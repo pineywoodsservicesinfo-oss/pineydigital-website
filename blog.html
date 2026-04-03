@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Small Business Growth Blog | Piney Digital</title>
+    <meta name="description" content="Expert web design and local SEO tips for Lufkin and Nacogdoches businesses. Learn how to get more calls, rank better on Google, and build a stronger online presence.">
+    <meta name="keywords" content="local SEO Lufkin, web design tips East Texas, small business website advice, Google ranking tips, online presence for local business">
+    <meta name="author" content="Joel Escoto">
+    <link rel="canonical" href="https://pineydigital.com/blog.html">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pineydigital.com/blog.html">
+    <meta property="og:title" content="Business Growth Blog | Piney Digital - East Texas">
+    <meta property="og:description" content="Expert web design and local SEO tips for Lufkin and Nacogdoches businesses. Get more calls, rank better on Google.">
+    <meta property="og:image" content="https://pineydigital.com/images/og-blog.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Business Growth Blog | Piney Digital - East Texas">
+    <meta name="twitter:description" content="Expert web design and local SEO tips for Lufkin and Nacogdoches businesses. Get more calls, rank better on Google.">
+    <meta name="twitter:image" content="https://pineydigital.com/images/og-blog.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/modern.css">
+    <style>
+        .blog-hero {
+            padding: 140px 0 60px;
+            min-height: auto;
+        }
+        .blog-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1.5rem;
+        }
+        .blog-pill {
+            padding: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 999px;
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+        @media (max-width: 900px) {
+            .articles-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .article-card {
+            background: rgba(18, 18, 26, 0.95);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 20px;
+            padding: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        .article-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+        }
+        .article-card__meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .article-card__tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.35rem 0.75rem;
+            border-radius: 999px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .article-card__tag--primary {
+            background: rgba(30, 90, 142, 0.15);
+            color: var(--primary);
+        }
+        .article-card__tag--accent {
+            background: rgba(45, 127, 78, 0.15);
+            color: var(--accent);
+        }
+        .article-card__title {
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+            line-height: 1.3;
+        }
+        .article-card__excerpt {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+        .posts-section {
+            padding: 80px 0;
+            background: rgba(10, 10, 15, 0.5);
+        }
+        .blog-post {
+            background: rgba(18, 18, 26, 0.95);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 24px;
+            padding: 3rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+            margin-bottom: 2rem;
+        }
+        .blog-post__meta {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+        .blog-post__content {
+            color: var(--text-secondary);
+            line-height: 1.9;
+            font-size: 1.05rem;
+        }
+        .blog-post__content h3,
+        .blog-post__content h4 {
+            color: var(--text-primary);
+            margin: 2rem 0 1rem;
+        }
+        .blog-post__content ul,
+        .blog-post__content ol {
+            padding-left: 1.25rem;
+            margin: 1rem 0;
+        }
+        .blog-post__content li + li {
+            margin-top: 0.5rem;
+        }
+        .blog-post__content a {
+            color: var(--accent);
+        }
+        .post-highlight {
+            background: linear-gradient(135deg, rgba(45, 127, 78, 0.1) 0%, rgba(30, 90, 142, 0.1) 100%);
+            border: 1px solid var(--accent);
+            border-radius: 12px;
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .post-highlight strong {
+            color: var(--text-primary);
+        }
+        .post-cta {
+            text-align: center;
+            border-top: 1px solid var(--border);
+            padding-top: 2rem;
+            margin-top: 2rem;
+        }
+        .post-cta p {
+            color: var(--text-primary);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        @media (max-width: 768px) {
+            .blog-hero {
+                padding: 100px 0 40px;
+            }
+            .blog-post {
+                padding: 1.5rem;
+            }
+            .article-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="noise-overlay"></div>
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="nav-logo-icon">🌲</span>
+                <span class="nav-logo-text">Piney Digital</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html#services" class="nav-link">Services</a>
+                <a href="portfolio.html" class="nav-link">Portfolio</a>
+                <a href="blog.html" class="nav-link active">Blog</a>
+                <a href="pricing.html" class="nav-link">Pricing</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                <a href="index.html#contact" class="nav-cta">
+                    <span>Start Project</span>
+                </a>
+                <button class="nav-menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-content">
+            <a href="index.html#services" class="mobile-link">Services</a>
+            <a href="portfolio.html" class="mobile-link">Portfolio</a>
+            <a href="blog.html" class="mobile-link">Blog</a>
+            <a href="pricing.html" class="mobile-link">Pricing</a>
+            <a href="about.html" class="mobile-link">About</a>
+            <a href="index.html#contact" class="mobile-link">Contact</a>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero -->
+        <section class="blog-hero">
+            <div class="container">
+                <span class="section-label section-label--accent">Business Growth</span>
+                <h1 class="section-title">Insights for <span class="gradient-text">Local Business</span></h1>
+                <p class="section-description" style="max-width: 700px;">Practical guidance on web design, local SEO, and digital presence. Written for East Texas business owners who want results.</p>
+                <div class="blog-pills">
+                    <span class="blog-pill">Web Design</span>
+                    <span class="blog-pill">Local SEO</span>
+                    <span class="blog-pill">Lead Generation</span>
+                    <span class="blog-pill">Growth Strategy</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Articles -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Featured</span>
+                    <h2 class="section-title">What every business owner <span class="gradient-text">should know</span></h2>
+                    <p class="section-description">Clear answers to the questions you're asking about websites, visibility, and growth.</p>
+                </div>
+
+                <div class="articles-grid">
+                    <article class="article-card">
+                        <div class="article-card__meta">
+                            <span class="article-card__tag article-card__tag--primary">Essential</span>
+                            <span class="article-card__tag article-card__tag--accent">First Read</span>
+                        </div>
+                        <h3 class="article-card__title">5 Reasons Your Business Needs a Professional Website in 2026</h3>
+                        <p class="article-card__excerpt">Why a professional website is no longer optional — and what you're losing without one.</p>
+                        <a href="#article-reasons" class="btn btn-primary">Read Article</a>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="article-card__meta">
+                            <span class="article-card__tag article-card__tag--accent">Local SEO</span>
+                            <span class="article-card__tag article-card__tag--primary">Visibility</span>
+                        </div>
+                        <h3 class="article-card__title">Winning the Google Map Pack With Better NAP Consistency</h3>
+                        <p class="article-card__excerpt">Why your name, address, and phone number must match everywhere online — and how to fix inconsistencies.</p>
+                        <a href="#article-seo" class="btn btn-outline">Read Article</a>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="article-card__meta">
+                            <span class="article-card__tag article-card__tag--primary">Conversion</span>
+                            <span class="article-card__tag article-card__tag--accent">Design</span>
+                        </div>
+                        <h3 class="article-card__title">What Actually Makes a Website Turn Visitors Into Calls?</h3>
+                        <p class="article-card__excerpt">The design elements and trust signals that separate sites that convert from sites that don't.</p>
+                        <a href="#article-conversion" class="btn btn-outline">Read Article</a>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="article-card__meta">
+                            <span class="article-card__tag article-card__tag--accent">Strategy</span>
+                            <span class="article-card__tag article-card__tag--primary">Growth</span>
+                        </div>
+                        <h3 class="article-card__title">How to Know When Your Business Has Outgrown Its Current Website</h3>
+                        <p class="article-card__excerpt">Signs your site is holding you back — and what to do about it.</p>
+                        <a href="#article-redesign" class="btn btn-outline">Read Article</a>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="article-card__meta">
+                            <span class="article-card__tag article-card__tag--primary">Technical SEO</span>
+                            <span class="article-card__tag article-card__tag--accent">New</span>
+                        </div>
+                        <h3 class="article-card__title">Google Crawling, Sitemaps, and the Backend Work That Gets You Found</h3>
+                        <p class="article-card__excerpt">The technical side of SEO — how Google finds, indexes, and ranks your website.</p>
+                        <a href="#article-google-crawling" class="btn btn-outline">Read Article</a>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="article-card__meta">
+                            <span class="article-card__tag article-card__tag--green">Product</span>
+                            <span class="article-card__tag article-card__tag--accent">New</span>
+                        </div>
+                        <h3 class="article-card__title">Inside the Piney Outreach System: Loyalty + SMS + Reviews</h3>
+                        <p class="article-card__excerpt">How the customer retention platform works — loyalty cards, text marketing, and automated review requests.</p>
+                        <a href="#article-piney-outreach" class="btn btn-outline">Read Article</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Full Articles -->
+        <section class="posts-section">
+            <div class="container">
+                <article id="article-reasons" class="blog-post">
+                    <span class="section-label section-label--primary">Business Strategy</span>
+                    <h2>5 Reasons Your Business Needs a Professional Website in 2026</h2>
+                    <p class="blog-post__meta">March 17, 2026 • 6 min read</p>
+
+                    <div class="blog-post__content">
+                        <p>If you're running a business in Lufkin, Nacogdoches, Diboll, or anywhere around East Texas, your website is no longer just a nice extra. It's one of the first places a customer goes to decide whether you're real, trustworthy, and worth contacting. Even if someone hears about you through Facebook, a recommendation, or your Google Business Profile, there's a good chance they'll still look for your website before they call.</p>
+
+                        <p>That means your website isn't just a digital business card. It's your first impression, your credibility check, your salesperson, and your lead capture tool all in one. Here are five reasons every serious small business should treat their website like a core part of growth in 2026.</p>
+
+                        <h3>1. First Impressions Decide Whether People Trust You</h3>
+                        <p>When someone lands on your website, they make a judgment fast. If the design feels outdated, confusing, or unfinished, people assume the business might be the same way. On the other hand, when the site looks polished, modern, and clear, it immediately increases confidence. A good website makes a small business feel established, even if it's still growing.</p>
+                        <p>This matters even more for local service businesses. When a homeowner is comparing a detailer, contractor, barber, or restaurant, they are often deciding between businesses that all claim to be "the best." A professional website helps you stand out before the first conversation even happens.</p>
+
+                        <h3>2. Your Website Works Even When You Aren't</h3>
+                        <p>A strong website keeps doing its job after business hours. It answers common questions, shows your services, explains pricing or process, highlights reviews or portfolio work, and gives visitors a clear way to contact you. While you sleep, drive, or work on a client job, your site can still be helping people decide to reach out.</p>
+                        <p>That matters because many people don't contact businesses the moment they first hear about them. They look around, compare options, and circle back later. If you don't have a clean site waiting for them, you lose that opportunity to whoever does.</p>
+
+                        <h3>3. Local Search Visibility Depends on More Than Just a Facebook Page</h3>
+                        <p>Social media helps with visibility, but it doesn't replace a website. A real website gives search engines stronger signals about what you do, where you work, and who you help. This supports your Google Business Profile, helps you rank for local searches, and gives you a better chance of showing up when someone searches terms like "web designer Lufkin," "detailing near me," or "best contractor in Nacogdoches."</p>
+                        <p>Without a website, you're depending almost entirely on social platforms you don't control. If your account gets less reach or your posts stop performing, your visibility drops. A website gives you an asset that belongs to your business.</p>
+
+                        <h3>4. Mobile Experience Is No Longer Optional</h3>
+                        <p>Most local traffic now comes from phones. People search while they're on the move, waiting in line, sitting in the driveway, or comparing options during lunch. If your site is hard to read on mobile, loads slowly, or makes people zoom in just to use it, they leave.</p>
+                        <p>A professional website is built with mobile users in mind from the start. Buttons are easy to tap, contact information is obvious, layouts are readable, and the next step feels simple. That kind of experience increases inquiries and lowers the chance of people bouncing away.</p>
+
+                        <h3>5. A Better Website Helps You Charge More and Close Faster</h3>
+                        <p>One of the most underrated benefits of a professional website is positioning. When your brand looks more polished online, customers expect a more professional service. That changes how they see your pricing, your authority, and your overall value.</p>
+                        <p>Instead of spending every conversation convincing people that you're legitimate, the website starts doing that work for you. Better photos, stronger copy, clearer process, case studies, and a real call to action all help reduce hesitation and move leads closer to saying yes.</p>
+
+                        <div class="post-highlight">
+                            <strong>Bottom line:</strong> a professional website does more than "put your business online." It helps people trust you faster, understand your value, and contact you with more confidence.
+                        </div>
+
+                        <p>If your current site doesn't reflect the quality of your business, that gap is costing you. In 2026, people expect a legitimate business to have a legitimate online presence. The good news is that with the right strategy, a website doesn't have to be huge or expensive to work well. It just has to be clear, professional, and built for the customer journey.</p>
+                    </div>
+
+                    <div class="post-cta">
+                        <p>Ready for a website that works as hard as you do?</p>
+                        <a href="index.html#contact" class="btn btn-primary">Get Your Free Quote</a>
+                    </div>
+                </article>
+
+                <article id="article-seo" class="blog-post">
+                    <span class="section-label section-label--accent">Local SEO</span>
+                    <h2>Winning the Google Map Pack With Better NAP Consistency</h2>
+                    <p class="blog-post__meta">March 17, 2026 • 5 min read</p>
+
+                    <div class="blog-post__content">
+                        <p>To a search engine, consistency is one of the strongest signs that your business is legitimate. When Google sees the same business name, address, and phone number repeated accurately across your website, Google Business Profile, Facebook page, directory listings, and other mentions online, it becomes easier for the algorithm to trust your business information.</p>
+                        <p>That trust matters because Google wants to show users reliable local results. If your contact details are inconsistent, incomplete, or outdated, that weakens your local presence and can hurt your chances of appearing in the Map Pack.</p>
+
+                        <h3>What NAP Means</h3>
+                        <p>NAP stands for <strong>Name, Address, and Phone number</strong>. It sounds simple, but small differences create confusion. If one listing says "Piney Digital LLC," another says "Piney Digital," and another has an older phone number, Google has to work harder to understand what is correct.</p>
+
+                        <h3>Why It Affects Local Rankings</h3>
+                        <p>When your business information matches everywhere, it sends a cleaner signal. That supports your Google Business Profile, your website, and your local citations. It's one of the foundational steps in local SEO because it helps Google connect all your digital properties to the same real-world business.</p>
+
+                        <div class="post-highlight">
+                            <strong>Simple rule:</strong> choose one exact business format for your name, address, and phone number, and use it everywhere online without variation.
+                        </div>
+
+                        <h3>What to Check First</h3>
+                        <ul>
+                            <li>Your website footer and contact section</li>
+                            <li>Your Google Business Profile</li>
+                            <li>Your Facebook and Instagram business details</li>
+                            <li>Any directory listings or old profiles you may have created</li>
+                            <li>Phone numbers inside graphics, PDFs, or old promotional assets</li>
+                        </ul>
+
+                        <h3>How to Use NAP as a Growth Tool</h3>
+                        <p>Once your NAP is consistent, your local SEO gets a stronger foundation. Pair that with reviews, a clean website, relevant service pages, and a properly built Google Business Profile, and you'll be in a better position to compete locally.</p>
+                    </div>
+
+                    <div class="post-cta">
+                        <p>Want to rank higher in local search?</p>
+                        <a href="index.html#contact" class="btn btn-primary">Schedule a Consultation</a>
+                    </div>
+                </article>
+
+                <article id="article-conversion" class="blog-post">
+                    <span class="section-label section-label--primary">Conversion</span>
+                    <h2>What Actually Makes a Website Turn Visitors Into Calls?</h2>
+                    <p class="blog-post__meta">March 17, 2026 • 5 min read</p>
+
+                    <div class="blog-post__content">
+                        <p>A lot of business websites look decent but still don't generate many leads. That's because design alone doesn't convert. A site turns visitors into calls when it removes confusion, builds trust, and makes the next step feel obvious.</p>
+
+                        <h3>Clear Messaging Beats Clever Messaging</h3>
+                        <p>When someone lands on your homepage, they should immediately understand what you do, who you help, and what action to take next. If the messaging is vague, overly clever, or too general, the visitor has to work too hard to figure it out.</p>
+
+                        <h3>Strong Calls to Action Matter</h3>
+                        <p>If every page doesn't make the next step clear, people drift away. A good local business website should have obvious calls to action like "Call Now," "Get a Free Quote," or "Book an Estimate." The easier you make it to act, the more people will.</p>
+
+                        <h3>Trust Signals Reduce Hesitation</h3>
+                        <p>People are naturally skeptical online. Trust signals help them relax. These can include portfolio examples, reviews, local service areas, before-and-after photos, guarantees, a real phone number, and even a polished About section that makes the business feel human.</p>
+
+                        <h3>Speed and Mobile Usability Affect Everything</h3>
+                        <p>If a website loads slowly or feels awkward on a phone, users leave before they ever get to your offer. Fast load times, clean spacing, big tap targets, and obvious contact options are conversion tools, not just design details.</p>
+
+                        <div class="post-highlight">
+                            <strong>The best converting websites usually do four things well:</strong> they explain the offer clearly, make the business look trustworthy, remove friction, and ask for action in a simple way.
+                        </div>
+
+                        <h3>What Most Small Business Sites Are Missing</h3>
+                        <ol>
+                            <li>A headline that quickly explains the value of the business</li>
+                            <li>A visible call button or quote button above the fold</li>
+                            <li>Proof that the business is real and trusted</li>
+                            <li>A layout that works smoothly on mobile</li>
+                            <li>A page structure that guides the visitor instead of overwhelming them</li>
+                        </ol>
+
+                        <p>When those pieces are in place, a website becomes more than an online brochure. It becomes a conversion tool that helps you earn attention, build trust, and capture interest while your competitors are still relying on weak first impressions.</p>
+                    </div>
+
+                    <div class="post-cta">
+                        <p>Need a site that actually converts?</p>
+                        <a href="index.html#contact" class="btn btn-primary">Start Your Project</a>
+                    </div>
+                </article>
+
+                <article id="article-redesign" class="blog-post">
+                    <span class="section-label section-label--accent">Strategy</span>
+                    <h2>How to Know When Your Business Has Outgrown Its Current Website</h2>
+                    <p class="blog-post__meta">March 17, 2026 • 4 min read</p>
+
+                    <div class="blog-post__content">
+                        <p>Sometimes the problem isn't that a business has no website. It's that the current one no longer matches the quality of the business behind it. A site that felt "good enough" a few years ago can quietly become a liability if it looks outdated, loads poorly, or fails to support how the business has grown.</p>
+
+                        <h3>Here Are Some Common Signs It's Time for a Redesign</h3>
+                        <ul>
+                            <li>Your website doesn't look good on mobile</li>
+                            <li>It loads slowly or feels clunky</li>
+                            <li>Your branding, services, or pricing have changed</li>
+                            <li>You feel hesitant to send people to it</li>
+                            <li>It gets traffic but not many inquiries</li>
+                            <li>It doesn't reflect the level you're operating at now</li>
+                        </ul>
+
+                        <h3>Your Business Evolves, So Your Website Should Too</h3>
+                        <p>As a business matures, customer expectations change. You may have better photography, clearer offers, stronger testimonials, or a more refined process than you did before. If the website still represents an older version of the business, it creates a disconnect.</p>
+
+                        <h3>An Outdated Site Costs More Than It Seems</h3>
+                        <p>The cost of a weak website isn't always obvious. It often shows up as fewer calls, lower trust, more price-shopping, and missed opportunities with people who never reached out in the first place. A redesign can improve not just how the business looks, but how it performs.</p>
+
+                        <div class="post-highlight">
+                            <strong>Good redesigns are not just cosmetic.</strong> The goal is to improve clarity, trust, mobile usability, speed, and conversion potential so the website better supports where the business is going next.
+                        </div>
+
+                        <p>If you've been avoiding sending prospects to your current site, that's usually a sign. A redesign should make you feel proud to show people what you've built and confident that the site is helping your business instead of holding it back.</p>
+                    </div>
+
+                    <div class="post-cta">
+                        <p>Time for an upgrade?</p>
+                        <a href="index.html#contact" class="btn btn-primary">Get Started Today</a>
+                    </div>
+                </article>
+
+                <!-- NEW: Google Crawling Article -->
+                <article id="article-google-crawling" class="blog-post">
+                    <span class="section-label section-label--primary">Technical SEO</span>
+                    <h2>Google Crawling, Sitemaps, and the Backend Work That Gets You Found</h2>
+                    <p class="blog-post__meta">April 3, 2026 • 8 min read</p>
+
+                    <div class="blog-post__content">
+                        <p>You launched your website. It looks great. But when you search for your business on Google... nothing shows up. Or worse, you're buried on page 5.</p>
+
+                        <p>This is where most business owners start asking: "How do I get on Google?" The answer involves understanding what happens behind the scenes — the technical work that most people never see but that determines whether your site gets found at all.</p>
+
+                        <h3>Step 1: Google Has to Find You (Crawling)</h3>
+                        <p>Google uses automated programs called "crawlers" or "spiders" (officially named Googlebot) to discover websites. These bots follow links from page to page, reading content as they go.</p>
+
+                        <p>Think of it like a librarian walking through a library. If there's no map and no signs, the librarian might miss entire sections. That's what happens to websites without proper structure.</p>
+
+                        <p><strong>How Googlebot finds your site:</strong></p>
+                        <ul>
+                            <li>Links from other websites pointing to yours</li>
+                            <li>Your XML sitemap (more on this below)</li>
+                            <li>Direct submission through Google Search Console</li>
+                            <li>Social media mentions and shares</li>
+                        </ul>
+
+                        <p>If your site is brand new and has no incoming links, Google might not know it exists yet. That's normal — but it's fixable.</p>
+
+                        <h3>Step 2: Google Has to Understand You (Indexing)</h3>
+                        <p>Once Googlebot crawls your site, it sends the information back to Google's servers. Google then decides whether to add your pages to its index — the massive database of all webpages that can appear in search results.</p>
+
+                        <p><strong>Common reasons pages don't get indexed:</strong></p>
+                        <ul>
+                            <li><code>noindex</code> tags accidentally left in the code</li>
+                            <li>Pages blocked by robots.txt</li>
+                            <li>Thin or duplicate content</li>
+                            <li>Technical errors (404s, server errors, slow loading)</li>
+                            <li>New site that hasn't been crawled yet</li>
+                        </ul>
+
+                        <p>You can check if your site is indexed by searching <code>site:yourdomain.com</code> in Google. If pages show up, you're indexed. If nothing appears, there's a problem to fix.</p>
+
+                        <h3>The Sitemap: Your Map for Google</h3>
+                        <p>An XML sitemap is exactly what it sounds like — a file that tells Google about every important page on your website. It's not for humans; it's a roadmap for search engines.</p>
+
+                        <p><strong>What a sitemap includes:</strong></p>
+                        <ul>
+                            <li>URLs of all important pages</li>
+                            <li>When each page was last updated</li>
+                            <li>How often pages typically change (daily, weekly, monthly)</li>
+                            <li>Priority levels (which pages matter most)</li>
+                        </ul>
+
+                        <p>Every site I build includes an auto-generated sitemap at <code>yourdomain.com/sitemap.xml</code>. I submit it directly to Google Search Console so Google knows exactly what to crawl.</p>
+
+                        <div class="post-highlight">
+                            <strong>Why this matters:</strong> Without a sitemap, Google might miss pages — especially if your site navigation isn't perfectly structured. A sitemap ensures nothing gets left behind.
+                        </div>
+
+                        <h3>Robots.txt: The Bouncer at Your Door</h3>
+                        <p>Every website has (or should have) a file called <code>robots.txt</code> at the root level. This file tells crawlers which pages they're allowed to access and which they should skip.</p>
+
+                        <p><strong>Typical robots.txt looks like this:</strong></p>
+                        <pre style="background: rgba(0,0,0,0.3); padding: 1rem; border-radius: 8px; font-family: monospace; font-size: 0.875rem; color: var(--text-secondary); margin: 1rem 0;">User-agent: *
+Allow: /
+
+Sitemap: https://yourdomain.com/sitemap.xml</pre>
+
+                        <p>This tells all crawlers they can access everything, and points them to your sitemap. Simple, but essential.</p>
+
+                        <h3>Meta Tags: The Labels That Tell Google What You Are</h3>
+                        <p>Meta tags are snippets of code in your page's `<head>` section that tell search engines what the page is about. The two most important:</p>
+
+                        <p><strong>Title Tag:</strong> Shows up as the blue clickable link in search results. Should include your main keyword and be under 60 characters.</p>
+                        <p><strong>Meta Description:</strong> The short paragraph under the title in search results. Doesn't directly affect ranking, but affects click-through rate. Should be under 160 characters and compelling.</p>
+
+                        <p>Every page on your site should have unique, descriptive title tags and meta descriptions. Generic or duplicate tags hurt your visibility.</p>
+
+                        <h3>Page Speed: The Hidden Ranking Factor</h3>
+                        <p>Google officially uses page speed as a ranking signal. Slow sites rank lower, and users bounce faster. The technical term is "Core Web Vitals" — a set of metrics Google uses to measure user experience.</p>
+
+                        <p><strong>What affects speed:</strong></p>
+                        <ul>
+                            <li>Image file sizes (big photos = slow loading)</li>
+                            <li>Too many scripts or plugins</li>
+                            <li>Cheap hosting with slow servers</li>
+                            <li>Unoptimized code</li>
+                        </ul>
+
+                        <p>I optimize all images, use efficient code, and host on reliable servers to keep sites fast. A site that loads in under 3 seconds keeps visitors; anything slower and people start leaving.</p>
+
+                        <h3>Mobile-First: Google Judges Your Mobile Site First</h3>
+                        <p>Since 2019, Google has used "mobile-first indexing." That means Google looks at your mobile site first to decide how to rank you — even for desktop searches.</p>
+
+                        <p>If your site doesn't work well on phones, you're not just losing mobile customers. You're losing Google ranking across the board.</p>
+
+                        <h3>What I Handle for You</h3>
+                        <p>Here's the technical SEO work included in every site I build:</p>
+                        <ul>
+                            <li>XML sitemap generation and Google submission</li>
+                            <li>Robots.txt configuration</li>
+                            <li>Unique title tags and meta descriptions on every page</li>
+                            <li>Proper heading structure (H1, H2, H3)</li>
+                            <li>Image optimization and lazy loading</li>
+                            <li>Mobile-responsive design</li>
+                            <li>Fast, reliable hosting</li>
+                            <li>Google Search Console setup</li>
+                            <li>Google Business Profile integration</li>
+                        </ul>
+
+                        <p>This is the foundation. Without it, even the best content won't rank. With it, you're positioned to compete — especially in local markets where the competition is less intense than national keywords.</p>
+
+                        <div class="post-highlight">
+                            <strong>The takeaway:</strong> SEO isn't magic. It's technical work that makes your site understandable to Google. Most of it happens once during setup, then continues with ongoing optimization. That's why monthly plans include monitoring and adjustments — SEO is a process, not a one-time task.
+                        </div>
+
+                        <p>If you're curious about how your current site performs, I can run a free audit. Just reach out — no pressure, just honest feedback on where you stand.</p>
+                    </div>
+
+                    <div class="post-cta">
+                        <p>Want a site that's built right from day one?</p>
+                        <a href="index.html#contact" class="btn btn-primary">Get Your Free Audit</a>
+                    </div>
+                </article>
+
+                <!-- NEW: Piney Outreach System Article -->
+                <article id="article-piney-outreach" class="blog-post">
+                    <span class="section-label section-label--green">Product</span>
+                    <h2>Inside the Piney Outreach System: Loyalty + SMS + Reviews</h2>
+                    <p class="blog-post__meta">April 3, 2026 • 7 min read</p>
+
+                    <div class="blog-post__content">
+                        <p>When I started Piney Digital, I noticed something: most web designers in East Texas were selling the same thing — a website, delivered once, then you're on your own.</p>
+
+                        <p>But a website alone doesn't grow a business. It's a tool, not a strategy. The businesses that thrive are the ones that bring customers back, generate word-of-mouth, and stay top-of-mind without being annoying.</p>
+
+                        <p>That's why I built the Piney Outreach system — a complete customer retention platform that includes loyalty programs, SMS marketing, and automated review requests. Here's exactly how it works.</p>
+
+                        <h3>The Problem: Customer Acquisition is Expensive</h3>
+                        <p>Marketing studies consistently show that acquiring a new customer costs 5-25x more than retaining an existing one. Yet most small businesses spend almost all their marketing budget on getting new customers and almost nothing on keeping the ones they have.</p>
+
+                        <p><strong>Common scenarios I see in East Texas:</strong></p>
+                        <ul>
+                            <li>A restaurant spends $500/month on Facebook ads but has no system to bring first-timers back</li>
+                            <li>A salon books appointments but never follows up when clients go 8 weeks without visiting</li>
+                            <li>A retail store has great products but customers forget they exist until they drive past</li>
+                        </ul>
+
+                        <p>The businesses that win aren't necessarily the ones with the best products. They're the ones that stay connected with their customers.</p>
+
+                        <h3>The Solution: A System That Works While You Work</h3>
+                        <p>Piney Outreach automates the retention piece. Instead of hoping customers remember you, the system keeps them engaged with minimal effort on your part.</p>
+
+                        <h3>Component 1: Digital Loyalty Cards</h3>
+                        <p>Remember the old paper punch cards? Same concept — but digital, automatic, and actually trackable.</p>
+
+                        <p><strong>How it works:</strong></p>
+                        <ol>
+                            <li>Customer gives their phone number at checkout</li>
+                            <li>You (or your POS) log the visit in the dashboard</li>
+                            <li>Customer earns points automatically</li>
+                            <li>When they're close to a reward, the system sends a text reminder</li>
+                            <li>They come back to redeem, and the cycle continues</li>
+                        </ol>
+
+                        <p><strong>Why it works:</strong> The "endowed progress effect" — people are more likely to complete a goal when they feel they've already made progress. A digital loyalty card shows customers exactly how close they are, and that near-completion feeling drives return visits.</p>
+
+                        <p><strong>Real example:</strong> A coffee shop sets up "Buy 9 coffees, get the 10th free." After 3 months, they have 200 enrolled customers. Even if only 40% actively participate, that's 80 customers who are statistically more likely to choose them over competitors because they're "almost at a free coffee."</p>
+
+                        <h3>Component 2: SMS Marketing</h3>
+                        <p>Email is fine. But SMS has a 98% open rate compared to email's ~20%. Text messages get read — usually within 90 seconds of arrival.</p>
+
+                        <p><strong>What you can send:</strong></p>
+                        <ul>
+                            <li>Reward reminders ("You're 1 visit away from a free haircut!")</li>
+                            <li>Exclusive offers for loyalty members</li>
+                            <li>Appointment reminders (reduces no-shows)</li>
+                            <li>Re-engagement messages ("Haven't seen you in a while — here's 15% off")</li>
+                            <li>Event or promotion announcements</li>
+                        </ul>
+
+                        <p><strong>Compliance built in:</strong> The system is Twilio-compliant, meaning it follows all TCPA regulations. Customers opt in explicitly, every message includes opt-out instructions, and you can't spam them. This protects both you and your customers.</p>
+
+                        <div class="post-highlight">
+                            <strong>Important:</strong> SMS should feel like a favor to the customer, not a demand. "Your reward is waiting" performs better than "Come spend money." The businesses that use SMS well are the ones that respect their customers' attention.
+                        </div>
+
+                        <h3>Component 3: Automated Review Requests</h3>
+                        <p>Google reviews are critical for local SEO and social proof. But most businesses don't ask consistently — or at all.</p>
+
+                        <p><strong>How it works:</strong></p>
+                        <ol>
+                            <li>Customer completes a visit or purchase</li>
+                            <li>System automatically sends a text: "Thanks for visiting! Would you mind leaving us a quick review?"</li>
+                            <li>Customer clicks a link and is taken directly to your Google Business Profile</li>
+                            <li>Review is posted, boosting your local ranking and credibility</li>
+                        </ol>
+
+                        <p><strong>Why automation matters:</strong> Asking in the moment works, but it's inconsistent. Some staff members ask, some don't. Some customers say "sure" and forget. Automation ensures every customer gets asked, every time, without relying on anyone's memory.</p>
+
+                        <p><strong>Real impact:</strong> A client went from 12 reviews to 87 reviews in 4 months using automated requests. That's not just vanity — more reviews = higher local ranking = more organic traffic = more customers without ad spend.</p>
+
+                        <h3>Component 4: Customer Dashboard</h3>
+                        <p>All of this feeds into a dashboard you can access anytime. You can see:</p>
+                        <ul>
+                            <li>Total enrolled customers</li>
+                            <li>Active vs. inactive customers</li>
+                            <li>Redemption rates (how many people actually use rewards)</li>
+                            <li>SMS campaign performance</li>
+                            <li>Review generation over time</li>
+                        </ul>
+
+                        <p>This isn't just data for data's sake. It tells you what's working. If a certain offer gets 80% redemption, run it again. If a segment hasn't visited in 60 days, send a re-engagement offer. The dashboard turns guesses into decisions.</p>
+
+                        <h3>Who This Is For</h3>
+                        <p>The Outreach system is included in Growth and Pro plans. It's best suited for:</p>
+                        <ul>
+                            <li><strong>Restaurants & cafes:</strong> Frequent visits, low transaction value, high competition</li>
+                            <li><strong>Salons & barbershops:</strong> Repeat appointments, service-based, relationship-driven</li>
+                            <li><strong>Retail shops:</strong> Product variety, seasonal traffic, local customer base</li>
+                            <li><strong>Auto services:</strong> Maintenance intervals, high customer lifetime value</li>
+                            <li><strong>Wellness & fitness:</strong> Membership models, habit-based, community-focused</li>
+                        </ul>
+
+                        <p>If your business relies on repeat customers — and most do — this system pays for itself.</p>
+
+                        <h3>What Makes This Different</h3>
+                        <p>No other web designer in East Texas is offering this. Most build a site, maybe set up Google Business Profile, and call it done. I'm building a complete growth system that keeps working after launch.</p>
+
+                        <p>The loyalty system, SMS, and review automation aren't add-ons I'm trying to upsell. They're core to what makes a website actually drive business growth instead of just sitting there looking pretty.</p>
+
+                        <div class="post-highlight">
+                            <strong>Bottom line:</strong> Your website brings people in. The Outreach system keeps them coming back. Together, they're a complete customer acquisition and retention engine.</p>
+                        </div>
+
+                        <p>If you want to see a demo of the dashboard or talk through how this would work for your specific business, just reach out. I'm happy to walk you through it — no pressure, just honest conversation about whether it makes sense for you.</p>
+                    </div>
+
+                    <div class="post-cta">
+                        <p>Ready to keep customers coming back?</p>
+                        <a href="index.html#contact" class="btn btn-primary">See How It Works</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <span>🌲</span>
+                        <span>Piney Digital</span>
+                    </a>
+                    <p class="footer-tagline">Professional websites for East Texas businesses.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <a href="index.html#services">Services</a>
+                    <a href="portfolio.html">Work</a>
+                    <a href="pricing.html">Pricing</a>
+                    <a href="about.html">About</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="index.html#contact">Contact</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms & Conditions</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <a href="tel:9362999897">(936) 299-9897</a>
+                    <a href="mailto:joel@pineydigital.com">joel@pineydigital.com</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Piney Digital. All rights reserved.</p>
+                <p>Built with ❤️ in East Texas</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/modern.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+# Robots.txt for Piney Digital
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://pineydigital.com/sitemap.xml
+
+# Disallow old/backup files
+Disallow: /*-old.html
+Disallow: /server.py
+Disallow: /piney_digital_new_pricing.html

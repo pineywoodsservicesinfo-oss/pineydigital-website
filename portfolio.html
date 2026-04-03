@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio & Case Studies | Piney Digital</title>
+    <meta name="description" content="View Piney Digital's portfolio of live websites, design mockups, and technical builds for East Texas businesses. Real results, real clients, measurable outcomes.">
+    <meta name="keywords" content="web design portfolio Lufkin, East Texas websites, local business websites, website examples, Pineywoods Detailing">
+    <meta name="author" content="Joel Escoto">
+    <link rel="canonical" href="https://pineydigital.com/portfolio.html">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pineydigital.com/portfolio.html">
+    <meta property="og:title" content="Portfolio | Piney Digital - East Texas Web Design Work">
+    <meta property="og:description" content="View Piney Digital's portfolio of live websites, design mockups, and technical builds for East Texas businesses.">
+    <meta property="og:image" content="https://pineydigital.com/images/og-portfolio.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Portfolio | Piney Digital - East Texas Web Design Work">
+    <meta name="twitter:description" content="View Piney Digital's portfolio of live websites, design mockups, and technical builds for East Texas businesses.">
+    <meta name="twitter:image" content="https://pineydigital.com/images/og-portfolio.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/modern.css">
+    <style>
+        .portfolio-hero {
+            padding: 140px 0 80px;
+            min-height: auto;
+        }
+        .portfolio-hero .section-title {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+        }
+        .trust-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1.5rem;
+        }
+        .trust-pill {
+            padding: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 999px;
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .portfolio-note {
+            background: rgba(18, 18, 26, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 16px;
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            color: var(--text-secondary);
+        }
+        .portfolio-note strong {
+            color: var(--text-primary);
+        }
+        .portfolio-section {
+            padding: 60px 0;
+        }
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+        .section-label--green {
+            background: rgba(45, 127, 78, 0.15);
+            color: var(--accent);
+        }
+        .section-label--gold {
+            background: rgba(212, 175, 55, 0.15);
+            color: #e8c66a;
+        }
+        .section-label--blue {
+            background: rgba(30, 90, 142, 0.15);
+            color: var(--primary);
+        }
+        .case-card {
+            background: rgba(18, 18, 26, 0.95);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 24px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        .case-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+        }
+        .case-card.featured {
+            border-color: rgba(45, 127, 78, 0.5);
+            background: linear-gradient(135deg, rgba(18, 18, 26, 0.95) 0%, rgba(30, 60, 40, 0.9) 100%);
+        }
+        .case-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .case-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.35rem 0.75rem;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .case-badge--live {
+            background: rgba(45, 127, 78, 0.15);
+            color: var(--accent);
+        }
+        .case-badge--mockup {
+            background: rgba(212, 175, 55, 0.15);
+            color: #e8c66a;
+        }
+        .case-badge--system {
+            background: rgba(30, 90, 142, 0.15);
+            color: var(--primary);
+        }
+        .case-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .case-meta {
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .case-title {
+            color: var(--text-primary);
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+        }
+        .case-description {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        .case-stats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+        .case-stat {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        .case-body-list {
+            margin-bottom: 1.5rem;
+            padding-left: 1.25rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+        .case-body-list li + li {
+            margin-top: 0.5rem;
+        }
+        .case-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .portfolio-cta {
+            background: rgba(18, 18, 26, 0.95);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 24px;
+            padding: 3rem;
+            text-align: center;
+            margin-top: 3rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        .portfolio-cta h3 {
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .portfolio-cta p {
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 1.5rem;
+        }
+        @media (max-width: 768px) {
+            .portfolio-hero {
+                padding: 100px 0 40px;
+            }
+            .case-card {
+                padding: 1.5rem;
+            }
+            .case-stats {
+                flex-direction: column;
+            }
+            .portfolio-cta {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="noise-overlay"></div>
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="nav-logo-icon">🌲</span>
+                <span class="nav-logo-text">Piney Digital</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html#services" class="nav-link">Services</a>
+                <a href="portfolio.html" class="nav-link active">Portfolio</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="pricing.html" class="nav-link">Pricing</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                <a href="index.html#contact" class="nav-cta">
+                    <span>Start Project</span>
+                </a>
+                <button class="nav-menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-content">
+            <a href="index.html#services" class="mobile-link">Services</a>
+            <a href="portfolio.html" class="mobile-link">Portfolio</a>
+            <a href="blog.html" class="mobile-link">Blog</a>
+            <a href="pricing.html" class="mobile-link">Pricing</a>
+            <a href="about.html" class="mobile-link">About</a>
+            <a href="index.html#contact" class="mobile-link">Contact</a>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero -->
+        <section class="portfolio-hero">
+            <div class="container">
+                <span class="section-label section-label--green">Portfolio</span>
+                <h1 class="section-title">Work That <span class="gradient-text">Delivers Results</span></h1>
+                <p class="section-description" style="max-width: 700px;">Real projects. Real outcomes. Every build below represents a business that needed a stronger online presence — and got one.</p>
+                <div class="trust-pills">
+                    <span class="trust-pill"><span>✓</span> Live deployed projects</span>
+                    <span class="trust-pill"><span>✓</span> Design concepts & mockups</span>
+                    <span class="trust-pill"><span>✓</span> Industry-specific templates</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="portfolio-note">
+                <strong>What you'll find here:</strong> Deployed websites with measurable business impact, design concepts that demonstrate range, and technical systems that prove depth. All clearly labeled so you know exactly what you're looking at.
+            </div>
+        </div>
+
+        <!-- Deployed Projects -->
+        <section class="portfolio-section">
+            <div class="container">
+                <span class="section-label section-label--green">Live Projects</span>
+                <h2 class="section-title">Deployed websites with <span class="gradient-text">proven results</span></h2>
+                <p class="section-description" style="max-width: 700px;">Production builds that are live, indexed, and generating leads. These represent the standard of work delivered to every client.</p>
+
+                <article class="case-card featured">
+                    <div class="case-badges">
+                        <span class="case-badge case-badge--live">✓ Live Production</span>
+                        <span class="case-badge case-badge--live">↑ #1 Google Ranking</span>
+                    </div>
+                    <div class="case-icon">🚗</div>
+                    <div class="case-meta">Automotive • Single-Page Site • Local SEO</div>
+                    <h3 class="case-title">Pineywoods Detailing</h3>
+                    <p class="case-description">A conversion-focused website built for an East Texas auto detailing business. Mobile-first design, optimized for local search, with clear paths to contact and quote requests.</p>
+                    <div class="case-stats">
+                        <div class="case-stat"><span>🏆</span> #1 Google ranking for "detailing Lufkin TX"</div>
+                        <div class="case-stat"><span>📧</span> 8–10 qualified inquiries weekly</div>
+                        <div class="case-stat"><span>📱</span> Mobile-optimized conversion paths</div>
+                    </div>
+                    <ul class="case-body-list">
+                        <li>Designed specifically to convert local search traffic into calls and quote requests.</li>
+                        <li>Built with speed and SEO as primary considerations from day one.</li>
+                        <li>The benchmark for what every service business website should achieve.</li>
+                    </ul>
+                    <div class="case-actions">
+                        <a href="https://pineywoodsdetailing.com" target="_blank" rel="noopener" class="btn btn-primary">
+                            View Live Site
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="7" y1="17" x2="17" y2="7"></line>
+                                <polyline points="7 7 17 7 17 17"></polyline>
+                            </svg>
+                        </a>
+                        <a href="index.html#contact" class="btn btn-ghost">Build Something Similar</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Mockups & Concepts -->
+        <section class="portfolio-section" style="background: var(--bg-secondary);">
+            <div class="container">
+                <span class="section-label section-label--gold">Design Concepts</span>
+                <h2 class="section-title">Visual range and <span class="gradient-text">design versatility</span></h2>
+                <p class="section-description" style="max-width: 700px;">Concept work that demonstrates design range. These show the visual directions available before committing to a full build.</p>
+
+                <div style="display: grid; gap: 2rem;">
+                    <article class="case-card">
+                        <div class="case-badges">
+                            <span class="case-badge case-badge--mockup">✦ Concept Design</span>
+                            <span class="case-badge case-badge--mockup">3 Pages</span>
+                        </div>
+                        <div class="case-icon">🌮</div>
+                        <div class="case-meta">Restaurant • Multi-Page • Brand Identity</div>
+                        <h3 class="case-title">Herraduras Fresh Mex</h3>
+                        <p class="case-description">A premium restaurant concept featuring rich visual identity, interactive menu exploration, and an atmosphere that matches the dining experience. Designed for hospitality brands that need more than a basic brochure site.</p>
+                        <div class="case-stats">
+                            <div class="case-stat"><span>📄</span> Home, About, Menu</div>
+                            <div class="case-stat"><span>🍴</span> 50+ menu items</div>
+                            <div class="case-stat"><span>🎨</span> Premium dark/gold theme</div>
+                        </div>
+                        <ul class="case-body-list">
+                            <li>Showcase concept demonstrating restaurant and hospitality capabilities.</li>
+                            <li>Built with atmosphere, storytelling, and user experience as priorities.</li>
+                            <li>A reference point for restaurants, food trucks, bars, and similar businesses.</li>
+                        </ul>
+                        <div class="case-actions">
+                            <a href="https://herradurasmockup.netlify.app/" target="_blank" rel="noopener" class="btn btn-outline" style="background: rgba(212, 175, 55, 0.1); border-color: #e8c66a; color: #e8c66a;">
+                                View Design
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                                    <polyline points="7 7 17 7 17 17"></polyline>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="case-card">
+                        <div class="case-badges">
+                            <span class="case-badge case-badge--mockup">✦ Concept Design</span>
+                            <span class="case-badge case-badge--mockup">Brand Direction</span>
+                        </div>
+                        <div class="case-icon">🏗️</div>
+                        <div class="case-meta">Industrial • Corporate • Bold Visual Identity</div>
+                        <h3 class="case-title">Ironclad Construction</h3>
+                        <p class="case-description">A rugged industrial concept built for contractors, builders, and industrial service companies. Bold hierarchy, strong visual positioning, and a design language that communicates reliability and strength.</p>
+                        <div class="case-stats">
+                            <div class="case-stat"><span>⚡</span> Custom interaction design</div>
+                            <div class="case-stat"><span>✏️</span> Industrial visual system</div>
+                        </div>
+                        <ul class="case-body-list">
+                            <li>Reference design for contractors, industrial brands, and construction companies.</li>
+                            <li>Demonstrates capability beyond service business and restaurant layouts.</li>
+                            <li>Ready to be adapted for any industrial or trade business.</li>
+                        </ul>
+                        <div class="case-actions">
+                            <a href="index.html#contact" class="btn btn-ghost">Discuss Your Design</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Systems & Technical -->
+        <section class="portfolio-section">
+            <div class="container">
+                <span class="section-label section-label--blue">Technical Depth</span>
+                <h2 class="section-title">Systems that prove <span class="gradient-text">engineering capability</span></h2>
+                <p class="section-description" style="max-width: 700px;">Beyond web design — full-stack development, automation, and product architecture. These projects demonstrate technical depth that informs how I approach every website build.</p>
+
+                <article class="case-card">
+                    <div class="case-badges">
+                        <span class="case-badge case-badge--system">⚙ Full-Stack System</span>
+                        <span class="case-badge case-badge--system">Production Architecture</span>
+                    </div>
+                    <div class="case-icon">🎯</div>
+                    <div class="case-meta">Automation • Python • Real-Time Systems</div>
+                    <h3 class="case-title">Piney Sniper v2</h3>
+                    <p class="case-description">A real-time automated trading system with machine learning, custom scoring algorithms, and multi-layer risk management. Not a website — but proof of serious engineering capability.</p>
+                    <div class="case-stats">
+                        <div class="case-stat"><span>📦</span> 38 Python modules</div>
+                        <div class="case-stat"><span>🧠</span> 858+ ML training samples</div>
+                        <div class="case-stat"><span>💰</span> 22 tracked data sources</div>
+                        <div class="case-stat"><span>📈</span> +415% peak performance</div>
+                    </div>
+                    <ul class="case-body-list">
+                        <li>Built with async Python architecture, live data ingestion, and custom scoring systems.</li>
+                        <li>Demonstrates capability for complex logic, automation, and systems-level thinking.</li>
+                        <li>Relevant for clients who may need advanced integrations or custom tooling.</li>
+                    </ul>
+                    <div class="case-actions">
+                        <a href="http://104.131.219.169:5000/" target="_blank" rel="noopener" class="btn btn-outline">
+                            View Dashboard
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="7" y1="17" x2="17" y2="7"></line>
+                                <polyline points="7 7 17 7 17 17"></polyline>
+                            </svg>
+                        </a>
+                        <a href="index.html#contact" class="btn btn-ghost">Discuss Technical Needs</a>
+                    </div>
+                </article>
+
+                <div class="portfolio-cta">
+                    <h3>Ready to Build Something That Works?</h3>
+                    <p style="max-width: 600px; margin: 0 auto 1.5rem;">Choose a template below or start from scratch. Either way, you get a website that's built to convert, rank, and grow your business.</p>
+                    <a href="index.html#contact" class="btn btn-primary btn-lg">
+                        Start Your Project
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Template Gallery -->
+        <section class="portfolio-section" style="background: linear-gradient(135deg, rgba(45, 127, 78, 0.08) 0%, rgba(30, 90, 142, 0.08) 100%);">
+            <div class="container">
+                <span class="section-label section-label--green">Industry Templates</span>
+                <h2 class="section-title">Start with a proven <span class="gradient-text">foundation</span></h2>
+                <p class="section-description" style="max-width: 700px;">Each template is designed for a specific industry. I'll customize the content, colors, and layout to match your brand — you get a professional site faster and at a lower cost than starting from scratch.</p>
+
+                <!-- Templates Grid -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+
+                    <!-- Restaurant Template -->
+                    <article class="case-card" style="border-color: rgba(212, 175, 55, 0.3);">
+                        <div class="case-badges">
+                            <span class="case-badge case-badge--mockup">🍽️ Restaurant</span>
+                            <span class="case-badge case-badge--mockup">3-5 Pages</span>
+                        </div>
+                        <div class="case-icon">🌮</div>
+                        <h3 class="case-title" style="margin-top: 0.5rem;">Restaurant & Food Service</h3>
+                        <p class="case-description">Built for restaurants, food trucks, cafes, and bars. Integrated menu system, location mapping, online ordering setup, and visual design that reflects your atmosphere.</p>
+                        <div class="case-stats">
+                            <div class="case-stat"><span>📋</span> Digital menu system</div>
+                            <div class="case-stat"><span>📍</span> Location & hours</div>
+                            <div class="case-stat"><span>📞</span> Click-to-call</div>
+                        </div>
+                        <div class="case-actions" style="margin-top: auto;">
+                            <a href="index.html#contact" class="btn btn-primary" style="background: linear-gradient(135deg, #d4af37, #e8c66a); color: #1a1510; border: none;">
+                                Start With This Template
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Contractor Template -->
+                    <article class="case-card" style="border-color: rgba(30, 90, 142, 0.3);">
+                        <div class="case-badges">
+                            <span class="case-badge case-badge--system">🔧 Contractor</span>
+                            <span class="case-badge case-badge--system">3-5 Pages</span>
+                        </div>
+                        <div class="case-icon">🏗️</div>
+                        <h3 class="case-title" style="margin-top: 0.5rem;">Contractor & Home Services</h3>
+                        <p class="case-description">Designed for electricians, plumbers, HVAC, landscapers, and general contractors. Professional design with service pages, project galleries, and instant quote forms.</p>
+                        <div class="case-stats">
+                            <div class="case-stat"><span>✅</span> Service breakdown</div>
+                            <div class="case-stat"><span>📸</span> Project gallery</div>
+                            <div class="case-stat"><span>💰</span> Quote request form</div>
+                        </div>
+                        <div class="case-actions" style="margin-top: auto;">
+                            <a href="index.html#contact" class="btn btn-primary">
+                                Start With This Template
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Professional Services Template -->
+                    <article class="case-card" style="border-color: rgba(45, 127, 78, 0.3);">
+                        <div class="case-badges">
+                            <span class="case-badge case-badge--live">💼 Professional</span>
+                            <span class="case-badge case-badge--live">4-6 Pages</span>
+                        </div>
+                        <div class="case-icon">📊</div>
+                        <h3 class="case-title" style="margin-top: 0.5rem;">Professional Services</h3>
+                        <p class="case-description">Ideal for lawyers, accountants, consultants, real estate, and insurance. Trust-forward design with credentials, testimonials, and clear service descriptions.</p>
+                        <div class="case-stats">
+                            <div class="case-stat"><span>👤</span> Team profiles</div>
+                            <div class="case-stat"><span>⭐</span> Client testimonials</div>
+                            <div class="case-stat"><span>📅</span> Booking integration</div>
+                        </div>
+                        <div class="case-actions" style="margin-top: auto;">
+                            <a href="index.html#contact" class="btn btn-primary">
+                                Start With This Template
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Retail Template -->
+                    <article class="case-card" style="border-color: rgba(168, 85, 247, 0.3);">
+                        <div class="case-badges">
+                            <span class="case-badge" style="background: rgba(168, 85, 247, 0.15); color: #c084fc;">🛍️ Retail</span>
+                            <span class="case-badge" style="background: rgba(168, 85, 247, 0.15); color: #c084fc;">3-5 Pages</span>
+                        </div>
+                        <div class="case-icon">🏪</div>
+                        <h3 class="case-title" style="margin-top: 0.5rem;">Retail & E-Commerce</h3>
+                        <p class="case-description">For boutiques, shops, and product-based businesses. Product showcase, e-commerce integration, inventory display, and conversion-optimized layouts.</p>
+                        <div class="case-stats">
+                            <div class="case-stat"><span>🛒</span> Product catalog</div>
+                            <div class="case-stat"><span>💳</span> Payment integration</div>
+                            <div class="case-stat"><span>📦</span> Inventory sync</div>
+                        </div>
+                        <div class="case-actions" style="margin-top: auto;">
+                            <a href="index.html#contact" class="btn btn-primary" style="background: linear-gradient(135deg, #6366f1, #a855f7); border: none;">
+                                Start With This Template
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Health & Wellness Template -->
+                    <article class="case-card" style="border-color: rgba(34, 197, 94, 0.3);">
+                        <div class="case-badges">
+                            <span class="case-badge" style="background: rgba(34, 197, 94, 0.15); color: #4ade80;">🌿 Wellness</span>
+                            <span class="case-badge" style="background: rgba(34, 197, 94, 0.15); color: #4ade80;">3-4 Pages</span>
+                        </div>
+                        <div class="case-icon">💆</div>
+                        <h3 class="case-title" style="margin-top: 0.5rem;">Health & Wellness</h3>
+                        <p class="case-description">Built for spas, salons, gyms, studios, and practitioners. Calming design with online booking, service menus, pricing display, and client reviews.</p>
+                        <div class="case-stats">
+                            <div class="case-stat"><span>📆</span> Online booking</div>
+                            <div class="case-stat"><span>💝</span> Service menu</div>
+                            <div class="case-stat"><span>🌟</span> Client reviews</div>
+                        </div>
+                        <div class="case-actions" style="margin-top: auto;">
+                            <a href="index.html#contact" class="btn btn-primary" style="background: linear-gradient(135deg, #22c55e, #16a34a); border: none;">
+                                Start With This Template
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Automotive Template -->
+                    <article class="case-card featured">
+                        <div class="case-badges">
+                            <span class="case-badge case-badge--live">🚗 Automotive</span>
+                            <span class="case-badge case-badge--live">Proven Results</span>
+                        </div>
+                        <div class="case-icon">🚙</div>
+                        <h3 class="case-title" style="margin-top: 0.5rem;">Automotive & Detailing</h3>
+                        <p class="case-description">Designed for auto shops, detailers, mechanics, and car washes. High-impact hero, services breakdown, pricing tables, photo galleries. Built to convert local search traffic.</p>
+                        <div class="case-stats">
+                            <div class="case-stat"><span>🏆</span> Proven conversion</div>
+                            <div class="case-stat"><span>📸</span> Before/after gallery</div>
+                            <div class="case-stat"><span>📞</span> Instant quote form</div>
+                        </div>
+                        <div class="case-actions" style="margin-top: auto;">
+                            <a href="index.html#contact" class="btn btn-primary">
+                                Start With This Template
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="portfolio-cta" style="margin-top: 3rem;">
+                    <h3>Need Something Different?</h3>
+                    <p style="max-width: 600px; margin: 0 auto 1.5rem;">Every template is a starting point. Colors, layout, content, and features are fully customizable. If you don't see your industry listed, that doesn't mean I can't build it — it means you'll get something tailored exactly to your needs.</p>
+                    <a href="index.html#contact" class="btn btn-ghost btn-lg">
+                        Discuss Your Project
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <span>🌲</span>
+                        <span>Piney Digital</span>
+                    </a>
+                    <p class="footer-tagline">Modern websites for East Texas businesses.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <a href="index.html#services">Services</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="pricing.html">Pricing</a>
+                    <a href="about.html">About</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="index.html#contact">Contact</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms & Conditions</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <a href="tel:9362999897">(936) 299-9897</a>
+                    <a href="mailto:joel@pineydigital.com">joel@pineydigital.com</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Piney Digital. All rights reserved.</p>
+                <p>Built with ❤️ in East Texas</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/modern.js"></script>
+</body>
+</html>

@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | Piney Digital - Common Questions About Web Design & SEO</title>
+    <meta name="description" content="Frequently asked questions about web design, local SEO, Google ranking, and Piney Digital services. Learn about timelines, crawling, indexing, and more.">
+    <meta name="keywords" content="web design FAQ, local SEO questions, Google ranking timeline, how long SEO takes, website indexing, sitemap submission, East Texas web designer">
+    <meta name="author" content="Joel Escoto">
+    <link rel="canonical" href="https://pineydigital.com/faq.html">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pineydigital.com/faq.html">
+    <meta property="og:title" content="FAQ | Piney Digital - Common Questions About Web Design & SEO">
+    <meta property="og:description" content="Frequently asked questions about web design, local SEO, Google ranking, and Piney Digital services.">
+    <meta property="og:image" content="https://pineydigital.com/images/og-faq.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="FAQ | Piney Digital - Common Questions About Web Design & SEO">
+    <meta name="twitter:description" content="Frequently asked questions about web design, local SEO, Google ranking, and Piney Digital services.">
+    <meta name="twitter:image" content="https://pineydigital.com/images/og-faq.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/modern.css">
+    <style>
+        .faq-hero {
+            padding: 140px 0 60px;
+            min-height: auto;
+        }
+        .faq-hero .section-title {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+        }
+        .faq-section {
+            margin-bottom: 4rem;
+        }
+        .faq-section h2 {
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .faq-section h2::before {
+            content: '';
+            display: block;
+            width: 4px;
+            height: 24px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+        .faq-item {
+            background: rgba(18, 18, 26, 0.95);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 16px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 1.25rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            color: var(--text-primary);
+            font-size: 1rem;
+            font-weight: 600;
+            text-align: left;
+            transition: background 0.2s ease;
+        }
+        .faq-question:hover {
+            background: rgba(255, 255, 255, 0.02);
+        }
+        .faq-question svg {
+            flex-shrink: 0;
+            transition: transform 0.3s ease;
+            color: var(--accent);
+        }
+        .faq-item.active .faq-question svg {
+            transform: rotate(180deg);
+        }
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        .faq-item.active .faq-answer {
+            padding: 0 1.5rem 1.5rem;
+            max-height: 1000px;
+        }
+        .faq-answer p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        .faq-answer p:last-child {
+            margin-bottom: 0;
+        }
+        .faq-answer ul {
+            color: var(--text-secondary);
+            padding-left: 1.5rem;
+            margin-top: 1rem;
+        }
+        .faq-answer li {
+            margin-bottom: 0.5rem;
+            line-height: 1.7;
+        }
+        .faq-answer strong {
+            color: var(--text-primary);
+        }
+        .faq-answer code {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            color: var(--accent);
+        }
+        .pro-tip {
+            background: linear-gradient(135deg, rgba(45, 127, 78, 0.15) 0%, rgba(30, 90, 142, 0.15) 100%);
+            border: 1px solid var(--accent);
+            border-radius: 12px;
+            padding: 1rem 1.25rem;
+            margin-top: 1rem;
+        }
+        .pro-tip strong {
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .pro-tip p {
+            margin: 0;
+            font-size: 0.9375rem;
+        }
+        .info-box {
+            background: rgba(30, 90, 142, 0.1);
+            border: 1px solid var(--primary);
+            border-radius: 12px;
+            padding: 1rem 1.25rem;
+            margin-top: 1rem;
+        }
+        .info-box strong {
+            color: var(--primary);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .info-box p {
+            margin: 0;
+            font-size: 0.9375rem;
+            color: var(--text-secondary);
+        }
+        .cta-section {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, rgba(45, 127, 78, 0.1) 0%, rgba(30, 90, 142, 0.1) 100%);
+            border-radius: 24px;
+            margin-top: 4rem;
+        }
+        .cta-section h2 {
+            color: var(--text-primary);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .cta-section p {
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+        @media (max-width: 768px) {
+            .faq-hero {
+                padding: 100px 0 40px;
+            }
+            .faq-question {
+                padding: 1rem;
+                font-size: 0.9375rem;
+            }
+            .faq-answer {
+                padding: 0 1rem;
+            }
+            .faq-item.active .faq-answer {
+                padding: 0 1rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="noise-overlay"></div>
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="nav-logo-icon">🌲</span>
+                <span class="nav-logo-text">Piney Digital</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html#services" class="nav-link">Services</a>
+                <a href="portfolio.html" class="nav-link">Portfolio</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="pricing.html" class="nav-link">Pricing</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                <a href="index.html#contact" class="nav-cta">
+                    <span>Start Project</span>
+                </a>
+                <button class="nav-menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-content">
+            <a href="index.html#services" class="mobile-link">Services</a>
+            <a href="portfolio.html" class="mobile-link">Portfolio</a>
+            <a href="blog.html" class="mobile-link">Blog</a>
+            <a href="pricing.html" class="mobile-link">Pricing</a>
+            <a href="about.html" class="mobile-link">About</a>
+            <a href="index.html#contact" class="mobile-link">Contact</a>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero -->
+        <section class="faq-hero">
+            <div class="container">
+                <span class="section-label section-label--green">FAQ</span>
+                <h1 class="section-title">Common <span class="gradient-text">Questions</span></h1>
+                <p class="section-description" style="max-width: 700px;">Everything you need to know about websites, SEO, Google ranking, and how Piney Digital works.</p>
+            </div>
+        </section>
+
+        <!-- FAQ Sections -->
+        <section class="section" style="padding-top: 2rem;">
+            <div class="container">
+
+                <!-- General Questions -->
+                <div class="faq-section">
+                    <h2>Getting Started</h2>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>How long does it take to build my website?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Most websites launch within <strong>3-7 business days</strong> after we receive your content (text, photos, logos). The timeline depends on:</p>
+                            <ul>
+                                <li><strong>Package type:</strong> Starter sites (5 pages) typically take 3-5 days. Growth and Pro sites with additional features may take 5-7 days.</li>
+                                <li><strong>Content readiness:</strong> If you have your text and photos ready, we move fast. If you need help writing content, add a few days.</li>
+                                <li><strong>Revision rounds:</strong> Each package includes revision time. Most clients are happy with the first or second round.</li>
+                            </ul>
+                            <div class="pro-tip">
+                                <strong>💡 Pro Tip</strong>
+                                <p>Rush delivery (2-3 days) is available for an additional $250 if you need to launch quickly for an event, opening, or promotion.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What do I need to provide before you start?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Here's what we need to get started:</p>
+                            <ul>
+                                <li><strong>Business name and contact info</strong> — Address, phone, email, hours</li>
+                                <li><strong>Services or products</strong> — What you offer and pricing if you want it listed</li>
+                                <li><strong>Photos</strong> — Of your business, team, products, or work. Stock photos work too if you don't have any.</li>
+                                <li><strong>Any existing branding</strong> — Logo, colors, fonts if you have them</li>
+                                <li><strong>Competitors or examples</strong> — Websites you like (or don't like) for reference</li>
+                            </ul>
+                            <p>If you're missing some of these, that's okay. We can help with content writing ($150) and photography ($200) as add-ons.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Do I own my website?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p><strong>Yes.</strong> You own your content, your domain name, your Google Business Profile — everything.</p>
+                            <p>If you ever decide to leave, I'll hand over all your files, data, and access credentials. No hostage situations, no hidden fees. You built it with me, you own it.</p>
+                            <p>The monthly plan covers ongoing hosting, updates, and support — not ownership. Think of it like renting an apartment with a landlord who actually fixes things when they break.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Can I update the website myself?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>You can, but most clients don't want to. Your monthly plan includes content updates (1-2 hours for Starter/Growth, unlimited for Pro), so you just tell me what to change and I handle it.</p>
+                            <p>If you prefer to edit yourself, I can set up a simple content management system. Just know that part of the value I provide is taking this off your plate — you run your business, I'll handle the website.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SEO & Google Ranking -->
+                <div class="faq-section">
+                    <h2>SEO & Google Ranking</h2>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>How long until my website ranks on Google?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Here's the realistic timeline for local SEO:</p>
+                            <ul>
+                                <li><strong>1-7 days:</strong> Google indexes your site (finds it and adds it to search results)</li>
+                                <li><strong>2-4 weeks:</strong> You start appearing for branded searches (your business name)</li>
+                                <li><strong>1-3 months:</strong> You begin ranking for local, low-competition keywords ("detailing in [your town]")</li>
+                                <li><strong>3-6 months:</strong> More competitive keywords start showing results</li>
+                                <li><strong>6-12 months:</strong> Established rankings for your core services</li>
+                            </ul>
+                            <div class="info-box">
+                                <strong>📍 Local SEO is different from national SEO</strong>
+                                <p>As a local business, you're not competing with the whole country — just other businesses in your area. This means you can rank faster than you might think, especially if you're in a smaller market like Lufkin or Nacogdoches.</p>
+                            </div>
+                            <p>Every site I build includes on-page SEO optimization (meta tags, proper heading structure, fast loading, mobile-friendly design). But SEO is ongoing — the sites that rank best are the ones that get regular updates, new content, and consistent signals over time. That's why monthly plans include ongoing optimization.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What is Google crawling and indexing?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>These are two separate steps in how Google finds and displays your website:</p>
+                            <p><strong>Crawling</strong> is when Google's bots (called "Googlebot") discover your website by following links from other sites or from your sitemap. They read your pages to understand what they're about.</p>
+                            <p><strong>Indexing</strong> is when Google stores your pages in their search database. Only indexed pages can appear in search results.</p>
+                            <p><strong>Here's what I do for you:</strong></p>
+                            <ul>
+                                <li>Submit your sitemap to Google Search Console</li>
+                                <li>Ensure proper internal linking so Googlebot can crawl everything</li>
+                                <li>Use proper meta tags so Google understands each page</li>
+                                <li>Fix any crawl errors that come up</li>
+                                <li>Monitor indexing status and request indexing for new pages</li>
+                            </ul>
+                            <div class="pro-tip">
+                                <strong>🔍 Pro Tip</strong>
+                                <p>You can check if your site is indexed by searching <code>site:yourdomain.com</code> in Google. If pages show up, you're indexed. If nothing appears, we need to submit your sitemap or fix crawl blockers.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What is a sitemap and do I need one?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>A sitemap is an XML file that tells search engines about all the pages on your website. Think of it as a map for Googlebot to follow.</p>
+                            <p><strong>Yes, you need one.</strong> Every site I build includes an automatically generated sitemap (usually at <code>yourdomain.com/sitemap.xml</code>) that gets submitted to Google Search Console.</p>
+                            <p>The sitemap includes:</p>
+                            <ul>
+                                <li>All your important pages</li>
+                                <li>When each page was last updated</li>
+                                <li>How often pages change (daily, weekly, monthly)</li>
+                                <li>Priority levels for different pages</li>
+                            </ul>
+                            <p>This helps Google find and index your content faster and more accurately.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What is Google Business Profile and do I need it?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Google Business Profile (GBP) is your free listing on Google Maps and local search. It's what shows up when someone searches "restaurants near me" or "plumbers in Lufkin."</p>
+                            <p><strong>Yes, you absolutely need one.</strong> For local businesses, GBP is often more important than your website for getting found. It's the #1 way customers discover local businesses on mobile.</p>
+                            <p><strong>What I set up for you:</strong></p>
+                            <ul>
+                                <li>Complete profile with accurate NAP (Name, Address, Phone)</li>
+                                <li>Business categories and attributes</li>
+                                <li>Hours of operation</li>
+                                <li>Photos and logo</li>
+                                <li>Link to your website</li>
+                                <li>Review request system (on Growth and Pro plans)</li>
+                            </ul>
+                            <p>The Growth and Pro plans include ongoing GBP management — posting updates, responding to reviews, and optimizing for local ranking.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Why isn't my website showing up when I search for it?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>There are a few common reasons:</p>
+                            <ul>
+                                <li><strong>It's not indexed yet:</strong> New sites take a few days to a week. Search <code>site:yourdomain.com</code> to check.</li>
+                                <li><strong>You're searching too broadly:</strong> If you search "best pizza" you'll get national results. Search "best pizza Lufkin TX" for local results.</li>
+                                <li><strong>Your site is too new:</strong> Google takes time to trust new domains. Consistent updates and backlinks help build authority.</li>
+                                <li><strong>Technical issues:</strong> Crawl errors, blocked pages, or missing meta tags can prevent indexing.</li>
+                            </ul>
+                            <p>If your site has been live for more than 2 weeks and still isn't showing up, contact me and I'll investigate. Usually it's just a matter of time or a simple fix in Search Console.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What are backlinks and do they matter?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Backlinks are links from other websites to yours. Google sees them as "votes of confidence" — if other sites link to you, you must be trustworthy.</p>
+                            <p><strong>Yes, they matter.</strong> Backlinks are one of the top ranking factors for Google. But quality matters more than quantity.</p>
+                            <p><strong>Good backlinks for local businesses:</strong></p>
+                            <ul>
+                                <li>Local chamber of commerce</li>
+                                <li>Business directories (Yelp, YellowPages, etc.)</li>
+                                <li>Local news sites or blogs</li>
+                                <li>Industry associations</li>
+                                <li>Customer websites (if they mention you)</li>
+                            </ul>
+                            <p>I don't do aggressive link building — it can backfire if done wrong. But I'll help you get listed in legitimate local directories and make sure your NAP (Name, Address, Phone) is consistent everywhere, which indirectly helps with local link signals.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Loyalty & SMS System -->
+                <div class="faq-section">
+                    <h2>Loyalty & SMS System</h2>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>How does the loyalty system work?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>It's a digital punch card system that works through text messages — no app for customers to download.</p>
+                            <p><strong>How it works:</strong></p>
+                            <ol style="color: var(--text-secondary); padding-left: 1.5rem; margin-top: 1rem;">
+                                <li>Customer gives their phone number at checkout</li>
+                                <li>You log the visit in your dashboard (or it auto-logs if integrated)</li>
+                                <li>Customer earns points toward a reward (you set the rules — e.g., "Buy 9, get 10th free")</li>
+                                <li>System sends automatic texts when they're close to a reward</li>
+                                <li>Customer redeems reward on their next visit</li>
+                            </ol>
+                            <p><strong>Why it works:</strong> Customers are 5x more likely to return when they're close to earning a reward. The SMS reminders keep you top-of-mind without being spammy.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Is SMS marketing spam?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>It can be if you do it wrong. Here's how we keep it compliant and welcome:</p>
+                            <ul>
+                                <li><strong>Opt-in only:</strong> Customers must agree to receive texts. No buying lists, no scraping numbers.</li>
+                                <li><strong>Clear value:</strong> Messages are about rewards, appointments, or things they asked for — not random promotions.</li>
+                                <li><strong>Easy opt-out:</strong> Every message includes "Reply STOP to unsubscribe."</li>
+                                <li><strong>Reasonable frequency:</strong> 1-4 messages per month during active campaigns. Never more than one per day.</li>
+                            </ul>
+                            <p>The goal is to be helpful, not annoying. When done right, customers actually want your texts because they're getting value (rewards, reminders, exclusive offers).</p>
+                            <div class="pro-tip">
+                                <strong>📱 Pro Tip</strong>
+                                <p>SMS has a 98% open rate compared to 20% for email. That's why it's included in the Growth and Pro plans — it's the most direct way to reach your customers.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Can I send promotional texts whenever I want?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>You can send promotional texts to customers who opted in for marketing messages. But there are best practices:</p>
+                            <ul>
+                                <li><strong>Segment your list:</strong> Don't blast everyone. Send relevant offers to relevant customers.</li>
+                                <li><strong>Timing matters:</strong> No texts before 8am or after 8pm. Tuesday-Thursday tends to perform best.</li>
+                                <li><strong>Value first:</strong> Every promo should feel like a gift, not a demand. "Exclusive 20% off for loyal customers" works better than "Come spend money."</li>
+                                <li><strong>Track results:</strong> See which messages get responses and which get opt-outs. Adjust accordingly.</li>
+                            </ul>
+                            <p>On Growth and Pro plans, I help you craft messages that convert without burning out your list.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plans & Pricing -->
+                <div class="faq-section">
+                    <h2>Plans & Pricing</h2>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Can I switch plans later?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes. Many clients start on Starter and upgrade to Growth after seeing results. If your business needs change, we adjust the plan accordingly. You're not locked in.</p>
+                            <p>Downgrading is also possible, though some features (like loyalty system data) may be archived if you move to a plan that doesn't include them.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What happens if I cancel?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>After the initial 3-month commitment, you can cancel with 30 days notice. Here's what happens:</p>
+                            <ul>
+                                <li>You keep your website files and content</li>
+                                <li>You keep your domain name (if registered through me, I'll transfer it)</li>
+                                <li>You keep your Google Business Profile</li>
+                                <li>Loyalty system data can be exported in CSV format</li>
+                                <li>Hosting and support end after the 30-day period</li>
+                            </ul>
+                            <p>I'll help you transition smoothly. No games, no hostage situations. If I earned your business, I should be able to keep it with results — not contracts.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Are there any hidden fees?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>No. The monthly price includes:</p>
+                            <ul>
+                                <li>Hosting and SSL certificate</li>
+                                <li>Security updates and backups</li>
+                                <li>Content updates (within your plan limits)</li>
+                                <li>Technical support</li>
+                                <li>Loyalty and SMS features (on Growth/Pro)</li>
+                            </ul>
+                            <p>Add-ons like rush delivery, logo design, or photography are optional and quoted upfront. You'll never get a surprise invoice.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA -->
+                <div class="cta-section">
+                    <h2>Still have questions?</h2>
+                    <p>Every business is different. Let's talk about your specific situation and figure out the best path forward.</p>
+                    <a href="index.html#contact" class="btn btn-primary btn-lg">
+                        <span>Get in Touch</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <span>🌲</span>
+                        <span>Piney Digital</span>
+                    </a>
+                    <p class="footer-tagline">Modern websites for East Texas businesses.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <a href="index.html#services">Services</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="pricing.html">Pricing</a>
+                    <a href="about.html">About</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="index.html#contact">Contact</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms & Conditions</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <a href="tel:9362999897">(936) 299-9897</a>
+                    <a href="mailto:joel@pineydigital.com">joel@pineydigital.com</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Piney Digital. All rights reserved.</p>
+                <p>Built with ❤️ in East Texas</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/modern.js"></script>
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                const isActive = item.classList.contains('active');
+
+                // Close all other items
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+
+                // Toggle current item
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

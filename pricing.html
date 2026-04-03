@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing | Piney Digital</title>
+    <meta name="description" content="Transparent pricing for East Texas businesses. Website packages starting at $99/month with hosting, updates, loyalty system, and SMS marketing included.">
+    <meta name="keywords" content="web design pricing Lufkin, website cost East Texas, affordable website packages, small business website price, loyalty program for business">
+    <meta name="author" content="Joel Escoto">
+    <link rel="canonical" href="https://pineydigital.com/pricing.html">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pineydigital.com/pricing.html">
+    <meta property="og:title" content="Pricing | Piney Digital - Website Packages for East Texas">
+    <meta property="og:description" content="Transparent pricing for East Texas businesses. Monthly plans include hosting, updates, and growth tools starting at $99/month.">
+    <meta property="og:image" content="https://pineydigital.com/images/og-pricing.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pricing | Piney Digital - Website Packages for East Texas">
+    <meta name="twitter:description" content="Transparent pricing for East Texas businesses. Monthly plans include hosting, updates, and growth tools starting at $99/month.">
+    <meta name="twitter:image" content="https://pineydigital.com/images/og-pricing.png">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Pricing",
+        "description": "Transparent website pricing for East Texas businesses with monthly plans",
+        "publisher": {
+            "@type": "LocalBusiness",
+            "name": "Piney Digital",
+            "url": "https://pineydigital.com"
+        },
+        "mainEntity": {
+            "@type": "ItemList",
+            "name": "Website Packages",
+            "itemListElement": [
+                {
+                    "@type": "Service",
+                    "name": "Starter Plan",
+                    "description": "5-page website with hosting and monthly updates",
+                    "offers": {
+                        "@type": "Offer",
+                        "price": "99",
+                        "priceCurrency": "USD"
+                    }
+                },
+                {
+                    "@type": "Service",
+                    "name": "Growth Plan",
+                    "description": "Website with loyalty system, SMS marketing, and review automation",
+                    "offers": {
+                        "@type": "Offer",
+                        "price": "249",
+                        "priceCurrency": "USD"
+                    }
+                },
+                {
+                    "@type": "Service",
+                    "name": "Pro Plan",
+                    "description": "Full platform with booking, gift cards, and unlimited updates",
+                    "offers": {
+                        "@type": "Offer",
+                        "price": "449",
+                        "priceCurrency": "USD"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/modern.css">
+    <style>
+        .pricing-hero {
+            padding: 140px 0 80px;
+            min-height: auto;
+        }
+        .pricing-hero .section-title {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+        }
+        .pricing-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+        .toggle-label {
+            color: var(--text-secondary);
+            font-size: 0.9375rem;
+        }
+        .toggle-badge {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        @media (max-width: 992px) {
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+                margin: 0 auto 3rem;
+            }
+        }
+        .pricing-card {
+            background: rgba(18, 18, 26, 0.95);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 24px;
+            padding: 2rem;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .pricing-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        .pricing-card.featured {
+            border: 2px solid var(--accent);
+            background: linear-gradient(135deg, rgba(18, 18, 26, 0.95) 0%, rgba(30, 60, 40, 0.95) 100%);
+        }
+        .pricing-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
+            color: white;
+            padding: 0.5rem 1.25rem;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            white-space: nowrap;
+        }
+        .pricing-header {
+            margin-bottom: 1.5rem;
+        }
+        .pricing-name {
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+        .pricing-description {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+        .pricing-price {
+            margin-bottom: 1.5rem;
+        }
+        .price-monthly {
+            display: flex;
+            align-items: baseline;
+            gap: 0.25rem;
+        }
+        .price-amount {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            line-height: 1;
+        }
+        .price-period {
+            font-size: 1rem;
+            color: var(--text-secondary);
+        }
+        .price-setup {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            margin-top: 0.5rem;
+        }
+        .price-setup strong {
+            color: var(--text-secondary);
+        }
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+        .pricing-features li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            line-height: 1.6;
+            margin-bottom: 0.75rem;
+        }
+        .pricing-features li svg {
+            flex-shrink: 0;
+            color: var(--accent);
+            margin-top: 0.125rem;
+        }
+        .pricing-features li.disabled {
+            color: var(--text-muted);
+            opacity: 0.5;
+        }
+        .pricing-features li.disabled svg {
+            color: var(--text-muted);
+        }
+        .pricing-cta {
+            margin-top: auto;
+        }
+        .pricing-card .btn {
+            width: 100%;
+        }
+        .pricing-best-for {
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .best-for-label {
+            display: inline-block;
+            background: rgba(45, 127, 78, 0.15);
+            color: var(--accent);
+            padding: 0.375rem 0.75rem;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .comparison-section {
+            background: rgba(18, 18, 26, 0.6);
+            border-radius: 24px;
+            padding: 3rem;
+            margin-bottom: 4rem;
+        }
+        .comparison-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .comparison-header h3 {
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .comparison-header p {
+            color: var(--text-secondary);
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .comparison-table th {
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 600;
+        }
+        .comparison-table th:first-child {
+            width: 40%;
+        }
+        .comparison-table td {
+            color: var(--text-secondary);
+            font-size: 0.9375rem;
+        }
+        .comparison-table td:first-child {
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+        .comparison-table .check {
+            color: var(--accent);
+        }
+        .comparison-table .cross {
+            color: var(--text-muted);
+            opacity: 0.3;
+        }
+        .comparison-table tr.featured-row td {
+            background: rgba(45, 127, 78, 0.1);
+        }
+        .comparison-table .plan-name {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        @media (max-width: 768px) {
+            .comparison-table {
+                font-size: 0.875rem;
+            }
+            .comparison-table th,
+            .comparison-table td {
+                padding: 0.75rem 0.5rem;
+            }
+            .comparison-section {
+                padding: 1.5rem;
+                overflow-x: auto;
+            }
+        }
+        .value-prop {
+            background: linear-gradient(135deg, rgba(45, 127, 78, 0.15) 0%, rgba(30, 90, 142, 0.15) 100%);
+            border: 1px solid var(--accent);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 4rem;
+        }
+        .value-prop h3 {
+            color: var(--text-primary);
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .value-prop p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        .value-prop strong {
+            color: var(--text-primary);
+        }
+        .faq-section {
+            margin-bottom: 4rem;
+        }
+        .faq-item {
+            background: rgba(18, 18, 26, 0.95);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 16px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 1.25rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            color: var(--text-primary);
+            font-size: 1rem;
+            font-weight: 600;
+            text-align: left;
+        }
+        .faq-question:hover {
+            background: rgba(255, 255, 255, 0.02);
+        }
+        .faq-question svg {
+            flex-shrink: 0;
+            transition: transform 0.3s ease;
+        }
+        .faq-item.active .faq-question svg {
+            transform: rotate(180deg);
+        }
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        .faq-item.active .faq-answer {
+            padding: 0 1.5rem 1.5rem;
+            max-height: 500px;
+        }
+        .faq-answer p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+        .faq-answer ul {
+            color: var(--text-secondary);
+            padding-left: 1.5rem;
+            margin-top: 0.75rem;
+        }
+        .faq-answer li {
+            margin-bottom: 0.5rem;
+        }
+        .cta-section {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, rgba(45, 127, 78, 0.1) 0%, rgba(30, 90, 142, 0.1) 100%);
+            border-radius: 24px;
+        }
+        .cta-section h2 {
+            color: var(--text-primary);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .cta-section p {
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+        @media (max-width: 768px) {
+            .pricing-hero {
+                padding: 100px 0 40px;
+            }
+            .pricing-card {
+                padding: 1.5rem;
+            }
+            .price-amount {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="noise-overlay"></div>
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="nav-logo-icon">🌲</span>
+                <span class="nav-logo-text">Piney Digital</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html#services" class="nav-link">Services</a>
+                <a href="portfolio.html" class="nav-link">Portfolio</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="pricing.html" class="nav-link active">Pricing</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                <a href="index.html#contact" class="nav-cta">
+                    <span>Start Project</span>
+                </a>
+                <button class="nav-menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-content">
+            <a href="index.html#services" class="mobile-link">Services</a>
+            <a href="portfolio.html" class="mobile-link">Portfolio</a>
+            <a href="blog.html" class="mobile-link">Blog</a>
+            <a href="pricing.html" class="mobile-link">Pricing</a>
+            <a href="about.html" class="mobile-link">About</a>
+            <a href="index.html#contact" class="mobile-link">Contact</a>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero -->
+        <section class="pricing-hero">
+            <div class="container">
+                <span class="section-label section-label--green">Pricing</span>
+                <h1 class="section-title">Simple pricing, <span class="gradient-text">serious results</span></h1>
+                <p class="section-description" style="max-width: 700px;">Monthly plans that include everything — your website, hosting, updates, and growth tools. No surprise bills, no hourly charges, no confusion.</p>
+                <div class="pricing-toggle">
+                    <span class="toggle-label">All plans include hosting, maintenance, and support</span>
+                    <span class="toggle-badge">No Hidden Fees</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Cards -->
+        <section class="section" style="padding-top: 0;">
+            <div class="container">
+                <div class="pricing-grid">
+                    <!-- Starter -->
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3 class="pricing-name">Starter</h3>
+                            <p class="pricing-description">Get online, look professional, get found</p>
+                        </div>
+                        <div class="pricing-price">
+                            <div class="price-monthly">
+                                <span class="price-amount">$99</span>
+                                <span class="price-period">/month</span>
+                            </div>
+                            <p class="price-setup"><strong>$499</strong> one-time setup</p>
+                        </div>
+                        <ul class="pricing-features">
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                5-page professional website
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                Mobile-responsive design
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                Google Business Profile setup
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                Contact form + Google Maps
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                Basic SEO optimization
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                Hosting & SSL included
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                Monthly updates (1 hour)
+                            </li>
+                            <li class="disabled">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                                Loyalty card system
+                            </li>
+                            <li class="disabled">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                                SMS marketing
+                            </li>
+                            <li class="disabled">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                                Review automation
+                            </li>
+                        </ul>
+                        <div class="pricing-best-for">
+                            <span class="best-for-label">Best for: New businesses getting started</span>
+                        </div>
+                        <div class="pricing-cta">
+                            <a href="index.html#contact" class="btn btn-outline" style="width: 100%;">
+                                Get Started
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Growth (Featured) -->
+                    <div class="pricing-card featured">
+                        <div class="pricing-badge">Most Popular</div>
+                        <div class="pricing-header">
+                            <h3 class="pricing-name">Growth</h3>
+                            <p class="pricing-description">Website + loyalty + SMS + reviews</p>
+                        </div>
+                        <div class="pricing-price">
+                            <div class="price-monthly">
+                                <span class="price-amount">$249</span>
+                                <span class="price-period">/month</span>
+                            </div>
+                            <p class="price-setup"><strong>$799</strong> one-time setup</p>
+                        </div>
+                        <ul class="pricing-features">
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <strong>Everything in Starter</strong>
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                Digital loyalty card system
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                SMS marketing (500 msgs/mo)
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                Automated review requests
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                Customer dashboard
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                Monthly performance report
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                Content updates (2 hrs/mo)
+                            </li>
+                            <li class="disabled">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                                Online booking system
+                            </li>
+                            <li class="disabled">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                                Digital gift cards
+                            </li>
+                        </ul>
+                        <div class="pricing-best-for">
+                            <span class="best-for-label">Best for: Restaurants, salons, retail shops</span>
+                        </div>
+                        <div class="pricing-cta">
+                            <a href="index.html#contact" class="btn btn-primary" style="width: 100%;">
+                                Get Started
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Pro -->
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3 class="pricing-name">Pro</h3>
+                            <p class="pricing-description">Full platform for serious growth</p>
+                        </div>
+                        <div class="pricing-price">
+                            <div class="price-monthly">
+                                <span class="price-amount">$449</span>
+                                <span class="price-period">/month</span>
+                            </div>
+                            <p class="price-setup"><strong>$1,199</strong> one-time setup</p>
+                        </div>
+                        <ul class="pricing-features">
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <strong>Everything in Growth</strong>
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                Online booking system
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                Referral program tools
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                Digital gift cards
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                SMS marketing (2,000 msgs/mo)
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                Unlimited content updates
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                Priority support (same-day)
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                Quarterly strategy calls
+                            </li>
+                        </ul>
+                        <div class="pricing-best-for">
+                            <span class="best-for-label">Best for: Salons, med spas, gyms</span>
+                        </div>
+                        <div class="pricing-cta">
+                            <a href="index.html#contact" class="btn btn-outline" style="width: 100%;">
+                                Get Started
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add-Ons Section -->
+                <div class="addons-section" style="margin-bottom: 3rem;">
+                    <h3 style="color: var(--text-primary); font-size: 1.5rem; margin-bottom: 1.5rem; text-align: center;">Optional Add-Ons</h3>
+                    <p style="color: var(--text-secondary); text-align: center; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">Need something extra? These can be added to any plan. Most are one-time fees, charged separately from your monthly plan.</p>
+                    <div class="addons-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem;">
+                        <div class="addon-card" style="background: rgba(18, 18, 26, 0.95); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 16px; padding: 1.25rem; display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <div style="color: var(--text-primary); font-weight: 600; margin-bottom: 0.25rem;">⚡ Rush Delivery</div>
+                                <div style="color: var(--text-muted); font-size: 0.875rem;">Launch in 2-3 days instead of 5-7</div>
+                            </div>
+                            <div style="color: var(--accent); font-weight: 700; font-size: 1.25rem;">+$250</div>
+                        </div>
+                        <div class="addon-card" style="background: rgba(18, 18, 26, 0.95); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 16px; padding: 1.25rem; display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <div style="color: var(--text-primary); font-weight: 600; margin-bottom: 0.25rem;">🎨 Logo Design</div>
+                                <div style="color: var(--text-muted); font-size: 0.875rem;">Custom logo with 3 concepts + revisions</div>
+                            </div>
+                            <div style="color: var(--accent); font-weight: 700; font-size: 1.25rem;">+$300</div>
+                        </div>
+                        <div class="addon-card" style="background: rgba(18, 18, 26, 0.95); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 16px; padding: 1.25rem; display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <div style="color: var(--text-primary); font-weight: 600; margin-bottom: 0.25rem;">📸 Photography Package</div>
+                                <div style="color: var(--text-muted); font-size: 0.875rem;">On-site photos for your business</div>
+                            </div>
+                            <div style="color: var(--accent); font-weight: 700; font-size: 1.25rem;">+$200</div>
+                        </div>
+                        <div class="addon-card" style="background: rgba(18, 18, 26, 0.95); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 16px; padding: 1.25rem; display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <div style="color: var(--text-primary); font-weight: 600; margin-bottom: 0.25rem;">✍️ Copywriting</div>
+                                <div style="color: var(--text-muted); font-size: 0.875rem;">Professional page content written</div>
+                            </div>
+                            <div style="color: var(--accent); font-weight: 700; font-size: 1.25rem;">+$150</div>
+                        </div>
+                        <div class="addon-card" style="background: rgba(18, 18, 26, 0.95); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 16px; padding: 1.25rem; display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <div style="color: var(--text-primary); font-weight: 600; margin-bottom: 0.25rem;">🗺️ Additional Location Page</div>
+                                <div style="color: var(--text-muted); font-size: 0.875rem;">SEO page for each service area</div>
+                            </div>
+                            <div style="color: var(--accent); font-weight: 700; font-size: 1.25rem;">+$100</div>
+                        </div>
+                        <div class="addon-card" style="background: rgba(18, 18, 26, 0.95); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 16px; padding: 1.25rem; display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <div style="color: var(--text-primary); font-weight: 600; margin-bottom: 0.25rem;">📱 Extra SMS Messages</div>
+                                <div style="color: var(--text-muted); font-size: 0.875rem;">1,000 additional texts per month</div>
+                            </div>
+                            <div style="color: var(--accent); font-weight: 700; font-size: 1.25rem;">+$25/mo</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Value Proposition -->
+                <div class="value-prop">
+                    <h3>💡 Why monthly instead of one-time?</h3>
+                    <p>Most web designers build a site and walk away. Then you're stuck paying hourly rates for every little update, or worse — your site goes stale and stops working.</p>
+                    <p><strong>With a monthly plan, you get:</strong></p>
+                    <ul style="color: var(--text-secondary); padding-left: 1.5rem; margin-bottom: 1rem;">
+                        <li>A website that stays current and secure</li>
+                        <li>Regular updates without hourly charges</li>
+                        <li>Real tools that bring customers back (loyalty, SMS, reviews)</li>
+                        <li>Someone invested in your long-term growth</li>
+                    </ul>
+                    <p><strong>For less than $10/day on the Growth plan</strong>, you're not just buying a website — you're getting a digital growth partner who keeps the system running while you focus on your business.</p>
+                </div>
+
+                <!-- Feature Comparison -->
+                <div class="comparison-section">
+                    <div class="comparison-header">
+                        <h3>Compare Plans</h3>
+                        <p>See what's included at each level</p>
+                    </div>
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th class="plan-name">Starter</th>
+                                <th class="plan-name" style="color: var(--accent);">Growth</th>
+                                <th class="plan-name">Pro</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Website pages</td>
+                                <td>5</td>
+                                <td class="check">5+</td>
+                                <td class="check">Unlimited</td>
+                            </tr>
+                            <tr>
+                                <td>Hosting & SSL</td>
+                                <td class="check">✓</td>
+                                <td class="check">✓</td>
+                                <td class="check">✓</td>
+                            </tr>
+                            <tr>
+                                <td>Google Business setup</td>
+                                <td class="check">✓</td>
+                                <td class="check">✓</td>
+                                <td class="check">✓</td>
+                            </tr>
+                            <tr>
+                                <td>Mobile-responsive</td>
+                                <td class="check">✓</td>
+                                <td class="check">✓</td>
+                                <td class="check">✓</td>
+                            </tr>
+                            <tr>
+                                <td>Basic SEO</td>
+                                <td class="check">✓</td>
+                                <td class="check">✓</td>
+                                <td class="check">✓</td>
+                            </tr>
+                            <tr>
+                                <td>Monthly updates</td>
+                                <td>1 hour</td>
+                                <td>2 hours</td>
+                                <td class="check">Unlimited</td>
+                            </tr>
+                            <tr class="featured-row">
+                                <td>Loyalty card system</td>
+                                <td class="cross">—</td>
+                                <td class="check">✓</td>
+                                <td class="check">✓</td>
+                            </tr>
+                            <tr class="featured-row">
+                                <td>SMS marketing</td>
+                                <td class="cross">—</td>
+                                <td>500/mo</td>
+                                <td>2,000/mo</td>
+                            </tr>
+                            <tr class="featured-row">
+                                <td>Review automation</td>
+                                <td class="cross">—</td>
+                                <td class="check">✓</td>
+                                <td class="check">✓</td>
+                            </tr>
+                            <tr>
+                                <td>Customer dashboard</td>
+                                <td class="cross">—</td>
+                                <td class="check">✓</td>
+                                <td class="check">✓</td>
+                            </tr>
+                            <tr>
+                                <td>Online booking</td>
+                                <td class="cross">—</td>
+                                <td class="cross">—</td>
+                                <td class="check">✓</td>
+                            </tr>
+                            <tr>
+                                <td>Digital gift cards</td>
+                                <td class="cross">—</td>
+                                <td class="cross">—</td>
+                                <td class="check">✓</td>
+                            </tr>
+                            <tr>
+                                <td>Referral program</td>
+                                <td class="cross">—</td>
+                                <td class="cross">—</td>
+                                <td class="check">✓</td>
+                            </tr>
+                            <tr>
+                                <td>Strategy calls</td>
+                                <td class="cross">—</td>
+                                <td class="cross">—</td>
+                                <td>Quarterly</td>
+                            </tr>
+                            <tr>
+                                <td>Support</td>
+                                <td>48-hour</td>
+                                <td>24-hour</td>
+                                <td>Same-day</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- FAQ -->
+                <div class="faq-section">
+                    <div class="section-header" style="margin-bottom: 2rem;">
+                        <span class="section-label">FAQ</span>
+                        <h2 class="section-title">Common <span class="gradient-text">questions</span></h2>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What happens after the first 3 months?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>You're month-to-month after the initial 3-month commitment. No long-term contracts — if the service isn't delivering value, you can cancel with 30 days notice. Most clients stay because the results speak for themselves.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What if I already have a website?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>I can migrate your existing content to a new, faster, more effective site. The setup fee covers the initial build whether we're starting fresh or upgrading. If your current site is already doing well, I can add just the loyalty and SMS tools.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Do I own my website?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes. You own your content, your domain, your Google Business Profile — everything. If you ever want to leave, I'll hand over all your files and data. No hostage situations.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Can I upgrade or downgrade later?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Absolutely. Many clients start on Starter and upgrade to Growth after seeing results. If your business needs change, we adjust the plan accordingly. You're not locked in.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What's the SMS loyalty system?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>It's a customer retention system. Your customers earn points for visits, get automated reminders when they're close to a reward, and you can send targeted promotions. It works through text messages — no app for them to download, no complicated signup. They just give their phone number and the system handles the rest.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What if I need something custom?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>For custom work outside the standard packages — integrations, special features, complex functionality — we scope it separately and give you a clear quote before any work starts. No surprise invoices.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA -->
+                <div class="cta-section">
+                    <h2>Ready to grow?</h2>
+                    <p>Let's talk about which plan fits your business. No pressure, no sales scripts — just an honest conversation about what you need.</p>
+                    <a href="index.html#contact" class="btn btn-primary btn-lg">
+                        <span>Start a Conversation</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <span>🌲</span>
+                        <span>Piney Digital</span>
+                    </a>
+                    <p class="footer-tagline">Modern websites for East Texas businesses.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <a href="index.html#services">Services</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="pricing.html">Pricing</a>
+                    <a href="about.html">About</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="index.html#contact">Contact</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms & Conditions</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <a href="tel:9362999897">(936) 299-9897</a>
+                    <a href="mailto:joel@pineydigital.com">joel@pineydigital.com</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Piney Digital. All rights reserved.</p>
+                <p>Built with ❤️ in East Texas</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/modern.js"></script>
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                const isActive = item.classList.contains('active');
+
+                // Close all other items
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+
+                // Toggle current item
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

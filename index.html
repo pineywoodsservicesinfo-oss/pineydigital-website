@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piney Digital | Modern Web Design for East Texas</title>
+    <meta name="description" content="Professional websites for East Texas businesses. Fast delivery, modern design, monthly plans include hosting, updates, and growth tools. Serving Lufkin, Nacogdoches, Diboll.">
+    <meta name="keywords" content="web design East Texas, web designer Lufkin, affordable websites, small business website, local SEO Lufkin, website design Nacogdoches, loyalty program for business, SMS marketing East Texas">
+    <meta name="author" content="Joel Escoto">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://pineydigital.com/">
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pineydigital.com/">
+    <meta property="og:title" content="Piney Digital | Modern Web Design for East Texas">
+    <meta property="og:description" content="Professional websites for East Texas businesses. Monthly plans include hosting, updates, loyalty system, and SMS marketing.">
+    <meta property="og:image" content="https://pineydigital.com/images/og-image.png">
+    <meta property="og:site_name" content="Piney Digital">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Piney Digital | Modern Web Design for East Texas">
+    <meta name="twitter:description" content="Professional websites for East Texas businesses. Monthly plans include hosting, updates, loyalty system, and SMS marketing.">
+    <meta name="twitter:image" content="https://pineydigital.com/images/og-image.png">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "@id": "https://pineydigital.com",
+        "name": "Piney Digital",
+        "description": "Professional web design and digital growth services for East Texas businesses. Specializing in websites, local SEO, loyalty programs, and SMS marketing.",
+        "url": "https://pineydigital.com",
+        "telephone": "+1-936-299-9897",
+        "email": "joel@pineydigital.com",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Lufkin",
+            "addressRegion": "TX",
+            "addressCountry": "US"
+        },
+        "areaServed": ["Lufkin, TX", "Nacogdoches, TX", "Diboll, TX", "Hudson, TX", "Huntington, TX", "Angelina County"],
+        "priceRange": "$$",
+        "openingHours": "Mo-Fr 09:00-18:00",
+        "sameAs": [],
+        "founder": {
+            "@type": "Person",
+            "name": "Joel Escoto",
+            "jobTitle": "Web Developer & Founder"
+        },
+        "serviceType": ["Web Design", "Website Development", "Local SEO", "Loyalty Programs", "SMS Marketing", "Digital Marketing"],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Website Packages",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Starter Plan",
+                        "description": "5-page professional website with hosting and monthly updates"
+                    },
+                    "price": "99",
+                    "priceCurrency": "USD",
+                    "priceSpecification": {
+                        "price": "99",
+                        "priceCurrency": "USD",
+                        "billingDuration": "P1M"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Growth Plan",
+                        "description": "Website with loyalty system, SMS marketing, and review automation"
+                    },
+                    "price": "249",
+                    "priceCurrency": "USD",
+                    "priceSpecification": {
+                        "price": "249",
+                        "priceCurrency": "USD",
+                        "billingDuration": "P1M"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Pro Plan",
+                        "description": "Full platform with booking, gift cards, and unlimited updates"
+                    },
+                    "price": "449",
+                    "priceCurrency": "USD",
+                    "priceSpecification": {
+                        "price": "449",
+                        "priceCurrency": "USD",
+                        "billingDuration": "P1M"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+
+    <link rel="stylesheet" href="css/modern.css">
+</head>
+<body>
+    <!-- Noise Overlay -->
+    <div class="noise-overlay"></div>
+
+    <!-- Cursor Glow -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="nav-logo-icon">🌲</span>
+                <span class="nav-logo-text">Piney Digital</span>
+            </a>
+            <div class="nav-links">
+                <a href="#services" class="nav-link">Services</a>
+                <a href="portfolio.html" class="nav-link">Portfolio</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="faq.html" class="nav-link">FAQ</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                <a href="#contact" class="nav-cta">
+                    <span>Start Project</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+                <button class="nav-menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-content">
+            <a href="#services" class="mobile-link">Services</a>
+            <a href="portfolio.html" class="mobile-link">Portfolio</a>
+            <a href="blog.html" class="mobile-link">Blog</a>
+            <a href="#pricing" class="mobile-link">Pricing</a>
+            <a href="#about" class="mobile-link">About</a>
+            <a href="faq.html" class="mobile-link">FAQ</a>
+            <a href="#contact" class="mobile-link">Contact</a>
+            <a href="#contact" class="mobile-cta">Start Project</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="hero-gradient"></div>
+            <div class="hero-grid"></div>
+            <div class="hero-blob blob-1"></div>
+            <div class="hero-blob blob-2"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-badge animate-in">
+                <span class="badge-dot"></span>
+                <span>Professional Web Design for East Texas</span>
+            </div>
+            <h1 class="hero-title animate-in">
+                <span class="title-line">Websites built to</span>
+                <span class="title-line gradient-text">win customers.</span>
+            </h1>
+            <p class="hero-description animate-in">
+                Custom websites for local businesses. Fast delivery, clean design,
+                and pricing that won't break your budget.
+            </p>
+            <div class="hero-stats animate-in">
+                <div class="stat-item">
+                    <span class="stat-number" data-value="7">0</span>
+                    <span class="stat-label">Day Delivery</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number" data-value="20">0</span><span class="stat-percent">% Off Launch</span>
+                    <span class="stat-label">Intro Pricing</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number" data-value="100">0</span><span class="stat-percent">% Mobile-Ready</span>
+                    <span class="stat-label">Every Site</span>
+                </div>
+            </div>
+            <div class="hero-cta animate-in">
+                <a href="#pricing" class="btn btn-primary btn-lg magnetic">
+                    <span>View Packages</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+                <a href="portfolio.html" class="btn btn-ghost btn-lg magnetic">
+                    <span>See Our Work</span>
+                </a>
+            </div>
+            <div class="hero-scroll">
+                <div class="scroll-indicator">
+                    <span>Scroll to explore</span>
+                    <div class="scroll-line"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Bento Grid -->
+    <section class="section services" id="services">
+        <div class="container">
+            <div class="section-header animate-in">
+                <span class="section-label">Services</span>
+                <h2 class="section-title">Everything you need to <span class="gradient-text">win online</span></h2>
+            </div>
+
+            <div class="bento-grid">
+                <!-- Large Card -->
+                <div class="bento-card bento-lg animate-in">
+                    <div class="card-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                    </div>
+                    <h3>Web Design</h3>
+                    <p>Custom websites built from scratch. No templates, no shortcuts. Every site is designed to convert visitors into customers.</p>
+                    <div class="card-features">
+                        <span>Mobile-First</span>
+                        <span>Fast Loading</span>
+                        <span>SEO Optimized</span>
+                    </div>
+                </div>
+
+                <!-- Medium Cards Row -->
+                <div class="bento-card bento-md animate-in">
+                    <div class="card-icon small">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </div>
+                    <h3>Local SEO</h3>
+                    <p>Get found by customers searching for your services in Lufkin, Nacogdoches, and across East Texas.</p>
+                    <div class="card-arrow">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="7" y1="17" x2="17" y2="7"></line>
+                            <polyline points="7 7 17 7 17 17"></polyline>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="bento-card bento-md animate-in">
+                    <div class="card-icon small">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                            <path d="M2 17l10 5 10-5"></path>
+                            <path d="M2 12l10 5 10-5"></path>
+                        </svg>
+                    </div>
+                    <h3>Branding</h3>
+                    <p>Logo design and visual identity that makes your business memorable.</p>
+                    <div class="card-arrow">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="7" y1="17" x2="17" y2="7"></line>
+                            <polyline points="7 7 17 7 17 17"></polyline>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Bottom Row -->
+                <div class="bento-card bento-sm animate-in">
+                    <h4>🚀 3-7 Day Delivery</h4>
+                    <p>Fast turnaround, not months</p>
+                </div>
+
+                <div class="bento-card bento-sm animate-in">
+                    <h4>💬 Direct Communication</h4>
+                    <p>Work directly with Joel</p>
+                </div>
+
+                <div class="bento-card bento-sm animate-in">
+                    <h4>📍 East Texas Focus</h4>
+                    <p>Local market expertise</p>
+                </div>
+
+                <div class="bento-card bento-sm animate-in featured-card">
+                    <h4>Starting at $640</h4>
+                    <p>20% launch discount active</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Section -->
+    <section class="section work" id="work">
+        <div class="container">
+            <div class="section-header animate-in">
+                <span class="section-label">Recent Work</span>
+                <h2 class="section-title">Live sites with <span class="gradient-text">measurable results</span></h2>
+                <p class="section-description">Every build is designed to convert. Here's proof.</p>
+            </div>
+
+            <div class="work-grid">
+                <article class="work-card animate-in">
+                    <div class="work-image">
+                        <div class="work-placeholder" style="--accent: #2d7f4e;">
+                            <span>🚗</span>
+                        </div>
+                        <div class="work-overlay">
+                            <a href="https://pineywoodsdetailing.com" target="_blank" rel="noopener" class="work-link">
+                                View Site
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                                    <polyline points="7 7 17 7 17 17"></polyline>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="work-content">
+                        <span class="work-category">Automotive</span>
+                        <h3 class="work-title">Pineywoods Detailing</h3>
+                        <p class="work-result">
+                            <span class="result-badge">#1 Google Ranking</span>
+                            <span class="result-text">8-10 leads per week</span>
+                        </p>
+                    </div>
+                </article>
+
+                <article class="work-card animate-in">
+                    <div class="work-image">
+                        <div class="work-placeholder" style="--accent: #c9a227;">
+                            <span>🌿</span>
+                        </div>
+                        <div class="work-overlay">
+                            <a href="https://herradurasmockup.netlify.app/" target="_blank" rel="noopener" class="work-link">
+                                View Design
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                                    <polyline points="7 7 17 7 17 17"></polyline>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="work-content">
+                        <span class="work-category">Restaurant</span>
+                        <h3 class="work-title">Herraduras Mexican Grill</h3>
+                        <p class="work-result">
+                            <span class="result-badge">Design Concept</span>
+                            <span class="result-text">Premium menu experience</span>
+                        </p>
+                    </div>
+                </article>
+
+                <article class="work-card animate-in">
+                    <div class="work-image">
+                        <div class="work-placeholder coming-soon" style="--accent: #1e5a8e;">
+                            <span>🎯</span>
+                        </div>
+                    </div>
+                    <div class="work-content">
+                        <span class="work-category">Your Industry</span>
+                        <h3 class="work-title">Your Business Here</h3>
+                        <p class="work-result">
+                            <span class="result-badge">Next Project</span>
+                            <span class="result-text">Custom build for you</span>
+                        </p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="work-cta animate-in">
+                <a href="portfolio.html" class="btn btn-outline btn-lg magnetic">
+                    <span>View Full Portfolio</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section pricing" id="pricing">
+        <div class="container">
+            <div class="section-header animate-in">
+                <span class="section-label">Pricing</span>
+                <h2 class="section-title">Simple, transparent <span class="gradient-text">pricing</span></h2>
+                <p class="section-description">Monthly plans with a one-time setup fee. No hidden costs.</p>
+            </div>
+
+            <div class="pricing-grid">
+                <!-- Starter -->
+                <div class="pricing-card animate-in">
+                    <div class="pricing-header">
+                        <h3 class="pricing-name">Starter</h3>
+                        <p class="pricing-description">Perfect for new businesses</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="price-current">$99</span>
+                        <span class="price-period">/month</span>
+                    </div>
+                    <p style="text-align: center; color: var(--text-muted); font-size: 0.875rem; margin-top: -0.5rem; margin-bottom: 1rem;">+ $499 one-time setup</p>
+                    <ul class="pricing-features">
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Single-page website</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Mobile-responsive</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Contact form</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Google Maps</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Basic SEO</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Monthly updates</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Hosting included</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline btn-block magnetic">
+                        Get Started
+                    </a>
+                </div>
+
+                <!-- Growth (Most Popular) -->
+                <div class="pricing-card featured animate-in">
+                    <div class="pricing-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3 class="pricing-name">Growth</h3>
+                        <p class="pricing-description">Everything you need to compete</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="price-current">$249</span>
+                        <span class="price-period">/month</span>
+                    </div>
+                    <p style="text-align: center; color: var(--text-muted); font-size: 0.875rem; margin-top: -0.5rem; margin-bottom: 1rem;">+ $799 one-time setup</p>
+                    <ul class="pricing-features">
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg><strong>Everything in Starter</strong></li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>3-5 pages</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Photo gallery</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Booking form</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Testimonials section</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Google Business setup</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Priority support</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary btn-block magnetic">
+                        Get Started
+                    </a>
+                </div>
+
+                <!-- Pro -->
+                <div class="pricing-card animate-in">
+                    <div class="pricing-header">
+                        <h3 class="pricing-name">Pro</h3>
+                        <p class="pricing-description">Complete digital presence</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="price-current">$449</span>
+                        <span class="price-period">/month</span>
+                    </div>
+                    <p style="text-align: center; color: var(--text-muted); font-size: 0.875rem; margin-top: -0.5rem; margin-bottom: 1rem;">+ $1,199 one-time setup</p>
+                    <ul class="pricing-features">
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg><strong>Everything in Growth</strong></li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Blog setup</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Advanced SEO</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Email marketing</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Social media integration</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Analytics dashboard</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Dedicated support</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline btn-block magnetic">
+                        Get Started
+                    </a>
+                </div>
+            </div>
+
+            <div class="pricing-addons animate-in">
+                <h4>Add-Ons</h4>
+                <div class="addons-grid">
+                    <div class="addon-item">
+                        <span class="addon-name">⚡ Rush Delivery (2-3 days)</span>
+                        <span class="addon-price">+$250</span>
+                    </div>
+                    <div class="addon-item">
+                        <span class="addon-name">🎨 Logo Design</span>
+                        <span class="addon-price">+$300</span>
+                    </div>
+                    <div class="addon-item">
+                        <span class="addon-name">📱 Piney Outreach System</span>
+                        <span class="addon-price">+$99/mo</span>
+                    </div>
+                    <div class="addon-item">
+                        <span class="addon-name">🛠️ Custom Development</span>
+                        <span class="addon-price">Custom quote</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content animate-in">
+                    <span class="section-label">About</span>
+                    <h2 class="section-title">I'm <span class="gradient-text">Joel Escoto</span></h2>
+                    <p class="about-text">
+                        I build websites for local businesses in East Texas. Piney Digital exists because too many good businesses have bad websites — or none at all.
+                    </p>
+                    <p class="about-text">
+                        You deserve a site that looks professional, loads fast, and actually brings in customers. That's what I deliver.
+                    </p>
+                    <div class="about-stats">
+                        <div class="about-stat">
+                            <span class="stat-number" data-value="3">0</span><span class="stat-suffix">-7</span>
+                            <span class="stat-label">Days to Launch</span>
+                        </div>
+                        <div class="about-stat">
+                            <span class="stat-number" data-value="100">0</span><span class="stat-suffix">%</span>
+                            <span class="stat-label">Mobile-Optimized</span>
+                        </div>
+                        <div class="about-stat">
+                            <span class="stat-number" data-value="20">0</span><span class="stat-suffix">% Off</span>
+                            <span class="stat-label">Launch Discount</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual animate-in">
+                    <div class="about-card">
+                        <div class="card-glow"></div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <span class="card-dot"></span>
+                                <span class="card-dot"></span>
+                                <span class="card-dot"></span>
+                            </div>
+                            <div class="card-lines">
+                                <div class="card-line"></div>
+                                <div class="card-line short"></div>
+                                <div class="card-line"></div>
+                                <div class="card-line short"></div>
+                                <div class="card-line medium"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-content animate-in">
+                    <span class="section-label">Contact</span>
+                    <h2 class="section-title">Start your project <span class="gradient-text">today</span></h2>
+                    <p class="contact-text">
+                        Fill out the form and I'll respond within 24 hours. Or call directly — I answer my own phone.
+                    </p>
+                    <div class="contact-info">
+                        <a href="tel:9362999897" class="contact-item magnetic">
+                            <div class="contact-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                            </div>
+                            <div class="contact-text">
+                                <span class="contact-label">Phone</span>
+                                <span class="contact-value">(936) 299-9897</span>
+                            </div>
+                        </a>
+                        <a href="mailto:joel@pineydigital.com" class="contact-item magnetic">
+                            <div class="contact-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </div>
+                            <div class="contact-text">
+                                <span class="contact-label">Email</span>
+                                <span class="contact-value">joel@pineydigital.com</span>
+                            </div>
+                        </a>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                            </div>
+                            <div class="contact-text">
+                                <span class="contact-label">Service Area</span>
+                                <span class="contact-value">East Texas</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper animate-in">
+                    <form id="contactForm" class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required placeholder="Your name">
+                            </div>
+                            <div class="form-group">
+                                <label for="business">Business</label>
+                                <input type="text" id="business" name="business" placeholder="Business name">
+                            </div>
+                        </div>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required placeholder="your@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input type="tel" id="phone" name="phone" placeholder="(936) 000-0000">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="package">Package Interest</label>
+                            <select id="package" name="package">
+                                <option value="">Select a package...</option>
+                                <option value="starter">Starter - $99/mo + $499 setup</option>
+                                <option value="growth">Growth - $249/mo + $799 setup (Most Popular)</option>
+                                <option value="pro">Pro - $449/mo + $1,199 setup</option>
+                                <option value="unsure">Not sure yet</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Project Details</label>
+                            <textarea id="message" name="message" rows="4" required placeholder="What does your business do? What are you hoping to achieve with a new website?"></textarea>
+                        </div>
+                        <div class="form-checkbox">
+                            <input type="checkbox" id="sms-consent" name="sms-consent" value="yes">
+                            <label for="sms-consent"><strong>Text me</strong> about web design services and special offers. Message frequency varies. Reply STOP to cancel. <a href="terms.html" target="_blank">View Terms</a>. <em style="color: var(--text-muted);">(Optional)</em></label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block btn-lg magnetic">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-loading">Sending...</span>
+                        </button>
+                        <div id="formMessage" class="form-message"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#hero" class="footer-logo">
+                        <span>🌲</span>
+                        <span>Piney Digital</span>
+                    </a>
+                    <p class="footer-tagline">Professional websites for East Texas businesses.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <a href="#services">Services</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#about">About</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms & Conditions</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <a href="tel:9362999897">(936) 299-9897</a>
+                    <a href="mailto:joel@pineydigital.com">joel@pineydigital.com</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Piney Digital. All rights reserved.</p>
+                <p>Built with ❤️ in East Texas</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/modern.js"></script>
+</body>
+</html>
