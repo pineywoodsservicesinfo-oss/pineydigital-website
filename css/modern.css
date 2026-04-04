@@ -122,6 +122,57 @@ body {
   opacity: 1;
 }
 
+/* Hero Spotlight Effect */
+.hero-spotlight {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 400px;
+  background: radial-gradient(ellipse at center, rgba(16, 185, 129, 0.15) 0%, rgba(16, 185, 129, 0.05) 40%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+  animation: spotlight-pulse 4s ease-in-out infinite;
+}
+
+@keyframes spotlight-pulse {
+  0%, 100% {
+    opacity: 0.6;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
+
+/* Title spotlight shine effect */
+.hero-title {
+  position: relative;
+}
+
+.hero-title::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  animation: title-shine 3s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes title-shine {
+  0% {
+    left: -100%;
+  }
+  50%, 100% {
+    left: 150%;
+  }
+}
+
 /* Selection */
 ::selection {
   background: var(--accent-primary);
