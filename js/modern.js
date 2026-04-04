@@ -374,11 +374,11 @@ document.addEventListener('DOMContentLoaded', function() {
     if (spotlightEntrance && !hasSeenSpotlight) {
         spotlightEntrance.classList.remove('hidden');
 
-        // Mark as seen after animation completes
+        // Mark as seen and hide after animation completes
         setTimeout(() => {
             sessionStorage.setItem('spotlightSeen', 'true');
             spotlightEntrance.classList.add('hidden');
-        }, 4500); // Total animation duration
+        }, 4000); // Total animation duration
     }
 
     // ==========================================
