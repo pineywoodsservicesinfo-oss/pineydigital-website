@@ -365,32 +365,11 @@ document.addEventListener('DOMContentLoaded', function() {
     gsap.from('.hero-cta', { opacity: 0, y: 30, duration: 0.6, delay: 1.2 });
 
     // ==========================================
-    // SPOTLIGHT ENTRANCE EFFECT
-    // ==========================================
-    const spotlightEntrance = document.getElementById('spotlightEntrance');
-    const hasSeenSpotlight = sessionStorage.getItem('spotlightSeen');
-
-    // Only show spotlight on homepage and once per session
-    if (spotlightEntrance && !hasSeenSpotlight) {
-        spotlightEntrance.classList.remove('hidden');
-
-        // Mark as seen and hide after animation completes
-        setTimeout(() => {
-            sessionStorage.setItem('spotlightSeen', 'true');
-            spotlightEntrance.classList.add('hidden');
-        }, 4000); // Total animation duration
-    }
-
-    // ==========================================
     // PREFERS REDUCED MOTION
     // ==========================================
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         gsap.globalTimeline.clear();
         ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-        // Hide spotlight for reduced motion preference
-        if (spotlightEntrance) {
-            spotlightEntrance.classList.add('hidden');
-        }
     }
 
     console.log('🌲 Piney Digital - Modern 2026 Design Loaded');
