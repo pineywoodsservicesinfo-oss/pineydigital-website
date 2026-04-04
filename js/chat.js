@@ -165,22 +165,21 @@
         const loadingEl = addMessage('', false, true);
 
         try {
-            const response = await fetch(`${ASSISTANT_URL}/chat`, {
+            const response = await fetch(`${ASSISTANT_URL}/api/chat`, {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json',
-                    'X-Session-ID': sessionId
+                    'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
                     message: message,
-                    history: history.slice(-10) // Send last 10 messages for context
+                    sessionId: sessionId
                 })
             });
 
             if (!response.ok) throw new Error('Network response was not ok');
 
             const data = await response.json();
-            const aiResponse = data.response || data.message || "I'm not sure about that. Can you ask about our services?";
+            const aiResponse = data.message || "I'm not sure about that. Can you ask about our services?";
 
             // Remove loading indicator
             loadingEl.remove();
