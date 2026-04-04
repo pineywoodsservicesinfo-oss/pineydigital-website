@@ -218,11 +218,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
             try {
                 const formData = new FormData(this);
+                const data = Object.fromEntries(formData.entries());
+
                 const response = await fetch(this.action, {
                     method: 'POST',
-                    body: formData,
+                    body: JSON.stringify(data),
                     headers: {
-                        'Accept': 'application/json'
+                        'Content-Type': 'application/json'
                     }
                 });
 

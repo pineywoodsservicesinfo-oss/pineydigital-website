@@ -299,6 +299,61 @@ async function sendLeadEmail(lead) {
   console.log(`✉️ Lead email sent: ${lead.name} (${lead.email})`);
 }
 
+// ── CONTACT FORM ENDPOINT ─────────────────────────────────────
+app.post('/api/contact', async (req, res) => {
+  const { name, email, phone, package, business, message, 'sms-consent': smsConsent } = req.body;
+
+  if (!name || !email || !message) {
+    return res.status(400).json({ error: 'Name, email, and message are required' });
+  }
+
+  try {
+    const row = (label, value) => value
+      ? `<tr><td style="padding:8px 0;color:#6b7280;font-size:13px;width:140px;">${label}</td><td style="padding:8px 0;color:#111827;font-weight:500;">${value}</td></tr>`
+      : '';
+
+    await resend.emails.send({
+      from: `Piney Digital Contact <${FROM_EMAIL}>`,
+      to: YOUR_EMAIL,
+      subject: `📬 New Contact Form Submission — ${name}`,
+      html: `
+        <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;">
+          <div style="background:linear-gradient(135deg,#1e4d2b,#2d7a47);padding:24px;border-radius:12px 12px 0 0;">
+            <h1 style="color:#fff;margin:0;font-size:20px;">🌲 Piney Digital — Contact Form</h1>
+            <p style="color:rgba(255,255,255,0.8);margin:6px 0 0;font-size:14px;">New submission from pineydigital.com</p>
+          </div>
+          <div style="background:#f9fafb;padding:24px;border:1px solid #e5e7eb;border-top:none;border-radius:0 0 12px 12px;">
+            <h3 style="margin:0 0 12px;color:#1e4d2b;font-size:15px;">👤 Contact Info</h3>
+            <table style="width:100%;border-collapse:collapse;background:#fff;padding:12px;border-radius:8px;border:1px solid #e5e7eb;">
+              <tbody>
+                ${row('Name', name)}
+                ${row('Email', `<a href="mailto:${email}" style="color:#1e4d2b;">${email}</a>`)}
+                ${row('Phone', phone ? `<a href="tel:${phone}" style="color:#1e4d2b;">${phone}</a>` : '')}
+                ${row('Package Interest', package)}
+                ${row('Business', business)}
+                ${row('SMS Consent', smsConsent === 'yes' ? '✅ Yes, opted in for SMS' : 'No')}
+              </tbody>
+            </table>
+            <h3 style="margin:20px 0 12px;color:#1e4d2b;font-size:15px;">💬 Message</h3>
+            <div style="background:#fff;padding:14px;border-radius:8px;border:1px solid #e5e7eb;">
+              <p style="margin:0;line-height:1.6;color:#374151;white-space:pre-wrap;">${message}</p>
+            </div>
+            <div style="text-align:center;margin-top:24px;display:flex;gap:12px;justify-content:center;">
+              <a href="mailto:${email}" style="background:#1e4d2b;color:#fff;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:600;">Reply to ${name}</a>
+              ${phone ? `<a href="tel:${phone}" style="background:#f0fdf4;color:#1e4d2b;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:600;border:1px solid #86efac;">Call ${name}</a>` : ''}
+            </div>
+            <p style="color:#9ca3af;font-size:12px;text-align:center;margin-top:20px;">Sent from Piney Digital Contact Form • pineydigital.com</p>
+          </div>
+        </div>`,
+    });
+    console.log(`✉️ Contact form submitted: ${name} (${email})`);
+    res.json({ success: true, message: 'Thanks! Joel will contact you within 24 hours.' });
+  } catch (error) {
+    console.error('Contact form error:', error);
+    res.status(500).json({ error: 'Failed to send message. Please try again.' });
+  }
+});
+
 app.delete('/api/chat/:sessionId', (req, res) => {
   delete conversations[req.params.sessionId];
   res.json({ success: true });

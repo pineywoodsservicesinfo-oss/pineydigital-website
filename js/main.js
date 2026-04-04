@@ -221,21 +221,21 @@ document.addEventListener('DOMContentLoaded', function() {
             // Show loading state
             const submitButton = contactForm.querySelector('button[type="submit"]');
             submitButton.disabled = true;
-            
+
             try {
-                // Send to Formspree
-                const response = await fetch('https://formspree.io/f/xnjbbjnl', {
+                // Send to Railway backend
+                const response = await fetch('https://pineydigital-production.up.railway.app/api/contact', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
                     },
                     body: JSON.stringify(formData)
                 });
-                
+
                 if (response.ok) {
                     showMessage('Thank you! Your quote request has been received. We\'ll get back to you within 24 hours!', 'success');
                     contactForm.reset();
-                    
+
                     // Auto-hide success message after 8 seconds
                     setTimeout(() => {
                         formMessage.style.display = 'none';
