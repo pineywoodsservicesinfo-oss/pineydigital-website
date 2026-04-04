@@ -130,9 +130,9 @@ body {
   transform: translate(-50%, -50%);
   width: 800px;
   height: 400px;
-  background: radial-gradient(ellipse at center, rgba(16, 185, 129, 0.15) 0%, rgba(16, 185, 129, 0.05) 40%, transparent 70%);
+  background: radial-gradient(ellipse at center, rgba(16, 185, 129, 0.2) 0%, rgba(16, 185, 129, 0.1) 40%, transparent 70%);
   pointer-events: none;
-  z-index: 0;
+  z-index: 1;
   animation: spotlight-pulse 4s ease-in-out infinite;
 }
 
@@ -577,6 +577,8 @@ h4 { font-size: 1.125rem; }
   margin: 0 auto;
   padding: 0 24px;
   text-align: center;
+  position: relative;
+  z-index: 2;
 }
 
 .hero-badge {
