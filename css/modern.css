@@ -393,7 +393,7 @@ h4 { font-size: 1.125rem; }
   right: 0;
   bottom: 0;
   background: var(--bg-primary);
-  z-index: 999;
+  z-index: 1001;
   padding: 80px 24px 24px;
 }
 
