@@ -11,7 +11,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 // ── YOUR DETAILS ─────────────────────────────────────────────
 const YOUR_EMAIL = 'joel@pineydigital.com';
-const FROM_EMAIL = 'assistant@pineydigital.com';
+const FROM_EMAIL = 'joel@pineydigital.com';  // Use your personal email
 const CALENDLY_LINK = 'https://calendly.com/pineywoodsservices-info/30min';
 // ─────────────────────────────────────────────────────────────
 
