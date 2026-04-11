@@ -359,5 +359,112 @@ app.delete('/api/chat/:sessionId', (req, res) => {
   res.json({ success: true });
 });
 
+// ═══════════════════════════════════════════════════════════════
+// VAPI WEBHOOKS — AI Voice Call Callbacks
+// ═══════════════════════════════════════════════════════════════
+
+app.post('/webhook/vapi/call-ended', async (req, res) => {
+  const data = req.body || {};
+  console.log('📞 Vapi call-ended webhook received');
+  console.log(JSON.stringify(data, null, 2).slice(0, 500));
+
+  const callData = data.call || {};
+  const callId = callData.id || 'unknown';
+  const callStatus = callData.status || 'ended';
+  const transcript = callData.transcript || '';
+  const summary = callData.summary || '';
+  const duration = callData.durationSeconds || 0;
+  const customerNum = data.customer?.number || '';
+
+  console.log(`  Call ID: ${callId}`);
+  console.log(`  Status: ${callStatus}`);
+  console.log(`  Duration: ${duration}s`);
+  console.log(`  Customer: ${customerNum}`);
+
+  // ── Determine call outcome ───────────────────────────────
+  let outcome = 'called';
+  let isHotLead = false;
+
+  if (callStatus === 'transferred') {
+    outcome = 'transferred';
+    isHotLead = true;
+  } else if (callStatus === 'voicemail') {
+    outcome = 'voicemail';
+  } else if (callStatus === 'no-answer') {
+    outcome = 'no_answer';
+  } else if (transcript) {
+    const lower = transcript.toLowerCase();
+    if (lower.includes('interested') || lower.includes('yes') && lower.includes('call back') || lower.includes('connect me')) {
+      outcome = 'interested';
+      isHotLead = true;
+    } else if (lower.includes('not interested') || lower.includes('stop calling')) {
+      outcome = 'declined';
+    }
+  }
+
+  // ── Send email notification for hot leads ───────────────
+  if (isHotLead || callStatus === 'transferred') {
+    try {
+      await resend.emails.send({
+        from: `Piney Digital Calls <${FROM_EMAIL}>`,
+        to: YOUR_EMAIL,
+        subject: `🔥 HOT LEAD from AI Call — ${customerNum}`,
+        html: `
+          <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;">
+            <div style="background:linear-gradient(135deg,#dc2626,#ea580c);padding:24px;border-radius:12px 12px 0 0;">
+              <h1 style="color:#fff;margin:0;font-size:20px;">🔥 HOT LEAD — AI Call</h1>
+              <p style="color:rgba(255,255,255,0.9);margin:6px 0 0;font-size:14px;">A lead wants to talk to you!</p>
+            </div>
+            <div style="background:#f9fafb;padding:24px;border:1px solid #e5e7eb;border-top:none;border-radius:0 0 12px 12px;">
+              <h3 style="margin:0 0 12px;color:#dc2626;font-size:15px;">📞 Call Details</h3>
+              <table style="width:100%;border-collapse:collapse;background:#fff;padding:12px;border-radius:8px;border:1px solid #e5e7eb;">
+                <tbody>
+                  <tr><td style="padding:8px 0;color:#6b7280;font-size:13px;width:140px;">Status</td><td style="padding:8px 0;color:#111827;font-weight:600;text-transform:uppercase;">${outcome}</td></tr>
+                  <tr><td style="padding:8px 0;color:#6b7280;font-size:13px;">Phone</td><td style="padding:8px 0;color:#111827;font-weight:500;"><a href="tel:${customerNum}" style="color:#1e4d2b;">${customerNum}</a></td></tr>
+                  <tr><td style="padding:8px 0;color:#6b7280;font-size:13px;">Duration</td><td style="padding:8px 0;color:#111827;">${Math.floor(duration / 60)}m ${duration % 60}s</td></tr>
+                  <tr><td style="padding:8px 0;color:#6b7280;font-size:13px;">Call ID</td><td style="padding:8px 0;color:#6b7280;font-size:12px;">${callId}</td></tr>
+                </tbody>
+              </table>
+              ${summary ? `
+              <h3 style="margin:20px 0 12px;color:#1e4d2b;font-size:15px;">📝 Summary</h3>
+              <div style="background:#fff;padding:14px;border-radius:8px;border:1px solid #e5e7eb;">
+                <p style="margin:0;line-height:1.6;color:#374151;">${summary}</p>
+              </div>` : ''}
+              ${transcript ? `
+              <h3 style="margin:20px 0 12px;color:#1e4d2b;font-size:15px;">💬 Transcript</h3>
+              <div style="background:#fff;padding:14px;border-radius:8px;border:1px solid #e5e7eb;max-height:200px;overflow-y:auto;">
+                <p style="margin:0;line-height:1.5;color:#374151;white-space:pre-wrap;font-size:13px;">${transcript.slice(0, 1000)}</p>
+              </div>` : ''}
+              <div style="text-align:center;margin-top:24px;">
+                <a href="tel:${customerNum}" style="background:#dc2626;color:#fff;padding:14px 28px;border-radius:8px;text-decoration:none;font-weight:600;display:inline-block;">📞 Call Lead Now</a>
+              </div>
+              <p style="color:#9ca3af;font-size:12px;text-align:center;margin-top:20px;">AI Voice Call from Piney Digital • Vapi ID: ${callId}</p>
+            </div>
+          </div>`,
+      });
+      console.log(`📧 Hot lead email sent for call ${callId}`);
+    } catch (error) {
+      console.error('Failed to send hot lead email:', error);
+    }
+  }
+
+  res.json({ status: 'ok', outcome, callId });
+});
+
+app.post('/webhook/vapi/transcript', (req, res) => {
+  console.log('📝 Vapi transcript update');
+  res.json({ status: 'ok' });
+});
+
+app.post('/webhook/vapi/status', (req, res) => {
+  const data = req.body || {};
+  console.log(`📞 Vapi status: ${data.call?.status || 'unknown'}`);
+  res.json({ status: 'ok' });
+});
+
+app.get('/webhook/health', (req, res) => {
+  res.json({ status: 'ok', service: 'Piney Digital Server', time: new Date().toISOString() });
+});
+
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => console.log(`✅ Piney Digital AI running on port ${PORT}`));
