@@ -82,14 +82,57 @@
                     <!-- Chat Messages -->
                     <div id="piney-chat-messages" class="piney-chat-messages">
                         <div class="piney-chat-welcome">
-                            <p>Hi! I'm Piney AI. Ask me about:</p>
+                            <p>Hi! I'm Piney AI. How can I help?</p>
                             <ul>
-                                <li>Website packages & pricing</li>
-                                <li>Piney Outreach system</li>
-                                <li>SEO & Google ranking</li>
+                                <li>SaaS platforms & custom development</li>
+                                <li>Pricing & packages</li>
                                 <li>Technical questions</li>
                             </ul>
+                            <div class="piney-chat-welcome-actions">
+                                <button id="piney-quick-quote-btn" class="piney-quick-btn">📝 Quick Quote Form</button>
+                            </div>
                         </div>
+                    </div>
+
+                    <!-- Quote Form (hidden by default) -->
+                    <div id="piney-quote-form" class="piney-quote-form hidden">
+                        <div class="piney-quote-header">
+                            <button id="piney-quote-back" class="piney-quote-back">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                                </svg>
+                            </button>
+                            <h3>Quick Quote Request</h3>
+                        </div>
+                        <form id="piney-quote-submit" class="piney-quote-content">
+                            <div class="piney-quote-field">
+                                <label for="quote-name">Your Name *</label>
+                                <input type="text" id="quote-name" name="name" required placeholder="John Smith">
+                            </div>
+                            <div class="piney-quote-field">
+                                <label for="quote-email">Email *</label>
+                                <input type="email" id="quote-email" name="email" required placeholder="john@company.com">
+                            </div>
+                            <div class="piney-quote-field">
+                                <label for="quote-phone">Phone (optional)</label>
+                                <input type="tel" id="quote-phone" name="phone" placeholder="+1 (555) 123-4567">
+                            </div>
+                            <div class="piney-quote-field">
+                                <label for="quote-package">Interested In</label>
+                                <select id="quote-package" name="package">
+                                    <option value="">Select a package...</option>
+                                    <option value="concept">Concept Site ($3,000)</option>
+                                    <option value="saas">SaaS Platform (from $5,000)</option>
+                                    <option value="enterprise">Enterprise Platform (from $15,000)</option>
+                                    <option value="unsure">Not sure yet</option>
+                                </select>
+                            </div>
+                            <div class="piney-quote-field">
+                                <label for="quote-project">Project Details</label>
+                                <textarea id="quote-project" name="project" rows="3" placeholder="Tell me about your project..."></textarea>
+                            </div>
+                            <button type="submit" id="piney-quote-send" class="piney-quote-send">Send Quote Request</button>
+                        </form>
                     </div>
 
                     <!-- Chat Input -->
@@ -232,6 +275,13 @@
         const chatInput = document.getElementById('piney-chat-input');
         const messagesContainer = document.getElementById('piney-chat-messages');
 
+        // Quote form elements
+        const quoteForm = document.getElementById('piney-quote-form');
+        const quoteBtn = document.getElementById('piney-quick-quote-btn');
+        const quoteBack = document.getElementById('piney-quote-back');
+        const quoteSubmit = document.getElementById('piney-quote-submit');
+        const quoteSendBtn = document.getElementById('piney-quote-send');
+
         // Load previous conversation
         const history = getConversationHistory();
         if (history.length > 0) {
@@ -262,15 +312,19 @@
             clearConversation();
             messagesContainer.innerHTML = `
                 <div class="piney-chat-welcome">
-                    <p>Hi! I'm Piney AI. Ask me about:</p>
+                    <p>Hi! I'm Piney AI. How can I help?</p>
                     <ul>
-                        <li>Website packages & pricing</li>
-                        <li>Piney Outreach system</li>
-                        <li>SEO & Google ranking</li>
+                        <li>SaaS platforms & custom development</li>
+                        <li>Pricing & packages</li>
                         <li>Technical questions</li>
                     </ul>
+                    <div class="piney-chat-welcome-actions">
+                        <button id="piney-quick-quote-btn" class="piney-quick-btn">📝 Quick Quote Form</button>
+                    </div>
                 </div>
             `;
+            // Re-bind quote button after clear
+            bindQuoteButton();
         });
 
         // Handle form submission
@@ -290,6 +344,86 @@
                 chatForm.dispatchEvent(new Event('submit'));
             }
         });
+
+        // Quote form handlers
+        function bindQuoteButton() {
+            const btn = document.getElementById('piney-quick-quote-btn');
+            if (btn) {
+                btn.addEventListener('click', () => {
+                    quoteForm.classList.remove('hidden');
+                });
+            }
+        }
+        bindQuoteButton();
+
+        if (quoteBack) {
+            quoteBack.addEventListener('click', () => {
+                quoteForm.classList.add('hidden');
+            });
+        }
+
+        // Handle quote form submission
+        if (quoteSubmit) {
+            quoteSubmit.addEventListener('submit', async (e) => {
+                e.preventDefault();
+
+                const formData = {
+                    name: document.getElementById('quote-name').value.trim(),
+                    email: document.getElementById('quote-email').value.trim(),
+                    phone: document.getElementById('quote-phone').value.trim(),
+                    package: document.getElementById('quote-package').value,
+                    message: document.getElementById('quote-project').value.trim()
+                };
+
+                if (!formData.name || !formData.email) {
+                    return;
+                }
+
+                // Disable send button
+                quoteSendBtn.disabled = true;
+                quoteSendBtn.textContent = 'Sending...';
+
+                try {
+                    const response = await fetch(`${ASSISTANT_URL}/api/contact`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(formData)
+                    });
+
+                    if (!response.ok) throw new Error('Failed to send');
+
+                    // Show success message
+                    quoteForm.innerHTML = `
+                        <div class="piney-success-message">
+                            <div class="piney-success-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                            </div>
+                            <h4>Quote Request Sent!</h4>
+                            <p>Joel will contact you within 24 hours.</p>
+                        </div>
+                    `;
+
+                    // Auto-close after 3 seconds
+                    setTimeout(() => {
+                        quoteForm.classList.add('hidden');
+                        // Reset form for next time
+                        quoteSubmit.reset();
+                        quoteSendBtn.disabled = false;
+                        quoteSendBtn.textContent = 'Send Quote Request';
+                    }, 3000);
+
+                } catch (error) {
+                    console.error('Quote submission error:', error);
+                    quoteSendBtn.disabled = false;
+                    quoteSendBtn.textContent = 'Send Quote Request';
+                    alert('Failed to send. Please try again or use the chat.');
+                }
+            });
+        }
     }
 
     // Add chat CSS
@@ -590,6 +724,195 @@
 
             .piney-chat-send:active {
                 transform: scale(0.95);
+            }
+
+            /* Welcome actions */
+            .piney-chat-welcome-actions {
+                margin-top: 16px;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .piney-quick-btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 8px;
+                padding: 12px 16px;
+                background: transparent;
+                border: 1px solid var(--border-color, #334155);
+                border-radius: 8px;
+                color: var(--text-primary, #e2e8f0);
+                font-size: 13px;
+                font-weight: 500;
+                cursor: pointer;
+                transition: all 0.2s;
+            }
+
+            .piney-quick-btn:hover {
+                background: var(--bg-primary, #0f172a);
+                border-color: #10b981;
+                color: #10b981;
+            }
+
+            /* Quote Form */
+            .piney-quote-form {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: var(--card-bg, #1e293b);
+                display: flex;
+                flex-direction: column;
+                z-index: 10;
+            }
+
+            .piney-quote-form.hidden {
+                display: none;
+            }
+
+            .piney-quote-header {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                padding: 16px 20px;
+                background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+                color: white;
+            }
+
+            .piney-quote-back {
+                background: rgba(255, 255, 255, 0.1);
+                border: none;
+                border-radius: 8px;
+                padding: 6px;
+                cursor: pointer;
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: background 0.2s;
+            }
+
+            .piney-quote-back:hover {
+                background: rgba(255, 255, 255, 0.2);
+            }
+
+            .piney-quote-header h3 {
+                margin: 0;
+                font-size: 15px;
+                font-weight: 600;
+            }
+
+            .piney-quote-content {
+                flex: 1;
+                overflow-y: auto;
+                padding: 16px;
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .piney-quote-field {
+                display: flex;
+                flex-direction: column;
+                gap: 6px;
+            }
+
+            .piney-quote-field label {
+                font-size: 13px;
+                font-weight: 500;
+                color: var(--text-muted, #94a3b8);
+            }
+
+            .piney-quote-field input,
+            .piney-quote-field select,
+            .piney-quote-field textarea {
+                padding: 10px 14px;
+                background: var(--bg-primary, #0f172a);
+                border: 1px solid var(--border-color, #334155);
+                border-radius: 8px;
+                color: var(--text-primary, #e2e8f0);
+                font-size: 14px;
+                font-family: inherit;
+                outline: none;
+                transition: border-color 0.2s;
+            }
+
+            .piney-quote-field input:focus,
+            .piney-quote-field select:focus,
+            .piney-quote-field textarea:focus {
+                border-color: #10b981;
+            }
+
+            .piney-quote-field textarea {
+                resize: vertical;
+                min-height: 80px;
+            }
+
+            .piney-quote-send {
+                margin-top: auto;
+                padding: 14px;
+                background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+                border: none;
+                border-radius: 8px;
+                color: white;
+                font-size: 14px;
+                font-weight: 600;
+                cursor: pointer;
+                transition: transform 0.2s, box-shadow 0.2s;
+            }
+
+            .piney-quote-send:hover {
+                transform: translateY(-1px);
+                box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+            }
+
+            .piney-quote-send:disabled {
+                opacity: 0.6;
+                cursor: not-allowed;
+                transform: none;
+            }
+
+            .piney-success-message {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                text-align: center;
+                padding: 20px;
+            }
+
+            .piney-success-icon {
+                width: 64px;
+                height: 64px;
+                background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 16px;
+            }
+
+            .piney-success-icon svg {
+                width: 32px;
+                height: 32px;
+                color: white;
+            }
+
+            .piney-success-message h4 {
+                margin: 0 0 8px 0;
+                font-size: 18px;
+                font-weight: 600;
+                color: var(--text-primary, #e2e8f0);
+            }
+
+            .piney-success-message p {
+                margin: 0;
+                color: var(--text-muted, #94a3b8);
+                font-size: 14px;
             }
 
             /* Mobile responsive */
