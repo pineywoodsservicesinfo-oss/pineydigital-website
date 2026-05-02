@@ -1126,12 +1126,31 @@ h4 { font-size: 1.125rem; }
 
 .about-stats {
   display: flex;
-  gap: 48px;
+  gap: 24px;
   margin-top: 48px;
 }
 
 .about-stat {
   text-align: center;
+  flex: 1;
+}
+
+.about-stat .stat-label {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-top: 0;
+  padding: 16px 24px;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  background: var(--bg-card);
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.about-stat:hover .stat-label {
+  border-color: var(--accent);
+  background: rgba(45, 127, 78, 0.1);
 }
 
 .about-card {

@@ -1,34 +1,69 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-16SZEY2J5E"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-16SZEY2J5E');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ | Piney Digital - Common Questions About Web Design & SEO</title>
-    <meta name="description" content="Frequently asked questions about web design, local SEO, Google ranking, and Piney Digital services. Learn about timelines, crawling, indexing, and more.">
-    <meta name="keywords" content="web design FAQ, local SEO questions, Google ranking timeline, how long SEO takes, website indexing, sitemap submission, East Texas web designer">
+    <title>FAQ | Piney Digital - Common Questions About SaaS Platforms & Custom Development</title>
+    <meta name="description" content="Frequently asked questions about SaaS platforms, custom web applications, enterprise development, and Piney Digital services. Learn about timelines, pricing, and development process.">
+    <meta name="keywords" content="SaaS FAQ, custom development questions, enterprise software, web application development, multi-location platforms, dashboard development, API integration">
     <meta name="author" content="Joel Escoto">
     <link rel="canonical" href="https://pineydigital.com/faq.html">
     <meta name="robots" content="index, follow">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#1e5a8e">
+    <meta name="msapplication-TileColor" content="#0a0a0f">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pineydigital.com/faq.html">
-    <meta property="og:title" content="FAQ | Piney Digital - Common Questions About Web Design & SEO">
-    <meta property="og:description" content="Frequently asked questions about web design, local SEO, Google ranking, and Piney Digital services.">
+    <meta property="og:title" content="FAQ | Piney Digital - Common Questions About SaaS Platforms & Custom Development">
+    <meta property="og:description" content="Frequently asked questions about SaaS platforms, custom web applications, enterprise development, and Piney Digital services.">
     <meta property="og:image" content="https://pineydigital.com/images/og-faq.png">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="FAQ | Piney Digital - Common Questions About Web Design & SEO">
-    <meta name="twitter:description" content="Frequently asked questions about web design, local SEO, Google ranking, and Piney Digital services.">
+    <meta name="twitter:title" content="FAQ | Piney Digital - Common Questions About SaaS Platforms & Custom Development">
+    <meta name="twitter:description" content="Frequently asked questions about SaaS platforms, custom web applications, enterprise development, and Piney Digital services.">
     <meta name="twitter:image" content="https://pineydigital.com/images/og-faq.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/modern.css">
+
+    <!-- BreadcrumbList Schema for AI Search -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://pineydigital.com/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "FAQ",
+                "item": "https://pineydigital.com/faq.html"
+            }
+        ]
+    }
+    </script>
     <style>
         .faq-hero {
             padding: 140px 0 60px;
@@ -195,6 +230,72 @@
             }
         }
     </style>
+
+    <!-- FAQ Schema for AI Search -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is the difference between a concept site and a SaaS platform?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A Concept Site ($3,000) is a static marketing website designed to showcase your business with professional design, SEO optimization, and essential pages. A SaaS Platform ($5,000+) is a full-featured web application with custom functionality including user accounts, admin dashboards, database management, and integrations. Concept sites are your digital storefront; SaaS platforms are your digital operations center."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How long does it take to build a SaaS platform?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Simple platforms ($5,000) take 4-6 weeks for core features and basic user accounts. Mid-range platforms ($10,000+) take 8-12 weeks for multiple user roles and integrations. Enterprise platforms ($15,000+) take 3-6 months for complex features, multiple integrations, and advanced security."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What tech stack does Piney Digital use?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We use Python (Flask/FastAPI) for backend, PostgreSQL or SQLite for databases, Tailwind CSS for frontend styling, and deploy on Railway, Render, or cloud providers of your choice. We integrate with Twilio for SMS, Resend for email, Stripe for payments, and custom APIs as needed."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do you offer ongoing maintenance after launch?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. All platforms include 90 days of free maintenance after launch. After that, we offer monthly retainers ($500-2,000/month), hourly support ($125/hr), or feature sprints for significant new features. We don't disappear after launch."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can you integrate with our existing systems?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. We integrate with payment processors (Stripe, Square, PayPal), CRM systems (Salesforce, HubSpot), communication tools (Twilio, SendGrid, Slack), business tools (QuickBooks, Xero, Google Workspace), and custom APIs. Each integration is typically $1,000."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do I own my platform and code?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Absolutely. You own everything we build: full source code and documentation, your database and all business data, domain names and hosting accounts, API keys and integration credentials. We provide complete handoff if you ever decide to bring development in-house."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What does Piney Digital charge for custom platforms?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We offer three tiers: Concept Site at $3,000 for a static marketing website with SEO and mobile-responsive design. SaaS Platform starting at $5,000 for a custom web application with user accounts, dashboard, and core features. Enterprise Platform starting at $15,000 for full-scale platforms with integrations, multi-location support, and advanced features."
+                }
+            }
+        ]
+    }
+    </script>
 </head>
 <body>
     <div class="noise-overlay"></div>
@@ -233,7 +334,7 @@
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                     </svg>
                 </button>
-                <a href="index.html#contact" class="nav-cta">
+                <a href="contact.html" class="nav-cta">
                     <span>Start Project</span>
                 </a>
                 <button class="nav-menu-toggle" id="menuToggle" aria-label="Toggle menu">
@@ -262,7 +363,7 @@
             <div class="container">
                 <span class="section-label section-label--green">FAQ</span>
                 <h1 class="section-title">Common <span class="gradient-text">Questions</span></h1>
-                <p class="section-description" style="max-width: 700px;">Everything you need to know about websites, SEO, Google ranking, and how Piney Digital works.</p>
+                <p class="section-description" style="max-width: 700px;">Everything you need to know about SaaS platforms, custom development, enterprise projects, and how Piney Digital works.</p>
             </div>
         </section>
 
@@ -270,309 +371,480 @@
         <section class="section" style="padding-top: 2rem;">
             <div class="container">
 
+                <!-- SaaS & Custom Platforms -->
+                <div class="faq-section">
+                    <h2>SaaS & Custom Platforms</h2>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What's the difference between a concept site and a SaaS platform?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p><strong>Concept Sites ($3,000)</strong> are static marketing websites designed to showcase your business. They include beautiful design, SEO optimization, and all the essential pages (Home, About, Services, Contact). Perfect for establishing an online presence.</p>
+                            <p><strong>SaaS Platforms ($5,000+)</strong> are full-featured web applications with custom functionality. Examples include:</p>
+                            <ul>
+                                <li>Multi-location management dashboards</li>
+                                <li>Customer loyalty and booking systems</li>
+                                <li>Staff scheduling and inventory tracking</li>
+                                <li>Real-time analytics and reporting</li>
+                                <li>Admin panels with role-based access</li>
+                            </ul>
+                            <p>Concept sites are your digital storefront. SaaS platforms are your digital operations center.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>How long does it take to build a SaaS platform?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Timeline varies based on complexity:</p>
+                            <ul>
+                                <li><strong>Simple Platform ($5,000):</strong> 4-6 weeks — Core features, admin dashboard, basic user accounts</li>
+                                <li><strong>Mid-Range Platform ($10,000+):</strong> 8-12 weeks — Multiple user roles, integrations, custom workflows</li>
+                                <li><strong>Enterprise Platform ($15,000+):</strong> 3-6 months — Complex features, multiple integrations, advanced security</li>
+                            </ul>
+                            <div class="info-box">
+                                <strong>📋 What affects timeline?</strong>
+                                <p>Feature complexity, number of integrations, data migration needs, and how quickly you can provide feedback during development.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What tech stack do you use?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We use modern, battle-tested technologies:</p>
+                            <ul>
+                                <li><strong>Backend:</strong> Python (Flask/FastAPI) — fast development, secure, maintainable</li>
+                                <li><strong>Database:</strong> PostgreSQL or SQLite — reliable, scalable, ACID-compliant</li>
+                                <li><strong>Frontend:</strong> Tailwind CSS + Vanilla JS — fast loading, easy to maintain</li>
+                                <li><strong>Hosting:</strong> Railway, Render, or your preferred cloud provider</li>
+                                <li><strong>Integrations:</strong> Twilio (SMS), Resend (email), Stripe (payments), custom APIs</li>
+                            </ul>
+                            <div class="pro-tip">
+                                <strong>💡 Why not React/Angular?</strong>
+                                <p>For most business platforms, server-rendered pages with progressive enhancement are faster to build, easier to maintain, and perform better. We use the right tool for the job — not the trendiest.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Can you integrate with my existing systems?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p><strong>Yes.</strong> Third-party integrations are our specialty. Common integrations include:</p>
+                            <ul>
+                                <li><strong>Payment processors:</strong> Stripe, Square, PayPal</li>
+                                <li><strong>CRM systems:</strong> Salesforce, HubSpot, custom databases</li>
+                                <li><strong>Communication:</strong> Twilio (SMS), SendGrid/Resend (email), Slack webhooks</li>
+                                <li><strong>Business tools:</strong> QuickBooks, Xero, Google Workspace</li>
+                                <li><strong>Custom APIs:</strong> Your proprietary systems</li>
+                            </ul>
+                            <p>Each integration is scoped and quoted separately (typically $1,000 per integration). We handle the API connections, data mapping, and error handling.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What about mobile apps?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We build <strong>responsive web applications</strong> that work beautifully on mobile browsers. This approach offers several advantages:</p>
+                            <ul>
+                                <li><strong>No app store approval:</strong> Launch immediately, no Apple/Google review delays</li>
+                                <li><strong>Single codebase:</strong> Faster development, easier maintenance</li>
+                                <li><strong>No install friction:</strong> Users access instantly via URL</li>
+                                <li><strong>PWA support:</strong> Add to home screen, offline capabilities</li>
+                            </ul>
+                            <p>If you need a native app later, we can build one starting at $5,000. But most businesses find a well-built web app covers 95% of their needs.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Do you offer ongoing maintenance?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p><strong>Yes.</strong> All platforms include 90 days of free maintenance after launch. After that:</p>
+                            <ul>
+                                <li><strong>Monthly retainer ($500-2,000/mo):</strong> Ongoing support, updates, and minor feature additions</li>
+                                <li><strong>Hourly support ($125/hr):</strong> Pay-as-you-go for occasional needs</li>
+                                <li><strong>Feature sprints:</strong> Quote-based for major new features</li>
+                            </ul>
+                            <p>We don't disappear after launch. Your platform needs care to stay secure and performant.</p>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- General Questions -->
                 <div class="faq-section">
                     <h2>Getting Started</h2>
 
                     <div class="faq-item">
                         <button class="faq-question">
-                            <span>How long does it take to build my website?</span>
+                            <span>How do you handle project requirements?</span>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
                         </button>
                         <div class="faq-answer">
-                            <p>Most websites launch within <strong>3-7 business days</strong> after we receive your content (text, photos, logos). The timeline depends on:</p>
+                            <p>Every project starts with a <strong>discovery call</strong> to understand your business goals, existing pain points, and must-have features. From there:</p>
                             <ul>
-                                <li><strong>Package type:</strong> Starter sites (5 pages) typically take 3-5 days. Growth and Pro sites with additional features may take 5-7 days.</li>
-                                <li><strong>Content readiness:</strong> If you have your text and photos ready, we move fast. If you need help writing content, add a few days.</li>
-                                <li><strong>Revision rounds:</strong> Each package includes revision time. Most clients are happy with the first or second round.</li>
+                                <li><strong>Requirements document:</strong> We outline all features, user flows, and technical specifications</li>
+                                <li><strong>Fixed-price quote:</strong> You know exactly what you're paying before development starts</li>
+                                <li><strong>Milestone-based development:</strong> Regular check-ins at key stages (design, core features, testing)</li>
+                                <li><strong>Revision rounds:</strong> Built into every project scope</li>
                             </ul>
                             <div class="pro-tip">
                                 <strong>💡 Pro Tip</strong>
-                                <p>Rush delivery (2-3 days) is available for an additional $250 if you need to launch quickly for an event, opening, or promotion.</p>
+                                <p>The more detail you can provide about your workflows and pain points, the more accurate our quote will be. We're happy to sign NDAs before discussing sensitive business processes.</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="faq-item">
                         <button class="faq-question">
-                            <span>What do I need to provide before you start?</span>
+                            <span>What do I need to provide before development starts?</span>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
                         </button>
                         <div class="faq-answer">
-                            <p>Here's what we need to get started:</p>
+                            <p>For custom platforms, we'll need:</p>
                             <ul>
-                                <li><strong>Business name and contact info</strong> — Address, phone, email, hours</li>
-                                <li><strong>Services or products</strong> — What you offer and pricing if you want it listed</li>
-                                <li><strong>Photos</strong> — Of your business, team, products, or work. Stock photos work too if you don't have any.</li>
-                                <li><strong>Any existing branding</strong> — Logo, colors, fonts if you have them</li>
-                                <li><strong>Competitors or examples</strong> — Websites you like (or don't like) for reference</li>
+                                <li><strong>Business context:</strong> Your goals, target users, and key workflows</li>
+                                <li><strong>Existing assets:</strong> Branding, logos, any current systems or data</li>
+                                <li><strong>Feature priorities:</strong> What's essential vs. nice-to-have</li>
+                                <li><strong>Integration requirements:</strong> Any third-party systems that need to connect</li>
+                                <li><strong>Access credentials:</strong> For existing platforms we're integrating with or replacing</li>
                             </ul>
-                            <p>If you're missing some of these, that's okay. We can help with content writing ($150) and photography ($200) as add-ons.</p>
+                            <p>Don't worry if you don't have all of this figured out — we help you work through it during discovery.</p>
                         </div>
                     </div>
 
                     <div class="faq-item">
                         <button class="faq-question">
-                            <span>Do I own my website?</span>
+                            <span>Do I own my platform and code?</span>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
                         </button>
                         <div class="faq-answer">
-                            <p><strong>Yes.</strong> You own your content, your domain name, your Google Business Profile — everything.</p>
-                            <p>If you ever decide to leave, I'll hand over all your files, data, and access credentials. No hostage situations, no hidden fees. You built it with me, you own it.</p>
-                            <p>The monthly plan covers ongoing hosting, updates, and support — not ownership. Think of it like renting an apartment with a landlord who actually fixes things when they break.</p>
+                            <p><strong>Absolutely.</strong> You own everything we build for you:</p>
+                            <ul>
+                                <li>Full source code and documentation</li>
+                                <li>Your database and all business data</li>
+                                <li>Domain names and hosting accounts</li>
+                                <li>API keys and integration credentials</li>
+                            </ul>
+                            <p>If you ever decide to bring development in-house or switch partners, we provide a complete handoff: code repository, documentation, deployment instructions, and knowledge transfer. No vendor lock-in.</p>
                         </div>
                     </div>
 
                     <div class="faq-item">
                         <button class="faq-question">
-                            <span>Can I update the website myself?</span>
+                            <span>Can my team manage the platform after launch?</span>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
                         </button>
                         <div class="faq-answer">
-                            <p>You can, but most clients don't want to. Your monthly plan includes content updates (1-2 hours for Starter/Growth, unlimited for Pro), so you just tell me what to change and I handle it.</p>
-                            <p>If you prefer to edit yourself, I can set up a simple content management system. Just know that part of the value I provide is taking this off your plate — you run your business, I'll handle the website.</p>
+                            <p>Every platform includes an <strong>admin dashboard</strong> designed for non-technical users. Your team can:</p>
+                            <ul>
+                                <li>Manage users, roles, and permissions</li>
+                                <li>Update content, products, or services</li>
+                                <li>View analytics and generate reports</li>
+                                <li>Configure business rules and settings</li>
+                            </ul>
+                            <p>For technical teams, we provide full documentation and can set up CI/CD pipelines. We build for maintainability — clean code, clear documentation, standard practices.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- SEO & Google Ranking -->
+                <!-- Security & Infrastructure -->
                 <div class="faq-section">
-                    <h2>SEO & Google Ranking</h2>
+                    <h2>Security & Infrastructure</h2>
 
                     <div class="faq-item">
                         <button class="faq-question">
-                            <span>How long until my website ranks on Google?</span>
+                            <span>How do you handle security?</span>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
                         </button>
                         <div class="faq-answer">
-                            <p>Here's the realistic timeline for local SEO:</p>
+                            <p>Security is built into everything we develop:</p>
                             <ul>
-                                <li><strong>1-7 days:</strong> Google indexes your site (finds it and adds it to search results)</li>
-                                <li><strong>2-4 weeks:</strong> You start appearing for branded searches (your business name)</li>
-                                <li><strong>1-3 months:</strong> You begin ranking for local, low-competition keywords ("detailing in [your town]")</li>
-                                <li><strong>3-6 months:</strong> More competitive keywords start showing results</li>
-                                <li><strong>6-12 months:</strong> Established rankings for your core services</li>
+                                <li><strong>Authentication:</strong> Secure password hashing, session management, optional 2FA</li>
+                                <li><strong>Data protection:</strong> Encrypted connections (HTTPS), sensitive data encrypted at rest</li>
+                                <li><strong>Input validation:</strong> Protection against SQL injection, XSS, and CSRF attacks</li>
+                                <li><strong>Access control:</strong> Role-based permissions, audit logging</li>
+                                <li><strong>Regular updates:</strong> Dependency updates and security patches</li>
                             </ul>
                             <div class="info-box">
-                                <strong>📍 Local SEO is different from national SEO</strong>
-                                <p>As a local business, you're not competing with the whole country — just other businesses in your area. This means you can rank faster than you might think, especially if you're in a smaller market like Lufkin or Nacogdoches.</p>
-                            </div>
-                            <p>Every site I build includes on-page SEO optimization (meta tags, proper heading structure, fast loading, mobile-friendly design). But SEO is ongoing — the sites that rank best are the ones that get regular updates, new content, and consistent signals over time. That's why monthly plans include ongoing optimization.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span>What is Google crawling and indexing?</span>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                        </button>
-                        <div class="faq-answer">
-                            <p>These are two separate steps in how Google finds and displays your website:</p>
-                            <p><strong>Crawling</strong> is when Google's bots (called "Googlebot") discover your website by following links from other sites or from your sitemap. They read your pages to understand what they're about.</p>
-                            <p><strong>Indexing</strong> is when Google stores your pages in their search database. Only indexed pages can appear in search results.</p>
-                            <p><strong>Here's what I do for you:</strong></p>
-                            <ul>
-                                <li>Submit your sitemap to Google Search Console</li>
-                                <li>Ensure proper internal linking so Googlebot can crawl everything</li>
-                                <li>Use proper meta tags so Google understands each page</li>
-                                <li>Fix any crawl errors that come up</li>
-                                <li>Monitor indexing status and request indexing for new pages</li>
-                            </ul>
-                            <div class="pro-tip">
-                                <strong>🔍 Pro Tip</strong>
-                                <p>You can check if your site is indexed by searching <code>site:yourdomain.com</code> in Google. If pages show up, you're indexed. If nothing appears, we need to submit your sitemap or fix crawl blockers.</p>
+                                <strong>🔒 Enterprise Security Add-ons</strong>
+                                <p>SSO integration ($2,500), advanced audit logging, and compliance documentation available for regulated industries.</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="faq-item">
                         <button class="faq-question">
-                            <span>What is a sitemap and do I need one?</span>
+                            <span>Where is my platform hosted?</span>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
                         </button>
                         <div class="faq-answer">
-                            <p>A sitemap is an XML file that tells search engines about all the pages on your website. Think of it as a map for Googlebot to follow.</p>
-                            <p><strong>Yes, you need one.</strong> Every site I build includes an automatically generated sitemap (usually at <code>yourdomain.com/sitemap.xml</code>) that gets submitted to Google Search Console.</p>
-                            <p>The sitemap includes:</p>
+                            <p>We use modern cloud platforms with automatic scaling and 99.9% uptime SLAs:</p>
                             <ul>
-                                <li>All your important pages</li>
-                                <li>When each page was last updated</li>
-                                <li>How often pages change (daily, weekly, monthly)</li>
-                                <li>Priority levels for different pages</li>
+                                <li><strong>Railway</strong> — Our default for most platforms, simple deployment and scaling</li>
+                                <li><strong>Render</strong> — Alternative with more granular control</li>
+                                <li><strong>AWS/GCP/Azure</strong> — For enterprises requiring specific cloud providers</li>
                             </ul>
-                            <p>This helps Google find and index your content faster and more accurately.</p>
+                            <p>Hosting costs are separate from development and typically run $20-200/month depending on traffic and database size. We'll recommend the right tier for your needs.</p>
                         </div>
                     </div>
 
                     <div class="faq-item">
                         <button class="faq-question">
-                            <span>What is Google Business Profile and do I need it?</span>
+                            <span>What about backups and disaster recovery?</span>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
                         </button>
                         <div class="faq-answer">
-                            <p>Google Business Profile (GBP) is your free listing on Google Maps and local search. It's what shows up when someone searches "restaurants near me" or "plumbers in Lufkin."</p>
-                            <p><strong>Yes, you absolutely need one.</strong> For local businesses, GBP is often more important than your website for getting found. It's the #1 way customers discover local businesses on mobile.</p>
-                            <p><strong>What I set up for you:</strong></p>
+                            <p>All platforms include automated backup systems:</p>
                             <ul>
-                                <li>Complete profile with accurate NAP (Name, Address, Phone)</li>
-                                <li>Business categories and attributes</li>
-                                <li>Hours of operation</li>
-                                <li>Photos and logo</li>
-                                <li>Link to your website</li>
-                                <li>Review request system (on Growth and Pro plans)</li>
+                                <li><strong>Daily database backups:</strong> Automatic snapshots retained for 30 days</li>
+                                <li><strong>Point-in-time recovery:</strong> Restore to any point within the backup window</li>
+                                <li><strong>Off-site replication:</strong> Backups stored in multiple geographic regions</li>
+                                <li><strong>Tested restores:</strong> We verify backups work before you need them</li>
                             </ul>
-                            <p>The Growth and Pro plans include ongoing GBP management — posting updates, responding to reviews, and optimizing for local ranking.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span>Why isn't my website showing up when I search for it?</span>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                        </button>
-                        <div class="faq-answer">
-                            <p>There are a few common reasons:</p>
-                            <ul>
-                                <li><strong>It's not indexed yet:</strong> New sites take a few days to a week. Search <code>site:yourdomain.com</code> to check.</li>
-                                <li><strong>You're searching too broadly:</strong> If you search "best pizza" you'll get national results. Search "best pizza Lufkin TX" for local results.</li>
-                                <li><strong>Your site is too new:</strong> Google takes time to trust new domains. Consistent updates and backlinks help build authority.</li>
-                                <li><strong>Technical issues:</strong> Crawl errors, blocked pages, or missing meta tags can prevent indexing.</li>
-                            </ul>
-                            <p>If your site has been live for more than 2 weeks and still isn't showing up, contact me and I'll investigate. Usually it's just a matter of time or a simple fix in Search Console.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span>What are backlinks and do they matter?</span>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                        </button>
-                        <div class="faq-answer">
-                            <p>Backlinks are links from other websites to yours. Google sees them as "votes of confidence" — if other sites link to you, you must be trustworthy.</p>
-                            <p><strong>Yes, they matter.</strong> Backlinks are one of the top ranking factors for Google. But quality matters more than quantity.</p>
-                            <p><strong>Good backlinks for local businesses:</strong></p>
-                            <ul>
-                                <li>Local chamber of commerce</li>
-                                <li>Business directories (Yelp, YellowPages, etc.)</li>
-                                <li>Local news sites or blogs</li>
-                                <li>Industry associations</li>
-                                <li>Customer websites (if they mention you)</li>
-                            </ul>
-                            <p>I don't do aggressive link building — it can backfire if done wrong. But I'll help you get listed in legitimate local directories and make sure your NAP (Name, Address, Phone) is consistent everywhere, which indirectly helps with local link signals.</p>
+                            <p>For enterprise clients, we offer enhanced disaster recovery with multi-region failover and 1-hour RTO (recovery time objective).</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Loyalty & SMS System -->
+                <!-- SEO & Performance -->
                 <div class="faq-section">
-                    <h2>Loyalty & SMS System</h2>
+                    <h2>SEO & Performance</h2>
 
                     <div class="faq-item">
                         <button class="faq-question">
-                            <span>How does the loyalty system work?</span>
+                            <span>How do you optimize platform performance?</span>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
                         </button>
                         <div class="faq-answer">
-                            <p>It's a digital punch card system that works through text messages — no app for customers to download.</p>
-                            <p><strong>How it works:</strong></p>
-                            <ol style="color: var(--text-secondary); padding-left: 1.5rem; margin-top: 1rem;">
-                                <li>Customer gives their phone number at checkout</li>
-                                <li>You log the visit in your dashboard (or it auto-logs if integrated)</li>
-                                <li>Customer earns points toward a reward (you set the rules — e.g., "Buy 9, get 10th free")</li>
-                                <li>System sends automatic texts when they're close to a reward</li>
-                                <li>Customer redeems reward on their next visit</li>
-                            </ol>
-                            <p><strong>Why it works:</strong> Customers are 5x more likely to return when they're close to earning a reward. The SMS reminders keep you top-of-mind without being spammy.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span>Is SMS marketing spam?</span>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                        </button>
-                        <div class="faq-answer">
-                            <p>It can be if you do it wrong. Here's how we keep it compliant and welcome:</p>
+                            <p>Performance is critical for user experience and SEO. We optimize at every layer:</p>
                             <ul>
-                                <li><strong>Opt-in only:</strong> Customers must agree to receive texts. No buying lists, no scraping numbers.</li>
-                                <li><strong>Clear value:</strong> Messages are about rewards, appointments, or things they asked for — not random promotions.</li>
-                                <li><strong>Easy opt-out:</strong> Every message includes "Reply STOP to unsubscribe."</li>
-                                <li><strong>Reasonable frequency:</strong> 1-4 messages per month during active campaigns. Never more than one per day.</li>
+                                <li><strong>Database:</strong> Indexed queries, connection pooling, query optimization</li>
+                                <li><strong>Caching:</strong> Redis for frequently accessed data, CDN for static assets</li>
+                                <li><strong>Code:</strong> Efficient algorithms, lazy loading, optimized assets</li>
+                                <li><strong>Infrastructure:</strong> Auto-scaling, load balancing, edge caching</li>
                             </ul>
-                            <p>The goal is to be helpful, not annoying. When done right, customers actually want your texts because they're getting value (rewards, reminders, exclusive offers).</p>
                             <div class="pro-tip">
-                                <strong>📱 Pro Tip</strong>
-                                <p>SMS has a 98% open rate compared to 20% for email. That's why it's included in the Growth and Pro plans — it's the most direct way to reach your customers.</p>
+                                <strong>⚡ Benchmark</strong>
+                                <p>We target sub-200ms API response times and sub-3-second page loads. Slow platforms lose users — we build fast.</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="faq-item">
                         <button class="faq-question">
-                            <span>Can I send promotional texts whenever I want?</span>
+                            <span>Can the platform handle high traffic?</span>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
                         </button>
                         <div class="faq-answer">
-                            <p>You can send promotional texts to customers who opted in for marketing messages. But there are best practices:</p>
+                            <p><strong>Yes.</strong> We build for scale from day one:</p>
                             <ul>
-                                <li><strong>Segment your list:</strong> Don't blast everyone. Send relevant offers to relevant customers.</li>
-                                <li><strong>Timing matters:</strong> No texts before 8am or after 8pm. Tuesday-Thursday tends to perform best.</li>
-                                <li><strong>Value first:</strong> Every promo should feel like a gift, not a demand. "Exclusive 20% off for loyal customers" works better than "Come spend money."</li>
-                                <li><strong>Track results:</strong> See which messages get responses and which get opt-outs. Adjust accordingly.</li>
+                                <li><strong>Horizontal scaling:</strong> Add more server instances as traffic grows</li>
+                                <li><strong>Database scaling:</strong> Read replicas, connection pooling, query optimization</li>
+                                <li><strong>Caching layers:</strong> Redis reduces database load by 80%+ for common queries</li>
+                                <li><strong>CDN integration:</strong> Global edge caching for static assets</li>
                             </ul>
-                            <p>On Growth and Pro plans, I help you craft messages that convert without burning out your list.</p>
+                            <p>Most platforms start on a $20/month infrastructure tier and scale up as needed. We monitor performance and alert you before capacity becomes an issue.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Do you include SEO optimization?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Every platform includes SEO fundamentals:</p>
+                            <ul>
+                                <li><strong>Technical SEO:</strong> Proper meta tags, structured data (JSON-LD), sitemap generation</li>
+                                <li><strong>Performance:</strong> Fast loading times, mobile-optimized, Core Web Vitals compliant</li>
+                                <li><strong>Accessibility:</strong> Semantic HTML, proper heading hierarchy, ARIA labels</li>
+                                <li><strong>Indexing:</strong> Robots.txt, canonical URLs, proper HTTP status codes</li>
+                            </ul>
+                            <p>For public-facing pages, we ensure search engines can discover and rank your content properly.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What analytics and reporting do you include?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>All platforms include built-in analytics dashboards:</p>
+                            <ul>
+                                <li><strong>User analytics:</strong> Signups, active users, retention rates</li>
+                                <li><strong>Business metrics:</strong> Revenue, transactions, conversion funnels</li>
+                                <li><strong>Performance metrics:</strong> Response times, error rates, uptime</li>
+                                <li><strong>Export options:</strong> CSV exports for deeper analysis in your tools</li>
+                            </ul>
+                            <div class="info-box">
+                                <strong>📊 Advanced Analytics ($2,000 add-on)</strong>
+                                <p>Custom dashboards, cohort analysis, predictive models, and integration with Google Analytics or Mixpanel.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What about AI and automation features?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We integrate AI where it adds real value:</p>
+                            <ul>
+                                <li><strong>AI Chat ($1,500 add-on):</strong> Intelligent customer support bot trained on your business data</li>
+                                <li><strong>Automated workflows:</strong> Email sequences, follow-up reminders, appointment confirmations</li>
+                                <li><strong>Smart recommendations:</strong> Product/service suggestions based on user behavior</li>
+                                <li><strong>Data insights:</strong> Pattern recognition in your business metrics</li>
+                            </ul>
+                            <p>We're pragmatic about AI — we use it where it saves time or improves experience, not because it's trendy.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Plans & Pricing -->
+                <!-- Features & Integrations -->
                 <div class="faq-section">
-                    <h2>Plans & Pricing</h2>
+                    <h2>Features & Integrations</h2>
 
                     <div class="faq-item">
                         <button class="faq-question">
-                            <span>Can I switch plans later?</span>
+                            <span>What features are commonly included?</span>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
                         </button>
                         <div class="faq-answer">
-                            <p>Yes. Many clients start on Starter and upgrade to Growth after seeing results. If your business needs change, we adjust the plan accordingly. You're not locked in.</p>
-                            <p>Downgrading is also possible, though some features (like loyalty system data) may be archived if you move to a plan that doesn't include them.</p>
+                            <p>Features are customized to your needs, but common components include:</p>
+                            <ul>
+                                <li><strong>User management:</strong> Registration, authentication, role-based permissions</li>
+                                <li><strong>Dashboard:</strong> Real-time metrics, charts, and data visualization</li>
+                                <li><strong>Booking/scheduling:</strong> Appointments, reservations, calendar integration</li>
+                                <li><strong>E-commerce:</strong> Product catalogs, shopping cart, payment processing</li>
+                                <li><strong>Communication:</strong> Email notifications, SMS alerts, in-app messaging</li>
+                                <li><strong>Reporting:</strong> Custom reports, data export, scheduled summaries</li>
+                            </ul>
+                            <p>Each platform is scoped based on your specific workflows and requirements.</p>
                         </div>
                     </div>
 
                     <div class="faq-item">
                         <button class="faq-question">
-                            <span>What happens if I cancel?</span>
+                            <span>Do you support multi-location businesses?</span>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
                         </button>
                         <div class="faq-answer">
-                            <p>After the initial 3-month commitment, you can cancel with 30 days notice. Here's what happens:</p>
+                            <p><strong>Yes.</strong> Multi-location support is a core capability:</p>
                             <ul>
-                                <li>You keep your website files and content</li>
-                                <li>You keep your domain name (if registered through me, I'll transfer it)</li>
-                                <li>You keep your Google Business Profile</li>
-                                <li>Loyalty system data can be exported in CSV format</li>
-                                <li>Hosting and support end after the 30-day period</li>
+                                <li><strong>Location management:</strong> Add unlimited locations ($500/location setup)</li>
+                                <li><strong>Centralized dashboard:</strong> View metrics across all locations</li>
+                                <li><strong>Location-specific settings:</strong> Hours, staff, inventory per location</li>
+                                <li><strong>Role hierarchy:</strong> Corporate admins, location managers, staff</li>
+                                <li><strong>Aggregated reporting:</strong> Compare performance across locations</li>
                             </ul>
-                            <p>I'll help you transition smoothly. No games, no hostage situations. If I earned your business, I should be able to keep it with results — not contracts.</p>
+                            <div class="pro-tip">
+                                <strong>📍 Real Example</strong>
+                                <p>We're currently building a multi-location platform for Catfish King (11 restaurant locations) with loyalty, booking, and real-time analytics.</p>
+                            </div>
                         </div>
                     </div>
 
                     <div class="faq-item">
                         <button class="faq-question">
-                            <span>Are there any hidden fees?</span>
+                            <span>What payment integrations do you support?</span>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
                         </button>
                         <div class="faq-answer">
-                            <p>No. The monthly price includes:</p>
+                            <p>We integrate with major payment processors:</p>
                             <ul>
-                                <li>Hosting and SSL certificate</li>
-                                <li>Security updates and backups</li>
-                                <li>Content updates (within your plan limits)</li>
-                                <li>Technical support</li>
-                                <li>Loyalty and SMS features (on Growth/Pro)</li>
+                                <li><strong>Stripe:</strong> Cards, Apple Pay, Google Pay, subscriptions</li>
+                                <li><strong>Square:</strong> POS integration, in-person payments</li>
+                                <li><strong>PayPal:</strong> Legacy support for existing customers</li>
                             </ul>
-                            <p>Add-ons like rush delivery, logo design, or photography are optional and quoted upfront. You'll never get a surprise invoice.</p>
+                            <p>Payment integration includes PCI compliance guidance, secure tokenization, and proper handling of sensitive data. We never store card numbers directly.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pricing & Contracts -->
+                <div class="faq-section">
+                    <h2>Pricing & Contracts</h2>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>How does pricing work?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We offer three tiers:</p>
+                            <ul>
+                                <li><strong>Concept Site ($3,000):</strong> Static marketing website with SEO, mobile-responsive design, and essential pages</li>
+                                <li><strong>SaaS Platform ($5,000+):</strong> Custom web application with user accounts, dashboard, and core features</li>
+                                <li><strong>Enterprise ($15,000+):</strong> Full-scale platform with integrations, multi-location support, advanced features</li>
+                            </ul>
+                            <p>Each project is scoped individually. We provide a detailed quote after understanding your requirements.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What's the payment structure?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We work in milestones with deposits:</p>
+                            <ul>
+                                <li><strong>30% deposit</strong> to start development</li>
+                                <li><strong>40% at milestone</strong> (design approved, core features complete)</li>
+                                <li><strong>30% at launch</strong> after final testing and approval</li>
+                            </ul>
+                            <p>For larger projects, we can structure monthly payments across the timeline. We're flexible — let's discuss what works for your cash flow.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Are there ongoing costs after launch?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Beyond development, expect:</p>
+                            <ul>
+                                <li><strong>Hosting:</strong> $20-200/month depending on scale</li>
+                                <li><strong>Domain:</strong> $10-20/year</li>
+                                <li><strong>Third-party services:</strong> Twilio, Stripe, email providers (usage-based)</li>
+                                <li><strong>Maintenance (optional):</strong> $500-2,000/month retainer</li>
+                            </ul>
+                            <p>We'll estimate ongoing costs during quoting so there are no surprises.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What if I need changes after launch?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>All projects include 90 days of free maintenance (bug fixes, minor tweaks). After that:</p>
+                            <ul>
+                                <li><strong>Monthly retainer:</strong> Priority support and ongoing improvements ($500-2,000/mo)</li>
+                                <li><strong>Hourly rate:</strong> $125/hr for occasional changes</li>
+                                <li><strong>Feature sprints:</strong> Quote-based for significant new features</li>
+                            </ul>
+                            <p>We don't nickel-and-dime for small changes. Retainer clients get most minor updates included.</p>
                         </div>
                     </div>
                 </div>
@@ -581,7 +853,7 @@
                 <div class="cta-section">
                     <h2>Still have questions?</h2>
                     <p>Every business is different. Let's talk about your specific situation and figure out the best path forward.</p>
-                    <a href="index.html#contact" class="btn btn-primary btn-lg">
+                    <a href="contact.html" class="btn btn-primary btn-lg">
                         <span>Get in Touch</span>
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -602,7 +874,7 @@
                         <span>🌲</span>
                         <span>Piney Digital</span>
                     </a>
-                    <p class="footer-tagline">Modern websites for East Texas businesses.</p>
+                    <p class="footer-tagline">Enterprise SaaS platforms and custom development.</p>
                 </div>
                 <div class="footer-links">
                     <h4>Navigation</h4>
@@ -612,7 +884,7 @@
                     <a href="pricing.html">Pricing</a>
                     <a href="about.html">About</a>
                     <a href="faq.html">FAQ</a>
-                    <a href="index.html#contact">Contact</a>
+                    <a href="contact.html">Contact</a>
                 </div>
                 <div class="footer-links">
                     <h4>Legal</h4>
@@ -627,7 +899,7 @@
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 Piney Digital. All rights reserved.</p>
-                <p>Built with ❤️ in East Texas</p>
+                <p>Built with ❤️ for enterprise clients</p>
             </div>
         </div>
     </footer>

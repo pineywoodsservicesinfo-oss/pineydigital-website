@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-16SZEY2J5E"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-16SZEY2J5E');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Piney Digital | East Texas Web Design</title>
-    <meta name="description" content="Meet Joel Escoto, East Texas web developer behind Piney Digital. Local business growth partner serving Lufkin, Nacogdoches, and Angelina County.">
-    <meta name="keywords" content="web developer Lufkin TX, East Texas web designer, local business websites, Joel Escoto, Piney Digital about">
+    <title>About Piney Digital | Enterprise SaaS & Custom Platform Development</title>
+    <meta name="description" content="Piney Digital builds custom SaaS platforms and web applications for multi-location businesses and enterprises. Specializing in scalable, secure systems.">
+    <meta name="keywords" content="enterprise SaaS development, custom platform builder, multi-location systems, scalable web applications, API integration, Joel Escoto">
     <meta name="author" content="Joel Escoto">
     <link rel="canonical" href="https://pineydigital.com/about.html">
     <meta name="robots" content="index, follow">
@@ -14,14 +22,14 @@
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pineydigital.com/about.html">
-    <meta property="og:title" content="About Piney Digital | East Texas Web Developer">
-    <meta property="og:description" content="Meet Joel Escoto, East Texas web developer. Local business growth partner serving Lufkin, Nacogdoches, and Angelina County.">
+    <meta property="og:title" content="About Piney Digital | Enterprise SaaS Development">
+    <meta property="og:description" content="Piney Digital builds custom SaaS platforms and web applications for multi-location businesses and enterprises.">
     <meta property="og:image" content="https://pineydigital.com/images/og-about.png">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="About Piney Digital | East Texas Web Developer">
-    <meta name="twitter:description" content="Meet Joel Escoto, East Texas web developer. Local business growth partner serving Lufkin, Nacogdoches, and Angelina County.">
+    <meta name="twitter:title" content="About Piney Digital | Enterprise SaaS Development">
+    <meta name="twitter:description" content="Piney Digital builds custom SaaS platforms and web applications for multi-location businesses and enterprises.">
     <meta name="twitter:image" content="https://pineydigital.com/images/og-about.png">
 
     <!-- Structured Data -->
@@ -30,26 +38,53 @@
         "@context": "https://schema.org",
         "@type": "AboutPage",
         "mainEntity": {
-            "@type": "LocalBusiness",
+            "@type": "Organization",
             "name": "Piney Digital",
-            "description": "Web design and digital growth services for East Texas businesses",
+            "description": "Enterprise SaaS platforms and custom web application development",
             "founder": {
                 "@type": "Person",
                 "name": "Joel Escoto",
-                "jobTitle": "Web Developer & Founder",
-                "description": "East Texas developer specializing in websites, loyalty systems, and SMS marketing for local businesses"
+                "jobTitle": "Platform Developer & Founder",
+                "description": "Developer specializing in scalable SaaS platforms, multi-location systems, and enterprise web applications"
             },
-            "areaServed": ["Lufkin, TX", "Nacogdoches, TX", "Diboll, TX", "Angelina County"],
+            "areaServed": "Worldwide",
             "url": "https://pineydigital.com"
         }
     }
     </script>
 
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#1e5a8e">
+    <meta name="msapplication-TileColor" content="#0a0a0f">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/modern.css">
+
+    <!-- BreadcrumbList Schema for AI Search -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://pineydigital.com/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "About",
+                "item": "https://pineydigital.com/about.html"
+            }
+        ]
+    }
+    </script>
     <style>
         .about-hero {
             padding: 140px 0 80px;
@@ -382,7 +417,7 @@
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                     </svg>
                 </button>
-                <a href="index.html#contact" class="nav-cta">
+                <a href="contact.html" class="nav-cta">
                     <span>Start Project</span>
                 </a>
                 <button class="nav-menu-toggle" id="menuToggle" aria-label="Toggle menu">
@@ -590,7 +625,7 @@
                 <div class="cta-section">
                     <h2>Ready to build something that works?</h2>
                     <p>Whether you need a simple web presence or a complete growth system with loyalty, SMS, and reviews — I'll help you figure out the right path. No pressure, no scripts.</p>
-                    <a href="index.html#contact" class="btn btn-primary btn-lg">
+                    <a href="contact.html" class="btn btn-primary btn-lg">
                         <span>Start a Conversation</span>
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -611,7 +646,7 @@
                         <span>🌲</span>
                         <span>Piney Digital</span>
                     </a>
-                    <p class="footer-tagline">Modern websites for East Texas businesses.</p>
+                    <p class="footer-tagline">Enterprise SaaS platforms and custom development.</p>
                 </div>
                 <div class="footer-links">
                     <h4>Navigation</h4>
@@ -620,7 +655,7 @@
                     <a href="pricing.html">Pricing</a>
                     <a href="about.html">About</a>
                     <a href="faq.html">FAQ</a>
-                    <a href="index.html#contact">Contact</a>
+                    <a href="contact.html">Contact</a>
                 </div>
                 <div class="footer-links">
                     <h4>Legal</h4>
@@ -635,7 +670,7 @@
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 Piney Digital. All rights reserved.</p>
-                <p>Built with ❤️ in East Texas</p>
+                <p>Built with ❤️ for enterprise clients</p>
             </div>
         </div>
     </footer>

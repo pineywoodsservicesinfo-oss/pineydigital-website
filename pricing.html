@@ -2,10 +2,18 @@
 <html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-16SZEY2J5E"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-16SZEY2J5E');
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pricing | Piney Digital</title>
-    <meta name="description" content="Transparent pricing for East Texas businesses. Website packages starting at $99/month with hosting, updates, loyalty system, and SMS marketing included.">
-    <meta name="keywords" content="web design pricing Lufkin, website cost East Texas, affordable website packages, small business website price, loyalty program for business">
+    <meta name="description" content="Custom enterprise software pricing. SaaS platforms, multi-location dashboards, and AI integration starting at $3K. Transparent quotes based on your needs.">
+    <meta name="keywords" content="SaaS pricing, enterprise software cost, custom platform pricing, business software quote">
     <meta name="author" content="Joel Escoto">
     <link rel="canonical" href="https://pineydigital.com/pricing.html">
     <meta name="robots" content="index, follow">
@@ -14,14 +22,14 @@
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pineydigital.com/pricing.html">
-    <meta property="og:title" content="Pricing | Piney Digital - Website Packages for East Texas">
-    <meta property="og:description" content="Transparent pricing for East Texas businesses. Monthly plans include hosting, updates, and growth tools starting at $99/month.">
+    <meta property="og:title" content="Pricing | Piney Digital - Enterprise Software & SaaS">
+    <meta property="og:description" content="Custom enterprise software pricing. Platforms, dashboards, and AI integration starting at $3K.">
     <meta property="og:image" content="https://pineydigital.com/images/og-pricing.png">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Pricing | Piney Digital - Website Packages for East Texas">
-    <meta name="twitter:description" content="Transparent pricing for East Texas businesses. Monthly plans include hosting, updates, and growth tools starting at $99/month.">
+    <meta name="twitter:title" content="Pricing | Piney Digital - Enterprise SaaS & Custom Platforms">
+    <meta name="twitter:description" content="Custom enterprise software pricing. Platforms, dashboards, and AI integration starting at $3K.">
     <meta name="twitter:image" content="https://pineydigital.com/images/og-pricing.png">
 
     <!-- Structured Data -->
@@ -30,43 +38,43 @@
         "@context": "https://schema.org",
         "@type": "WebPage",
         "name": "Pricing",
-        "description": "Transparent website pricing for East Texas businesses with monthly plans",
+        "description": "Custom enterprise software pricing for SaaS platforms, multi-location dashboards, and AI integration",
         "publisher": {
-            "@type": "LocalBusiness",
+            "@type": "Organization",
             "name": "Piney Digital",
             "url": "https://pineydigital.com"
         },
         "mainEntity": {
             "@type": "ItemList",
-            "name": "Website Packages",
+            "name": "Enterprise Services",
             "itemListElement": [
                 {
                     "@type": "Service",
-                    "name": "Starter Plan",
-                    "description": "Single-page website with hosting and monthly updates",
+                    "name": "Concept Website",
+                    "description": "Premium custom website design with SEO and analytics",
                     "offers": {
                         "@type": "Offer",
-                        "price": "99",
+                        "price": "3000",
                         "priceCurrency": "USD"
                     }
                 },
                 {
                     "@type": "Service",
-                    "name": "Growth Plan",
-                    "description": "Website with loyalty system, SMS marketing, and review automation",
+                    "name": "Platform Build",
+                    "description": "Custom SaaS platform with multi-location support and role-based access",
                     "offers": {
                         "@type": "Offer",
-                        "price": "249",
+                        "price": "5000",
                         "priceCurrency": "USD"
                     }
                 },
                 {
                     "@type": "Service",
-                    "name": "Pro Plan",
-                    "description": "Full platform with booking, gift cards, and unlimited updates",
+                    "name": "Enterprise Platform",
+                    "description": "Full-service platform with AI integration and ongoing development",
                     "offers": {
                         "@type": "Offer",
-                        "price": "449",
+                        "price": "15000",
                         "priceCurrency": "USD"
                     }
                 }
@@ -75,11 +83,38 @@
     }
     </script>
 
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#1e5a8e">
+    <meta name="msapplication-TileColor" content="#0a0a0f">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/modern.css">
+
+    <!-- BreadcrumbList Schema for AI Search -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://pineydigital.com/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Pricing",
+                "item": "https://pineydigital.com/pricing.html"
+            }
+        ]
+    }
+    </script>
     <style>
         .pricing-hero {
             padding: 140px 0 80px;
@@ -456,7 +491,7 @@
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                     </svg>
                 </button>
-                <a href="index.html#contact" class="nav-cta">
+                <a href="contact.html" class="nav-cta">
                     <span>Start Project</span>
                 </a>
                 <button class="nav-menu-toggle" id="menuToggle" aria-label="Toggle menu">
@@ -484,11 +519,11 @@
         <section class="pricing-hero">
             <div class="container">
                 <span class="section-label section-label--green">Pricing</span>
-                <h1 class="section-title">Simple pricing, <span class="gradient-text">serious results</span></h1>
-                <p class="section-description" style="max-width: 700px;">Monthly plans that include everything — your website, hosting, updates, and growth tools. No surprise bills, no hourly charges, no confusion.</p>
+                <h1 class="section-title">Custom solutions, <span class="gradient-text">transparent quotes</span></h1>
+                <p class="section-description" style="max-width: 700px;">Every business is different. I build what you actually need — no cookie-cutter packages, no unnecessary features. Here's how pricing typically works.</p>
                 <div class="pricing-toggle">
-                    <span class="toggle-label">All plans include hosting, maintenance, and support</span>
-                    <span class="toggle-badge">No Hidden Fees</span>
+                    <span class="toggle-label">All projects include training, documentation, and 30-day support</span>
+                    <span class="toggle-badge">No Surprises</span>
                 </div>
             </div>
         </section>
@@ -497,186 +532,150 @@
         <section class="section" style="padding-top: 0;">
             <div class="container">
                 <div class="pricing-grid">
-                    <!-- Starter -->
+                    <!-- Concept Website -->
                     <div class="pricing-card">
                         <div class="pricing-header">
-                            <h3 class="pricing-name">Starter</h3>
-                            <p class="pricing-description">Get online, look professional, get found</p>
+                            <h3 class="pricing-name">Concept Website</h3>
+                            <p class="pricing-description">Premium web presence</p>
                         </div>
                         <div class="pricing-price">
                             <div class="price-monthly">
-                                <span class="price-amount">$99</span>
-                                <span class="price-period">/month</span>
+                                <span class="price-amount">$3K+</span>
+                                <span class="price-period">one-time</span>
                             </div>
-                            <p class="price-setup"><strong>$499</strong> one-time setup</p>
+                            <p class="price-setup"><strong>+$50/mo</strong> optional hosting</p>
                         </div>
                         <ul class="pricing-features">
                             <li>
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                Single-page professional website
+                                Custom design (no templates)
                             </li>
                             <li>
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                Mobile-responsive design
+                                Mobile-responsive
                             </li>
                             <li>
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                Google Business Profile setup
+                                Contact forms
                             </li>
                             <li>
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                Contact form + Google Maps
+                                SEO optimized
                             </li>
                             <li>
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                Basic SEO optimization
+                                Analytics setup
                             </li>
                             <li>
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                Hosting & SSL included
-                            </li>
-                            <li>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                Monthly updates (1 hour)
-                            </li>
-                            <li class="disabled">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-                                Loyalty card system
-                            </li>
-                            <li class="disabled">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-                                SMS marketing
-                            </li>
-                            <li class="disabled">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-                                Review automation
+                                2-week delivery
                             </li>
                         </ul>
                         <div class="pricing-best-for">
-                            <span class="best-for-label">Best for: New businesses getting started</span>
+                            <span class="best-for-label">Best for: Professional services, law firms, consultants</span>
                         </div>
                         <div class="pricing-cta">
-                            <a href="index.html#contact" class="btn btn-outline" style="width: 100%;">
-                                Get Started
+                            <a href="contact.html" class="btn btn-outline" style="width: 100%;">
+                                Get Quote
                             </a>
                         </div>
                     </div>
 
-                    <!-- Growth (Featured) -->
+                    <!-- Platform Build (Featured) -->
                     <div class="pricing-card featured">
                         <div class="pricing-badge">Most Popular</div>
                         <div class="pricing-header">
-                            <h3 class="pricing-name">Growth</h3>
-                            <p class="pricing-description">Website + loyalty + SMS + reviews</p>
+                            <h3 class="pricing-name">Platform Build</h3>
+                            <p class="pricing-description">Custom SaaS platform</p>
                         </div>
                         <div class="pricing-price">
                             <div class="price-monthly">
-                                <span class="price-amount">$249</span>
-                                <span class="price-period">/month</span>
+                                <span class="price-amount">$5K+</span>
+                                <span class="price-period">build</span>
                             </div>
-                            <p class="price-setup"><strong>$799</strong> one-time setup</p>
+                            <p class="price-setup"><strong>+$300/mo</strong> hosting & support</p>
                         </div>
                         <ul class="pricing-features">
                             <li>
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                <strong>Everything in Starter</strong>
+                                Custom dashboard
                             </li>
                             <li>
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                Digital loyalty card system
+                                Multi-location support
                             </li>
                             <li>
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                SMS marketing (500 msgs/mo)
+                                Role-based access
                             </li>
                             <li>
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                Automated review requests
+                                API integrations
                             </li>
                             <li>
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                Customer dashboard
+                                Training included
                             </li>
                             <li>
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                Monthly performance report
-                            </li>
-                            <li>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                Content updates (2 hrs/mo)
-                            </li>
-                            <li class="disabled">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-                                Online booking system
-                            </li>
-                            <li class="disabled">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-                                Digital gift cards
+                                30-day support
                             </li>
                         </ul>
                         <div class="pricing-best-for">
-                            <span class="best-for-label">Best for: Restaurants, salons, retail shops</span>
+                            <span class="best-for-label">Best for: Multi-location businesses, restaurant chains</span>
                         </div>
                         <div class="pricing-cta">
-                            <a href="index.html#contact" class="btn btn-primary" style="width: 100%;">
-                                Get Started
+                            <a href="contact.html" class="btn btn-primary" style="width: 100%;">
+                                Get Quote
                             </a>
                         </div>
                     </div>
 
-                    <!-- Pro -->
+                    <!-- Enterprise -->
                     <div class="pricing-card">
                         <div class="pricing-header">
-                            <h3 class="pricing-name">Pro</h3>
-                            <p class="pricing-description">Full platform for serious growth</p>
+                            <h3 class="pricing-name">Enterprise</h3>
+                            <p class="pricing-description">Full-service platform</p>
                         </div>
                         <div class="pricing-price">
                             <div class="price-monthly">
-                                <span class="price-amount">$449</span>
-                                <span class="price-period">/month</span>
+                                <span class="price-amount">$15K+</span>
+                                <span class="price-period">build</span>
                             </div>
-                            <p class="price-setup"><strong>$1,199</strong> one-time setup</p>
+                            <p class="price-setup"><strong>$500-800/mo</strong> ongoing support</p>
                         </div>
                         <ul class="pricing-features">
                             <li>
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                <strong>Everything in Growth</strong>
+                                <strong>Everything in Platform</strong>
                             </li>
                             <li>
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                Online booking system
+                                AI & automation features
                             </li>
                             <li>
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                Referral program tools
+                                Custom reporting
                             </li>
                             <li>
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                Digital gift cards
+                                Ongoing development
                             </li>
                             <li>
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                SMS marketing (2,000 msgs/mo)
+                                Priority support
                             </li>
                             <li>
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                Unlimited content updates
-                            </li>
-                            <li>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                Priority support (same-day)
-                            </li>
-                            <li>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                Quarterly strategy calls
+                                Quarterly reviews
                             </li>
                         </ul>
                         <div class="pricing-best-for">
-                            <span class="best-for-label">Best for: Salons, med spas, gyms</span>
+                            <span class="best-for-label">Best for: Growing enterprises, franchise operations</span>
                         </div>
                         <div class="pricing-cta">
-                            <a href="index.html#contact" class="btn btn-outline" style="width: 100%;">
-                                Get Started
+                            <a href="contact.html" class="btn btn-outline" style="width: 100%;">
+                                Get Quote
                             </a>
                         </div>
                     </div>
@@ -685,97 +684,71 @@
                 <!-- Add-Ons Section -->
                 <div class="addons-section" style="margin-bottom: 3rem;">
                     <h3 style="color: var(--text-primary); font-size: 1.5rem; margin-bottom: 1.5rem; text-align: center;">Optional Add-Ons</h3>
-                    <p style="color: var(--text-secondary); text-align: center; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">Need something extra? These can be added to any plan. Most are one-time fees, charged separately from your monthly plan.</p>
+                    <p style="color: var(--text-secondary); text-align: center; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">Enhance your platform with these optional features. Each is quoted separately based on scope.</p>
                     <div class="addons-grid" style="display: grid; grid-template-columns: 1fr; gap: 1rem;">
                         <div class="addon-card" style="background: rgba(18, 18, 26, 0.95); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 16px; padding: 1.25rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
                             <div>
-                                <div style="color: var(--text-primary); font-weight: 600; margin-bottom: 0.25rem;">⚡ Rush Delivery</div>
-                                <div style="color: var(--text-muted); font-size: 0.875rem;">Launch in 2-3 days instead of 5-7</div>
+                                <div style="color: var(--text-primary); font-weight: 600; margin-bottom: 0.25rem;">🤖 AI Chat Integration</div>
+                                <div style="color: var(--text-muted); font-size: 0.875rem;">Intelligent chatbot trained on your business data</div>
                             </div>
-                            <div style="color: var(--accent); font-weight: 700; font-size: 1.25rem;">+$250</div>
+                            <div style="color: var(--accent); font-weight: 700; font-size: 1.25rem;">+$1,500</div>
                         </div>
                         <div class="addon-card" style="background: rgba(18, 18, 26, 0.95); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 16px; padding: 1.25rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
                             <div>
-                                <div style="color: var(--text-primary); font-weight: 600; margin-bottom: 0.25rem;">🎨 Logo Design</div>
-                                <div style="color: var(--text-muted); font-size: 0.875rem;">Custom logo with 3 concepts + revisions</div>
+                                <div style="color: var(--text-primary); font-weight: 600; margin-bottom: 0.25rem;">📊 Advanced Analytics</div>
+                                <div style="color: var(--text-muted); font-size: 0.875rem;">Custom dashboards with predictive insights</div>
                             </div>
-                            <div style="color: var(--accent); font-weight: 700; font-size: 1.25rem;">+$300</div>
+                            <div style="color: var(--accent); font-weight: 700; font-size: 1.25rem;">+$2,000</div>
                         </div>
                         <div class="addon-card" style="background: rgba(18, 18, 26, 0.95); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 16px; padding: 1.25rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
                             <div>
-                                <div style="color: var(--text-primary); font-weight: 600; margin-bottom: 0.25rem;">📸 Photography Package</div>
-                                <div style="color: var(--text-muted); font-size: 0.875rem;">On-site photos for your business</div>
+                                <div style="color: var(--text-primary); font-weight: 600; margin-bottom: 0.25rem;">🔗 Third-Party Integrations</div>
+                                <div style="color: var(--text-muted); font-size: 0.875rem;">Connect with POS, CRM, accounting systems</div>
                             </div>
-                            <div style="color: var(--accent); font-weight: 700; font-size: 1.25rem;">+$200</div>
+                            <div style="color: var(--accent); font-weight: 700; font-size: 1.25rem;">+$1,000 each</div>
                         </div>
                         <div class="addon-card" style="background: rgba(18, 18, 26, 0.95); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 16px; padding: 1.25rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
                             <div>
-                                <div style="color: var(--text-primary); font-weight: 600; margin-bottom: 0.25rem;">✍️ Copywriting</div>
-                                <div style="color: var(--text-muted); font-size: 0.875rem;">Professional page content written</div>
+                                <div style="color: var(--text-primary); font-weight: 600; margin-bottom: 0.25rem;">📱 Mobile App Version</div>
+                                <div style="color: var(--text-muted); font-size: 0.875rem;">iOS and Android companion app</div>
                             </div>
-                            <div style="color: var(--accent); font-weight: 700; font-size: 1.25rem;">+$150</div>
+                            <div style="color: var(--accent); font-weight: 700; font-size: 1.25rem;">+$5,000+</div>
                         </div>
                         <div class="addon-card" style="background: rgba(18, 18, 26, 0.95); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 16px; padding: 1.25rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
                             <div>
-                                <div style="color: var(--text-primary); font-weight: 600; margin-bottom: 0.25rem;">🗺️ Additional Location Page</div>
-                                <div style="color: var(--text-muted); font-size: 0.875rem;">SEO page for each service area</div>
+                                <div style="color: var(--text-primary); font-weight: 600; margin-bottom: 0.25rem;">🔐 SSO Integration</div>
+                                <div style="color: var(--text-muted); font-size: 0.875rem;">Single sign-on with Okta, Azure AD, etc.</div>
                             </div>
-                            <div style="color: var(--accent); font-weight: 700; font-size: 1.25rem;">+$100</div>
+                            <div style="color: var(--accent); font-weight: 700; font-size: 1.25rem;">+$2,500</div>
                         </div>
                         <div class="addon-card" style="background: rgba(18, 18, 26, 0.95); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 16px; padding: 1.25rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
                             <div>
-                                <div style="color: var(--text-primary); font-weight: 600; margin-bottom: 0.25rem;">📱 Extra SMS Messages</div>
-                                <div style="color: var(--text-muted); font-size: 0.875rem;">1,000 additional texts per month</div>
+                                <div style="color: var(--text-primary); font-weight: 600; margin-bottom: 0.25rem;">🌐 Additional Location</div>
+                                <div style="color: var(--text-muted); font-size: 0.875rem;">Each additional location beyond initial scope</div>
                             </div>
-                            <div style="color: var(--accent); font-weight: 700; font-size: 1.25rem;">+$25/mo</div>
+                            <div style="color: var(--accent); font-weight: 700; font-size: 1.25rem;">+$500/location</div>
                         </div>
                     </div>
-                </div>
-
-                <!-- Value Proposition -->
-                <div class="value-prop">
-                    <h3>💡 Why monthly instead of one-time?</h3>
-                    <p>Most web designers build a site and walk away. Then you're stuck paying hourly rates for every little update, or worse — your site goes stale and stops working.</p>
-                    <p><strong>With a monthly plan, you get:</strong></p>
-                    <ul style="color: var(--text-secondary); padding-left: 1.5rem; margin-bottom: 1rem;">
-                        <li>A website that stays current and secure</li>
-                        <li>Regular updates without hourly charges</li>
-                        <li>Real tools that bring customers back (loyalty, SMS, reviews)</li>
-                        <li>Someone invested in your long-term growth</li>
-                    </ul>
-                    <p><strong>For less than $10/day on the Growth plan</strong>, you're not just buying a website — you're getting a digital growth partner who keeps the system running while you focus on your business.</p>
                 </div>
 
                 <!-- Feature Comparison -->
                 <div class="comparison-section">
                     <div class="comparison-header">
-                        <h3>Compare Plans</h3>
+                        <h3>Compare Tiers</h3>
                         <p>See what's included at each level</p>
                     </div>
                     <table class="comparison-table">
                         <thead>
                             <tr>
                                 <th>Feature</th>
-                                <th class="plan-name">Starter</th>
-                                <th class="plan-name" style="color: var(--accent);">Growth</th>
-                                <th class="plan-name">Pro</th>
+                                <th class="plan-name">Concept</th>
+                                <th class="plan-name" style="color: var(--accent);">Platform</th>
+                                <th class="plan-name">Enterprise</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Website pages</td>
-                                <td>5</td>
-                                <td class="check">5+</td>
-                                <td class="check">Unlimited</td>
-                            </tr>
-                            <tr>
-                                <td>Hosting & SSL</td>
-                                <td class="check">✓</td>
-                                <td class="check">✓</td>
-                                <td class="check">✓</td>
-                            </tr>
-                            <tr>
-                                <td>Google Business setup</td>
+                                <td>Custom design</td>
                                 <td class="check">✓</td>
                                 <td class="check">✓</td>
                                 <td class="check">✓</td>
@@ -787,70 +760,76 @@
                                 <td class="check">✓</td>
                             </tr>
                             <tr>
-                                <td>Basic SEO</td>
+                                <td>SEO optimized</td>
                                 <td class="check">✓</td>
                                 <td class="check">✓</td>
                                 <td class="check">✓</td>
                             </tr>
                             <tr>
-                                <td>Monthly updates</td>
-                                <td>1 hour</td>
-                                <td>2 hours</td>
-                                <td class="check">Unlimited</td>
+                                <td>Contact forms</td>
+                                <td class="check">✓</td>
+                                <td class="check">✓</td>
+                                <td class="check">✓</td>
+                            </tr>
+                            <tr>
+                                <td>Analytics setup</td>
+                                <td class="check">✓</td>
+                                <td class="check">✓</td>
+                                <td class="check">✓</td>
+                            </tr>
+                            <tr>
+                                <td>Custom dashboard</td>
+                                <td class="cross">—</td>
+                                <td class="check">✓</td>
+                                <td class="check">✓</td>
                             </tr>
                             <tr class="featured-row">
-                                <td>Loyalty card system</td>
+                                <td>Multi-location support</td>
                                 <td class="cross">—</td>
                                 <td class="check">✓</td>
                                 <td class="check">✓</td>
                             </tr>
                             <tr class="featured-row">
-                                <td>SMS marketing</td>
+                                <td>Role-based access</td>
                                 <td class="cross">—</td>
-                                <td>500/mo</td>
-                                <td>2,000/mo</td>
+                                <td class="check">✓</td>
+                                <td class="check">✓</td>
                             </tr>
                             <tr class="featured-row">
-                                <td>Review automation</td>
+                                <td>API integrations</td>
                                 <td class="cross">—</td>
                                 <td class="check">✓</td>
                                 <td class="check">✓</td>
                             </tr>
                             <tr>
-                                <td>Customer dashboard</td>
-                                <td class="cross">—</td>
-                                <td class="check">✓</td>
-                                <td class="check">✓</td>
-                            </tr>
-                            <tr>
-                                <td>Online booking</td>
+                                <td>AI & automation</td>
                                 <td class="cross">—</td>
                                 <td class="cross">—</td>
                                 <td class="check">✓</td>
                             </tr>
                             <tr>
-                                <td>Digital gift cards</td>
+                                <td>Custom reporting</td>
                                 <td class="cross">—</td>
                                 <td class="cross">—</td>
                                 <td class="check">✓</td>
                             </tr>
                             <tr>
-                                <td>Referral program</td>
+                                <td>Ongoing development</td>
                                 <td class="cross">—</td>
                                 <td class="cross">—</td>
                                 <td class="check">✓</td>
                             </tr>
                             <tr>
-                                <td>Strategy calls</td>
+                                <td>Priority support</td>
                                 <td class="cross">—</td>
-                                <td class="cross">—</td>
-                                <td>Quarterly</td>
+                                <td>30 days</td>
+                                <td class="check">Ongoing</td>
                             </tr>
                             <tr>
-                                <td>Support</td>
-                                <td>48-hour</td>
-                                <td>24-hour</td>
-                                <td>Same-day</td>
+                                <td>Quarterly reviews</td>
+                                <td class="cross">—</td>
+                                <td class="cross">—</td>
+                                <td class="check">✓</td>
                             </tr>
                         </tbody>
                     </table>
@@ -865,61 +844,61 @@
 
                     <div class="faq-item">
                         <button class="faq-question">
-                            <span>What happens after the first 3 months?</span>
+                            <span>How long does a typical build take?</span>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
                         </button>
                         <div class="faq-answer">
-                            <p>You're month-to-month after the initial 3-month commitment. No long-term contracts — if the service isn't delivering value, you can cancel with 30 days notice. Most clients stay because the results speak for themselves.</p>
+                            <p>Concept websites: 2-3 weeks. Platform builds: 4-8 weeks depending on complexity. Enterprise platforms: 8-16 weeks for full feature sets. I'll give you a realistic timeline after our initial discovery call.</p>
                         </div>
                     </div>
 
                     <div class="faq-item">
                         <button class="faq-question">
-                            <span>What if I already have a website?</span>
+                            <span>What's included in the discovery phase?</span>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
                         </button>
                         <div class="faq-answer">
-                            <p>I can migrate your existing content to a new, faster, more effective site. The setup fee covers the initial build whether we're starting fresh or upgrading. If your current site is already doing well, I can add just the loyalty and SMS tools.</p>
+                            <p>Before any code is written, we map out your workflows, data sources, user roles, and integration needs. This ensures we build what you actually need — not what looks impressive but doesn't fit your operations.</p>
                         </div>
                     </div>
 
                     <div class="faq-item">
                         <button class="faq-question">
-                            <span>Do I own my website?</span>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            <span>Do I own my platform and data?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></line></svg>
                         </button>
                         <div class="faq-answer">
-                            <p>Yes. You own your content, your domain, your Google Business Profile — everything. If you ever want to leave, I'll hand over all your files and data. No hostage situations.</p>
+                            <p>Yes. You own everything — your code, your data, your infrastructure. I build on your cloud accounts (or help you set them up). If we part ways, you keep everything. No vendor lock-in.</p>
                         </div>
                     </div>
 
                     <div class="faq-item">
                         <button class="faq-question">
-                            <span>Can I upgrade or downgrade later?</span>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            <span>What happens after launch?</span>
+                            <svg width="20" height="20" viewBox="0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
                         </button>
                         <div class="faq-answer">
-                            <p>Absolutely. Many clients start on Starter and upgrade to Growth after seeing results. If your business needs change, we adjust the plan accordingly. You're not locked in.</p>
+                            <p>Platform builds include 30 days of support for bug fixes and minor adjustments. Enterprise clients get ongoing support with their monthly retainer. Training for your team is included in all builds.</p>
                         </div>
                     </div>
 
                     <div class="faq-item">
                         <button class="faq-question">
-                            <span>What's the SMS loyalty system?</span>
+                            <span>Can features be added later?</span>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
                         </button>
                         <div class="faq-answer">
-                            <p>It's a customer retention system. Your customers earn points for visits, get automated reminders when they're close to a reward, and you can send targeted promotions. It works through text messages — no app for them to download, no complicated signup. They just give their phone number and the system handles the rest.</p>
+                            <p>Absolutely. The platforms are built to be extensible. Need a new integration, additional reporting, or mobile app? We scope it as a phase 2 project with clear pricing before any work begins.</p>
                         </div>
                     </div>
 
                     <div class="faq-item">
                         <button class="faq-question">
-                            <span>What if I need something custom?</span>
+                            <span>What technologies do you use?</span>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
                         </button>
                         <div class="faq-answer">
-                            <p>For custom work outside the standard packages — integrations, special features, complex functionality — we scope it separately and give you a clear quote before any work starts. No surprise invoices.</p>
+                            <p>Python/Flask for backends, SQLite/PostgreSQL for databases, Chart.js for visualizations, Tailwind CSS for styling. I use proven, well-documented technologies — not experimental frameworks that might disappear.</p>
                         </div>
                     </div>
                 </div>
@@ -928,7 +907,7 @@
                 <div class="cta-section">
                     <h2>Ready to grow?</h2>
                     <p>Let's talk about which plan fits your business. No pressure, no sales scripts — just an honest conversation about what you need.</p>
-                    <a href="index.html#contact" class="btn btn-primary btn-lg">
+                    <a href="contact.html" class="btn btn-primary btn-lg">
                         <span>Start a Conversation</span>
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -949,7 +928,7 @@
                         <span>🌲</span>
                         <span>Piney Digital</span>
                     </a>
-                    <p class="footer-tagline">Modern websites for East Texas businesses.</p>
+                    <p class="footer-tagline">Enterprise SaaS platforms and custom development.</p>
                 </div>
                 <div class="footer-links">
                     <h4>Navigation</h4>
@@ -958,7 +937,7 @@
                     <a href="pricing.html">Pricing</a>
                     <a href="about.html">About</a>
                     <a href="faq.html">FAQ</a>
-                    <a href="index.html#contact">Contact</a>
+                    <a href="contact.html">Contact</a>
                 </div>
                 <div class="footer-links">
                     <h4>Legal</h4>
@@ -973,7 +952,7 @@
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 Piney Digital. All rights reserved.</p>
-                <p>Built with ❤️ in East Texas</p>
+                <p>Built with ❤️ for enterprise clients</p>
             </div>
         </div>
     </footer>

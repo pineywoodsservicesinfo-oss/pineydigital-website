@@ -1,0 +1,146 @@
+# ===========================================
+# Piney Digital - Netlify Configuration
+# ===========================================
+# This file controls how Netlify builds, secures,
+# and serves your website. It's placed in the
+# root of your project.
+#
+# Docs: https://docs.netlify.com/configure-builds/file-based-configuration/
+
+# -------------------------------------------
+# BUILD SETTINGS
+# -------------------------------------------
+# For static sites, we just specify the publish directory.
+# No build command needed since we're serving pre-built HTML.
+[build]
+  publish = "."
+
+# -------------------------------------------
+# SECURITY HEADERS
+# -------------------------------------------
+# These headers protect your site from common attacks.
+# They're sent with every response to browsers.
+
+# Global headers for all pages
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Prevents clickjacking - your site can't be embedded in iframes
+    # on other domains. Protects against UI redress attacks.
+    X-Frame-Options = "DENY"
+
+    # Prevents MIME type sniffing. Browser will only interpret
+    # files as the content type we specify, not what it "guesses".
+    # Prevents uploading malicious files that browsers might execute.
+    X-Content-Type-Options = "nosniff"
+
+    # Enables XSS protection in browsers. "1; mode=block" means
+    # the browser will block the page entirely if an attack is detected.
+    X-XSS-Protection = "1; mode=block"
+
+    # Referrer Policy - controls what info is sent when linking out
+    # "strict-origin-when-cross-origin" sends full URL for same-origin,
+    # but only the origin (domain) for cross-origin requests.
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+    # Permissions Policy (formerly Feature Policy)
+    # Restricts what browser features the site can use.
+    # We disable camera, microphone, geolocation since we don't need them.
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+    # Content Security Policy (CSP)
+    # Controls what external resources can be loaded.
+    # This is the most important security header for modern sites.
+    #
+    # Directives explained:
+    # - default-src 'self' = only load from same domain by default
+    # - script-src = where JavaScript can come from
+    # - style-src = where CSS can come from
+    # - img-src = where images can come from
+    # - font-src = where fonts can come from
+    # - connect-src = where AJAX/fetch requests can go
+    # - frame-ancestors 'none' = no one can iframe this site
+    # - upgrade-insecure-requests = force HTTPS for all resources
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdnjs.cloudflare.com https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none'; upgrade-insecure-requests;"
+
+    # Strict Transport Security (HSTS)
+    # Forces browsers to ONLY use HTTPS for this domain.
+    # max-age=31536000 = 1 year in seconds
+    # includeSubDomains = applies to all subdomains too
+    # preload = can be submitted to browser preload lists
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+
+# -------------------------------------------
+# CACHE HEADERS FOR STATIC ASSETS
+# -------------------------------------------
+# Static assets (CSS, JS, images) don't change often.
+# We tell browsers to cache them for a year.
+# When you update these files, use query strings (?v=2) to bust cache.
+
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.ico"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Fonts from Google are cached for a year
+[[headers]]
+  for = "/*.woff2"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# -------------------------------------------
+# REDIRECTS
+# -------------------------------------------
+# Redirects handle URL changes, clean URLs, and force HTTPS.
+
+# Force HTTPS - redirect any HTTP requests to HTTPS
+# Note: Netlify does this automatically, but this makes it explicit
+[[redirects]]
+  from = "http://pineydigital.com/*"
+  to = "https://pineydigital.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.pineydigital.com/*"
+  to = "https://pineydigital.com/:splat"
+  status = 301
+  force = true
+
+# Redirect www to non-www (canonical domain)
+[[redirects]]
+  from = "https://www.pineydigital.com/*"
+  to = "https://pineydigital.com/:splat"
+  status = 301
+  force = true
+
+# Clean URLs - remove .html extension
+# Example: /about.html redirects to /about
+# This is optional but makes URLs cleaner
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+
+# Handle 404s - Netlify will use 404.html automatically
+# But we can explicitly handle SPA-style routing here if needed

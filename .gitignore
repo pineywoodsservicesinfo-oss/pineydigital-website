@@ -1,0 +1,20 @@
+# Dependencies
+node_modules/
+
+# Development files
+*.csv
+*.zip
+package.json
+package-lock.json
+server.js
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
