@@ -38,10 +38,10 @@
             "url": "/contact.html"
         },
         {
-            "name": "View Portfolio",
-            "short_name": "Portfolio",
-            "description": "See our SaaS platforms and custom development work",
-            "url": "/portfolio.html"
+            "name": "Capabilities",
+            "short_name": "Capabilities",
+            "description": "See what I can build for your business",
+            "url": "/capabilities.html"
         },
         {
             "name": "Pricing",

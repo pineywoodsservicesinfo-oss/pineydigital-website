@@ -142,5 +142,11 @@
   to = "/"
   status = 301
 
+# Redirect old portfolio.html to new capabilities.html (SEO)
+[[redirects]]
+  from = "/portfolio.html"
+  to = "/capabilities.html"
+  status = 301
+
 # Handle 404s - Netlify will use 404.html automatically
 # But we can explicitly handle SPA-style routing here if needed

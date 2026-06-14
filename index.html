@@ -11,9 +11,9 @@
       gtag('config', 'G-16SZEY2J5E');
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Piney Digital | Enterprise SaaS & Custom Platform Development</title>
-    <meta name="description" content="Custom SaaS platforms, multi-location dashboards, and AI integration for growing businesses. Enterprise software that scales with your operations.">
-    <meta name="keywords" content="SaaS development, custom software, enterprise dashboards, multi-location platforms, AI integration, business automation, custom web applications">
+    <title>Piney Digital | Stop The Operational Bleed | Enterprise SaaS & Custom Platforms</title>
+    <meta name="description" content="Stop wasting time, paper, and profit on outdated manual processes. We build custom enterprise SaaS platforms that automate your operations and scale your revenue.">
+    <meta name="keywords" content="business automation, operational efficiency, custom SaaS development, enterprise dashboards, stop manual tracking, multi-location software, digital transformation">
     <meta name="author" content="Joel Escoto">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://pineydigital.com/">
@@ -72,17 +72,7 @@
                     "itemOffered": {
                         "@type": "Service",
                         "name": "Concept Site",
-                        "description": "Professional marketing website with SEO optimization"
-                    },
-                    "price": "3000",
-                    "priceCurrency": "USD"
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "SaaS Platform",
-                        "description": "Custom web application with user accounts and dashboard"
+                        "description": "Professional marketing website with 5-20 pages, SEO, mobile-responsive design"
                     },
                     "price": "5000",
                     "priceCurrency": "USD"
@@ -91,11 +81,23 @@
                     "@type": "Offer",
                     "itemOffered": {
                         "@type": "Service",
-                        "name": "Enterprise Platform",
-                        "description": "Full-scale platform with integrations and multi-location support"
+                        "name": "SaaS Platform",
+                        "description": "Custom web application with user accounts, dashboard, and core features"
                     },
-                    "price": "15000",
+                    "price": "14000",
                     "priceCurrency": "USD"
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Enterprise Platform",
+                        "description": "Full-scale platform with integrations, multi-location support, and advanced features"
+                    },
+                    "priceSpecification": {
+                        "@type": "PriceSpecification",
+                        "description": "Custom quote based on scope"
+                    }
                 }
             ]
         }
@@ -113,6 +115,44 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
 
     <link rel="stylesheet" href="css/modern.css">
+    <style>
+        .hero {
+            position: relative;
+            overflow: hidden;
+            min-height: 85vh !important;
+            display: flex;
+            align-items: center;
+        }
+        .hero-bg-image {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            height: 80%;
+            background-image: url('images/herovisuals.png');
+            background-size: cover;
+            background-position: center;
+            filter: brightness(0.6) contrast(1.1);
+            border-radius: 24px;
+            z-index: -1;
+            transition: transform 0.5s ease-out;
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, transparent 20%, var(--bg-color) 100%),
+                        linear-gradient(to bottom, transparent 0%, var(--bg-color) 95%);
+            z-index: 0;
+        }
+        .hero-container {
+            position: relative;
+            z-index: 2;
+        }
+    </style>
 </head>
 <body>
     <!-- Noise Overlay -->
@@ -129,10 +169,10 @@
                 <span class="nav-logo-text">Piney Digital</span>
             </a>
             <div class="nav-links">
-                <a href="#services" class="nav-link">Services</a>
-                <a href="portfolio.html" class="nav-link">Portfolio</a>
+                <a href="#hero" class="nav-link">Homepage</a>
+                <a href="capabilities.html" class="nav-link">Capabilities</a>
                 <a href="blog.html" class="nav-link">Blog</a>
-                <a href="#pricing" class="nav-link">Pricing</a>
+                <a href="pricing.html" class="nav-link">Pricing</a>
                 <a href="#about" class="nav-link">About</a>
                 <a href="faq.html" class="nav-link">FAQ</a>
                 <a href="contact.html" class="nav-link">Contact</a>
@@ -171,10 +211,10 @@
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
         <div class="mobile-menu-content">
-            <a href="#services" class="mobile-link">Services</a>
-            <a href="portfolio.html" class="mobile-link">Portfolio</a>
+            <a href="#hero" class="mobile-link">Homepage</a>
+            <a href="capabilities.html" class="mobile-link">Capabilities</a>
             <a href="blog.html" class="mobile-link">Blog</a>
-            <a href="#pricing" class="mobile-link">Pricing</a>
+            <a href="pricing.html" class="mobile-link">Pricing</a>
             <a href="#about" class="mobile-link">About</a>
             <a href="faq.html" class="mobile-link">FAQ</a>
             <a href="contact.html" class="mobile-link">Contact</a>
@@ -182,13 +222,10 @@
         </div>
     </div>
 
-    <!-- Hero Section -->
     <section class="hero" id="hero">
         <div class="hero-bg">
-            <div class="hero-gradient"></div>
-            <div class="hero-grid"></div>
-            <div class="hero-blob blob-1"></div>
-            <div class="hero-blob blob-2"></div>
+            <div class="hero-bg-image"></div>
+            <div class="hero-overlay"></div>
         </div>
         <div class="hero-spotlight"></div>
         <div class="hero-container">
@@ -197,12 +234,11 @@
                 <span>Enterprise Software & Custom SaaS</span>
             </div>
             <h1 class="hero-title animate-in">
-                <span class="title-line">Custom platforms built</span>
-                <span class="title-line gradient-text">to scale your business.</span>
+                <span class="title-line">Stop the bleed.</span>
+                <span class="title-line gradient-text">Scale your operations.</span>
             </h1>
             <p class="hero-description animate-in">
-                Multi-location dashboards, AI-powered automation, and custom SaaS solutions
-                designed for growing enterprises.
+                Stop wasting time, paper, and profit on manual tracking. We replace fragmented spreadsheets and ink-stained logs with high-performance enterprise SaaS platforms built for real-world growth.
             </p>
             <div class="hero-stats animate-in">
                 <div class="stat-item">
@@ -218,15 +254,15 @@
                 </div>
             </div>
             <div class="hero-cta animate-in">
-                <a href="#pricing" class="btn btn-primary btn-lg magnetic">
+                <a href="pricing.html" class="btn btn-primary btn-lg magnetic">
                     <span>View Packages</span>
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <line x1="5" y1="12" x2="19" y2="12"></line>
                         <polyline points="12 5 19 12 12 19"></polyline>
                     </svg>
                 </a>
-                <a href="portfolio.html" class="btn btn-ghost btn-lg magnetic">
-                    <span>See Our Work</span>
+                <a href="capabilities.html" class="btn btn-ghost btn-lg magnetic">
+                    <span>View Capabilities</span>
                 </a>
             </div>
             <div class="hero-scroll">
@@ -248,7 +284,7 @@
 
             <div class="bento-grid">
                 <!-- Large Card -->
-                <div class="bento-card bento-lg animate-in">
+                <div class="bento-card bento-lg animate-in" style="background-image: linear-gradient(rgba(18, 18, 26, 0.8), rgba(18, 18, 26, 0.8)), url('images/servicesvisual.png'); background-size: cover; background-position: center;">
                     <div class="card-icon">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                             <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
@@ -256,12 +292,12 @@
                             <line x1="12" y1="17" x2="12" y2="21"></line>
                         </svg>
                     </div>
-                    <h3>Custom SaaS Platforms</h3>
-                    <p>Bespoke software platforms built for your operations. Multi-tenant architecture, role-based access, and integrations with your existing tools.</p>
+                    <h3>Operational OS</h3>
+                    <p>Stop the chaos of manual tracking. We build the central nervous system for your business—replacing paper logs and fragmented sheets with a single, high-performance source of truth.</p>
                     <div class="card-features">
-                        <span>Multi-Location</span>
-                        <span>Role-Based Access</span>
-                        <span>API Integrations</span>
+                        <span>End-to-End Automation</span>
+                        <span>Unified Command Center</span>
+                        <span>Zero-Data Leakage</span>
                     </div>
                 </div>
 
@@ -274,8 +310,8 @@
                             <line x1="12" y1="22.08" x2="12" y2="12"></line>
                         </svg>
                     </div>
-                    <h3>AI & Automation</h3>
-                    <p>AI-powered workflows, automated reporting, and intelligent dashboards that surface insights before you ask.</p>
+                    <h3>AI Profit Recovery</h3>
+                    <p>Turn your data into a weapon. Our AI agents surface leakage in your workflows and automate the repetitive tasks that steal your team's time.</p>
                     <div class="card-arrow">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <line x1="7" y1="17" x2="17" y2="7"></line>
@@ -292,8 +328,8 @@
                             <line x1="6" y1="20" x2="6" y2="14"></line>
                         </svg>
                     </div>
-                    <h3>Enterprise Dashboards</h3>
-                    <p>Real-time analytics across all locations. Compare performance, spot anomalies, and make data-driven decisions.</p>
+                    <h3>Multi-Location Intelligence</h3>
+                    <p>Full visibility across every site in real-time. No more phone-tagging managers to get a status update—see everything, everywhere, instantly.</p>
                     <div class="card-arrow">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <line x1="7" y1="17" x2="17" y2="7"></line>
@@ -330,9 +366,9 @@
     <section class="section work" id="work">
         <div class="container">
             <div class="section-header animate-in">
-                <span class="section-label">Recent Work</span>
-                <h2 class="section-title">Platforms built for <span class="gradient-text">real operations</span></h2>
-                <p class="section-description">Custom software solving real business challenges.</p>
+                <span class="section-label">Capabilities</span>
+                <h2 class="section-title">What I can build <span class="gradient-text">for your business</span></h2>
+                <p class="section-description">Concept demonstrations showing the range of solutions available.</p>
             </div>
 
             <div class="work-grid">
@@ -386,8 +422,45 @@
             </div>
 
             <div class="work-cta animate-in">
-                <a href="portfolio.html" class="btn btn-outline btn-lg magnetic">
-                    <span>View Full Portfolio</span>
+                <a href="capabilities.html" class="btn btn-outline btn-lg magnetic">
+                    <span>Explore All Capabilities</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="section blog-preview" id="blog-preview">
+        <div class="container">
+            <div class="section-header animate-in">
+                <span class="section-label">From the Blog</span>
+                <h2 class="section-title">Latest <span class="gradient-text">insights</span></h2>
+                <p class="section-description">Thoughts on building operational systems and stopping the bleed.</p>
+            </div>
+
+            <div class="blog-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+                <article class="blog-card animate-in" style="background: rgba(18, 18, 26, 0.95); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 20px; padding: 2rem; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <span style="display: inline-block; background: rgba(45, 127, 78, 0.15); color: var(--accent); padding: 0.35rem 0.75rem; border-radius: 999px; font-size: 0.75rem; font-weight: 600; margin-bottom: 1rem;">Positioning Shift</span>
+                    <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem; color: var(--text-primary);">From Websites to Operational Systems</h3>
+                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.25rem;">Why I stopped building "websites" and started building systems that actually run your business.</p>
+                    <a href="blog.html#article-operational-shift" class="btn btn-ghost" style="padding: 0.5rem 0;">Read Article →</a>
+                </article>
+
+                <article class="blog-card animate-in" style="background: rgba(18, 18, 26, 0.95); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 20px; padding: 2rem; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <span style="display: inline-block; background: rgba(212, 175, 55, 0.15); color: #e8c66a; padding: 0.35rem 0.75rem; border-radius: 999px; font-size: 0.75rem; font-weight: 600; margin-bottom: 1rem;">Core Concept</span>
+                    <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem; color: var(--text-primary);">What is Operational Bleed?</h3>
+                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.25rem;">The invisible losses from manual processes, scattered data, and disconnected tools — and how to stop them.</p>
+                    <a href="blog.html#article-operational-bleed" class="btn btn-ghost" style="padding: 0.5rem 0;">Read Article →</a>
+                </article>
+            </div>
+
+            <div class="animate-in" style="text-align: center;">
+                <a href="blog.html" class="btn btn-outline">
+                    <span>View All Posts</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
                 </a>
             </div>
         </div>
@@ -403,73 +476,73 @@
             </div>
 
             <div class="pricing-grid">
-                <!-- Concept Website -->
+                <!-- Concept Site -->
                 <div class="pricing-card animate-in">
                     <div class="pricing-header">
-                        <h3 class="pricing-name">Concept Website</h3>
-                        <p class="pricing-description">Premium web presence</p>
+                        <h3 class="pricing-name">Concept Site</h3>
+                        <p class="pricing-description">Professional web presence</p>
                     </div>
                     <div class="pricing-price">
-                        <span class="price-current">$3K+</span>
+                        <span class="price-current">$5,000</span>
                         <span class="price-period">one-time</span>
                     </div>
-                    <p style="text-align: center; color: var(--text-muted); font-size: 0.875rem; margin-top: -0.5rem; margin-bottom: 1rem;">+$50/mo hosting available</p>
+                    <p style="text-align: center; color: var(--text-muted); font-size: 0.875rem; margin-top: -0.5rem; margin-bottom: 1rem;">5-20 pages</p>
                     <ul class="pricing-features">
                         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Custom design</li>
                         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Mobile-responsive</li>
                         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Contact forms</li>
                         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>SEO optimized</li>
                         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Analytics setup</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>2-week delivery</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>2-4 week delivery</li>
                     </ul>
                     <a href="#contact" class="btn btn-outline btn-block magnetic">
                         Get Quote
                     </a>
                 </div>
 
-                <!-- Platform Build -->
+                <!-- SaaS Platform -->
                 <div class="pricing-card featured animate-in">
                     <div class="pricing-badge">Most Popular</div>
                     <div class="pricing-header">
-                        <h3 class="pricing-name">Platform Build</h3>
-                        <p class="pricing-description">Custom SaaS platform</p>
+                        <h3 class="pricing-name">SaaS Platform</h3>
+                        <p class="pricing-description">Custom operational software</p>
                     </div>
                     <div class="pricing-price">
-                        <span class="price-current">$5K+</span>
-                        <span class="price-period">one-time</span>
+                        <span class="price-current">$14K+</span>
+                        <span class="price-period">starting at</span>
                     </div>
-                    <p style="text-align: center; color: var(--text-muted); font-size: 0.875rem; margin-top: -0.5rem; margin-bottom: 1rem;">+ monthly hosting & support</p>
+                    <p style="text-align: center; color: var(--text-muted); font-size: 0.875rem; margin-top: -0.5rem; margin-bottom: 1rem;">Custom quote based on scope</p>
                     <ul class="pricing-features">
                         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Custom dashboard</li>
                         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Multi-location support</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Role-based access</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>User accounts & roles</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Data & analytics</li>
                         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>API integrations</li>
                         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Training included</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>30-day support</li>
                     </ul>
                     <a href="#contact" class="btn btn-primary btn-block magnetic">
                         Get Quote
                     </a>
                 </div>
 
-                <!-- Enterprise -->
+                <!-- Enterprise Platform -->
                 <div class="pricing-card animate-in">
                     <div class="pricing-header">
-                        <h3 class="pricing-name">Enterprise</h3>
-                        <p class="pricing-description">Full-service platform + ongoing support</p>
+                        <h3 class="pricing-name">Enterprise Platform</h3>
+                        <p class="pricing-description">Full-service + ongoing support</p>
                     </div>
                     <div class="pricing-price">
-                        <span class="price-current">$15K+</span>
-                        <span class="price-period">build</span>
+                        <span class="price-current">Custom</span>
+                        <span class="price-period">quote</span>
                     </div>
-                    <p style="text-align: center; color: var(--text-muted); font-size: 0.875rem; margin-top: -0.5rem; margin-bottom: 1rem;">$300-800/mo hosting & support</p>
+                    <p style="text-align: center; color: var(--text-muted); font-size: 0.875rem; margin-top: -0.5rem; margin-bottom: 1rem;">Complex integrations & scale</p>
                     <ul class="pricing-features">
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg><strong>Everything in Platform</strong></li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg><strong>Everything in SaaS Platform</strong></li>
                         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>AI & automation features</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Custom reporting</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Ongoing development</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Priority support</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Quarterly reviews</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Advanced security</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Dedicated support</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Custom integrations</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>SLA available</li>
                     </ul>
                     <a href="#contact" class="btn btn-outline btn-block magnetic">
                         Get Quote
@@ -484,19 +557,27 @@
                 <div class="addons-grid">
                     <div class="addon-item">
                         <span class="addon-name">🤖 AI Chat Integration</span>
-                        <span class="addon-price">+$1,500</span>
+                        <span class="addon-price">+$2,500</span>
                     </div>
                     <div class="addon-item">
                         <span class="addon-name">📊 Advanced Analytics</span>
-                        <span class="addon-price">+$2,000</span>
+                        <span class="addon-price">+$3,000</span>
                     </div>
                     <div class="addon-item">
                         <span class="addon-name">🔗 Third-Party Integrations</span>
-                        <span class="addon-price">+$1,000 each</span>
+                        <span class="addon-price">+$1,500 each</span>
                     </div>
                     <div class="addon-item">
                         <span class="addon-name">📱 Mobile App Version</span>
-                        <span class="addon-price">+$5,000+</span>
+                        <span class="addon-price">+$8,000+</span>
+                    </div>
+                    <div class="addon-item">
+                        <span class="addon-name">🔐 SSO Integration</span>
+                        <span class="addon-price">+$3,000</span>
+                    </div>
+                    <div class="addon-item">
+                        <span class="addon-name">🌐 Additional Location</span>
+                        <span class="addon-price">+$750/location</span>
                     </div>
                 </div>
             </div>
@@ -511,40 +592,26 @@
                     <span class="section-label">About</span>
                     <h2 class="section-title">I'm <span class="gradient-text">Joel Escoto</span></h2>
                     <p class="about-text">
-                        I build custom software platforms for growing businesses. Piney Digital exists because too many companies are stuck with generic tools that don't fit their operations.
+                        I don't just build software; I eliminate operational friction. Piney Digital was founded on a simple truth: most businesses are leaking profit through the cracks of manual processes, paper logs, and disconnected tools.
                     </p>
                     <p class="about-text">
-                        You deserve software built around your workflow—not the other way around. That's what I deliver: platforms that actually make your team more productive.
+                        I specialize in building high-performance "Operational OS" systems that reclaim wasted time and recover lost revenue. My goal is to give you back your hours and your peace of mind by turning your business into a seamless, automated machine.
                     </p>
                     <div class="about-stats">
                         <div class="about-stat">
-                            <span class="stat-label">Custom Solutions</span>
+                            <span class="stat-label">Operational Efficiency</span>
                         </div>
                         <div class="about-stat">
-                            <span class="stat-label">Modern Stack</span>
+                            <span class="stat-label">Revenue Recovery</span>
                         </div>
                         <div class="about-stat">
-                            <span class="stat-label">Fast Delivery</span>
+                            <span class="stat-label">Zero-Friction Scale</span>
                         </div>
                     </div>
                 </div>
                 <div class="about-visual animate-in">
-                    <div class="about-card">
+                    <div class="about-card" style="background-image: url('images/aboutvisual.png'); background-size: cover; background-position: center; min-height: 400px;">
                         <div class="card-glow"></div>
-                        <div class="card-content">
-                            <div class="card-header">
-                                <span class="card-dot"></span>
-                                <span class="card-dot"></span>
-                                <span class="card-dot"></span>
-                            </div>
-                            <div class="card-lines">
-                                <div class="card-line"></div>
-                                <div class="card-line short"></div>
-                                <div class="card-line"></div>
-                                <div class="card-line short"></div>
-                                <div class="card-line medium"></div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -625,9 +692,9 @@
                             <label for="package">Project Type</label>
                             <select id="package" name="package">
                                 <option value="">Select a project type...</option>
-                                <option value="platform">Custom SaaS Platform - $5K+</option>
-                                <option value="enterprise">Enterprise Package - $15K+ (Most Popular)</option>
-                                <option value="concept">Concept Website - $3K+</option>
+                                <option value="concept">Concept Site - $5,000 (5-20 pages)</option>
+                                <option value="platform">SaaS Platform - Starting at $14,000 (Most Popular)</option>
+                                <option value="enterprise">Enterprise Platform - Custom Quote</option>
                                 <option value="unsure">Not sure yet - Let's discuss</option>
                             </select>
                         </div>
@@ -659,17 +726,17 @@
                         <span>🌲</span>
                         <span>Piney Digital</span>
                     </a>
-                    <p class="footer-tagline">Custom SaaS platforms and enterprise software solutions.</p>
+                    <p class="footer-tagline">I build the systems that stop the operational bleed.</p>
                 </div>
                 <div class="footer-links">
                     <h4>Navigation</h4>
-                    <a href="#services">Services</a>
-                    <a href="portfolio.html">Portfolio</a>
+                    <a href="#hero">Homepage</a>
+                    <a href="capabilities.html">Capabilities</a>
                     <a href="blog.html">Blog</a>
-                    <a href="#pricing">Pricing</a>
+                    <a href="pricing.html">Pricing</a>
                     <a href="#about">About</a>
                     <a href="faq.html">FAQ</a>
-                    <a href="#contact">Contact</a>
+                    <a href="contact.html">Contact</a>
                 </div>
                 <div class="footer-links">
                     <h4>Legal</h4>
@@ -684,7 +751,7 @@
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 Piney Digital. All rights reserved.</p>
-                <p>Built for growing enterprises</p>
+                <p>Built with ❤️ for growing businesses</p>
             </div>
         </div>
     </footer>
