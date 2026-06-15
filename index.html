@@ -44,18 +44,48 @@
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "Organization",
+        "@type": ["Organization", "LocalBusiness"],
         "@id": "https://pineydigital.com",
         "name": "Piney Digital",
         "description": "Enterprise SaaS platforms, custom web applications, and multi-location systems for growing businesses.",
         "url": "https://pineydigital.com",
         "telephone": "+1-936-299-9897",
         "email": "joel@pineydigital.com",
-        "areaServed": "Worldwide",
         "priceRange": "$$$",
         "sameAs": [
             "https://www.linkedin.com/company/pineydigital"
         ],
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "East Texas",
+            "addressRegion": "TX",
+            "addressCountry": "US"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "31.76",
+            "longitude": "-95.65"
+        },
+        "areaServed": [
+            {
+                "@type": "State",
+                "name": "Texas"
+            },
+            {
+                "@type": "Country",
+                "name": "United States"
+            },
+            {
+                "@type": "Place",
+                "name": "Worldwide (Remote)"
+            }
+        ],
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "09:00",
+            "closes": "18:00"
+        },
         "founder": {
             "@type": "Person",
             "name": "Joel Escoto",
@@ -130,7 +160,7 @@
             transform: translate(-50%, -50%);
             width: 90%;
             height: 80%;
-            background-image: url('images/herovisuals.png');
+            background-image: url('images/hero-visual.svg');
             background-size: cover;
             background-position: center;
             filter: brightness(0.6) contrast(1.1);
@@ -160,6 +190,9 @@
 
     <!-- Cursor Glow -->
     <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress"></div>
 
     <!-- Navigation -->
     <nav class="nav" id="nav">
@@ -227,6 +260,8 @@
             <div class="hero-bg-image"></div>
             <div class="hero-overlay"></div>
         </div>
+        <div class="gradient-mesh"></div>
+        <div class="particles-container"></div>
         <div class="hero-spotlight"></div>
         <div class="hero-container">
             <div class="hero-badge animate-in">
@@ -284,7 +319,7 @@
 
             <div class="bento-grid">
                 <!-- Large Card -->
-                <div class="bento-card bento-lg animate-in" style="background-image: linear-gradient(rgba(18, 18, 26, 0.8), rgba(18, 18, 26, 0.8)), url('images/servicesvisual.png'); background-size: cover; background-position: center;">
+                <div class="bento-card bento-lg animate-in" style="background-image: linear-gradient(rgba(18, 18, 26, 0.85), rgba(18, 18, 26, 0.85)), url('images/services-visual.svg'); background-size: contain; background-position: center; background-repeat: no-repeat;">
                     <div class="card-icon">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                             <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
@@ -484,9 +519,9 @@
                     </div>
                     <div class="pricing-price">
                         <span class="price-current">$5,000</span>
-                        <span class="price-period">one-time</span>
+                        <span class="price-period">project</span>
                     </div>
-                    <p style="text-align: center; color: var(--text-muted); font-size: 0.875rem; margin-top: -0.5rem; margin-bottom: 1rem;">5-20 pages</p>
+                    <p style="text-align: center; color: var(--text-muted); font-size: 0.875rem; margin-top: -0.5rem; margin-bottom: 1rem;">5-20 pages • 90-day support included</p>
                     <ul class="pricing-features">
                         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Custom design</li>
                         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Mobile-responsive</li>
@@ -518,7 +553,7 @@
                         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>User accounts & roles</li>
                         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Data & analytics</li>
                         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>API integrations</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Training included</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Training + 90-day support</li>
                     </ul>
                     <a href="#contact" class="btn btn-primary btn-block magnetic">
                         Get Quote
@@ -552,33 +587,62 @@
                 </div>
             </div>
 
-            <div class="pricing-addons animate-in">
-                <h4>Add-Ons</h4>
-                <div class="addons-grid">
-                    <div class="addon-item">
-                        <span class="addon-name">🤖 AI Chat Integration</span>
-                        <span class="addon-price">+$2,500</span>
+            <!-- How We Work Together -->
+            <div class="partnership-section animate-in" style="margin-top: 3rem; background: linear-gradient(135deg, rgba(99, 102, 241, 0.08) 0%, rgba(139, 92, 246, 0.08) 100%); border: 1px solid rgba(99, 102, 241, 0.2); border-radius: 24px; padding: 2.5rem;">
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <h3 style="color: var(--text-primary); font-size: 1.5rem; margin-bottom: 0.5rem;">How We Work Together</h3>
+                    <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto;">Building your platform is just the beginning. Here's what the full partnership looks like.</p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+                    <div style="text-align: center; padding: 1.5rem;">
+                        <div style="font-size: 2rem; margin-bottom: 0.75rem;">🔍</div>
+                        <h4 style="color: var(--text-primary); font-size: 1rem; margin-bottom: 0.5rem;">Discovery</h4>
+                        <p style="color: var(--text-secondary); font-size: 0.875rem; line-height: 1.6;">We map your workflows, pain points, and goals. No assumptions — just clarity on what you actually need.</p>
                     </div>
-                    <div class="addon-item">
-                        <span class="addon-name">📊 Advanced Analytics</span>
-                        <span class="addon-price">+$3,000</span>
+                    <div style="text-align: center; padding: 1.5rem;">
+                        <div style="font-size: 2rem; margin-bottom: 0.75rem;">⚙️</div>
+                        <h4 style="color: var(--text-primary); font-size: 1rem; margin-bottom: 0.5rem;">Build & Train</h4>
+                        <p style="color: var(--text-secondary); font-size: 0.875rem; line-height: 1.6;">I build your platform and train your team. You're not handed a black box — you understand your system.</p>
                     </div>
-                    <div class="addon-item">
-                        <span class="addon-name">🔗 Third-Party Integrations</span>
-                        <span class="addon-price">+$1,500 each</span>
+                    <div style="text-align: center; padding: 1.5rem;">
+                        <div style="font-size: 2rem; margin-bottom: 0.75rem;">🚀</div>
+                        <h4 style="color: var(--text-primary); font-size: 1rem; margin-bottom: 0.5rem;">Launch & Support</h4>
+                        <p style="color: var(--text-secondary); font-size: 0.875rem; line-height: 1.6;">90 days of included support for bug fixes, adjustments, and questions. Your team has direct access to me.</p>
                     </div>
-                    <div class="addon-item">
-                        <span class="addon-name">📱 Mobile App Version</span>
-                        <span class="addon-price">+$8,000+</span>
+                    <div style="text-align: center; padding: 1.5rem;">
+                        <div style="font-size: 2rem; margin-bottom: 0.75rem;">📈</div>
+                        <h4 style="color: var(--text-primary); font-size: 1rem; margin-bottom: 0.5rem;">Grow Together</h4>
+                        <p style="color: var(--text-secondary); font-size: 0.875rem; line-height: 1.6;">Optional ongoing support, maintenance, and hosting. I already know your system — no ramp-up time needed.</p>
                     </div>
-                    <div class="addon-item">
-                        <span class="addon-name">🔐 SSO Integration</span>
-                        <span class="addon-price">+$3,000</span>
+                </div>
+
+                <div style="background: rgba(18, 18, 26, 0.6); border-radius: 16px; padding: 1.5rem; margin-bottom: 1.5rem;">
+                    <h4 style="color: var(--text-primary); font-size: 1rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <span style="color: var(--accent);">→</span> After Launch: Your Options
+                    </h4>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                        <div style="padding: 1rem; background: rgba(255, 255, 255, 0.03); border-radius: 12px;">
+                            <div style="color: var(--accent); font-weight: 600; margin-bottom: 0.5rem;">Self-Hosted</div>
+                            <p style="color: var(--text-muted); font-size: 0.8rem; line-height: 1.5; margin: 0;">You own everything. Host it yourself. I'm available for future updates if needed.</p>
+                        </div>
+                        <div style="padding: 1rem; background: rgba(99, 102, 241, 0.1); border-radius: 12px; border: 1px solid rgba(99, 102, 241, 0.2);">
+                            <div style="color: var(--text-primary); font-weight: 600; margin-bottom: 0.5rem;">Managed Care</div>
+                            <p style="color: var(--text-secondary); font-size: 0.8rem; line-height: 1.5; margin: 0;">I handle hosting, updates, security, and priority support. You focus on your business.</p>
+                        </div>
+                        <div style="padding: 1rem; background: rgba(255, 255, 255, 0.03); border-radius: 12px;">
+                            <div style="color: var(--accent); font-weight: 600; margin-bottom: 0.5rem;">Partner Retainer</div>
+                            <p style="color: var(--text-muted); font-size: 0.8rem; line-height: 1.5; margin: 0;">Monthly hours for new features, strategic reviews, and dedicated support.</p>
+                        </div>
                     </div>
-                    <div class="addon-item">
-                        <span class="addon-name">🌐 Additional Location</span>
-                        <span class="addon-price">+$750/location</span>
-                    </div>
+                </div>
+
+                <div style="text-align: center;">
+                    <p style="color: var(--text-muted); font-size: 0.875rem; margin-bottom: 1rem;">All projects include training, documentation, and 90-day support. Ongoing care is optional but recommended.</p>
+                    <a href="#contact" class="btn btn-primary magnetic" style="display: inline-flex; align-items: center; gap: 0.5rem;">
+                        <span>Start the Conversation</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
                 </div>
             </div>
         </div>
@@ -610,7 +674,7 @@
                     </div>
                 </div>
                 <div class="about-visual animate-in">
-                    <div class="about-card" style="background-image: url('images/aboutvisual.png'); background-size: cover; background-position: center; min-height: 400px;">
+                    <div class="about-card" style="background-image: url('images/about-visual.svg'); background-size: contain; background-position: center; background-repeat: no-repeat; min-height: 400px; background-color: #12121a;">
                         <div class="card-glow"></div>
                     </div>
                 </div>
@@ -671,21 +735,21 @@
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="name">Name</label>
-                                <input type="text" id="name" name="name" required placeholder="Your name">
+                                <input type="text" id="name" name="name" required placeholder="Your name" autocomplete="name">
                             </div>
                             <div class="form-group">
                                 <label for="business">Business</label>
-                                <input type="text" id="business" name="business" placeholder="Business name">
+                                <input type="text" id="business" name="business" placeholder="Business name" autocomplete="organization">
                             </div>
                         </div>
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="email">Email</label>
-                                <input type="email" id="email" name="email" required placeholder="your@email.com">
+                                <input type="email" id="email" name="email" required placeholder="your@email.com" autocomplete="email">
                             </div>
                             <div class="form-group">
                                 <label for="phone">Phone</label>
-                                <input type="tel" id="phone" name="phone" placeholder="(936) 000-0000">
+                                <input type="tel" id="phone" name="phone" placeholder="(936) 000-0000" autocomplete="tel">
                             </div>
                         </div>
                         <div class="form-group">

@@ -367,6 +367,236 @@ document.addEventListener('DOMContentLoaded', function() {
     gsap.from('.hero-cta', { opacity: 0, y: 30, duration: 0.6, delay: 1.2 });
 
     // ==========================================
+    // FLOATING PARTICLES (Subtle Background)
+    // ==========================================
+    const particlesContainer = document.querySelector('.particles-container');
+    if (particlesContainer && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        const particleCount = 15;
+        const colors = ['#6366f1', '#8b5cf6', '#a855f7', '#22c55e'];
+
+        for (let i = 0; i < particleCount; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.cssText = `
+                position: absolute;
+                width: ${Math.random() * 6 + 2}px;
+                height: ${Math.random() * 6 + 2}px;
+                background: ${colors[Math.floor(Math.random() * colors.length)]};
+                border-radius: 50%;
+                opacity: ${Math.random() * 0.3 + 0.1};
+                left: ${Math.random() * 100}%;
+                top: ${Math.random() * 100}%;
+            `;
+            particlesContainer.appendChild(particle);
+
+            gsap.to(particle, {
+                y: `${Math.random() * 100 - 50}`,
+                x: `${Math.random() * 100 - 50}`,
+                duration: Math.random() * 20 + 15,
+                repeat: -1,
+                yoyo: true,
+                ease: 'sine.inOut'
+            });
+        }
+    }
+
+    // ==========================================
+    // GRADIENT MESH ANIMATION
+    // ==========================================
+    const gradientMesh = document.querySelector('.gradient-mesh');
+    if (gradientMesh && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        gsap.to(gradientMesh, {
+            backgroundPosition: '200% 200%',
+            duration: 15,
+            repeat: -1,
+            ease: 'none'
+        });
+    }
+
+    // ==========================================
+    // ENHANCED SVG ILLUSTRATIONS
+    // ==========================================
+    const heroVisual = document.querySelector('.hero-visual svg');
+    if (heroVisual && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        // Animate chart bars with staggered reveal
+        const bars = heroVisual.querySelectorAll('rect[fill*="url"]');
+        bars.forEach((bar, i) => {
+            gsap.from(bar, {
+                scaleY: 0,
+                transformOrigin: 'bottom',
+                duration: 0.8,
+                delay: 0.5 + i * 0.1,
+                ease: 'power2.out'
+            });
+        });
+
+        // Animate trend line with draw effect
+        const trendLine = heroVisual.querySelector('polyline');
+        if (trendLine) {
+            const length = trendLine.getTotalLength();
+            gsap.from(trendLine, {
+                strokeDasharray: length,
+                strokeDashoffset: length,
+                duration: 1.5,
+                delay: 1,
+                ease: 'power2.out'
+            });
+        }
+
+        // Floating glow circles pulse
+        gsap.to(heroVisual.querySelectorAll('circle[filter*="glow"]'), {
+            scale: 1.2,
+            opacity: 0.8,
+            duration: 2,
+            repeat: -1,
+            yoyo: true,
+            ease: 'sine.inOut',
+            stagger: 0.3
+        });
+    }
+
+    // Services visual - connection lines pulse
+    const servicesVisual = document.querySelector('.services-visual svg');
+    if (servicesVisual && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        const connectionLines = servicesVisual.querySelectorAll('line');
+        connectionLines.forEach((line, i) => {
+            gsap.from(line, {
+                strokeDashoffset: 100,
+                strokeDasharray: 100,
+                duration: 0.8,
+                delay: i * 0.1,
+                ease: 'power2.out'
+            });
+        });
+
+        // Hub pulse animation
+        const hubCircle = servicesVisual.querySelector('g[transform="translate(400, 250)"] circle');
+        if (hubCircle) {
+            gsap.to(hubCircle, {
+                scale: 1.05,
+                duration: 2,
+                repeat: -1,
+                yoyo: true,
+                ease: 'sine.inOut',
+                transformOrigin: 'center center'
+            });
+        }
+    }
+
+    // About visual - stats reveal
+    const aboutVisual = document.querySelector('.about-visual svg');
+    if (aboutVisual && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        const stats = aboutVisual.querySelectorAll('text[font-size="48"]');
+        stats.forEach((stat, i) => {
+            gsap.from(stat, {
+                opacity: 0,
+                y: 20,
+                duration: 0.6,
+                delay: 0.5 + i * 0.2,
+                ease: 'power2.out'
+            });
+        });
+    }
+
+    // ==========================================
+    // SECTION REVEAL TIMELINES
+    // ==========================================
+
+    // Services section stagger
+    gsap.fromTo('.service-card',
+        { opacity: 0, y: 60 },
+        {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            stagger: 0.1,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: '.services-grid',
+                start: 'top 85%'
+            }
+        }
+    );
+
+    // Bento grid reveal with scale
+    gsap.fromTo('.bento-card',
+        { opacity: 0, scale: 0.95, y: 40 },
+        {
+            opacity: 1,
+            scale: 1,
+            y: 0,
+            duration: 0.6,
+            stagger: 0.08,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: '.bento-grid',
+                start: 'top 80%'
+            }
+        }
+    );
+
+    // Testimonials fade
+    gsap.fromTo('.testimonial-card',
+        { opacity: 0, x: -30 },
+        {
+            opacity: 1,
+            x: 0,
+            duration: 0.7,
+            stagger: 0.15,
+            ease: 'power2.out',
+            scrollTrigger: {
+                trigger: '.testimonials-grid',
+                start: 'top 85%'
+            }
+        }
+    );
+
+    // ==========================================
+    // MAGNETIC EFFECT ENHANCEMENT
+    // ==========================================
+    const magneticElements = document.querySelectorAll('.magnetic-enhanced');
+    magneticElements.forEach(el => {
+        el.addEventListener('mousemove', function(e) {
+            const rect = this.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+
+            gsap.to(this, {
+                x: x * 0.3,
+                y: y * 0.3,
+                duration: 0.3,
+                ease: 'power2.out'
+            });
+        });
+
+        el.addEventListener('mouseleave', function() {
+            gsap.to(this, {
+                x: 0,
+                y: 0,
+                duration: 0.5,
+                ease: 'elastic.out(1, 0.3)'
+            });
+        });
+    });
+
+    // ==========================================
+    // SCROLL PROGRESS INDICATOR
+    // ==========================================
+    const scrollProgress = document.querySelector('.scroll-progress');
+    if (scrollProgress) {
+        gsap.to(scrollProgress, {
+            scaleX: 1,
+            ease: 'none',
+            scrollTrigger: {
+                trigger: 'body',
+                start: 'top top',
+                end: 'bottom bottom',
+                scrub: 0.3
+            }
+        });
+    }
+
+    // ==========================================
     // PREFERS REDUCED MOTION
     // ==========================================
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {

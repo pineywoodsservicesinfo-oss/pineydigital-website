@@ -1,0 +1,117 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradient definitions matching site theme -->
+    <linearGradient id="grad-primary" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad-secondary" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#a855f7;stop-opacity:0.6" />
+    </linearGradient>
+    <linearGradient id="grad-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a24;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#12121a;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Glow filter -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Shadow filter -->
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#6366f1" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#grad-bg)"/>
+
+  <!-- Decorative grid pattern -->
+  <g opacity="0.1">
+    <line x1="0" y1="100" x2="800" y2="100" stroke="#6366f1" stroke-width="0.5"/>
+    <line x1="0" y1="200" x2="800" y2="200" stroke="#6366f1" stroke-width="0.5"/>
+    <line x1="0" y1="300" x2="800" y2="300" stroke="#6366f1" stroke-width="0.5"/>
+    <line x1="0" y1="400" x2="800" y2="400" stroke="#6366f1" stroke-width="0.5"/>
+    <line x1="0" y1="500" x2="800" y2="500" stroke="#6366f1" stroke-width="0.5"/>
+    <line x1="100" y1="0" x2="100" y2="600" stroke="#6366f1" stroke-width="0.5"/>
+    <line x1="200" y1="0" x2="200" y2="600" stroke="#6366f1" stroke-width="0.5"/>
+    <line x1="300" y1="0" x2="300" y2="600" stroke="#6366f1" stroke-width="0.5"/>
+    <line x1="400" y1="0" x2="400" y2="600" stroke="#6366f1" stroke-width="0.5"/>
+    <line x1="500" y1="0" x2="500" y2="600" stroke="#6366f1" stroke-width="0.5"/>
+    <line x1="600" y1="0" x2="600" y2="600" stroke="#6366f1" stroke-width="0.5"/>
+    <line x1="700" y1="0" x2="700" y2="600" stroke="#6366f1" stroke-width="0.5"/>
+  </g>
+
+  <!-- Main dashboard card -->
+  <g filter="url(#shadow)">
+    <rect x="80" y="80" width="640" height="440" rx="24" fill="#1e1e2e" stroke="#6366f1" stroke-width="2" opacity="0.9"/>
+
+    <!-- Top bar -->
+    <rect x="80" y="80" width="640" height="60" rx="24" fill="#252535"/>
+    <rect x="80" y="116" width="640" height="24" fill="#252535"/>
+    <circle cx="110" cy="110" r="8" fill="#ff5f57"/>
+    <circle cx="138" cy="110" r="8" fill="#ffbd2e"/>
+    <circle cx="166" cy="110" r="8" fill="#27ca40"/>
+
+    <!-- Sidebar -->
+    <rect x="80" y="140" width="160" height="380" fill="#1a1a28"/>
+
+    <!-- Nav items -->
+    <rect x="95" y="160" width="130" height="36" rx="8" fill="#6366f1" opacity="0.2"/>
+    <rect x="95" y="210" width="130" height="36" rx="8" fill="transparent" stroke="#4a4a5a" stroke-width="1"/>
+    <rect x="95" y="260" width="130" height="36" rx="8" fill="transparent" stroke="#4a4a5a" stroke-width="1"/>
+    <rect x="95" y="310" width="130" height="36" rx="8" fill="transparent" stroke="#4a4a5a" stroke-width="1"/>
+
+    <!-- Content area - Chart visualization -->
+    <g transform="translate(260, 160)">
+      <!-- Chart background -->
+      <rect x="0" y="0" width="420" height="200" rx="12" fill="#1a1a28"/>
+
+      <!-- Chart bars -->
+      <rect x="30" y="140" width="40" height="40" rx="4" fill="url(#grad-primary)" opacity="0.6"/>
+      <rect x="90" y="100" width="40" height="80" rx="4" fill="url(#grad-primary)" opacity="0.7"/>
+      <rect x="150" y="60" width="40" height="120" rx="4" fill="url(#grad-primary)" opacity="0.8"/>
+      <rect x="210" y="40" width="40" height="140" rx="4" fill="url(#grad-primary)" opacity="0.9"/>
+      <rect x="270" y="80" width="40" height="100" rx="4" fill="url(#grad-primary)"/>
+      <rect x="330" y="30" width="40" height="150" rx="4" fill="url(#grad-secondary)" filter="url(#glow)"/>
+
+      <!-- Trend line -->
+      <polyline points="50,130 110,90 170,50 230,30 290,70 350,20"
+                fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round" filter="url(#glow)"/>
+      <circle cx="350" cy="20" r="6" fill="#22c55e" filter="url(#glow)"/>
+    </g>
+
+    <!-- Stats cards -->
+    <g transform="translate(260, 380)">
+      <!-- Card 1 -->
+      <rect x="0" y="0" width="130" height="80" rx="12" fill="#1a1a28"/>
+      <text x="65" y="35" font-family="system-ui" font-size="24" text-anchor="middle" font-weight="bold" fill="#6366f1">47%</text>
+      <text x="65" y="60" font-family="system-ui" font-size="12" text-anchor="middle" fill="#888">Growth</text>
+
+      <!-- Card 2 -->
+      <rect x="145" y="0" width="130" height="80" rx="12" fill="#1a1a28"/>
+      <text x="210" y="35" font-family="system-ui" font-size="24" text-anchor="middle" font-weight="bold" fill="#8b5cf6">2.4x</text>
+      <text x="210" y="60" font-family="system-ui" font-size="12" text-anchor="middle" fill="#888">Efficiency</text>
+
+      <!-- Card 3 -->
+      <rect x="290" y="0" width="130" height="80" rx="12" fill="#1a1a28"/>
+      <text x="355" y="35" font-family="system-ui" font-size="24" text-anchor="middle" font-weight="bold" fill="#22c55e">98%</text>
+      <text x="355" y="60" font-family="system-ui" font-size="12" text-anchor="middle" fill="#888">Uptime</text>
+    </g>
+  </g>
+
+  <!-- Floating elements -->
+  <circle cx="680" cy="100" r="60" fill="url(#grad-secondary)" opacity="0.3" filter="url(#glow)"/>
+  <circle cx="120" cy="500" r="40" fill="url(#grad-primary)" opacity="0.2"/>
+  <circle cx="720" cy="480" r="30" fill="#22c55e" opacity="0.3"/>
+
+  <!-- Data flow lines -->
+  <path d="M 700 200 Q 750 250 700 300" stroke="#6366f1" stroke-width="2" fill="none" opacity="0.4" stroke-dasharray="5,5"/>
+  <path d="M 100 300 Q 50 350 100 400" stroke="#8b5cf6" stroke-width="2" fill="none" opacity="0.4" stroke-dasharray="5,5"/>
+</svg>

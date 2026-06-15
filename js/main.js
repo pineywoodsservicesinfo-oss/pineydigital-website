@@ -396,21 +396,67 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Focus management for modal-like mobile menu
-    const firstFocusableElement = navMenu?.querySelector('a');
-    const lastFocusableElement = navMenu?.querySelectorAll('a');
-    
-    if (navMenu && navMenu.classList.contains('active')) {
-        firstFocusableElement?.focus();
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    function getFocusableElements(container) {
+        return container?.querySelectorAll('a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])') || [];
     }
-    
-    // Trap focus in mobile menu when open
-    document.addEventListener('keydown', function(e) {
-        if (!navMenu?.classList.contains('active')) return;
-        
-        if (e.key === 'Escape') {
-            hamburger?.click();
-        }
-    });
+
+    function trapFocus(menu, toggle) {
+        if (!menu || !toggle) return;
+
+        const focusableElements = getFocusableElements(menu);
+        if (focusableElements.length === 0) return;
+
+        const firstFocusable = focusableElements[0];
+        const lastFocusable = focusableElements[focusableElements.length - 1];
+
+        // Focus first element when menu opens
+        firstFocusable.focus();
+
+        // Handle Tab key to trap focus
+        menu.addEventListener('keydown', function handleTabKey(e) {
+            if (e.key !== 'Tab') return;
+
+            if (e.shiftKey) {
+                // Shift + Tab: going backwards
+                if (document.activeElement === firstFocusable) {
+                    e.preventDefault();
+                    lastFocusable.focus();
+                }
+            } else {
+                // Tab: going forwards
+                if (document.activeElement === lastFocusable) {
+                    e.preventDefault();
+                    firstFocusable.focus();
+                }
+            }
+        });
+
+        // Handle Escape key
+        document.addEventListener('keydown', function handleEscape(e) {
+            if (e.key === 'Escape' && menu.classList.contains('active')) {
+                menu.classList.remove('active');
+                toggle.classList.remove('active');
+                document.body.style.overflow = '';
+                toggle.focus();
+            }
+        });
+    }
+
+    // Apply focus trap when menu opens
+    if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener('click', function() {
+            mobileMenu.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+
+            if (mobileMenu.classList.contains('active')) {
+                trapFocus(mobileMenu, menuToggle);
+            }
+        });
+    }
     
     // ==========================================
     // PAGE LOAD ANIMATIONS

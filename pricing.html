@@ -118,6 +118,64 @@
         ]
     }
     </script>
+
+    <!-- FAQPage Schema for Rich Snippets -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How long does a typical build take?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Concept Sites take 2-3 weeks. SaaS Platforms take 6-10 weeks depending on complexity. Enterprise Platforms take 3-6 months for full feature sets. You'll get a realistic timeline after the initial discovery call."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What's included in the discovery phase?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Before any code is written, we map out your workflows, data sources, user roles, and integration needs. This ensures we build what you actually need — not what looks impressive but doesn't fit your operations."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do I own my platform and data?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. You own everything — your code, your data, your infrastructure. We build on your cloud accounts (or help you set them up). If we part ways, you keep everything. No vendor lock-in."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What happens after launch?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "All projects include 90 days of support for bug fixes and minor adjustments. Enterprise clients get ongoing support with their monthly retainer. Training for your team is included in all builds."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can features be added later?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Absolutely. The platforms are built to be extensible. Need a new integration, additional reporting, or mobile app? We scope it as a phase 2 project with clear pricing before any work begins."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What technologies do you use?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Python/Flask for backends, SQLite/PostgreSQL for databases, Chart.js for visualizations, Tailwind CSS for styling. We use proven, well-documented technologies — not experimental frameworks that might disappear."
+                }
+            }
+        ]
+    }
+    </script>
     <style>
         .pricing-hero {
             padding: 140px 0 80px;
@@ -526,7 +584,7 @@
                 <p class="section-description" style="max-width: 700px;">I build what your business actually needs. No cookie-cutter packages, no hidden fees. Here's how pricing typically works.</p>
                 <div class="pricing-toggle">
                     <span class="toggle-label">All projects include training, documentation, and 90-day support</span>
-                    <span class="toggle-badge">No Hourly Billing</span>
+                    <span class="toggle-badge">Ongoing Care Available</span>
                 </div>
             </div>
         </section>
@@ -544,9 +602,9 @@
                         <div class="pricing-price">
                             <div class="price-monthly">
                                 <span class="price-amount">$5,000</span>
-                                <span class="price-period">one-time</span>
+                                <span class="price-period">project</span>
                             </div>
-                            <p class="price-setup"><strong>5-10 pages</strong> standard, up to 20 included</p>
+                            <p class="price-setup"><strong>5-10 pages</strong> standard • 90-day support included</p>
                         </div>
                         <ul class="pricing-features">
                             <li>
@@ -596,7 +654,7 @@
                                 <span class="price-amount">$14K</span>
                                 <span class="price-period">starting</span>
                             </div>
-                            <p class="price-setup"><strong>6-10 weeks</strong> typical timeline</p>
+                            <p class="price-setup"><strong>6-10 weeks</strong> • Training + 90-day support included</p>
                         </div>
                         <ul class="pricing-features">
                             <li>
@@ -685,8 +743,8 @@
 
                 <!-- Add-Ons Section -->
                 <div class="addons-section" style="margin-bottom: 3rem;">
-                    <h3 style="color: var(--text-primary); font-size: 1.5rem; margin-bottom: 1.5rem; text-align: center;">Optional Add-Ons</h3>
-                    <p style="color: var(--text-secondary); text-align: center; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">Enhance your platform with these optional features. Each is quoted separately based on scope.</p>
+                    <h3 style="color: var(--text-primary); font-size: 1.5rem; margin-bottom: 1.5rem; text-align: center;">Enhance Your Platform</h3>
+                    <p style="color: var(--text-secondary); text-align: center; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">Optional features and ongoing care to extend your platform. Quoted separately based on scope.</p>
                     <div class="addons-grid" style="display: grid; grid-template-columns: 1fr; gap: 1rem;">
                         <div class="addon-card" style="background: rgba(18, 18, 26, 0.95); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 16px; padding: 1.25rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
                             <div>
@@ -729,6 +787,13 @@
                                 <div style="color: var(--text-muted); font-size: 0.875rem;">Each additional location beyond initial scope</div>
                             </div>
                             <div style="color: var(--accent); font-weight: 700; font-size: 1.25rem;">+$750/location</div>
+                        </div>
+                        <div class="addon-card" style="background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 16px; padding: 1.25rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+                            <div>
+                                <div style="color: var(--text-primary); font-weight: 600; margin-bottom: 0.25rem;">🛡️ Managed Care & Hosting</div>
+                                <div style="color: var(--text-secondary); font-size: 0.875rem;">Ongoing maintenance, updates, security, and priority support</div>
+                            </div>
+                            <div style="color: var(--accent); font-weight: 700; font-size: 1.25rem;">Monthly</div>
                         </div>
                     </div>
                 </div>
@@ -845,61 +910,66 @@
                     </div>
 
                     <div class="faq-item">
-                        <button class="faq-question">
+                        <button class="faq-question" aria-expanded="false" aria-controls="pricing-faq-1">
                             <span>How long does a typical build take?</span>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
                         </button>
-                        <div class="faq-answer">
+                        <div class="faq-answer" id="pricing-faq-1">
                             <p>Concept Sites: 2-3 weeks. SaaS Platforms: 6-10 weeks depending on complexity. Enterprise Platforms: 3-6 months for full feature sets. I'll give you a realistic timeline after our initial discovery call.</p>
                         </div>
                     </div>
 
                     <div class="faq-item">
-                        <button class="faq-question">
+                        <button class="faq-question" aria-expanded="false" aria-controls="pricing-faq-2">
                             <span>What's included in the discovery phase?</span>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
                         </button>
-                        <div class="faq-answer">
+                        <div class="faq-answer" id="pricing-faq-2">
                             <p>Before any code is written, we map out your workflows, data sources, user roles, and integration needs. This ensures we build what you actually need — not what looks impressive but doesn't fit your operations.</p>
                         </div>
                     </div>
 
                     <div class="faq-item">
-                        <button class="faq-question">
+                        <button class="faq-question" aria-expanded="false" aria-controls="pricing-faq-3">
                             <span>Do I own my platform and data?</span>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
                         </button>
-                        <div class="faq-answer">
+                        <div class="faq-answer" id="pricing-faq-3">
                             <p>Yes. You own everything — your code, your data, your infrastructure. I build on your cloud accounts (or help you set them up). If we part ways, you keep everything. No vendor lock-in.</p>
                         </div>
                     </div>
 
                     <div class="faq-item">
-                        <button class="faq-question">
+                        <button class="faq-question" aria-expanded="false" aria-controls="pricing-faq-4">
                             <span>What happens after launch?</span>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
                         </button>
-                        <div class="faq-answer">
-                            <p>All projects include 90 days of support for bug fixes and minor adjustments. Enterprise clients get ongoing support with their monthly retainer. Training for your team is included in all builds.</p>
+                        <div class="faq-answer" id="pricing-faq-4">
+                            <p>All projects include 90 days of support for bug fixes and minor adjustments. Training for your team is included in all builds. After the included support period, you have three options:</p>
+                            <ul>
+                                <li><strong>Self-hosted:</strong> You own everything. Host it yourself. I'm available for future updates if needed.</li>
+                                <li><strong>Managed Care:</strong> I handle hosting, updates, security, and priority support. You focus on your business.</li>
+                                <li><strong>Partner Retainer:</strong> Monthly hours for new features, strategic reviews, and dedicated support.</li>
+                            </ul>
                         </div>
                     </div>
 
                     <div class="faq-item">
-                        <button class="faq-question">
+                        <button class="faq-question" aria-expanded="false" aria-controls="pricing-faq-5">
                             <span>Can features be added later?</span>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
                         </button>
-                        <div class="faq-answer">
+                        <div class="faq-answer" id="pricing-faq-5">
                             <p>Absolutely. The platforms are built to be extensible. Need a new integration, additional reporting, or mobile app? We scope it as a phase 2 project with clear pricing before any work begins.</p>
                         </div>
                     </div>
 
                     <div class="faq-item">
-                        <button class="faq-question">
+                        <button class="faq-question" aria-expanded="false" aria-controls="pricing-faq-6">
                             <span>What technologies do you use?</span>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
                         </button>
-                        <div class="faq-answer">
+                        <div class="faq-answer" id="pricing-faq-6">
                             <p>Python/Flask for backends, SQLite/PostgreSQL for databases, Chart.js for visualizations, Tailwind CSS for styling. I use proven, well-documented technologies — not experimental frameworks that might disappear.</p>
                         </div>
                     </div>

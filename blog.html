@@ -699,7 +699,7 @@
                 </div>
 
                 <div class="show-more-container">
-                    <button class="show-more-btn" data-target="all-articles-grid">
+                    <button class="show-more-btn" data-target="all-articles-grid" aria-expanded="false" aria-controls="all-articles-grid">
                         <span>Show More Articles</span>
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <polyline points="6 9 12 15 18 9"></polyline>
@@ -1039,7 +1039,7 @@
                         <ul>
                             <li><strong>Generic SaaS:</strong> $500/location/month = $60,000/year</li>
                             <li><strong>Enterprise software:</strong> $150K+ implementation + $30K/year</li>
-                            <li><strong>Custom platform:</strong> $15K-25K one-time + $12K/year maintenance</li>
+                            <li><strong>Custom platform:</strong> $15K-25K project (includes 90-day support) + optional ongoing care</li>
                         </ul>
                         <p>Within 2-3 years, a custom platform often costs less than generic solutions — and does exactly what you need.</p>
 
@@ -1731,11 +1731,13 @@
                     hiddenCards.forEach(card => card.classList.remove('show'));
                     this.classList.remove('expanded');
                     this.querySelector('span').textContent = 'Show More Articles';
+                    this.setAttribute('aria-expanded', 'false');
                 } else {
                     // Show cards
                     hiddenCards.forEach(card => card.classList.add('show'));
                     this.classList.add('expanded');
                     this.querySelector('span').textContent = 'Show Less';
+                    this.setAttribute('aria-expanded', 'true');
                 }
             });
         });
