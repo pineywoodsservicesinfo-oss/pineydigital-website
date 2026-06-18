@@ -284,8 +284,8 @@
             color: #4ade80;
             margin-bottom: 1.5rem;
             font-weight: 600;
-            opacity: 0;
-            transform: translateY(20px);
+            opacity: 1;
+            transform: translateY(0);
         }
 
         .section-title {
@@ -294,7 +294,21 @@
             font-weight: 700;
             line-height: 1.05;
             margin-bottom: 1.5rem;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Animation-ready state - GSAP will animate from these values */
+        .animations-ready .section-label,
+        .animations-ready .section-title,
+        .animations-ready .section-subtitle,
+        .animations-ready .cta-group,
+        .animations-ready .inline-stats {
             opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .animations-ready .section-title {
             transform: translateY(40px);
         }
 
@@ -310,6 +324,11 @@
             color: rgba(255, 255, 255, 0.85);
             line-height: 1.7;
             margin: 0 auto;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .animations-ready .section-subtitle {
             opacity: 0;
             transform: translateY(30px);
         }
@@ -321,6 +340,11 @@
             justify-content: center;
             margin-top: 2.5rem;
             flex-wrap: wrap;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .animations-ready .cta-group {
             opacity: 0;
             transform: translateY(30px);
         }
@@ -369,8 +393,8 @@
             gap: 4rem;
             margin-top: 2rem;
             justify-content: center;
-            opacity: 0;
-            transform: translateY(20px);
+            opacity: 1;
+            transform: translateY(0);
         }
 
         .stat {
@@ -416,8 +440,27 @@
             border-radius: 20px;
             padding: 2rem;
             transform-origin: center center;
+            /* Default: visible with stacked layout */
+            opacity: 1;
+            transform: translateX(0) rotateY(-5deg) rotateZ(-2deg);
+        }
+
+        .stack-card:nth-child(2) {
+            transform: translateX(25px) translateY(15px) rotateY(-5deg) rotateZ(1deg);
+        }
+
+        .stack-card:nth-child(3) {
+            transform: translateX(50px) translateY(30px) rotateY(-5deg) rotateZ(3deg);
+        }
+
+        /* Animation-ready state: start off-screen for scroll animation */
+        .animations-ready .stack-card {
             opacity: 0;
-            /* Start off-screen to the right */
+            transform: translateX(400px) rotateY(-30deg);
+        }
+
+        .animations-ready .stack-card:nth-child(2),
+        .animations-ready .stack-card:nth-child(3) {
             transform: translateX(400px) rotateY(-30deg);
         }
 
@@ -622,6 +665,11 @@
             width: 100%;
             max-width: 600px;
             margin: 2rem auto 0;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .animations-ready .contact-form-immersive {
             opacity: 0;
             transform: translateY(30px);
         }
@@ -692,6 +740,10 @@
             margin-top: 1.5rem;
             font-size: 0.9rem;
             color: rgba(255, 255, 255, 0.5);
+            opacity: 1;
+        }
+
+        .animations-ready .form-alt {
             opacity: 0;
         }
 
@@ -1084,6 +1136,9 @@
 
         // Initialize animations after loading
         function initAnimations() {
+            // Add animations-ready class to enable scroll-triggered animations
+            document.body.classList.add('animations-ready');
+
             // Scroll-based frame scrubbing
             ScrollTrigger.create({
                 trigger: ".scroll-track",
