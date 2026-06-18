@@ -101,10 +101,20 @@
                     "@type": "Offer",
                     "itemOffered": {
                         "@type": "Service",
+                        "name": "Starter Website",
+                        "description": "Simple website with 3-5 pages, custom design, mobile-responsive"
+                    },
+                    "price": "799",
+                    "priceCurrency": "USD"
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
                         "name": "Concept Site",
                         "description": "Professional marketing website with 5-20 pages, SEO, mobile-responsive design"
                     },
-                    "price": "5000",
+                    "price": "3500",
                     "priceCurrency": "USD"
                 },
                 {
@@ -114,21 +124,9 @@
                         "name": "SaaS Platform",
                         "description": "Custom web application with user accounts, dashboard, and core features"
                     },
-                    "price": "14000",
+                    "price": "0",
                     "priceCurrency": "USD"
                 },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Enterprise Platform",
-                        "description": "Full-scale platform with integrations, multi-location support, and advanced features"
-                    },
-                    "priceSpecification": {
-                        "@type": "PriceSpecification",
-                        "description": "Custom quote based on scope"
-                    }
-                }
             ]
         }
     }
@@ -511,15 +509,39 @@
             </div>
 
             <div class="pricing-grid">
-                <!-- Concept Site -->
+                <!-- Starter -->
                 <div class="pricing-card animate-in">
+                    <div class="pricing-header">
+                        <h3 class="pricing-name">Starter</h3>
+                        <p class="pricing-description">Simple web presence</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="price-current">$799</span>
+                        <span class="price-period">starting at</span>
+                    </div>
+                    <p style="text-align: center; color: var(--text-muted); font-size: 0.875rem; margin-top: -0.5rem; margin-bottom: 1rem;">3-5 pages • 90-day support</p>
+                    <ul class="pricing-features">
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Custom design</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Mobile-responsive</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Contact form</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Basic SEO</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>1-2 week delivery</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline btn-block magnetic">
+                        Get Quote
+                    </a>
+                </div>
+
+                <!-- Concept Site -->
+                <div class="pricing-card featured animate-in">
+                    <div class="pricing-badge">Most Popular</div>
                     <div class="pricing-header">
                         <h3 class="pricing-name">Concept Site</h3>
                         <p class="pricing-description">Professional web presence</p>
                     </div>
                     <div class="pricing-price">
-                        <span class="price-current">$5,000</span>
-                        <span class="price-period">project</span>
+                        <span class="price-current">$3,500</span>
+                        <span class="price-period">starting at</span>
                     </div>
                     <p style="text-align: center; color: var(--text-muted); font-size: 0.875rem; margin-top: -0.5rem; margin-bottom: 1rem;">5-20 pages • 90-day support included</p>
                     <ul class="pricing-features">
@@ -536,17 +558,15 @@
                 </div>
 
                 <!-- SaaS Platform -->
-                <div class="pricing-card featured animate-in">
-                    <div class="pricing-badge">Most Popular</div>
+                <div class="pricing-card animate-in">
                     <div class="pricing-header">
                         <h3 class="pricing-name">SaaS Platform</h3>
                         <p class="pricing-description">Custom operational software</p>
                     </div>
                     <div class="pricing-price">
-                        <span class="price-current">$14K+</span>
-                        <span class="price-period">starting at</span>
+                        <span class="price-current">Custom</span>
                     </div>
-                    <p style="text-align: center; color: var(--text-muted); font-size: 0.875rem; margin-top: -0.5rem; margin-bottom: 1rem;">Custom quote based on scope</p>
+                    <p style="text-align: center; color: var(--text-muted); font-size: 0.875rem; margin-top: -0.5rem; margin-bottom: 1rem;">Contact for pricing • Custom scope</p>
                     <ul class="pricing-features">
                         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Custom dashboard</li>
                         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Multi-location support</li>
@@ -560,31 +580,6 @@
                     </a>
                 </div>
 
-                <!-- Enterprise Platform -->
-                <div class="pricing-card animate-in">
-                    <div class="pricing-header">
-                        <h3 class="pricing-name">Enterprise Platform</h3>
-                        <p class="pricing-description">Full-service + ongoing support</p>
-                    </div>
-                    <div class="pricing-price">
-                        <span class="price-current">Custom</span>
-                        <span class="price-period">quote</span>
-                    </div>
-                    <p style="text-align: center; color: var(--text-muted); font-size: 0.875rem; margin-top: -0.5rem; margin-bottom: 1rem;">Complex integrations & scale</p>
-                    <ul class="pricing-features">
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg><strong>Everything in SaaS Platform</strong></li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>AI & automation features</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Advanced security</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Dedicated support</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Custom integrations</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>SLA available</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-outline btn-block magnetic">
-                        Get Quote
-                    </a>
-                </div>
-                    </a>
-                </div>
             </div>
 
             <!-- How We Work Together -->
@@ -756,9 +751,9 @@
                             <label for="package">Project Type</label>
                             <select id="package" name="package">
                                 <option value="">Select a project type...</option>
-                                <option value="concept">Concept Site - $5,000 (5-20 pages)</option>
-                                <option value="platform">SaaS Platform - Starting at $14,000 (Most Popular)</option>
-                                <option value="enterprise">Enterprise Platform - Custom Quote</option>
+                                <option value="starter">Starter - $799 (3-5 pages)</option>
+                                <option value="concept">Concept Site - $3,500 (5-20 pages)</option>
+                                <option value="platform">SaaS Platform - Custom Quote</option>
                                 <option value="unsure">Not sure yet - Let's discuss</option>
                             </select>
                         </div>

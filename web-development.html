@@ -11,521 +11,1260 @@
       gtag('config', 'G-16SZEY2J5E');
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Development Services | Professional Websites from $2,500 | Piney Digital</title>
-    <meta name="description" content="Professional web development services for businesses that need more than just a website. Custom designs starting at $2,500 with room to grow into a full platform.">
-    <meta name="keywords" content="web development, website design, professional website, business website, web hosting, custom website design">
+    <title>Web Development & Hosting | Piney Digital | Lufkin, TX</title>
+    <meta name="description" content="Professional web development & hosting services in Lufkin, TX. Custom websites starting at $799. Concept sites from $3,500. SaaS platforms custom pricing.">
+    <meta name="keywords" content="web development, web hosting, web design Lufkin TX, custom websites, Piney Digital, professional web design, Texas web developer">
     <meta name="author" content="Joel Escoto">
     <link rel="canonical" href="https://pineydigital.com/web-development.html">
     <meta name="robots" content="index, follow">
+    <meta name="geo.region" content="US-TX">
+    <meta name="geo.placename" content="Lufkin, Texas">
+    <meta name="geo.position" content="31.3382;-94.7291">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pineydigital.com/web-development.html">
-    <meta property="og:title" content="Web Development Services | From $2,500 | Piney Digital">
-    <meta property="og:description" content="Custom websites that grow with your business. Starting at $2,500.">
+    <meta property="og:title" content="Web Development & Hosting | Piney Digital | Lufkin, TX">
+    <meta property="og:description" content="Professional web development & hosting services in Lufkin, TX. Custom websites starting at $799. Concept sites from $3,500.">
     <meta property="og:image" content="https://pineydigital.com/images/og-image.png">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Piney Digital">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Web Development Services | From $2,500 | Piney Digital">
-    <meta name="twitter:description" content="Custom websites that grow with your business.">
+    <meta name="twitter:title" content="Web Development & Hosting | Piney Digital | Lufkin, TX">
+    <meta name="twitter:description" content="Professional web development & hosting services in Lufkin, TX. Custom websites & reliable hosting.">
     <meta name="twitter:image" content="https://pineydigital.com/images/og-image.png">
+
+    <!-- Structured Data: LocalBusiness + Service -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LocalBusiness",
+          "name": "Piney Digital",
+          "description": "Professional web development and hosting services in Lufkin, TX",
+          "url": "https://pineydigital.com/web-development.html",
+          "telephone": "+1-936-299-9897",
+          "email": "joel@pineydigital.com",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Lufkin",
+            "addressRegion": "TX",
+            "addressCountry": "US"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 31.3382,
+            "longitude": -94.7291
+          },
+          "areaServed": {
+            "@type": "City",
+            "name": "Lufkin",
+            "containedIn": "Texas"
+          },
+          "serviceType": ["Web Development", "Web Hosting", "Web Design"],
+          "priceRange": "$$",
+          "openingHours": "Mo-Fr 09:00-18:00"
+        },
+        {
+          "@type": "Service",
+          "serviceType": "Web Development",
+          "provider": {
+            "@type": "LocalBusiness",
+            "name": "Piney Digital"
+          },
+          "areaServed": "Lufkin, TX",
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Web Development Packages",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Starter Website Package"
+                },
+                "price": "799",
+                "priceCurrency": "USD"
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Concept Site Package"
+                },
+                "price": "3500",
+                "priceCurrency": "USD"
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "SaaS Platform Development"
+                },
+                "price": "0",
+                "priceCurrency": "USD"
+              }
+            ]
+          }
+        }
+      ]
+    }
+    </script>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
     <link rel="stylesheet" href="css/modern.css">
-    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="manifest" href="site.webmanifest">
-    <meta name="theme-color" content="#1e5a8e">
-    <meta name="msapplication-TileColor" content="#0a0a0f">
 
     <style>
-        .webdev-hero {
-            padding: 160px 0 100px;
-            min-height: auto;
+        /* Immersive Page Styles */
+        html { scroll-behavior: auto; }
+
+        body.immersive-page {
+            overflow-x: hidden;
+            background: #0a0a0f;
+            margin: 0;
+        }
+
+        /* Loading Screen */
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: #0a0a0f;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
+        }
+
+        #loading-screen.hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        .loading-logo {
+            font-size: 4rem;
+            margin-bottom: 2rem;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+
+        .loading-bar {
+            width: 200px;
+            height: 3px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .loading-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #4ade80, #22c55e);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        .loading-text {
+            margin-top: 1rem;
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.5);
+            letter-spacing: 0.1em;
+        }
+
+        /* Frame Background Container */
+        #frame-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 0;
+            pointer-events: none;
+            overflow: hidden;
+            background: #0a0a0f;
+        }
+
+        #frame-sequence {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        #frame-sequence.loaded {
+            opacity: 1;
+        }
+
+        #frame-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 1;
+            background: linear-gradient(to bottom,
+                rgba(10,10,15,0.1) 0%,
+                rgba(10,10,15,0.2) 30%,
+                rgba(10,10,15,0.4) 60%,
+                rgba(10,10,15,0.7) 100%);
+            pointer-events: none;
+        }
+
+        /* Progress Bar */
+        .scroll-progress-top {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #4ade80, #22c55e);
+            z-index: 9998;
+            width: 0%;
+        }
+
+        /* Scroll Track */
+        .scroll-track {
+            position: relative;
+            z-index: 2;
+            height: 1100vh;  /* Extra height for pinned pricing + hosting section */
+        }
+
+        /* Sections - All centered now */
+        .immersive-section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 0 5%;
+        }
+
+        /* Text Content - Always centered, clean */
+        .text-overlay {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.4em;
+            color: #4ade80;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .section-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 700;
+            line-height: 1.05;
+            margin-bottom: 1.5rem;
+            opacity: 0;
+            transform: translateY(40px);
+        }
+
+        .section-title .gradient-text {
+            background: linear-gradient(135deg, #4ade80 0%, #22c55e 50%, #16a34a 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-subtitle {
+            font-size: clamp(1.125rem, 2vw, 1.375rem);
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.7;
+            margin: 0 auto;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        /* CTA Buttons */
+        .cta-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2.5rem;
+            flex-wrap: wrap;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .btn-primary-immersive {
+            padding: 1rem 2.5rem;
+            background: linear-gradient(135deg, #4ade80, #22c55e);
+            color: #0a0a0f;
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary-immersive:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(74, 222, 128, 0.4);
+        }
+
+        .btn-secondary-immersive {
+            padding: 1rem 2.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-secondary-immersive:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* Stats - Inline, centered */
+        .inline-stats {
+            display: flex;
+            gap: 4rem;
+            margin-top: 2rem;
+            justify-content: center;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .stat {
             text-align: center;
         }
-        .webdev-hero .hero-title {
-            font-size: clamp(2.5rem, 6vw, 4rem);
-            margin-bottom: 1.5rem;
-        }
-        .webdev-hero .hero-subtitle {
-            font-size: clamp(1.125rem, 2vw, 1.25rem);
-            color: var(--text-secondary);
-            max-width: 700px;
-            margin: 0 auto 2rem;
-        }
-        .webdev-hero .hero-price {
-            font-size: 1.5rem;
-            color: var(--accent-success);
-            font-weight: 600;
-            margin-bottom: 2rem;
-        }
-        .webdev-hero .hero-price span {
-            color: var(--text-muted);
-            font-size: 1rem;
-            font-weight: 400;
-        }
-        .pricing-grid.webdev-grid {
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-        }
-        @media (max-width: 992px) {
-            .pricing-grid.webdev-grid {
-                grid-template-columns: 1fr;
-                max-width: 500px;
-                margin: 0 auto 3rem;
-            }
-        }
-        .webdev-card {
-            background: rgba(18, 18, 26, 0.95);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            border-radius: 24px;
-            padding: 2rem;
-            position: relative;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .webdev-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-        }
-        .webdev-card.featured {
-            border: 2px solid var(--accent);
-            background: linear-gradient(135deg, rgba(18, 18, 26, 0.95) 0%, rgba(30, 60, 40, 0.95) 100%);
-        }
-        .webdev-card .card-badge {
-            position: absolute;
-            top: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
-            color: white;
-            padding: 0.5rem 1.25rem;
-            border-radius: 999px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-        .webdev-card .card-name {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            color: var(--text-primary);
-        }
-        .webdev-card .card-desc {
-            font-size: 0.9375rem;
-            color: var(--text-tertiary);
-            margin-bottom: 1.5rem;
-        }
-        .webdev-card .card-price {
+
+        .stat-number {
+            font-family: 'Space Grotesk', sans-serif;
             font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--text-primary);
+            font-weight: 700;
+            color: #4ade80;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.5);
+            margin-top: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        /* Card Stack - For Pricing */
+        .card-stack {
+            position: absolute;
+            right: 8%;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 320px;
+            height: 400px;
+            perspective: 1000px;
+        }
+
+        .stack-card {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(18, 18, 26, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(74, 222, 128, 0.3);
+            border-radius: 20px;
+            padding: 2rem;
+            transform-origin: center center;
+            opacity: 0;
+            /* Start off-screen to the right */
+            transform: translateX(400px) rotateY(-30deg);
+        }
+
+        .stack-card.visible {
+            opacity: 1;
+        }
+
+        /* Cards stack with HIGHER z-index on top (later cards sit on top of earlier) */
+        .stack-card:nth-child(1) { z-index: 1; }  /* Starter - bottom of stack */
+        .stack-card:nth-child(2) {
+            z-index: 2;  /* Concept - middle */
+            border-color: #4ade80;
+            background: linear-gradient(135deg, rgba(18, 18, 26, 0.98) 0%, rgba(30, 60, 40, 0.95) 100%);
+        }
+        .stack-card:nth-child(3) { z-index: 3; }  /* SaaS - top of stack */
+
+        .stack-card h4 {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 0.75rem;
+        }
+
+        .stack-card .price {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: #4ade80;
             margin-bottom: 0.25rem;
         }
-        .webdev-card .card-price-note {
-            font-size: 0.875rem;
-            color: var(--text-muted);
+
+        .stack-card .price-note {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.5);
             margin-bottom: 1.5rem;
         }
-        .webdev-card .feature-list {
+
+        .stack-card .features {
             list-style: none;
-            margin-bottom: 2rem;
+            padding: 0;
+            margin: 0;
         }
-        .webdev-card .feature-list li {
+
+        .stack-card .features li {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
             padding: 0.5rem 0;
-            color: var(--text-secondary);
-            font-size: 0.9375rem;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
-        .webdev-card .feature-list li::before {
-            content: "✓";
-            color: var(--accent-success);
-            font-weight: 700;
-        }
-        .webdev-card .btn {
-            width: 100%;
-            text-align: center;
-        }
-        .growth-section {
-            padding: 100px 0;
-            background: rgba(255, 255, 255, 0.02);
-        }
-        .growth-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-        @media (max-width: 768px) {
-            .growth-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-        }
-        .growth-content h2 {
-            font-size: clamp(2rem, 4vw, 3rem);
-            margin-bottom: 1.5rem;
-        }
-        .growth-content p {
-            color: var(--text-secondary);
-            font-size: 1.125rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.7;
-        }
-        .growth-list {
-            list-style: none;
-        }
-        .growth-list li {
-            padding: 1rem 0;
-            border-bottom: 1px solid var(--border-color);
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-        }
-        .growth-list li:last-child {
+
+        .stack-card .features li:last-child {
             border-bottom: none;
         }
-        .growth-list .arrow {
-            color: var(--accent-success);
-            font-size: 1.25rem;
-            font-weight: 700;
+
+        .stack-card .features li::before {
+            content: "✓";
+            color: #4ade80;
+            margin-right: 0.75rem;
+            font-weight: bold;
         }
-        .growth-card {
-            background: rgba(18, 18, 26, 0.95);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            border-radius: 24px;
-            padding: 2rem;
+
+        /* Card 1 - Base position, slightly rotated */
+        .stack-card.card-pos-1 {
+            transform: translateX(0) rotateY(-5deg) rotateZ(-2deg);
         }
-        .growth-card h3 {
-            font-size: 1.25rem;
-            margin-bottom: 1.5rem;
+
+        /* Card 2 - Stacked on top of card 1, offset */
+        .stack-card.card-pos-2 {
+            transform: translateX(20px) translateY(10px) rotateY(-5deg) rotateZ(0deg);
+        }
+
+        /* Card 3 - Stacked on top of card 2, more offset */
+        }
+
+        .stack-card.stacked-3 {
+            transform: translateX(40px) translateY(20px) rotateY(-5deg) rotateZ(2deg);
+            opacity: 0.8;
+        }
+
+        /* Scroll Hint */
+        .scroll-hint {
+            position: fixed;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 100;
             text-align: center;
+            opacity: 1;
+            transition: opacity 0.5s;
         }
-        .cost-row {
+
+        .scroll-hint.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .scroll-hint-arrow {
+            width: 26px;
+            height: 42px;
+            border: 2px solid rgba(74, 222, 128, 0.4);
+            border-radius: 13px;
+            margin: 0 auto 8px;
+            position: relative;
+        }
+
+        .scroll-hint-arrow::after {
+            content: '';
+            position: absolute;
+            top: 6px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 10px;
+            background: #4ade80;
+            border-radius: 2px;
+            animation: scrollBounce 1.5s infinite;
+        }
+
+        @keyframes scrollBounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); opacity: 1; }
+            50% { transform: translateX(-50%) translateY(10px); opacity: 0.3; }
+        }
+
+        .scroll-hint p {
+            font-size: 0.7rem;
+            letter-spacing: 0.3em;
+            color: rgba(255, 255, 255, 0.4);
+            text-transform: uppercase;
+        }
+
+        /* Navigation */
+        .nav-immersive {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 9997;
+            padding: 1.5rem 3rem;
+            background: transparent;
+            transition: background 0.3s ease;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 0;
-            border-bottom: 1px solid var(--border-color);
         }
-        .cost-row:last-child {
-            border-bottom: none;
-            padding-top: 1.5rem;
-            margin-top: 0.5rem;
-            background: rgba(34, 197, 94, 0.1);
+
+        .nav-immersive.scrolled {
+            background: rgba(10, 10, 15, 0.85);
+            backdrop-filter: blur(20px);
+        }
+
+        .nav-immersive .nav-logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-immersive .logo-icon {
+            font-size: 1.5rem;
+        }
+
+        .nav-contact {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-contact:hover {
+            color: #4ade80;
+        }
+
+        /* Exit Banner */
+        .exit-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10, 10, 15, 0.95);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(74, 222, 128, 0.2);
+            padding: 1rem 2rem;
+            z-index: 9996;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transform: translateY(100%);
+            transition: transform 0.5s ease;
+        }
+
+        .exit-banner.visible {
+            transform: translateY(0);
+        }
+
+        /* Contact Form Styles */
+        .contact-form-immersive {
+            width: 100%;
+            max-width: 600px;
+            margin: 2rem auto 0;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .form-row {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .form-input,
+        .form-select,
+        .form-textarea {
+            flex: 1;
+            padding: 1rem 1.25rem;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
             border-radius: 12px;
-            padding: 1rem;
-            margin: 1rem -0.5rem 0;
+            color: white;
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s ease;
+            outline: none;
         }
-        .cost-label {
-            color: var(--text-secondary);
+
+        .form-input::placeholder,
+        .form-textarea::placeholder {
+            color: rgba(255, 255, 255, 0.4);
         }
-        .cost-value {
-            font-weight: 600;
+
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: #4ade80;
+            box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.1);
         }
-        .cost-row:last-child .cost-value {
-            color: var(--accent-success);
+
+        .form-select {
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23ffffff' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            padding-right: 2.5rem;
+        }
+
+        .form-select option {
+            background: #0a0a0f;
+            color: white;
+        }
+
+        .form-textarea {
+            width: 100%;
+            resize: vertical;
+            min-height: 100px;
+            margin-bottom: 1rem;
+        }
+
+        .form-submit {
+            width: 100%;
+            padding: 1rem 2rem;
+            border: none;
+            cursor: pointer;
+        }
+
+        .form-alt {
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.5);
+            opacity: 0;
+        }
+
+        .form-link {
+            color: #4ade80;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-link:hover {
+            border-bottom-color: #4ade80;
+        }
+
+        /* Form success message */
+        .form-success {
+            display: none;
+            padding: 2rem;
+            background: rgba(74, 222, 128, 0.1);
+            border: 1px solid #4ade80;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .form-success.visible {
+            display: block;
+        }
+
+        .form-success h3 {
+            color: #4ade80;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .card-stack {
+                display: none;
+            }
+
+            .text-overlay {
+                max-width: 90%;
+            }
+
+            .form-row {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
-<body>
-    <div class="noise-overlay"></div>
-    <div class="cursor-glow" id="cursorGlow"></div>
+<body class="immersive-page">
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-logo">🌲</div>
+        <div class="loading-bar">
+            <div class="loading-bar-fill" id="loadingBarFill"></div>
+        </div>
+        <div class="loading-text" id="loadingText">Loading experience...</div>
+    </div>
+
+    <div class="scroll-progress-top" id="progressBar"></div>
 
     <!-- Navigation -->
-    <nav class="nav" id="nav">
-        <div class="nav-container">
-            <a href="/" class="nav-logo">
-                <span class="logo-icon">🌲</span>
-                <span class="logo-text">Piney<span>Digital</span></span>
-            </a>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <div class="nav-menu" id="navMenu">
-                <a href="/" class="nav-link">Homepage</a>
-                <a href="/capabilities.html" class="nav-link">Capabilities</a>
-                <a href="/blog.html" class="nav-link">Blog</a>
-                <a href="/pricing.html" class="nav-link">Pricing</a>
-                <a href="/about.html" class="nav-link">About</a>
-                <a href="/faq.html" class="nav-link">FAQ</a>
-                <a href="/contact.html" class="btn btn-primary">Get in Touch</a>
-            </div>
-        </div>
+    <nav class="nav-immersive" id="navImmersive">
+        <a href="/" class="nav-logo">
+            <span class="logo-icon">🌲</span>
+            <span>Piney Digital</span>
+        </a>
+        <a href="tel:936-299-9897" class="nav-contact">(936) 299-9897</a>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero webdev-hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-badge">
-                    <span class="badge-icon">💻</span>
-                    <span>Web Development Services</span>
-                </div>
-                <h1 class="hero-title">Need a Website?<br>
-                    <span class="gradient-text">Get More Than Just Pages</span>
+    <!-- Frame Background -->
+    <div id="frame-container">
+        <img id="frame-sequence" src="video-frames/frame_001.jpg" alt="">
+    </div>
+    <div id="frame-overlay"></div>
+
+    <!-- Scroll Hint -->
+    <div class="scroll-hint" id="scrollHint">
+        <div class="scroll-hint-arrow"></div>
+        <p>Scroll</p>
+    </div>
+
+    <!-- Scroll Track -->
+    <div class="scroll-track">
+
+        <!-- Section 1: Hero -->
+        <section class="immersive-section">
+            <div class="text-overlay" id="hero-text">
+                <p class="section-label">Web Development</p>
+                <h1 class="section-title">
+                    Watch Your Vision<br>
+                    <span class="gradient-text">Come to Life</span>
                 </h1>
-
-                <p class="hero-subtitle">
-                    Professional web development starting at <strong>$2,500</strong>. Custom designs, fast loading, mobile-responsive — with room to grow into a full platform as your business scales.
+                <p class="section-subtitle">
+                    From abstract idea to polished reality. See exactly how your website transforms from chaos to clarity.
                 </p>
-
-                <div class="hero-cta">
-                    <a href="/contact.html" class="btn btn-glow btn-large">Get Free Consultation</a>
-                    <a href="#pricing" class="btn btn-secondary">View Pricing</a>
+                <div class="cta-group">
+                    <a href="#contact" class="btn-primary-immersive">Start Project</a>
+                    <a href="#pricing" class="btn-secondary-immersive">View Pricing</a>
                 </div>
+            </div>
+        </section>
 
-                <div class="hero-features">
-                    <div class="feature-item">
-                        <span class="feature-icon">⚡</span>
-                        <span>2-3 Week Delivery</span>
+        <!-- Section 2: Process -->
+        <section class="immersive-section">
+            <div class="text-overlay" id="process-text">
+                <p class="section-label">Our Process</p>
+                <h2 class="section-title">
+                    <span class="gradient-text">Precision</span><br>
+                    At Every Step
+                </h2>
+                <p class="section-subtitle">
+                    Every curve calculated. Every detail considered. We architect digital experiences, not just websites.
+                </p>
+                <div class="inline-stats" id="process-stats">
+                    <div class="stat">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Custom</div>
                     </div>
-                    <div class="feature-item">
-                        <span class="feature-icon">📱</span>
-                        <span>Mobile-Responsive</span>
+                    <div class="stat">
+                        <div class="stat-number">2-3</div>
+                        <div class="stat-label">Weeks</div>
                     </div>
-                    <div class="feature-item">
-                        <span class="feature-icon">🔍</span>
-                        <span>SEO Optimized</span>
-                    </div>
-                    <div class="feature-item">
-                        <span class="feature-icon">🚀</span>
-                        <span>Built to Scale</span>
+                    <div class="stat">
+                        <div class="stat-number">∞</div>
+                        <div class="stat-label">Growth</div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Pricing Section -->
-    <section class="section" id="pricing">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Choose Your <span class="gradient-text">Starting Point</span></h2>
-                <p class="section-subtitle">Every business is different. Start where you are, upgrade when you're ready.</p>
+        <!-- Section 3: Why Us -->
+        <section class="immersive-section">
+            <div class="text-overlay" id="why-text">
+                <p class="section-label">Why Us</p>
+                <h2 class="section-title">
+                    Built <span class="gradient-text">Different</span>
+                </h2>
+                <p class="section-subtitle">
+                    Most agencies hand you a template and disappear. We build on a foundation that grows—so when you're ready to scale, you don't start over.
+                </p>
+                <div class="cta-group">
+                    <a href="/capabilities.html" class="btn-secondary-immersive">See Capabilities</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Pricing with Stacked Cards (PINNED) -->
+        <section class="immersive-section" id="pricing" style="justify-content: flex-start; padding-left: 8%;">
+            <div class="text-overlay" id="pricing-text" style="text-align: left; margin: 0;">
+                <p class="section-label">Investment</p>
+                <h2 class="section-title">
+                    Choose Your<br>
+                    <span class="gradient-text">Starting Point</span>
+                </h2>
+                <p class="section-subtitle">
+                    Start where you are. Upgrade when you're ready.
+                </p>
             </div>
 
-            <div class="pricing-grid webdev-grid">
-                <!-- Starter -->
-                <div class="webdev-card">
-                    <div class="card-badge">Most Accessible</div>
-                    <h3 class="card-name">Starter Website</h3>
-                    <p class="card-desc">Perfect for new businesses</p>
-
-                    <div class="card-price">$2,500</div>
-                    <p class="card-price-note">one-time project fee</p>
-
-                    <ul class="feature-list">
+            <!-- Stacked Cards - Right Side -->
+            <div class="card-stack" id="cardStack">
+                <div class="stack-card" id="card1">
+                    <h4>Starter</h4>
+                    <div class="price">$799</div>
+                    <div class="price-note">starting at</div>
+                    <ul class="features">
                         <li>3-5 Pages</li>
                         <li>Custom Design</li>
                         <li>Mobile Responsive</li>
-                        <li>Contact Form</li>
-                        <li>90-Day Support</li>
-                        <li>Room to Grow</li>
+                        <li>Basic SEO Setup</li>
                     </ul>
-
-                    <a href="/contact.html?package=starter" class="btn btn-secondary">Get Started</a>
                 </div>
 
-                <!-- Concept Site -->
-                <div class="webdev-card featured">
-                    <div class="card-badge">Most Popular</div>
-                    <h3 class="card-name">Concept Site</h3>
-                    <p class="card-desc">For established businesses</p>
-
-                    <div class="card-price">$5,000</div>
-                    <p class="card-price-note">one-time project fee</p>
-
-                    <ul class="feature-list">
+                <div class="stack-card featured" id="card2">
+                    <h4>Concept Site</h4>
+                    <div class="price">$3,500</div>
+                    <div class="price-note">one-time</div>
+                    <ul class="features">
                         <li>5-20 Pages</li>
-                        <li>Premium Design</li>
-                        <li>SEO Optimization</li>
-                        <li>Analytics Setup</li>
-                        <li>90-Day Support</li>
-                        <li><strong>Platform-Ready Foundation</strong></li>
+                        <li>Advanced SEO</li>
+                        <li>Platform-Ready</li>
+                        <li>CMS Integration</li>
                     </ul>
-
-                    <a href="/contact.html?package=concept" class="btn btn-primary">Get Started</a>
                 </div>
 
-                <!-- SaaS Platform -->
-                <div class="webdev-card">
-                    <div class="card-badge" style="background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);">For Growing Businesses</div>
-                    <h3 class="card-name">SaaS Platform</h3>
-                    <p class="card-desc">When you're ready to scale</p>
-
-                    <div class="card-price">$14,000+</div>
-                    <p class="card-price-note">starting at</p>
-
-                    <ul class="feature-list">
-                        <li>User Accounts & Login</li>
+                <div class="stack-card" id="card3">
+                    <h4>SaaS Platform</h4>
+                    <div class="price">Custom</div>
+                    <div class="price-note">contact for pricing</div>
+                    <ul class="features">
+                        <li>User Accounts</li>
                         <li>Admin Dashboard</li>
-                        <li>Database & Workflows</li>
-                        <li>API Integrations</li>
-                        <li>Training + 90-Day Support</li>
-                        <li><strong>Full Custom Software</strong></li>
-                    </ul>
-
-                    <a href="/contact.html?package=saas" class="btn btn-secondary">Schedule Consultation</a>
-                </div>
-            </div>
-
-            <p class="text-center" style="color: var(--text-muted); font-size: 0.9375rem;">
-                All prices are one-time project fees. Hosting and support options available after 90 days.
-            </p>
-        </div>
-    </section>
-
-    <!-- Growth Section -->
-    <section class="growth-section">
-        <div class="container">
-            <div class="growth-grid">
-                <div class="growth-content">
-                    <h2>Most Businesses <span style="color: #ef4444;">Outgrow</span> Their Website in 6 Months</h2>
-
-                    <p>
-                        You start with a simple site. Then you need a booking system. Then customer logins. Then a dashboard. Suddenly you're duct-taping 5 different tools together.
-                    </p>
-
-                    <p>
-                        We build websites that can <strong style="color: var(--accent-success);">grow into platforms</strong> — so you never have to start over.
-                    </p>
-
-                    <ul class="growth-list">
-                        <li>
-                            <span class="arrow">→</span>
-                            <div>
-                                <strong>Start Small:</strong> Launch with a professional website
-                            </div>
-                        </li>
-                        <li>
-                            <span class="arrow">→</span>
-                            <div>
-                                <strong>Add Features:</strong> Booking, customer accounts, dashboards
-                            </div>
-                        </li>
-                        <li>
-                            <span class="arrow">→</span>
-                            <div>
-                                <strong>Scale:</strong> Multi-location, automation, AI
-                            </div>
-                        </li>
+                        <li>Custom Software</li>
+                        <li>API Integration</li>
                     </ul>
                 </div>
-
-                <div class="growth-card">
-                    <h3>The Cost of Starting Over</h3>
-
-                    <div class="cost-row">
-                        <span class="cost-label">Website (Year 1)</span>
-                        <span class="cost-value">$3,000</span>
-                    </div>
-
-                    <div class="cost-row">
-                        <span class="cost-label">+ Booking tool subscriptions</span>
-                        <span class="cost-value" style="color: #ef4444;">$600/yr</span>
-                    </div>
-
-                    <div class="cost-row">
-                        <span class="cost-label">+ CRM subscription</span>
-                        <span class="cost-value" style="color: #ef4444;">$1,200/yr</span>
-                    </div>
-
-                    <div class="cost-row">
-                        <span class="cost-label">+ Integration headaches</span>
-                        <span class="cost-value" style="color: #ef4444;">💸 Priceless</span>
-                    </div>
-
-                    <div class="cost-row" style="background: rgba(34, 197, 94, 0.1); border-radius: 12px; padding: 1rem;">
-                        <span class="cost-label"><strong>Our approach:</strong></span>
-                        <span class="cost-value" style="color: var(--accent-success);">One foundation, endless growth</span>
-                    </div>
-                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- CTA Section -->
-    <section class="section section-dark">
-        <div class="container">
-            <div class="text-center" style="max-width: 600px; margin: 0 auto;">
-                <h2 class="section-title" style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1.5rem;">
-                    Ready to Get Started?
+        <!-- Section 5: Trust -->
+        <section class="immersive-section">
+            <div class="text-overlay" id="trust-text">
+                <p class="section-label">The Difference</p>
+                <h2 class="section-title">
+                    No <span class="gradient-text">Templates</span>.<br>
+                    No <span class="gradient-text">Shortcuts</span>.
                 </h2>
-
-                <p class="section-subtitle" style="margin-bottom: 2rem;">
-                    Free 30-minute consultation. No pressure, no commitment. Just a conversation about what you need and how we can help.
-                </p>
-
-                <div class="hero-cta" style="justify-content: center;">
-                    <a href="/contact.html" class="btn btn-glow btn-large">Book Free Consultation</a>
-                    <a href="tel:936-299-9897" class="btn btn-secondary">Call (936) 299-9897</a>
-                </div>
-
-                <p style="color: var(--text-muted); font-size: 0.875rem; margin-top: 2rem;">
-                    Response within 24 hours · Based in Texas · Serving Nationwide
+                <p class="section-subtitle">
+                    Every pixel placed with intention. Every interaction designed to convert.
                 </p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="/" class="footer-logo">
-                        <span class="logo-icon">🌲</span>
-                        <span class="logo-text">Piney<span>Digital</span></span>
-                    </a>
-                    <p class="footer-description">
-                        Professional web development and custom software for growing businesses. Starting at $2,500.
-                    </p>
-                    <p class="footer-location">Based in Texas · Serving Nationwide</p>
+        <!-- Section 6: Web Hosting -->
+        <section class="immersive-section" id="hosting">
+            <div class="text-overlay" id="hosting-text">
+                <p class="section-label">Web Hosting</p>
+                <h2 class="section-title">
+                    Reliable <span class="gradient-text">Hosting</span><br>
+                    That Just Works
+                </h2>
+                <p class="section-subtitle">
+                    Fast, secure, &amp; managed hosting for your website. SSL included, daily backups, 99.9% uptime. Serving Lufkin, TX and beyond.
+                </p>
+                <div class="inline-stats" id="hosting-stats">
+                    <div class="stat">
+                        <div class="stat-number">99.9%</div>
+                        <div class="stat-label">Uptime</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">SSL</div>
+                        <div class="stat-label">Included</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Monitoring</div>
+                    </div>
                 </div>
-
-                <div class="footer-links">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="/web-development.html">Web Development</a></li>
-                        <li><a href="/pricing.html">Custom Websites</a></li>
-                        <li><a href="/capabilities.html">SaaS Platforms</a></li>
-                        <li><a href="/pricing.html">Enterprise Solutions</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-links">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="/about.html">About</a></li>
-                        <li><a href="/blog.html">Blog</a></li>
-                        <li><a href="/faq.html">FAQ</a></li>
-                        <li><a href="/contact.html">Contact</a></li>
-                    </ul>
+                <div class="cta-group">
+                    <a href="#contact" class="btn-secondary-immersive">Get Hosting Quote</a>
                 </div>
             </div>
+        </section>
 
-            <div class="footer-bottom">
-                <p class="copyright">© 2026 Piney Digital. All rights reserved.</p>
-                <div class="footer-legal">
-                    <a href="/privacy.html">Privacy Policy</a>
-                    <a href="/terms.html">Terms & Conditions</a>
-                </div>
+        <!-- Section 7: Contact Form -->
+        <section class="immersive-section" id="contact">
+            <div class="text-overlay" id="contact-text">
+                <p class="section-label">Let's Build</p>
+                <h2 class="section-title">
+                    Ready to <span class="gradient-text">Start?</span>
+                </h2>
+                <p class="section-subtitle">
+                    Free 30-minute consultation. No pressure, no commitment.
+                </p>
+
+                <!-- Quick Contact Form -->
+                <form class="contact-form-immersive" id="quickContactForm" action="https://pineydigital-production.up.railway.app/api/contact" method="POST">
+                    <div class="form-row">
+                        <input type="text" name="name" placeholder="Your Name" required class="form-input">
+                        <input type="email" name="email" placeholder="Email Address" required class="form-input">
+                    </div>
+                    <div class="form-row">
+                        <input type="tel" name="phone" placeholder="Phone (optional)" class="form-input">
+                        <select name="budget" class="form-select" required>
+                            <option value="" disabled selected>Budget Range</option>
+                            <option value="799">$799 - Starter</option>
+                            <option value="3500">$3,500 - Concept Site</option>
+                            <option value="custom">Custom - SaaS Platform</option>
+                            <option value="custom">Custom / Not Sure</option>
+                        </select>
+                    </div>
+                    <textarea name="message" placeholder="Tell us about your project..." rows="3" class="form-textarea"></textarea>
+                    <button type="submit" class="btn-primary-immersive form-submit">Send Message</button>
+                </form>
+
+                <p class="form-alt">Or <a href="tel:936-299-9897" class="form-link">call (936) 299-9897</a></p>
             </div>
-        </div>
-    </footer>
+        </section>
 
-    <script src="js/modern.js"></script>
-    <script src="js/chat.js"></script>
+    </div>
+
+    <!-- Exit Banner -->
+    <div class="exit-banner" id="exitBanner">
+        <p>Want to explore more? Visit our full website.</p>
+        <a href="/" style="color: #4ade80; text-decoration: none; font-weight: 600;">Back to Homepage →</a>
+    </div>
+
+    <script>
+        // Register GSAP
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Elements
+        const frameSequence = document.getElementById('frame-sequence');
+        const progressBar = document.getElementById('progressBar');
+        const scrollHint = document.getElementById('scrollHint');
+        const exitBanner = document.getElementById('exitBanner');
+        const nav = document.getElementById('navImmersive');
+        const loadingScreen = document.getElementById('loading-screen');
+        const loadingBarFill = document.getElementById('loadingBarFill');
+        const loadingText = document.getElementById('loadingText');
+
+        // Frame setup
+        const totalFrames = 361;
+        const frameUrl = (num) => `video-frames/frame_${String(num).padStart(3, '0')}.jpg`;
+        let currentFrame = 1;
+        let targetFrame = 1;
+        let framesPreloaded = 0;
+
+        // Preload frames with progress
+        function preloadFrames() {
+            const preloadCount = 50;
+
+            for (let i = 1; i <= preloadCount; i++) {
+                const img = new Image();
+                img.onload = () => {
+                    framesPreloaded++;
+                    const progress = (framesPreloaded / preloadCount) * 100;
+                    loadingBarFill.style.width = progress + '%';
+
+                    if (framesPreloaded >= preloadCount) {
+                        loadingText.textContent = 'Ready';
+                        setTimeout(() => {
+                            loadingScreen.classList.add('hidden');
+                            frameSequence.classList.add('loaded');
+                            initAnimations();
+                        }, 500);
+                    }
+                };
+                img.src = frameUrl(i);
+            }
+
+            // Continue preloading rest in background
+            for (let i = preloadCount + 1; i <= totalFrames; i++) {
+                const img = new Image();
+                img.src = frameUrl(i);
+            }
+        }
+
+        // Frame update loop
+        function updateFrame() {
+            if (targetFrame !== currentFrame) {
+                currentFrame = targetFrame;
+                frameSequence.src = frameUrl(currentFrame);
+            }
+            requestAnimationFrame(updateFrame);
+        }
+
+        // Initialize animations after loading
+        function initAnimations() {
+            // Scroll-based frame scrubbing
+            ScrollTrigger.create({
+                trigger: ".scroll-track",
+                start: "top top",
+                end: "bottom bottom",
+                scrub: 0.3,
+                onUpdate: (self) => {
+                    const progress = self.progress;
+                    targetFrame = Math.max(1, Math.min(totalFrames, Math.floor(progress * totalFrames)));
+                    progressBar.style.width = (progress * 100) + '%';
+
+                    if (progress > 0.03) scrollHint.classList.add('hidden');
+                    if (progress > 0.02) nav.classList.add('scrolled');
+                    else nav.classList.remove('scrolled');
+                    if (progress > 0.92) exitBanner.classList.add('visible');
+                    else exitBanner.classList.remove('visible');
+                }
+            });
+
+            // Hero text animation
+            const heroTimeline = gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#hero-text",
+                    start: "top 80%",
+                    end: "center center",
+                    scrub: 1
+                }
+            });
+
+            heroTimeline
+                .to("#hero-text .section-label", { opacity: 1, y: 0, duration: 0.3 })
+                .to("#hero-text .section-title", { opacity: 1, y: 0, duration: 0.4 })
+                .to("#hero-text .section-subtitle", { opacity: 1, y: 0, duration: 0.3 })
+                .to("#hero-text .cta-group", { opacity: 1, y: 0, duration: 0.3 });
+
+            // Process section
+            gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#process-text",
+                    start: "top 70%",
+                    end: "center center",
+                    scrub: 1
+                }
+            })
+            .to("#process-text .section-label", { opacity: 1, y: 0, duration: 0.2 })
+            .to("#process-text .section-title", { opacity: 1, y: 0, duration: 0.3 })
+            .to("#process-text .section-subtitle", { opacity: 1, y: 0, duration: 0.2 })
+            .to("#process-stats", { opacity: 1, y: 0, duration: 0.3 });
+
+            // Why section
+            gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#why-text",
+                    start: "top 70%",
+                    end: "center center",
+                    scrub: 1
+                }
+            })
+            .to("#why-text .section-label", { opacity: 1, y: 0, duration: 0.2 })
+            .to("#why-text .section-title", { opacity: 1, y: 0, duration: 0.3 })
+            .to("#why-text .section-subtitle", { opacity: 1, y: 0, duration: 0.2 })
+            .to("#why-text .cta-group", { opacity: 1, y: 0, duration: 0.2 });
+
+            // Pricing section with CARD STACK reveal
+            gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#pricing-text",
+                    start: "top 70%",
+                    end: "center center",
+                    scrub: 1
+                }
+            })
+            .to("#pricing-text .section-label", { opacity: 1, y: 0, duration: 0.2 })
+            .to("#pricing-text .section-title", { opacity: 1, y: 0, duration: 0.3 })
+            .to("#pricing-text .section-subtitle", { opacity: 1, y: 0, duration: 0.2 });
+
+            // PINNED Pricing Section with card stacking animation
+            const card1 = document.getElementById('card1');
+            const card2 = document.getElementById('card2');
+            const card3 = document.getElementById('card3');
+
+            gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#pricing",
+                    start: "top top",
+                    end: "+=200%",
+                    pin: true,
+                    scrub: 0.5,
+                    onLeaveBack: () => {
+                        // Reset cards when scrolling back to top
+                        card1.style.opacity = '0';
+                        card1.style.transform = 'translateX(400px) rotateY(-30deg)';
+                        card2.style.opacity = '0';
+                        card2.style.transform = 'translateX(400px) rotateY(-30deg)';
+                        card3.style.opacity = '0';
+                        card3.style.transform = 'translateX(400px) rotateY(-30deg)';
+                    }
+                }
+            })
+            // Pricing text fades in first
+            .to("#pricing-text .section-label", { opacity: 1, y: 0, duration: 0.1 })
+            .to("#pricing-text .section-title", { opacity: 1, y: 0, duration: 0.1 })
+            .to("#pricing-text .section-subtitle", { opacity: 1, y: 0, duration: 0.1 })
+            // Card 1 slides in from right (0-30%)
+            .to(card1, {
+                x: 0,
+                rotateY: -5,
+                rotateZ: -2,
+                opacity: 1,
+                duration: 0.3,
+                ease: "power2.out"
+            })
+            // Card 2 slides in and lands ON TOP of card 1 (30-60%)
+            .to(card2, {
+                x: 25,
+                y: 15,
+                rotateY: -5,
+                rotateZ: 1,
+                opacity: 1,
+                duration: 0.3,
+                ease: "power2.out"
+            })
+            // Card 3 slides in and lands ON TOP of card 2 (60-90%)
+            .to(card3, {
+                x: 50,
+                y: 30,
+                rotateY: -5,
+                rotateZ: 3,
+                opacity: 1,
+                duration: 0.3,
+                ease: "power2.out"
+            });
+
+            // Trust section
+            gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#trust-text",
+                    start: "top 70%",
+                    end: "center center",
+                    scrub: 1
+                }
+            })
+            .to("#trust-text .section-label", { opacity: 1, y: 0, duration: 0.2 })
+            .to("#trust-text .section-title", { opacity: 1, y: 0, duration: 0.3 })
+            .to("#trust-text .section-subtitle", { opacity: 1, y: 0, duration: 0.2 });
+
+            // Hosting section
+            gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#hosting-text",
+                    start: "top 70%",
+                    end: "center center",
+                    scrub: 1
+                }
+            })
+            .to("#hosting-text .section-label", { opacity: 1, y: 0, duration: 0.2 })
+            .to("#hosting-text .section-title", { opacity: 1, y: 0, duration: 0.3 })
+            .to("#hosting-text .section-subtitle", { opacity: 1, y: 0, duration: 0.2 })
+            .to("#hosting-stats", { opacity: 1, y: 0, duration: 0.3 })
+            .to("#hosting-text .cta-group", { opacity: 1, y: 0, duration: 0.2 });
+
+            // Contact section with form
+            gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#contact-text",
+                    start: "top 70%",
+                    end: "center center",
+                    scrub: 1
+                }
+            })
+            .to("#contact-text .section-label", { opacity: 1, y: 0, duration: 0.15 })
+            .to("#contact-text .section-title", { opacity: 1, y: 0, duration: 0.2 })
+            .to("#contact-text .section-subtitle", { opacity: 1, y: 0, duration: 0.15 })
+            .to(".contact-form-immersive", { opacity: 1, y: 0, duration: 0.25 })
+            .to(".form-alt", { opacity: 1, duration: 0.15 });
+
+            // Start frame loop
+            updateFrame();
+        }
+
+        // Start preloading
+        preloadFrames();
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Form submission handling
+        const form = document.getElementById('quickContactForm');
+        if (form) {
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const submitBtn = form.querySelector('.form-submit');
+                const originalText = submitBtn.textContent;
+
+                // Show loading state
+                submitBtn.textContent = 'Sending...';
+                submitBtn.disabled = true;
+
+                try {
+                    const response = await fetch(form.action, {
+                        method: 'POST',
+                        body: new FormData(form),
+                        headers: { 'Accept': 'application/json' }
+                    });
+
+                    if (response.ok) {
+                        // Success - show message
+                        form.innerHTML = `
+                            <div class="form-success" style="display: block;">
+                                <h3>✓ Message Sent!</h3>
+                                <p>We'll be in touch within 24 hours.</p>
+                            </div>
+                        `;
+                    } else {
+                        throw new Error('Form submission failed');
+                    }
+                } catch (error) {
+                    // Fallback - open contact page
+                    window.location.href = '/contact.html';
+                }
+            });
+        }
+    </script>
 </body>
 </html>
