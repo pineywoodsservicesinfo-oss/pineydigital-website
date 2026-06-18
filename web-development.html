@@ -202,6 +202,7 @@
             pointer-events: none;
             overflow: hidden;
             background: #0a0a0f;
+            will-change: transform; /* GPU acceleration */
         }
 
         #frame-sequence {
@@ -213,6 +214,9 @@
             object-fit: cover;
             opacity: 0;
             transition: opacity 0.5s ease;
+            will-change: opacity, transform; /* GPU acceleration */
+            -webkit-backface-visibility: hidden; /* Prevent flicker */
+            backface-visibility: hidden;
         }
 
         #frame-sequence.loaded {
@@ -250,6 +254,8 @@
             position: relative;
             z-index: 2;
             height: 1100vh;  /* Extra height for pinned pricing + hosting section */
+            will-change: transform; /* Hint for GPU acceleration */
+            contain: layout style paint; /* Contain layout for performance */
         }
 
         /* Sections - All centered now */
@@ -995,40 +1001,82 @@
         let framesPreloaded = 0;
 
         // Preload frames with progress
+        // Frame cache to store preloaded images
+        const frameCache = {};
+        let isFrameUpdating = false;
+
         function preloadFrames() {
-            const preloadCount = 50;
+            // Preload first 100 frames for smoother experience
+            const preloadCount = 100;
+            const criticalFrames = 50; // Show loading screen until these are ready
 
             for (let i = 1; i <= preloadCount; i++) {
                 const img = new Image();
                 img.onload = () => {
+                    frameCache[i] = img;
                     framesPreloaded++;
-                    const progress = (framesPreloaded / preloadCount) * 100;
+                    const progress = Math.min((framesPreloaded / criticalFrames) * 100, 100);
                     loadingBarFill.style.width = progress + '%';
 
-                    if (framesPreloaded >= preloadCount) {
+                    // Hide loading screen once critical frames are loaded
+                    if (framesPreloaded >= criticalFrames && !loadingScreen.classList.contains('hidden')) {
                         loadingText.textContent = 'Ready';
                         setTimeout(() => {
                             loadingScreen.classList.add('hidden');
                             frameSequence.classList.add('loaded');
                             initAnimations();
-                        }, 500);
+                        }, 300);
                     }
+                };
+                img.onerror = () => {
+                    console.warn(`Failed to load frame ${i}`);
+                    framesPreloaded++; // Count as loaded to not block
                 };
                 img.src = frameUrl(i);
             }
 
-            // Continue preloading rest in background
-            for (let i = preloadCount + 1; i <= totalFrames; i++) {
+            // Continue preloading rest in background with delay to not block
+            let i = preloadCount + 1;
+            function preloadNext() {
+                if (i > totalFrames) return;
                 const img = new Image();
+                img.onload = () => { frameCache[i] = img; };
                 img.src = frameUrl(i);
+                i++;
+                // Preload 5 frames at a time, then yield
+                if (i % 5 === 0) {
+                    setTimeout(preloadNext, 10);
+                } else {
+                    preloadNext();
+                }
             }
+            preloadNext();
         }
 
-        // Frame update loop
-        function updateFrame() {
-            if (targetFrame !== currentFrame) {
-                currentFrame = targetFrame;
-                frameSequence.src = frameUrl(currentFrame);
+        // Frame update loop with throttling
+        let lastFrameTime = 0;
+        const frameThrottle = 1000 / 30; // Max 30fps updates
+
+        function updateFrame(timestamp) {
+            if (timestamp - lastFrameTime >= frameThrottle) {
+                if (targetFrame !== currentFrame) {
+                    // Skip intermediate frames if lagging behind (fast scroll)
+                    const frameDiff = Math.abs(targetFrame - currentFrame);
+                    if (frameDiff > 5) {
+                        // Skip ahead by half the difference for smoother fast-scroll
+                        currentFrame += Math.sign(targetFrame - currentFrame) * Math.floor(frameDiff / 2);
+                    } else {
+                        currentFrame = targetFrame;
+                    }
+
+                    // Use cached image if available, otherwise load
+                    if (frameCache[currentFrame]) {
+                        frameSequence.src = frameCache[currentFrame].src;
+                    } else {
+                        frameSequence.src = frameUrl(currentFrame);
+                    }
+                }
+                lastFrameTime = timestamp;
             }
             requestAnimationFrame(updateFrame);
         }
