@@ -211,12 +211,17 @@
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover;
             opacity: 0;
             transition: opacity 0.5s ease;
-            will-change: opacity, transform; /* GPU acceleration */
-            -webkit-backface-visibility: hidden; /* Prevent flicker */
+            will-change: transform; /* GPU acceleration */
+            -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
+            /* Canvas sizing */
+            object-fit: cover;
+        }
+
+        #frame-sequence.loaded {
+            opacity: 1;
         }
 
         #frame-sequence.loaded {
@@ -442,26 +447,29 @@
             transform-origin: center center;
             /* Default: visible with stacked layout */
             opacity: 1;
-            transform: translateX(0) rotateY(-5deg) rotateZ(-2deg);
+            /* GPU-accelerated transform */
+            transform: translate3d(0, 0, 0) rotateY(-5deg) rotateZ(-2deg);
+            will-change: transform;
+            backface-visibility: hidden;
         }
 
         .stack-card:nth-child(2) {
-            transform: translateX(25px) translateY(15px) rotateY(-5deg) rotateZ(1deg);
+            transform: translate3d(25px, 15px, 0) rotateY(-5deg) rotateZ(1deg);
         }
 
         .stack-card:nth-child(3) {
-            transform: translateX(50px) translateY(30px) rotateY(-5deg) rotateZ(3deg);
+            transform: translate3d(50px, 30px, 0) rotateY(-5deg) rotateZ(3deg);
         }
 
         /* Animation-ready state: start off-screen for scroll animation */
         .animations-ready .stack-card {
             opacity: 0;
-            transform: translateX(400px) rotateY(-30deg);
+            transform: translate3d(400px, 0, 0) rotateY(-30deg);
         }
 
         .animations-ready .stack-card:nth-child(2),
         .animations-ready .stack-card:nth-child(3) {
-            transform: translateX(400px) rotateY(-30deg);
+            transform: translate3d(400px, 0, 0) rotateY(-30deg);
         }
 
         .stack-card.visible {
@@ -814,9 +822,9 @@
         <a href="tel:936-299-9897" class="nav-contact">(936) 299-9897</a>
     </nav>
 
-    <!-- Frame Background -->
+    <!-- Frame Background - Canvas for GPU-accelerated rendering -->
     <div id="frame-container">
-        <img id="frame-sequence" src="video-frames/frame_001.jpg" alt="">
+        <canvas id="frame-sequence" width="1920" height="1080"></canvas>
     </div>
     <div id="frame-overlay"></div>
 
@@ -1038,6 +1046,7 @@
 
         // Elements
         const frameSequence = document.getElementById('frame-sequence');
+        const ctx = frameSequence.getContext('2d');
         const progressBar = document.getElementById('progressBar');
         const scrollHint = document.getElementById('scrollHint');
         const exitBanner = document.getElementById('exitBanner');
@@ -1046,117 +1055,192 @@
         const loadingBarFill = document.getElementById('loadingBarFill');
         const loadingText = document.getElementById('loadingText');
 
+        // Mobile detection - disable frame scrubbing on mobile
+        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
         // Frame setup
         const totalFrames = 361;
         const frameUrl = (num) => `video-frames/frame_${String(num).padStart(3, '0')}.jpg`;
         let currentFrame = 1;
         let targetFrame = 1;
         let framesPreloaded = 0;
+        let allFramesLoaded = false;
 
-        // Preload frames with progress
-        // Frame cache to store preloaded images
-        const frameCache = {};
-        let isFrameUpdating = false;
+        // Frame cache - array for fast access
+        const frameCache = [];
 
         function preloadFrames() {
-            // Preload first 100 frames for smoother experience
-            const preloadCount = 100;
-            const criticalFrames = 50; // Show loading screen until these are ready
+            const criticalFrames = isMobile ? 20 : 50; // Lower threshold for faster startup
+            const batchSize = isMobile ? 361 : 361; // Load all frames
 
-            for (let i = 1; i <= preloadCount; i++) {
-                const img = new Image();
-                img.onload = () => {
-                    frameCache[i] = img;
-                    framesPreloaded++;
-                    const progress = Math.min((framesPreloaded / criticalFrames) * 100, 100);
-                    loadingBarFill.style.width = progress + '%';
+            // Load frames in batches
+            let loadedCount = 0;
+            const totalToLoad = isMobile ? 60 : totalFrames; // Only load first 60 on mobile
 
-                    // Hide loading screen once critical frames are loaded
-                    if (framesPreloaded >= criticalFrames && !loadingScreen.classList.contains('hidden')) {
-                        loadingText.textContent = 'Ready';
-                        setTimeout(() => {
-                            loadingScreen.classList.add('hidden');
-                            frameSequence.classList.add('loaded');
-                            initAnimations();
-                        }, 300);
-                    }
-                };
-                img.onerror = () => {
-                    console.warn(`Failed to load frame ${i}`);
-                    framesPreloaded++; // Count as loaded to not block
-                };
-                img.src = frameUrl(i);
-            }
+            function loadBatch(start, count) {
+                for (let i = start; i < Math.min(start + count, totalToLoad + 1); i++) {
+                    const img = new Image();
+                    img.onload = () => {
+                        frameCache[i] = img;
+                        loadedCount++;
+                        framesPreloaded++;
 
-            // Continue preloading rest in background with delay to not block
-            let i = preloadCount + 1;
-            function preloadNext() {
-                if (i > totalFrames) return;
-                const img = new Image();
-                img.onload = () => { frameCache[i] = img; };
-                img.src = frameUrl(i);
-                i++;
-                // Preload 5 frames at a time, then yield
-                if (i % 5 === 0) {
-                    setTimeout(preloadNext, 10);
-                } else {
-                    preloadNext();
+                        // Update loading bar
+                        const progress = Math.min((loadedCount / criticalFrames) * 100, 100);
+                        loadingBarFill.style.width = progress + '%';
+
+                        // Check if critical frames loaded
+                        if (loadedCount === criticalFrames) {
+                            loadingText.textContent = 'Ready';
+                            setTimeout(() => {
+                                loadingScreen.classList.add('hidden');
+                                frameSequence.classList.add('loaded');
+                                initAnimations();
+                            }, 300);
+                        }
+
+                        // Check if all frames loaded
+                        if (loadedCount >= totalToLoad) {
+                            allFramesLoaded = true;
+                        }
+                    };
+                    img.onerror = () => {
+                        loadedCount++;
+                        framesPreloaded++;
+                        console.warn(`Failed to load frame ${i}`);
+                    };
+                    img.src = frameUrl(i);
                 }
             }
-            preloadNext();
+
+            // Load in smaller batches to not overwhelm browser
+            const concurrentLoads = isMobile ? 60 : 30;
+            loadBatch(1, concurrentLoads);
+
+            // On desktop, continue loading remaining frames
+            if (!isMobile) {
+                let nextBatch = concurrentLoads + 1;
+                function loadNextBatch() {
+                    if (nextBatch > totalFrames) return;
+                    loadBatch(nextBatch, 20);
+                    nextBatch += 20;
+                    setTimeout(loadNextBatch, 100);
+                }
+                setTimeout(loadNextBatch, 500);
+            }
         }
 
-        // Frame update loop with throttling
+        // Canvas rendering - much smoother than img.src changes
         let lastFrameTime = 0;
-        const frameThrottle = 1000 / 30; // Max 30fps updates
+        const frameThrottle = 1000 / 60; // 60fps max for canvas
+
+        function resizeCanvas() {
+            const dpr = window.devicePixelRatio || 1;
+            const rect = frameSequence.getBoundingClientRect();
+            frameSequence.width = rect.width * dpr;
+            frameSequence.height = rect.height * dpr;
+            ctx.scale(dpr, dpr);
+        }
+
+        function drawFrame(frameNum) {
+            const img = frameCache[frameNum];
+            if (img && img.complete) {
+                const rect = frameSequence.getBoundingClientRect();
+                // Calculate cover sizing
+                const scale = Math.max(rect.width / img.naturalWidth, rect.height / img.naturalHeight);
+                const w = img.naturalWidth * scale;
+                const h = img.naturalHeight * scale;
+                const x = (rect.width - w) / 2;
+                const y = (rect.height - h) / 2;
+
+                ctx.clearRect(0, 0, rect.width, rect.height);
+                ctx.drawImage(img, x, y, w, h);
+            }
+        }
 
         function updateFrame(timestamp) {
             if (timestamp - lastFrameTime >= frameThrottle) {
                 if (targetFrame !== currentFrame) {
-                    // Skip intermediate frames if lagging behind (fast scroll)
+                    // Skip intermediate frames if lagging behind
                     const frameDiff = Math.abs(targetFrame - currentFrame);
-                    if (frameDiff > 5) {
-                        // Skip ahead by half the difference for smoother fast-scroll
+                    if (frameDiff > 3) {
                         currentFrame += Math.sign(targetFrame - currentFrame) * Math.floor(frameDiff / 2);
                     } else {
                         currentFrame = targetFrame;
                     }
 
-                    // Use cached image if available, otherwise load
-                    if (frameCache[currentFrame]) {
-                        frameSequence.src = frameCache[currentFrame].src;
-                    } else {
-                        frameSequence.src = frameUrl(currentFrame);
-                    }
+                    // Draw to canvas
+                    drawFrame(currentFrame);
                 }
                 lastFrameTime = timestamp;
             }
             requestAnimationFrame(updateFrame);
         }
 
+        // Handle resize
+        window.addEventListener('resize', () => {
+            resizeCanvas();
+            drawFrame(currentFrame);
+        });
+
         // Initialize animations after loading
         function initAnimations() {
             // Add animations-ready class to enable scroll-triggered animations
             document.body.classList.add('animations-ready');
 
-            // Scroll-based frame scrubbing
-            ScrollTrigger.create({
-                trigger: ".scroll-track",
-                start: "top top",
-                end: "bottom bottom",
-                scrub: 0.3,
-                onUpdate: (self) => {
-                    const progress = self.progress;
-                    targetFrame = Math.max(1, Math.min(totalFrames, Math.floor(progress * totalFrames)));
-                    progressBar.style.width = (progress * 100) + '%';
+            // Setup canvas
+            resizeCanvas();
 
-                    if (progress > 0.03) scrollHint.classList.add('hidden');
-                    if (progress > 0.02) nav.classList.add('scrolled');
-                    else nav.classList.remove('scrolled');
-                    if (progress > 0.92) exitBanner.classList.add('visible');
-                    else exitBanner.classList.remove('visible');
+            // Mobile: Show static frame instead of scrubbing
+            if (isMobile) {
+                // Show a representative frame on mobile (middle frame)
+                const mobileFrame = Math.floor(totalFrames / 2);
+                if (frameCache[mobileFrame]) {
+                    drawFrame(mobileFrame);
+                } else {
+                    // Fallback to loading and showing frame
+                    const img = new Image();
+                    img.onload = () => drawFrame(mobileFrame);
+                    img.src = frameUrl(mobileFrame);
                 }
-            });
+
+                // Still update progress bar and UI on scroll
+                ScrollTrigger.create({
+                    trigger: ".scroll-track",
+                    start: "top top",
+                    end: "bottom bottom",
+                    scrub: true,
+                    onUpdate: (self) => {
+                        const progress = self.progress;
+                        progressBar.style.width = (progress * 100) + '%';
+
+                        if (progress > 0.03) scrollHint.classList.add('hidden');
+                        if (progress > 0.02) nav.classList.add('scrolled');
+                        else nav.classList.remove('scrolled');
+                        if (progress > 0.92) exitBanner.classList.add('visible');
+                        else exitBanner.classList.remove('visible');
+                    }
+                });
+            } else {
+                // Desktop: Full frame scrubbing
+                ScrollTrigger.create({
+                    trigger: ".scroll-track",
+                    start: "top top",
+                    end: "bottom bottom",
+                    scrub: 0.3,
+                    onUpdate: (self) => {
+                        const progress = self.progress;
+                        targetFrame = Math.max(1, Math.min(totalFrames, Math.floor(progress * totalFrames)));
+                        progressBar.style.width = (progress * 100) + '%';
+
+                        if (progress > 0.03) scrollHint.classList.add('hidden');
+                        if (progress > 0.02) nav.classList.add('scrolled');
+                        else nav.classList.remove('scrolled');
+                        if (progress > 0.92) exitBanner.classList.add('visible');
+                        else exitBanner.classList.remove('visible');
+                    }
+                });
+            }
 
             // Hero text animation
             const heroTimeline = gsap.timeline({
@@ -1306,8 +1390,7 @@
             ScrollTrigger.refresh();
         }
 
-        // Start preloading
-        preloadFrames();
+        // Start preloading (RAF loop starts after loading screen hides)
 
         // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
