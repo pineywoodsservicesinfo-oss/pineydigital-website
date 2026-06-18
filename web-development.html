@@ -1070,63 +1070,72 @@
         const frameCache = [];
 
         function preloadFrames() {
-            const criticalFrames = isMobile ? 20 : 50; // Lower threshold for faster startup
-            const batchSize = isMobile ? 361 : 361; // Load all frames
+            const criticalFrames = isMobile ? 20 : 30; // Frames needed before showing content
+            const totalToLoad = isMobile ? 60 : totalFrames;
 
-            // Load frames in batches
             let loadedCount = 0;
-            const totalToLoad = isMobile ? 60 : totalFrames; // Only load first 60 on mobile
+            let hasInitialized = false;
 
-            function loadBatch(start, count) {
-                for (let i = start; i < Math.min(start + count, totalToLoad + 1); i++) {
-                    const img = new Image();
-                    img.onload = () => {
-                        frameCache[i] = img;
-                        loadedCount++;
-                        framesPreloaded++;
+            function loadFrame(i) {
+                const img = new Image();
+                img.onload = () => {
+                    frameCache[i] = img;
+                    loadedCount++;
 
-                        // Update loading bar
-                        const progress = Math.min((loadedCount / criticalFrames) * 100, 100);
-                        loadingBarFill.style.width = progress + '%';
+                    // Update loading bar
+                    const progress = Math.min((loadedCount / criticalFrames) * 100, 100);
+                    loadingBarFill.style.width = progress + '%';
 
-                        // Check if critical frames loaded
-                        if (loadedCount === criticalFrames) {
-                            loadingText.textContent = 'Ready';
-                            setTimeout(() => {
-                                loadingScreen.classList.add('hidden');
-                                frameSequence.classList.add('loaded');
-                                initAnimations();
-                            }, 300);
-                        }
+                    // Check if critical frames loaded - then initialize
+                    if (loadedCount >= criticalFrames && !hasInitialized) {
+                        hasInitialized = true;
+                        loadingText.textContent = 'Ready';
+                        setTimeout(() => {
+                            loadingScreen.classList.add('hidden');
+                            frameSequence.classList.add('loaded');
+                            initAnimations();
+                        }, 300);
+                    }
 
-                        // Check if all frames loaded
-                        if (loadedCount >= totalToLoad) {
-                            allFramesLoaded = true;
-                        }
-                    };
-                    img.onerror = () => {
-                        loadedCount++;
-                        framesPreloaded++;
-                        console.warn(`Failed to load frame ${i}`);
-                    };
-                    img.src = frameUrl(i);
-                }
+                    // Check if all frames loaded
+                    if (loadedCount >= totalToLoad) {
+                        allFramesLoaded = true;
+                    }
+                };
+                img.onerror = () => {
+                    loadedCount++;
+                    console.warn(`Failed to load frame ${i}`);
+                    // Still try to init if we have enough frames
+                    if (loadedCount >= criticalFrames && !hasInitialized) {
+                        hasInitialized = true;
+                        loadingScreen.classList.add('hidden');
+                        frameSequence.classList.add('loaded');
+                        initAnimations();
+                    }
+                };
+                img.src = frameUrl(i);
             }
 
-            // Load in smaller batches to not overwhelm browser
-            const concurrentLoads = isMobile ? 60 : 30;
-            loadBatch(1, concurrentLoads);
+            // Load first batch immediately
+            const firstBatch = Math.min(criticalFrames + 10, totalToLoad);
+            for (let i = 1; i <= firstBatch; i++) {
+                loadFrame(i);
+            }
 
-            // On desktop, continue loading remaining frames
+            // Load rest in background
             if (!isMobile) {
-                let nextBatch = concurrentLoads + 1;
-                function loadNextBatch() {
-                    if (nextBatch > totalFrames) return;
-                    loadBatch(nextBatch, 20);
-                    nextBatch += 20;
-                    setTimeout(loadNextBatch, 100);
+                let i = firstBatch + 1;
+                function loadNext() {
+                    if (i > totalFrames) return;
+                    loadFrame(i);
+                    i++;
+                    if (i % 10 === 0) {
+                        setTimeout(loadNext, 50);
+                    } else {
+                        loadNext();
+                    }
                 }
-                setTimeout(loadNextBatch, 500);
+                setTimeout(loadNext, 500);
             }
         }
 
@@ -1390,7 +1399,18 @@
             ScrollTrigger.refresh();
         }
 
-        // Start preloading (RAF loop starts after loading screen hides)
+        // Start preloading
+        preloadFrames();
+
+        // Fallback: hide loading screen after 5 seconds max
+        setTimeout(() => {
+            if (!document.body.classList.contains('animations-ready')) {
+                console.warn('Loading timeout - showing page anyway');
+                loadingScreen.classList.add('hidden');
+                frameSequence.classList.add('loaded');
+                initAnimations();
+            }
+        }, 5000);
 
         // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
