@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <!-- Google tag (gtag.js) -->
@@ -11,566 +11,521 @@
       gtag('config', 'G-16SZEY2J5E');
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Development Services | Professional Websites Starting at $2,500 | Piney Digital</title>
-    <meta name="description" content="Professional web development services for businesses that need more than just a website. Custom designs, fast loading, mobile-responsive. Starting at $2,500 with room to grow.">
+    <title>Web Development Services | Professional Websites from $2,500 | Piney Digital</title>
+    <meta name="description" content="Professional web development services for businesses that need more than just a website. Custom designs starting at $2,500 with room to grow into a full platform.">
     <meta name="keywords" content="web development, website design, professional website, business website, web hosting, custom website design">
+    <meta name="author" content="Joel Escoto">
+    <link rel="canonical" href="https://pineydigital.com/web-development.html">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 
-    <!-- Open Graph / Social Media -->
-    <meta property="og:title" content="Web Development Services | Professional Websites Starting at $2,500">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pineydigital.com/web-development.html">
+    <meta property="og:title" content="Web Development Services | From $2,500 | Piney Digital">
     <meta property="og:description" content="Custom websites that grow with your business. Starting at $2,500.">
     <meta property="og:image" content="https://pineydigital.com/images/og-image.png">
-    <meta property="og:url" content="https://pineydigital.com/web-development.html">
-    <meta property="og:type" content="website">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Web Development Services | Starting at $2,500">
+    <meta name="twitter:title" content="Web Development Services | From $2,500 | Piney Digital">
     <meta name="twitter:description" content="Custom websites that grow with your business.">
     <meta name="twitter:image" content="https://pineydigital.com/images/og-image.png">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <meta name="apple-mobile-web-app-title" content="Piney Digital">
-    <link rel="manifest" href="/site.webmanifest">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            light: '#2d7a47',
-                            DEFAULT: '#1e4d2b',
-                            dark: '#0a0a0f',
-                            accent: '#4ade80'
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
-
-    <!-- GSAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/modern.css">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#1e5a8e">
+    <meta name="msapplication-TileColor" content="#0a0a0f">
 
     <style>
-        *::before, *::after {
-            box-sizing: border-box;
+        .webdev-hero {
+            padding: 160px 0 100px;
+            min-height: auto;
+            text-align: center;
         }
-
-        html, body {
-            margin: 0;
-            padding: 0;
-            scroll-behavior: smooth;
+        .webdev-hero .hero-title {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            margin-bottom: 1.5rem;
         }
-
-        ul, ol {
-            margin: 0;
-            padding: 0;
+        .webdev-hero .hero-subtitle {
+            font-size: clamp(1.125rem, 2vw, 1.25rem);
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+        .webdev-hero .hero-price {
+            font-size: 1.5rem;
+            color: var(--accent-success);
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+        .webdev-hero .hero-price span {
+            color: var(--text-muted);
+            font-size: 1rem;
+            font-weight: 400;
+        }
+        .pricing-grid.webdev-grid {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+        @media (max-width: 992px) {
+            .pricing-grid.webdev-grid {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+                margin: 0 auto 3rem;
+            }
+        }
+        .webdev-card {
+            background: rgba(18, 18, 26, 0.95);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 24px;
+            padding: 2rem;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .webdev-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        .webdev-card.featured {
+            border: 2px solid var(--accent);
+            background: linear-gradient(135deg, rgba(18, 18, 26, 0.95) 0%, rgba(30, 60, 40, 0.95) 100%);
+        }
+        .webdev-card .card-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
+            color: white;
+            padding: 0.5rem 1.25rem;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .webdev-card .card-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+        .webdev-card .card-desc {
+            font-size: 0.9375rem;
+            color: var(--text-tertiary);
+            margin-bottom: 1.5rem;
+        }
+        .webdev-card .card-price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+        .webdev-card .card-price-note {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+        .webdev-card .feature-list {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+        .webdev-card .feature-list li {
+            padding: 0.5rem 0;
+            color: var(--text-secondary);
+            font-size: 0.9375rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .webdev-card .feature-list li::before {
+            content: "✓";
+            color: var(--accent-success);
+            font-weight: 700;
+        }
+        .webdev-card .btn {
+            width: 100%;
+            text-align: center;
+        }
+        .growth-section {
+            padding: 100px 0;
+            background: rgba(255, 255, 255, 0.02);
+        }
+        .growth-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        @media (max-width: 768px) {
+            .growth-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+        .growth-content h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 1.5rem;
+        }
+        .growth-content p {
+            color: var(--text-secondary);
+            font-size: 1.125rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+        .growth-list {
             list-style: none;
         }
-
-        h1, h2, h3, h4, h5, h6, p {
-            margin: 0;
+        .growth-list li {
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
         }
-
-        a {
-            text-decoration: none;
-            color: inherit;
+        .growth-list li:last-child {
+            border-bottom: none;
         }
-
-        button {
-            border: none;
-            background: none;
-            cursor: pointer;
+        .growth-list .arrow {
+            color: var(--accent-success);
+            font-size: 1.25rem;
+            font-weight: 700;
         }
-
-        img {
-            max-width: 100%;
-            display: block;
+        .growth-card {
+            background: rgba(18, 18, 26, 0.95);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 24px;
+            padding: 2rem;
         }
-
-        .gradient-text {
-            background: linear-gradient(135deg, #4ade80 0%, #22c55e 50%, #16a34a 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        .growth-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
         }
-
-        .glass-card {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+        .cost-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border-color);
         }
-
-        .highlight {
-            background: linear-gradient(180deg, transparent 60%, rgba(74, 222, 128, 0.3) 60%);
-            padding: 0 4px;
+        .cost-row:last-child {
+            border-bottom: none;
+            padding-top: 1.5rem;
+            margin-top: 0.5rem;
+            background: rgba(34, 197, 94, 0.1);
+            border-radius: 12px;
+            padding: 1rem;
+            margin: 1rem -0.5rem 0;
         }
-
-        .price-tag {
-            background: linear-gradient(135deg, #1e4d2b 0%, #2d7a47 100%);
-            border: 1px solid rgba(74, 222, 128, 0.3);
+        .cost-label {
+            color: var(--text-secondary);
+        }
+        .cost-value {
+            font-weight: 600;
+        }
+        .cost-row:last-child .cost-value {
+            color: var(--accent-success);
         }
     </style>
 </head>
-<body class="bg-brand-dark text-white font-sans antialiased overflow-x-hidden">
+<body>
+    <div class="noise-overlay"></div>
+    <div class="cursor-glow" id="cursorGlow"></div>
+
     <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="navbar">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                <a href="/" class="text-2xl font-bold flex items-center gap-2">
-                    <span class="text-3xl">🌲</span>
-                    <span>Piney Digital</span>
-                </a>
-                <div class="hidden md:flex items-center gap-8">
-                    <a href="/" class="text-sm text-white/80 hover:text-brand-accent transition-colors">Homepage</a>
-                    <a href="/capabilities.html" class="text-sm text-white/80 hover:text-brand-accent transition-colors">Capabilities</a>
-                    <a href="/blog.html" class="text-sm text-white/80 hover:text-brand-accent transition-colors">Blog</a>
-                    <a href="/pricing.html" class="text-sm text-white/80 hover:text-brand-accent transition-colors">Pricing</a>
-                    <a href="/about.html" class="text-sm text-white/80 hover:text-brand-accent transition-colors">About</a>
-                    <a href="/faq.html" class="text-sm text-white/80 hover:text-brand-accent transition-colors">FAQ</a>
-                    <a href="/contact.html" class="px-5 py-2.5 bg-brand-accent text-brand-dark font-semibold rounded-full hover:bg-brand-accent/90 transition-all">Contact</a>
-                </div>
-                <button class="md:hidden text-white p-2" id="mobileMenuBtn">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <!-- Mobile Menu -->
-        <div class="hidden md:hidden bg-brand-dark border-t border-white/10" id="mobileMenu">
-            <div class="px-4 py-4 space-y-3">
-                <a href="/" class="block text-white/80 hover:text-brand-accent py-2">Homepage</a>
-                <a href="/capabilities.html" class="block text-white/80 hover:text-brand-accent py-2">Capabilities</a>
-                <a href="/blog.html" class="block text-white/80 hover:text-brand-accent py-2">Blog</a>
-                <a href="/pricing.html" class="block text-white/80 hover:text-brand-accent py-2">Pricing</a>
-                <a href="/about.html" class="block text-white/80 hover:text-brand-accent py-2">About</a>
-                <a href="/faq.html" class="block text-white/80 hover:text-brand-accent py-2">FAQ</a>
-                <a href="/contact.html" class="block px-5 py-2.5 bg-brand-accent text-brand-dark font-semibold rounded-full text-center">Contact</a>
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <span class="logo-icon">🌲</span>
+                <span class="logo-text">Piney<span>Digital</span></span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-menu" id="navMenu">
+                <a href="/" class="nav-link">Homepage</a>
+                <a href="/capabilities.html" class="nav-link">Capabilities</a>
+                <a href="/blog.html" class="nav-link">Blog</a>
+                <a href="/pricing.html" class="nav-link">Pricing</a>
+                <a href="/about.html" class="nav-link">About</a>
+                <a href="/faq.html" class="nav-link">FAQ</a>
+                <a href="/contact.html" class="btn btn-primary">Get in Touch</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-b from-brand-light/10 via-transparent to-transparent"></div>
-        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-accent/10 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-brand-light/20 rounded-full blur-3xl"></div>
-
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            <div class="text-center max-w-4xl mx-auto">
-                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-8">
-                    <span class="w-2 h-2 bg-brand-accent rounded-full animate-pulse"></span>
-                    <span class="text-sm text-white/80">Web Development Services</span>
+    <section class="hero webdev-hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-icon">💻</span>
+                    <span>Web Development Services</span>
                 </div>
-
-                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
-                    Need a Website?<br>
+                <h1 class="hero-title">Need a Website?<br>
                     <span class="gradient-text">Get More Than Just Pages</span>
                 </h1>
 
-                <p class="text-lg sm:text-xl text-white/70 mb-6 max-w-2xl mx-auto leading-relaxed">
-                    Professional web development starting at <span class="text-brand-accent font-semibold">$2,500</span>. Custom designs, fast loading, mobile-responsive.
+                <p class="hero-subtitle">
+                    Professional web development starting at <strong>$2,500</strong>. Custom designs, fast loading, mobile-responsive — with room to grow into a full platform as your business scales.
                 </p>
 
-                <p class="text-base text-white/60 mb-10 max-w-xl mx-auto">
-                    <span class="highlight">Here's the thing:</span> Most businesses outgrow their website in 6 months. We build sites that <em>grow into platforms</em> as you scale.
-                </p>
-
-                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                    <a href="/contact.html" class="px-8 py-4 bg-brand-accent text-brand-dark font-semibold rounded-full hover:bg-brand-accent/90 transition-all text-center">
-                        Get Free Consultation
-                    </a>
-                    <a href="/pricing.html" class="px-8 py-4 border border-white/20 text-white font-semibold rounded-full hover:bg-white/5 transition-all text-center">
-                        View All Pricing
-                    </a>
+                <div class="hero-cta">
+                    <a href="/contact.html" class="btn btn-glow btn-large">Get Free Consultation</a>
+                    <a href="#pricing" class="btn btn-secondary">View Pricing</a>
                 </div>
 
-                <div class="flex flex-wrap items-center justify-center gap-6 text-sm text-white/50">
-                    <span class="flex items-center gap-2">
-                        <svg class="w-5 h-5 text-brand-accent" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                        </svg>
-                        2-3 Week Delivery
-                    </span>
-                    <span class="flex items-center gap-2">
-                        <svg class="w-5 h-5 text-brand-accent" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                        </svg>
-                        Mobile-Responsive
-                    </span>
-                    <span class="flex items-center gap-2">
-                        <svg class="w-5 h-5 text-brand-accent" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                        </svg>
-                        SEO Optimized
-                    </span>
+                <div class="hero-features">
+                    <div class="feature-item">
+                        <span class="feature-icon">⚡</span>
+                        <span>2-3 Week Delivery</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">📱</span>
+                        <span>Mobile-Responsive</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">🔍</span>
+                        <span>SEO Optimized</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">🚀</span>
+                        <span>Built to Scale</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Tiers -->
-    <section class="py-24 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
-                    Choose Your <span class="gradient-text">Starting Point</span>
-                </h2>
-                <p class="text-lg text-white/60 max-w-2xl mx-auto">
-                    Every business is different. Start where you are, upgrade when you're ready.
-                </p>
+    <!-- Pricing Section -->
+    <section class="section" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Choose Your <span class="gradient-text">Starting Point</span></h2>
+                <p class="section-subtitle">Every business is different. Start where you are, upgrade when you're ready.</p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8">
+            <div class="pricing-grid webdev-grid">
                 <!-- Starter -->
-                <div class="glass-card rounded-2xl p-8 relative overflow-hidden group hover:border-brand-accent/30 transition-all">
-                    <div class="absolute top-0 right-0 px-4 py-2 bg-brand-accent/10 text-brand-accent text-sm font-semibold rounded-bl-2xl">
-                        Most Accessible
-                    </div>
-                    <h3 class="text-2xl font-bold mb-2">Starter Website</h3>
-                    <p class="text-white/60 text-sm mb-6">Perfect for new businesses</p>
-                    <div class="mb-8">
-                        <span class="text-5xl font-bold">$2,500</span>
-                        <span class="text-white/50">one-time</span>
-                    </div>
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-center gap-3 text-white/80">
-                            <svg class="w-5 h-5 text-brand-accent" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            3-5 Pages
-                        </li>
-                        <li class="flex items-center gap-3 text-white/80">
-                            <svg class="w-5 h-5 text-brand-accent" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            Custom Design
-                        </li>
-                        <li class="flex items-center gap-3 text-white/80">
-                            <svg class="w-5 h-5 text-brand-accent" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            Mobile Responsive
-                        </li>
-                        <li class="flex items-center gap-3 text-white/80">
-                            <svg class="w-5 h-5 text-brand-accent" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            Contact Form
-                        </li>
-                        <li class="flex items-center gap-3 text-white/80">
-                            <svg class="w-5 h-5 text-brand-accent" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            90-Day Support
-                        </li>
+                <div class="webdev-card">
+                    <div class="card-badge">Most Accessible</div>
+                    <h3 class="card-name">Starter Website</h3>
+                    <p class="card-desc">Perfect for new businesses</p>
+
+                    <div class="card-price">$2,500</div>
+                    <p class="card-price-note">one-time project fee</p>
+
+                    <ul class="feature-list">
+                        <li>3-5 Pages</li>
+                        <li>Custom Design</li>
+                        <li>Mobile Responsive</li>
+                        <li>Contact Form</li>
+                        <li>90-Day Support</li>
+                        <li>Room to Grow</li>
                     </ul>
-                    <a href="/contact.html?package=starter" class="block w-full py-4 border border-brand-accent text-brand-accent font-semibold rounded-full hover:bg-brand-accent hover:text-brand-dark transition-all text-center">
-                        Get Started
-                    </a>
+
+                    <a href="/contact.html?package=starter" class="btn btn-secondary">Get Started</a>
                 </div>
 
                 <!-- Concept Site -->
-                <div class="glass-card rounded-2xl p-8 relative overflow-hidden border-brand-accent/50">
-                    <div class="absolute top-0 right-0 px-4 py-2 bg-brand-accent text-brand-dark text-sm font-semibold rounded-bl-2xl">
-                        Most Popular
-                    </div>
-                    <h3 class="text-2xl font-bold mb-2">Concept Site</h3>
-                    <p class="text-white/60 text-sm mb-6">For established businesses</p>
-                    <div class="mb-8">
-                        <span class="text-5xl font-bold">$5,000</span>
-                        <span class="text-white/50">one-time</span>
-                    </div>
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-center gap-3 text-white/80">
-                            <svg class="w-5 h-5 text-brand-accent" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            5-20 Pages
-                        </li>
-                        <li class="flex items-center gap-3 text-white/80">
-                            <svg class="w-5 h-5 text-brand-accent" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            Premium Design
-                        </li>
-                        <li class="flex items-center gap-3 text-white/80">
-                            <svg class="w-5 h-5 text-brand-accent" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            SEO Optimization
-                        </li>
-                        <li class="flex items-center gap-3 text-white/80">
-                            <svg class="w-5 h-5 text-brand-accent" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            Analytics Setup
-                        </li>
-                        <li class="flex items-center gap-3 text-white/80">
-                            <svg class="w-5 h-5 text-brand-accent" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            <span class="text-brand-accent font-medium">Room to grow into platform</span>
-                        </li>
+                <div class="webdev-card featured">
+                    <div class="card-badge">Most Popular</div>
+                    <h3 class="card-name">Concept Site</h3>
+                    <p class="card-desc">For established businesses</p>
+
+                    <div class="card-price">$5,000</div>
+                    <p class="card-price-note">one-time project fee</p>
+
+                    <ul class="feature-list">
+                        <li>5-20 Pages</li>
+                        <li>Premium Design</li>
+                        <li>SEO Optimization</li>
+                        <li>Analytics Setup</li>
+                        <li>90-Day Support</li>
+                        <li><strong>Platform-Ready Foundation</strong></li>
                     </ul>
-                    <a href="/contact.html?package=concept" class="block w-full py-4 bg-brand-accent text-brand-dark font-semibold rounded-full hover:bg-brand-accent/90 transition-all text-center">
-                        Get Started
-                    </a>
+
+                    <a href="/contact.html?package=concept" class="btn btn-primary">Get Started</a>
                 </div>
 
                 <!-- SaaS Platform -->
-                <div class="glass-card rounded-2xl p-8 relative overflow-hidden group hover:border-brand-accent/30 transition-all">
-                    <div class="absolute top-0 right-0 px-4 py-2 bg-white/10 text-white text-sm font-semibold rounded-bl-2xl">
-                        For Growing Businesses
-                    </div>
-                    <h3 class="text-2xl font-bold mb-2">SaaS Platform</h3>
-                    <p class="text-white/60 text-sm mb-6">When you're ready to scale</p>
-                    <div class="mb-8">
-                        <span class="text-5xl font-bold">$14,000</span>
-                        <span class="text-white/50">+</span>
-                    </div>
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-center gap-3 text-white/80">
-                            <svg class="w-5 h-5 text-brand-accent" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            User Accounts & Login
-                        </li>
-                        <li class="flex items-center gap-3 text-white/80">
-                            <svg class="w-5 h-5 text-brand-accent" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            Admin Dashboard
-                        </li>
-                        <li class="flex items-center gap-3 text-white/80">
-                            <svg class="w-5 h-5 text-brand-accent" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            Database & Workflows
-                        </li>
-                        <li class="flex items-center gap-3 text-white/80">
-                            <svg class="w-5 h-5 text-brand-accent" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            API Integrations
-                        </li>
-                        <li class="flex items-center gap-3 text-white/80">
-                            <svg class="w-5 h-5 text-brand-accent" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            Training + 90-Day Support
-                        </li>
+                <div class="webdev-card">
+                    <div class="card-badge" style="background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);">For Growing Businesses</div>
+                    <h3 class="card-name">SaaS Platform</h3>
+                    <p class="card-desc">When you're ready to scale</p>
+
+                    <div class="card-price">$14,000+</div>
+                    <p class="card-price-note">starting at</p>
+
+                    <ul class="feature-list">
+                        <li>User Accounts & Login</li>
+                        <li>Admin Dashboard</li>
+                        <li>Database & Workflows</li>
+                        <li>API Integrations</li>
+                        <li>Training + 90-Day Support</li>
+                        <li><strong>Full Custom Software</strong></li>
                     </ul>
-                    <a href="/contact.html?package=saas" class="block w-full py-4 border border-white/20 text-white font-semibold rounded-full hover:bg-white/5 transition-all text-center">
-                        Schedule Consultation
-                    </a>
+
+                    <a href="/contact.html?package=saas" class="btn btn-secondary">Schedule Consultation</a>
                 </div>
             </div>
 
-            <p class="text-center text-white/50 mt-8 text-sm">
+            <p class="text-center" style="color: var(--text-muted); font-size: 0.9375rem;">
                 All prices are one-time project fees. Hosting and support options available after 90 days.
             </p>
         </div>
     </section>
 
-    <!-- The Bridge: Why We Build Differently -->
-    <section class="py-24 bg-white/5">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h2 class="text-3xl sm:text-4xl font-bold mb-6">
-                        Most Businesses <span class="text-red-400">Outgrow</span> Their Website in 6 Months
-                    </h2>
-                    <p class="text-lg text-white/70 mb-6">
+    <!-- Growth Section -->
+    <section class="growth-section">
+        <div class="container">
+            <div class="growth-grid">
+                <div class="growth-content">
+                    <h2>Most Businesses <span style="color: #ef4444;">Outgrow</span> Their Website in 6 Months</h2>
+
+                    <p>
                         You start with a simple site. Then you need a booking system. Then customer logins. Then a dashboard. Suddenly you're duct-taping 5 different tools together.
                     </p>
-                    <p class="text-lg text-white/70 mb-8">
-                        We build websites that can <span class="text-brand-accent font-semibold">grow into platforms</span> — so you never have to start over.
+
+                    <p>
+                        We build websites that can <strong style="color: var(--accent-success);">grow into platforms</strong> — so you never have to start over.
                     </p>
-                    <ul class="space-y-4 mb-8">
-                        <li class="flex items-start gap-3">
-                            <span class="text-brand-accent text-2xl">→</span>
+
+                    <ul class="growth-list">
+                        <li>
+                            <span class="arrow">→</span>
                             <div>
-                                <strong class="text-white">Start Small:</strong>
-                                <span class="text-white/70">Launch with a professional website</span>
+                                <strong>Start Small:</strong> Launch with a professional website
                             </div>
                         </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-brand-accent text-2xl">→</span>
+                        <li>
+                            <span class="arrow">→</span>
                             <div>
-                                <strong class="text-white">Add Features:</strong>
-                                <span class="text-white/70">Booking, customer accounts, dashboards</span>
+                                <strong>Add Features:</strong> Booking, customer accounts, dashboards
                             </div>
                         </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-brand-accent text-2xl">→</span>
+                        <li>
+                            <span class="arrow">→</span>
                             <div>
-                                <strong class="text-white">Scale:</strong>
-                                <span class="text-white/70">Multi-location, automation, AI</span>
+                                <strong>Scale:</strong> Multi-location, automation, AI
                             </div>
                         </li>
                     </ul>
                 </div>
-                <div class="glass-card rounded-2xl p-8">
-                    <h3 class="text-xl font-bold mb-6 text-center">The Cost of Starting Over</h3>
-                    <div class="space-y-4">
-                        <div class="flex justify-between items-center py-3 border-b border-white/10">
-                            <span class="text-white/60">Website (Year 1)</span>
-                            <span class="font-semibold">$3,000</span>
-                        </div>
-                        <div class="flex justify-between items-center py-3 border-b border-white/10">
-                            <span class="text-white/60">+ Booking tool subscriptions</span>
-                            <span class="font-semibold text-red-400">$600/yr</span>
-                        </div>
-                        <div class="flex justify-between items-center py-3 border-b border-white/10">
-                            <span class="text-white/60">+ CRM subscription</span>
-                            <span class="font-semibold text-red-400">$1,200/yr</span>
-                        </div>
-                        <div class="flex justify-between items-center py-3 border-b border-white/10">
-                            <span class="text-white/60">+ Integration headaches</span>
-                            <span class="font-semibold text-red-400">Priceless 💸</span>
-                        </div>
-                        <div class="flex justify-between items-center py-4 bg-brand-accent/10 rounded-lg px-4 mt-4">
-                            <span class="font-bold">Our approach:</span>
-                            <span class="font-bold text-brand-accent">One foundation, endless growth</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Social Proof -->
-    <section class="py-24">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl sm:text-4xl font-bold mb-6">
-                    What You <span class="gradient-text">Get</span>
-                </h2>
-            </div>
+                <div class="growth-card">
+                    <h3>The Cost of Starting Over</h3>
 
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="glass-card rounded-xl p-6 text-center">
-                    <div class="w-12 h-12 bg-brand-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-6 h-6 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                        </svg>
+                    <div class="cost-row">
+                        <span class="cost-label">Website (Year 1)</span>
+                        <span class="cost-value">$3,000</span>
                     </div>
-                    <h3 class="font-semibold mb-2">Fast Loading</h3>
-                    <p class="text-sm text-white/60">Under 3 seconds guaranteed</p>
-                </div>
 
-                <div class="glass-card rounded-xl p-6 text-center">
-                    <div class="w-12 h-12 bg-brand-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-6 h-6 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
-                        </svg>
+                    <div class="cost-row">
+                        <span class="cost-label">+ Booking tool subscriptions</span>
+                        <span class="cost-value" style="color: #ef4444;">$600/yr</span>
                     </div>
-                    <h3 class="font-semibold mb-2">Mobile-First</h3>
-                    <p class="text-sm text-white/60">Looks perfect on every device</p>
-                </div>
 
-                <div class="glass-card rounded-xl p-6 text-center">
-                    <div class="w-12 h-12 bg-brand-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-6 h-6 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                        </svg>
+                    <div class="cost-row">
+                        <span class="cost-label">+ CRM subscription</span>
+                        <span class="cost-value" style="color: #ef4444;">$1,200/yr</span>
                     </div>
-                    <h3 class="font-semibold mb-2">SEO Ready</h3>
-                    <p class="text-sm text-white/60">Found on Google from day one</p>
-                </div>
 
-                <div class="glass-card rounded-xl p-6 text-center">
-                    <div class="w-12 h-12 bg-brand-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-6 h-6 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                        </svg>
+                    <div class="cost-row">
+                        <span class="cost-label">+ Integration headaches</span>
+                        <span class="cost-value" style="color: #ef4444;">💸 Priceless</span>
                     </div>
-                    <h3 class="font-semibold mb-2">Built to Scale</h3>
-                    <p class="text-sm text-white/60">Add features as you grow</p>
+
+                    <div class="cost-row" style="background: rgba(34, 197, 94, 0.1); border-radius: 12px; padding: 1rem;">
+                        <span class="cost-label"><strong>Our approach:</strong></span>
+                        <span class="cost-value" style="color: var(--accent-success);">One foundation, endless growth</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="py-24 bg-gradient-to-b from-brand-light/10 to-transparent">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
-                Ready to Get Started?
-            </h2>
-            <p class="text-lg text-white/70 mb-8 max-w-2xl mx-auto">
-                Free 30-minute consultation. No pressure, no commitment. Just a conversation about what you need and how we can help.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="/contact.html" class="px-8 py-4 bg-brand-accent text-brand-dark font-semibold rounded-full hover:bg-brand-accent/90 transition-all text-lg">
-                    Book Free Consultation
-                </a>
-                <a href="tel:936-299-9897" class="px-8 py-4 border border-white/20 text-white font-semibold rounded-full hover:bg-white/5 transition-all text-lg">
-                    Call (936) 299-9897
-                </a>
+    <section class="section section-dark">
+        <div class="container">
+            <div class="text-center" style="max-width: 600px; margin: 0 auto;">
+                <h2 class="section-title" style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1.5rem;">
+                    Ready to Get Started?
+                </h2>
+
+                <p class="section-subtitle" style="margin-bottom: 2rem;">
+                    Free 30-minute consultation. No pressure, no commitment. Just a conversation about what you need and how we can help.
+                </p>
+
+                <div class="hero-cta" style="justify-content: center;">
+                    <a href="/contact.html" class="btn btn-glow btn-large">Book Free Consultation</a>
+                    <a href="tel:936-299-9897" class="btn btn-secondary">Call (936) 299-9897</a>
+                </div>
+
+                <p style="color: var(--text-muted); font-size: 0.875rem; margin-top: 2rem;">
+                    Response within 24 hours · Based in Texas · Serving Nationwide
+                </p>
             </div>
-            <p class="text-sm text-white/50 mt-6">
-                Response within 24 hours. Based in Texas, serving businesses nationwide.
-            </p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="border-t border-white/10 py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8 mb-12">
-                <div class="md:col-span-2">
-                    <a href="/" class="text-2xl font-bold flex items-center gap-2 mb-4">
-                        <span class="text-3xl">🌲</span>
-                        <span>Piney Digital</span>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="footer-logo">
+                        <span class="logo-icon">🌲</span>
+                        <span class="logo-text">Piney<span>Digital</span></span>
                     </a>
-                    <p class="text-white/60 mb-4 max-w-md">
+                    <p class="footer-description">
                         Professional web development and custom software for growing businesses. Starting at $2,500.
                     </p>
-                    <p class="text-white/40 text-sm">
-                        Based in Texas • Serving Nationwide
-                    </p>
+                    <p class="footer-location">Based in Texas · Serving Nationwide</p>
                 </div>
-                <div>
-                    <h4 class="font-semibold mb-4">Services</h4>
-                    <ul class="space-y-2">
-                        <li><a href="/web-development.html" class="text-white/60 hover:text-brand-accent transition-colors">Web Development</a></li>
-                        <li><a href="/pricing.html" class="text-white/60 hover:text-brand-accent transition-colors">Custom Websites</a></li>
-                        <li><a href="/capabilities.html" class="text-white/60 hover:text-brand-accent transition-colors">SaaS Platforms</a></li>
-                        <li><a href="/pricing.html" class="text-white/60 hover:text-brand-accent transition-colors">Enterprise Solutions</a></li>
+
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="/web-development.html">Web Development</a></li>
+                        <li><a href="/pricing.html">Custom Websites</a></li>
+                        <li><a href="/capabilities.html">SaaS Platforms</a></li>
+                        <li><a href="/pricing.html">Enterprise Solutions</a></li>
                     </ul>
                 </div>
-                <div>
-                    <h4 class="font-semibold mb-4">Company</h4>
-                    <ul class="space-y-2">
-                        <li><a href="/about.html" class="text-white/60 hover:text-brand-accent transition-colors">About</a></li>
-                        <li><a href="/blog.html" class="text-white/60 hover:text-brand-accent transition-colors">Blog</a></li>
-                        <li><a href="/faq.html" class="text-white/60 hover:text-brand-accent transition-colors">FAQ</a></li>
-                        <li><a href="/contact.html" class="text-white/60 hover:text-brand-accent transition-colors">Contact</a></li>
+
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/about.html">About</a></li>
+                        <li><a href="/blog.html">Blog</a></li>
+                        <li><a href="/faq.html">FAQ</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-white/40 text-sm">
-                    © 2026 Piney Digital. All rights reserved.
-                </p>
-                <div class="flex gap-6">
-                    <a href="/privacy.html" class="text-white/40 hover:text-brand-accent text-sm transition-colors">Privacy Policy</a>
-                    <a href="/terms.html" class="text-white/40 hover:text-brand-accent text-sm transition-colors">Terms & Conditions</a>
+
+            <div class="footer-bottom">
+                <p class="copyright">© 2026 Piney Digital. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="/privacy.html">Privacy Policy</a>
+                    <a href="/terms.html">Terms & Conditions</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Chat Widget -->
+    <script src="js/modern.js"></script>
     <script src="js/chat.js"></script>
-
-    <script>
-        // Mobile menu toggle
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-
-        mobileMenuBtn?.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Navbar scroll effect
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('bg-brand-dark/95', 'backdrop-blur-md');
-            } else {
-                navbar.classList.remove('bg-brand-dark/95', 'backdrop-blur-md');
-            }
-        });
-    </script>
 </body>
 </html>
