@@ -253,7 +253,7 @@
         .scroll-track {
             position: relative;
             z-index: 2;
-            height: 1100vh;  /* Extra height for pinned pricing + hosting section */
+            height: 800vh;  /* Height for all sections */
             will-change: transform; /* Hint for GPU acceleration */
             contain: layout style paint; /* Contain layout for performance */
         }
@@ -1202,61 +1202,58 @@
             .to("#why-text .section-subtitle", { opacity: 1, y: 0, duration: 0.2 })
             .to("#why-text .cta-group", { opacity: 1, y: 0, duration: 0.2 });
 
-            // PINNED Pricing Section with card stacking animation
+            // Pricing section - cards animate in on scroll (NO PINNING to avoid conflicts)
             const card1 = document.getElementById('card1');
             const card2 = document.getElementById('card2');
             const card3 = document.getElementById('card3');
 
+            // Pricing text animation
             gsap.timeline({
                 scrollTrigger: {
-                    trigger: "#pricing",
-                    start: "top top",
-                    end: "+=200%",
-                    pin: true,
-                    scrub: 0.5,
-                    onLeaveBack: () => {
-                        // Reset cards when scrolling back to top
-                        card1.style.opacity = '0';
-                        card1.style.transform = 'translateX(400px) rotateY(-30deg)';
-                        card2.style.opacity = '0';
-                        card2.style.transform = 'translateX(400px) rotateY(-30deg)';
-                        card3.style.opacity = '0';
-                        card3.style.transform = 'translateX(400px) rotateY(-30deg)';
-                    }
+                    trigger: "#pricing-text",
+                    start: "top 70%",
+                    end: "center center",
+                    scrub: 1
                 }
             })
-            // Pricing text fades in first
-            .to("#pricing-text .section-label", { opacity: 1, y: 0, duration: 0.1 })
-            .to("#pricing-text .section-title", { opacity: 1, y: 0, duration: 0.1 })
-            .to("#pricing-text .section-subtitle", { opacity: 1, y: 0, duration: 0.1 })
-            // Card 1 slides in from right (0-30%)
+            .to("#pricing-text .section-label", { opacity: 1, y: 0, duration: 0.2 })
+            .to("#pricing-text .section-title", { opacity: 1, y: 0, duration: 0.3 })
+            .to("#pricing-text .section-subtitle", { opacity: 1, y: 0, duration: 0.2 });
+
+            // Cards animate in sequence as user scrolls through pricing section
+            gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#cardStack",
+                    start: "top 80%",
+                    end: "center 30%",
+                    scrub: 0.5
+                }
+            })
+            // Card 1 slides in from right
             .to(card1, {
                 x: 0,
                 rotateY: -5,
                 rotateZ: -2,
                 opacity: 1,
-                duration: 0.3,
-                ease: "power2.out"
+                duration: 0.25
             })
-            // Card 2 slides in and lands ON TOP of card 1 (30-60%)
+            // Card 2 slides in
             .to(card2, {
                 x: 25,
                 y: 15,
                 rotateY: -5,
                 rotateZ: 1,
                 opacity: 1,
-                duration: 0.3,
-                ease: "power2.out"
+                duration: 0.25
             })
-            // Card 3 slides in and lands ON TOP of card 2 (60-90%)
+            // Card 3 slides in
             .to(card3, {
                 x: 50,
                 y: 30,
                 rotateY: -5,
                 rotateZ: 3,
                 opacity: 1,
-                duration: 0.3,
-                ease: "power2.out"
+                duration: 0.25
             });
 
             // Trust section
