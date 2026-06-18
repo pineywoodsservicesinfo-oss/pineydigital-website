@@ -425,6 +425,7 @@
             opacity: 1;
         }
 
+
         /* Cards stack with HIGHER z-index on top (later cards sit on top of earlier) */
         .stack-card:nth-child(1) { z-index: 1; }  /* Starter - bottom of stack */
         .stack-card:nth-child(2) {
@@ -1145,19 +1146,6 @@
             .to("#why-text .section-title", { opacity: 1, y: 0, duration: 0.3 })
             .to("#why-text .section-subtitle", { opacity: 1, y: 0, duration: 0.2 })
             .to("#why-text .cta-group", { opacity: 1, y: 0, duration: 0.2 });
-
-            // Pricing section with CARD STACK reveal
-            gsap.timeline({
-                scrollTrigger: {
-                    trigger: "#pricing-text",
-                    start: "top 70%",
-                    end: "center center",
-                    scrub: 1
-                }
-            })
-            .to("#pricing-text .section-label", { opacity: 1, y: 0, duration: 0.2 })
-            .to("#pricing-text .section-title", { opacity: 1, y: 0, duration: 0.3 })
-            .to("#pricing-text .section-subtitle", { opacity: 1, y: 0, duration: 0.2 });
 
             // PINNED Pricing Section with card stacking animation
             const card1 = document.getElementById('card1');
