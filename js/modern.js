@@ -248,29 +248,37 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // ==========================================
-    // PARALLAX EFFECTS
+    // PARALLAX EFFECTS (only on pages with blobs)
     // ==========================================
-    gsap.to('.blob-1', {
-        scrollTrigger: {
-            trigger: '.hero',
-            start: 'top top',
-            end: 'bottom top',
-            scrub: 1
-        },
-        y: 100,
-        scale: 1.2
-    });
+    const blob1 = document.querySelector('.blob-1');
+    const blob2 = document.querySelector('.blob-2');
+    const heroSection = document.querySelector('.hero');
 
-    gsap.to('.blob-2', {
-        scrollTrigger: {
-            trigger: '.hero',
-            start: 'top top',
-            end: 'bottom top',
-            scrub: 1
-        },
-        y: -100,
-        scale: 1.1
-    });
+    if (blob1 && heroSection) {
+        gsap.to(blob1, {
+            scrollTrigger: {
+                trigger: heroSection,
+                start: 'top top',
+                end: 'bottom top',
+                scrub: 1
+            },
+            y: 100,
+            scale: 1.2
+        });
+    }
+
+    if (blob2 && heroSection) {
+        gsap.to(blob2, {
+            scrollTrigger: {
+                trigger: heroSection,
+                start: 'top top',
+                end: 'bottom top',
+                scrub: 1
+            },
+            y: -100,
+            scale: 1.1
+        });
+    }
 
     // ==========================================
     // HOVER EFFECTS FOR CARDS
@@ -323,48 +331,70 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // ==========================================
-    // ABOUT CARD ANIMATION
+    // ABOUT CARD ANIMATION (only if exists)
     // ==========================================
-    gsap.fromTo('.about-card .card-line',
-        { scaleX: 0 },
-        {
-            scaleX: 1,
-            duration: 1,
-            stagger: 0.1,
-            ease: 'power2.out',
-            scrollTrigger: {
-                trigger: '.about-card',
-                start: 'top 80%'
-            }
+    const aboutCard = document.querySelector('.about-card');
+    if (aboutCard) {
+        const cardLines = aboutCard.querySelectorAll('.card-line');
+        if (cardLines.length > 0) {
+            gsap.fromTo(cardLines,
+                { scaleX: 0 },
+                {
+                    scaleX: 1,
+                    duration: 1,
+                    stagger: 0.1,
+                    ease: 'power2.out',
+                    scrollTrigger: {
+                        trigger: aboutCard,
+                        start: 'top 80%'
+                    }
+                }
+            );
         }
-    );
+    }
 
     // ==========================================
-    // PRICING CARDS STAGGER
+    // PRICING CARDS STAGGER (only if exists)
     // ==========================================
-    gsap.fromTo('.pricing-card',
-        { y: 50, opacity: 0 },
-        {
-            y: 0,
-            opacity: 1,
-            duration: 0.6,
-            stagger: 0.15,
-            ease: 'power2.out',
-            scrollTrigger: {
-                trigger: '.pricing-grid',
-                start: 'top 80%'
-            }
+    const pricingGrid = document.querySelector('.pricing-grid');
+    if (pricingGrid) {
+        const pricingCards = pricingGrid.querySelectorAll('.pricing-card');
+        if (pricingCards.length > 0) {
+            gsap.fromTo(pricingCards,
+                { y: 50, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 0.6,
+                    stagger: 0.15,
+                    ease: 'power2.out',
+                    scrollTrigger: {
+                        trigger: pricingGrid,
+                        start: 'top 80%'
+                    }
+                }
+            );
         }
-    );
+    }
 
     // ==========================================
-    // INITIAL ANIMATIONS
+    // INITIAL ANIMATIONS (hero section - only if exists)
     // ==========================================
-    gsap.from('.hero-badge', { opacity: 0, y: 30, duration: 0.6, delay: 0.2 });
-    gsap.from('.hero-title .title-line', { opacity: 0, y: 50, duration: 0.8, stagger: 0.15, delay: 0.4 });
-    gsap.from('.hero-description', { opacity: 0, y: 30, duration: 0.6, delay: 0.8 });
-    gsap.from('.hero-stats', { opacity: 0, y: 30, duration: 0.6, delay: 1 });
-    gsap.from('.hero-cta', { opacity: 0, y: 30, duration: 0.6, delay: 1.2 });
+    if (document.querySelector('.hero-badge')) {
+        gsap.from('.hero-badge', { opacity: 0, y: 30, duration: 0.6, delay: 0.2 });
+    }
+    if (document.querySelector('.hero-title .title-line')) {
+        gsap.from('.hero-title .title-line', { opacity: 0, y: 50, duration: 0.8, stagger: 0.15, delay: 0.4 });
+    }
+    if (document.querySelector('.hero-description')) {
+        gsap.from('.hero-description', { opacity: 0, y: 30, duration: 0.6, delay: 0.8 });
+    }
+    if (document.querySelector('.hero-stats')) {
+        gsap.from('.hero-stats', { opacity: 0, y: 30, duration: 0.6, delay: 1 });
+    }
+    if (document.querySelector('.hero-cta')) {
+        gsap.from('.hero-cta', { opacity: 0, y: 30, duration: 0.6, delay: 1.2 });
+    }
 
     // ==========================================
     // FLOATING PARTICLES (Subtle Background)
