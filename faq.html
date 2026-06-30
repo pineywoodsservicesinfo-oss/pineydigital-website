@@ -1,935 +1,934 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-16SZEY2J5E"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-16SZEY2J5E');
-    </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ | Piney Digital — Questions About Your Operational OS</title>
-    <meta name="description" content="Everything you need to know about building systems that run your business. Timelines, pricing, ownership, and how Piney Digital works with growing businesses.">
-    <meta name="keywords" content="SaaS FAQ, operational systems, business automation, custom platform development, enterprise software, multi-location platforms">
-    <meta name="author" content="Joel Escoto">
-    <link rel="canonical" href="https://pineydigital.com/faq.html">
-    <meta name="robots" content="index, follow">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+ <!-- Cookie consent — loads Google Analytics only after user consent -->
+ <script src="js/cookie-consent.js" defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="geo.region" content="US-TX">
+<meta name="geo.placename" content="Lufkin, Texas">
+<meta name="geo.position" content="31.3382;-94.7191">
+<meta name="ICBM" content="31.3382, -94.7191">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="manifest" href="site.webmanifest">
-    <meta name="theme-color" content="#1e5a8e">
-    <meta name="msapplication-TileColor" content="#0a0a0f">
+ <title>FAQ | Piney Digital — Custom Software Questions for Texas Service Businesses</title>
+ <meta name="description" content="Common questions about working with Piney Digital: timelines, pricing, ownership, and how custom software gets built for your Texas service business.">
+ <meta name="keywords" content="custom software FAQ, Texas service business software questions, custom website timeline, software ownership, multi-location platform pricing">
+ <meta name="author" content="Joel Escoto">
+ <link rel="canonical" href="https://pineydigital.com/faq.html">
+ <meta name="robots" content="index, follow">
 
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://pineydigital.com/faq.html">
-    <meta property="og:title" content="FAQ | Piney Digital — Questions About Your Operational OS">
-    <meta property="og:description" content="Everything you need to know about building systems that run your business — not the other way around.">
-    <meta property="og:image" content="https://pineydigital.com/images/og-faq.png">
+ <link rel="icon" type="image/x-icon" href="favicon.ico">
+ <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="FAQ | Piney Digital — Questions About Your Operational OS">
-    <meta name="twitter:description" content="Everything you need to know about building systems that run your business.">
-    <meta name="twitter:image" content="https://pineydigital.com/images/og-faq.png">
+ <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+ <link rel="manifest" href="site.webmanifest">
+ <meta name="theme-color" content="#1e5a8e">
+ <meta name="msapplication-TileColor" content="#0a0a0f">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/modern.css">
+ <!-- Open Graph -->
+ <meta property="og:type" content="website">
+<meta property="og:site_name" content="Piney Digital">
+<meta property="og:locale" content="en_US">
+ <meta property="og:url" content="https://pineydigital.com/faq.html">
+ <meta property="og:title" content="FAQ | Piney Digital — Custom Software Questions for Texas Service Businesses">
+ <meta property="og:description" content="Common questions about working with Piney Digital: timelines, pricing, ownership, and how custom software gets built for your Texas service business.">
+<meta property="og:image" content="https://pineydigital.com/images/og-faq.png">
 
-    <!-- BreadcrumbList Schema for AI Search -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://pineydigital.com/"
-            },
-            {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "FAQ",
-                "item": "https://pineydigital.com/faq.html"
-            }
-        ]
-    }
-    </script>
-    <style>
-        .faq-hero {
-            padding: 140px 0 60px;
-            min-height: auto;
-        }
-        .faq-hero .section-title {
-            font-size: clamp(2.5rem, 6vw, 4rem);
-        }
-        .faq-section {
-            margin-bottom: 4rem;
-        }
-        .faq-section h2 {
-            color: var(--text-primary);
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-        .faq-section h2::before {
-            content: '';
-            display: block;
-            width: 4px;
-            height: 24px;
-            background: var(--accent);
-            border-radius: 2px;
-        }
-        .faq-item {
-            background: rgba(18, 18, 26, 0.95);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            border-radius: 16px;
-            margin-bottom: 1rem;
-            overflow: hidden;
-        }
-        .faq-question {
-            width: 100%;
-            background: none;
-            border: none;
-            padding: 1.25rem 1.5rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            cursor: pointer;
-            color: var(--text-primary);
-            font-size: 1rem;
-            font-weight: 600;
-            text-align: left;
-            transition: background 0.2s ease;
-        }
-        .faq-question:hover {
-            background: rgba(255, 255, 255, 0.02);
-        }
-        .faq-question svg {
-            flex-shrink: 0;
-            transition: transform 0.3s ease;
-            color: var(--accent);
-        }
-        .faq-item.active .faq-question svg {
-            transform: rotate(180deg);
-        }
-        .faq-answer {
-            padding: 0 1.5rem;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease, padding 0.3s ease;
-        }
-        .faq-item.active .faq-answer {
-            padding: 0 1.5rem 1.5rem;
-            max-height: 1000px;
-        }
-        .faq-answer p {
-            color: var(--text-secondary);
-            line-height: 1.8;
-            margin-bottom: 1rem;
-        }
-        .faq-answer p:last-child {
-            margin-bottom: 0;
-        }
-        .faq-answer ul {
-            color: var(--text-secondary);
-            padding-left: 1.5rem;
-            margin-top: 1rem;
-        }
-        .faq-answer li {
-            margin-bottom: 0.5rem;
-            line-height: 1.7;
-        }
-        .faq-answer strong {
-            color: var(--text-primary);
-        }
-        .faq-answer code {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 0.2rem 0.5rem;
-            border-radius: 4px;
-            font-family: 'Courier New', monospace;
-            font-size: 0.9em;
-            color: var(--accent);
-        }
-        .pro-tip {
-            background: linear-gradient(135deg, rgba(45, 127, 78, 0.15) 0%, rgba(30, 90, 142, 0.15) 100%);
-            border: 1px solid var(--accent);
-            border-radius: 12px;
-            padding: 1rem 1.25rem;
-            margin-top: 1rem;
-        }
-        .pro-tip strong {
-            color: var(--accent);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-bottom: 0.5rem;
-        }
-        .pro-tip p {
-            margin: 0;
-            font-size: 0.9375rem;
-        }
-        .info-box {
-            background: rgba(30, 90, 142, 0.1);
-            border: 1px solid var(--primary);
-            border-radius: 12px;
-            padding: 1rem 1.25rem;
-            margin-top: 1rem;
-        }
-        .info-box strong {
-            color: var(--primary);
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-        .info-box p {
-            margin: 0;
-            font-size: 0.9375rem;
-            color: var(--text-secondary);
-        }
-        .cta-section {
-            text-align: center;
-            padding: 4rem 2rem;
-            background: linear-gradient(135deg, rgba(45, 127, 78, 0.1) 0%, rgba(30, 90, 142, 0.1) 100%);
-            border-radius: 24px;
-            margin-top: 4rem;
-        }
-        .cta-section h2 {
-            color: var(--text-primary);
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-        .cta-section p {
-            color: var(--text-secondary);
-            max-width: 600px;
-            margin: 0 auto 2rem;
-        }
-        @media (max-width: 768px) {
-            .faq-hero {
-                padding: 100px 0 40px;
-            }
-            .faq-question {
-                padding: 1rem;
-                font-size: 0.9375rem;
-            }
-            .faq-answer {
-                padding: 0 1rem;
-            }
-            .faq-item.active .faq-answer {
-                padding: 0 1rem 1rem;
-            }
-        }
-    </style>
+ <!-- Twitter Card -->
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:title" content="FAQ | Piney Digital — Custom Software Questions for Texas Service Businesses">
+ <meta name="twitter:description" content="Common questions about working with Piney Digital: timelines, pricing, ownership, and how custom software gets built for your Texas service business.">
+ <meta name="twitter:image" content="https://pineydigital.com/images/og-faq.png">
 
-    <!-- FAQ Schema for AI Search -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "What is the difference between a concept site and a SaaS platform?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "A Concept Site ($5,000) is a static marketing website designed to showcase your business with professional design, SEO optimization, and 5-20 pages. A SaaS Platform (starting at $14,000) is a full-featured web application with custom functionality including user accounts, admin dashboards, database management, and integrations. Concept sites are your digital storefront; SaaS platforms run your operations."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "How long does it take to build a SaaS platform?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Concept Sites take 2-3 weeks. SaaS Platforms take 6-10 weeks for core features, admin dashboard, and user accounts. Enterprise Platforms take 3-6 months for complex features, multiple integrations, and advanced security."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "What tech stack does Piney Digital use?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "We use Python (Flask/FastAPI) for backend, PostgreSQL or SQLite for databases, Tailwind CSS for frontend styling, and deploy on Railway, Render, or cloud providers of your choice. We integrate with Twilio for SMS, Resend for email, Stripe for payments, and custom APIs as needed."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Do you offer ongoing maintenance after launch?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes. All projects include 90 days of support for bug fixes and minor adjustments. After that, you have three options: Self-hosted (you own everything, manage it yourself), Managed Care (I handle hosting, updates, security, and priority support), or Partner Retainer (monthly hours for new features, strategic reviews, and dedicated support). I already know your system — no ramp-up time needed."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Can you integrate with our existing systems?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes. We integrate with payment processors (Stripe, Square, PayPal), CRM systems (Salesforce, HubSpot), communication tools (Twilio, SendGrid, Slack), business tools (QuickBooks, Xero, Google Workspace), and custom APIs. Each integration is typically scoped separately."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Do I own my platform and code?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Absolutely. You own everything we build: full source code and documentation, your database and all business data, domain names and hosting accounts, API keys and integration credentials. We provide complete handoff if you ever decide to bring development in-house."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "What does Piney Digital charge for custom platforms?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Concept Sites are $5,000 (5-20 pages, SEO, mobile-responsive). SaaS Platforms start at $14,000 for custom web applications with user accounts and dashboards. Enterprise Platforms are custom-quoted based on scope for multi-location businesses and complex integrations. Each project is scoped individually after understanding your requirements."
-                }
-            }
-        ]
-    }
-    </script>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="css/modern.css">
+
+ <!-- BreadcrumbList Schema for AI Search -->
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+ {
+ "@type": "ListItem",
+ "position": 1,
+ "name": "Home",
+ "item": "https://pineydigital.com/"
+ },
+ {
+ "@type": "ListItem",
+ "position": 2,
+ "name": "FAQ",
+ "item": "https://pineydigital.com/faq.html"
+ }
+ ]
+ }
+ </script>
+ <style>
+ .faq-hero {
+ padding: 140px 0 60px;
+ min-height: auto;
+ }
+ .faq-hero .section-title {
+ font-size: clamp(2.5rem, 6vw, 4rem);
+ }
+ .faq-section {
+ margin-bottom: 4rem;
+ }
+ .faq-section h2 {
+ font-size: 1.5rem;
+ margin-bottom: 1.5rem;
+ display: flex;
+ align-items: center;
+ gap: 0.75rem;
+ }
+ .faq-section h2::before {
+ content: '';
+ display: block;
+ width: 4px;
+ height: 24px;
+ background: var(--accent);
+ border-radius: 2px;
+ }
+ .faq-item {
+ background: rgba(18, 18, 26, 0.95);
+ border: 1px solid rgba(255, 255, 255, 0.12);
+ border-radius: 16px;
+ margin-bottom: 1rem;
+ overflow: hidden;
+ }
+ .faq-question {
+ width: 100%;
+ background: none;
+ border: none;
+ padding: 1.25rem 1.5rem;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ cursor: pointer;
+ font-size: 1rem;
+ font-weight: 600;
+ text-align: left;
+ transition: background 0.2s ease;
+ }
+ .faq-question:hover {
+ background: rgba(255, 255, 255, 0.02);
+ }
+ .faq-question svg {
+ flex-shrink: 0;
+ transition: transform 0.3s ease;
+ }
+ .faq-item.active .faq-question svg {
+ transform: rotate(180deg);
+ }
+ .faq-answer {
+ padding: 0 1.5rem;
+ max-height: 0;
+ overflow: hidden;
+ transition: max-height 0.3s ease, padding 0.3s ease;
+ }
+ .faq-item.active .faq-answer {
+ padding: 0 1.5rem 1.5rem;
+ max-height: 1000px;
+ }
+ .faq-answer p {
+ line-height: 1.8;
+ margin-bottom: 1rem;
+ }
+ .faq-answer p:last-child {
+ margin-bottom: 0;
+ }
+ .faq-answer ul {
+ padding-left: 1.5rem;
+ margin-top: 1rem;
+ }
+ .faq-answer li {
+ margin-bottom: 0.5rem;
+ line-height: 1.7;
+ }
+ .faq-answer strong {
+ }
+ .faq-answer code {
+ background: rgba(255, 255, 255, 0.1);
+ padding: 0.2rem 0.5rem;
+ border-radius: 4px;
+ font-family: 'Courier New', monospace;
+ font-size: 0.9em;
+ }
+ .pro-tip {
+ background: linear-gradient(135deg, rgba(45, 127, 78, 0.15) 0%, rgba(30, 90, 142, 0.15) 100%);
+ border: 1px solid var(--accent);
+ border-radius: 12px;
+ padding: 1rem 1.25rem;
+ margin-top: 1rem;
+ }
+ .pro-tip strong {
+ display: flex;
+ align-items: center;
+ gap: 0.5rem;
+ margin-bottom: 0.5rem;
+ }
+ .pro-tip p {
+ margin: 0;
+ font-size: 0.9375rem;
+ }
+ .info-box {
+ background: rgba(30, 90, 142, 0.1);
+ border: 1px solid var(--primary);
+ border-radius: 12px;
+ padding: 1rem 1.25rem;
+ margin-top: 1rem;
+ }
+ .info-box strong {
+ display: block;
+ margin-bottom: 0.5rem;
+ }
+ .info-box p {
+ margin: 0;
+ font-size: 0.9375rem;
+ }
+ .cta-section {
+ text-align: center;
+ padding: 4rem 2rem;
+ background: linear-gradient(135deg, rgba(45, 127, 78, 0.1) 0%, rgba(30, 90, 142, 0.1) 100%);
+ border-radius: 24px;
+ margin-top: 4rem;
+ }
+ .cta-section h2 {
+ font-size: 2rem;
+ margin-bottom: 1rem;
+ }
+ .cta-section p {
+ max-width: 600px;
+ margin: 0 auto 2rem;
+ }
+ @media (max-width: 768px) {
+ .faq-hero {
+ padding: 100px 0 40px;
+ }
+ .faq-question {
+ padding: 1rem;
+ font-size: 0.9375rem;
+ }
+ .faq-answer {
+ padding: 0 1rem;
+ }
+ .faq-item.active .faq-answer {
+ padding: 0 1rem 1rem;
+ }
+ }
+ </style>
+
+ <!-- FAQ Schema for AI Search -->
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+ {
+ "@type": "Question",
+ "name": "What is the difference between a concept site and a SaaS platform?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "A Concept Site (starting at $3,500) is a marketing website designed to showcase your business with professional design, SEO optimization, and 5-20 pages. A Custom Software Platform (quoted per project) is a full-featured web application with custom functionality including user accounts, admin dashboards, database management, and integrations. Concept sites are your digital storefront; custom platforms run your operations."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "How long does it take to build a SaaS platform?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Concept Sites take 2-3 weeks. Custom Software and Operational Systems take 6-10 weeks for core features, admin dashboard, and user accounts. Complex multi-location platforms take 3-6 months for advanced features, multiple integrations, and enhanced security."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "What tech stack does Piney Digital use?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "We use Python (Flask/FastAPI) for backend, PostgreSQL or SQLite for databases, Tailwind CSS for frontend styling, and deploy on Railway, Render, or cloud providers of your choice. We integrate with Twilio for SMS, Resend for email, Stripe for payments, and custom APIs as needed."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Do you offer ongoing maintenance after launch?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Yes. All projects include 90 days of support for bug fixes and minor adjustments. After that, you have three options: Self-hosted (you own everything, manage it yourself), Managed Care (I handle hosting, updates, security, and priority support), or Partner Retainer (monthly hours for new features, strategic reviews, and dedicated support). I already know your system — no ramp-up time needed."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Can you integrate with our existing systems?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Yes. We integrate with payment processors (Stripe, Square, PayPal), CRM systems (Salesforce, HubSpot), communication tools (Twilio, SendGrid, Slack), business tools (QuickBooks, Xero, Google Workspace), and custom APIs. Each integration is typically scoped separately."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Do I own my platform and code?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Absolutely. You own everything we build: full source code and documentation, your database and all business data, domain names and hosting accounts, API keys and integration credentials. We provide complete handoff if you ever decide to bring development in-house."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "What does Piney Digital charge for custom platforms?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Starter websites are $799 (3-5 pages, 1-2 week delivery). Concept Sites start at $3,500 (5-20 pages, 2-3 week delivery). Custom Software and Operational Systems are custom-quoted based on scope, typically starting around $14,000 for a multi-location service business platform. Each project is scoped individually after understanding your requirements."
+ }
+ }
+ ]
+ }
+ </script>
 </head>
 <body>
-    <div class="noise-overlay"></div>
-    <div class="cursor-glow" id="cursorGlow"></div>
+ <a href="#main" class="skip-link">Skip to main content</a>
+ <div class="noise-overlay"></div>
+ <div class="cursor-glow" id="cursorGlow"></div>
 
-    <!-- Navigation -->
-    <nav class="nav" id="nav">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">
-                <span class="nav-logo-icon">🌲</span>
-                <span class="nav-logo-text">Piney Digital</span>
-            </a>
-            <div class="nav-links">
-                <a href="index.html" class="nav-link">Homepage</a>
-                <a href="capabilities.html" class="nav-link">Capabilities</a>
-                <a href="blog.html" class="nav-link">Blog</a>
-                <a href="pricing.html" class="nav-link">Pricing</a>
-                <a href="about.html" class="nav-link">About</a>
-                <a href="faq.html" class="nav-link active">FAQ</a>
-                <a href="contact.html" class="nav-link">Contact</a>
-            </div>
-            <div class="nav-actions">
-                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-                    <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                    <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                </button>
-                <a href="contact.html" class="nav-cta">
-                    <span>Start Project</span>
-                </a>
-                <button class="nav-menu-toggle" id="menuToggle" aria-label="Toggle menu">
-                    <span></span><span></span><span></span>
-                </button>
-            </div>
-        </div>
-    </nav>
+ <!-- Navigation -->
+ <nav class="nav" id="nav" aria-label="Primary">
+ <div class="nav-container">
+ <a href="index.html" class="nav-logo">
+ <span class="nav-logo-icon">🌲</span>
+ <span class="nav-logo-text">Piney Digital</span>
+ </a>
+ <ul class="nav-links">
+ <li><a href="index.html" class="nav-link">Homepage</a></li>
+ <li><a href="capabilities.html" class="nav-link">Capabilities</a></li>
+ <li><a href="blog.html" class="nav-link">Blog</a></li>
+ <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+ <li><a href="about.html" class="nav-link">About</a></li>
+ <li><a href="faq.html" class="nav-link active">FAQ</a></li>
+ <li><a href="contact.html" class="nav-link">Contact</a></li>
+ </ul>
+ <div class="nav-actions">
+ <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+ <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+ <circle cx="12" cy="12" r="5"></circle>
+ <line x1="12" y1="1" x2="12" y2="3"></line>
+ <line x1="12" y1="21" x2="12" y2="23"></line>
+ <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+ <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+ <line x1="1" y1="12" x2="3" y2="12"></line>
+ <line x1="21" y1="12" x2="23" y2="12"></line>
+ <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+ <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+ </svg>
+ <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+ <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+ </svg>
+ </button>
+ <a href="contact.html" class="nav-cta">
+ <span>Start Project</span>
+ </a>
+ <button class="nav-menu-toggle" id="menuToggle" aria-label="Toggle menu">
+ <span></span><span></span><span></span>
+ </button>
+ </div>
+ </div>
+ </nav>
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
-        <div class="mobile-menu-content">
-            <a href="index.html" class="mobile-link">Homepage</a>
-            <a href="capabilities.html" class="mobile-link">Capabilities</a>
-            <a href="blog.html" class="mobile-link">Blog</a>
-            <a href="pricing.html" class="mobile-link">Pricing</a>
-            <a href="about.html" class="mobile-link">About</a>
-            <a href="faq.html" class="mobile-link">FAQ</a>
-            <a href="contact.html" class="mobile-link">Contact</a>
-        </div>
-    </div>
+ <!-- Mobile Menu -->
+ <div class="mobile-menu" id="mobileMenu">
+ <ul class="mobile-menu-content">
+ <li><a href="index.html" class="mobile-link">Homepage</a></li>
+ <li><a href="capabilities.html" class="mobile-link">Capabilities</a></li>
+ <li><a href="blog.html" class="mobile-link">Blog</a></li>
+ <li><a href="pricing.html" class="mobile-link">Pricing</a></li>
+ <li><a href="about.html" class="mobile-link">About</a></li>
+ <li><a href="faq.html" class="mobile-link">FAQ</a></li>
+ <li><a href="contact.html" class="mobile-link">Contact</a></li>
+ </ul>
+ </div>
 
-    <main>
-        <!-- Hero -->
-        <section class="faq-hero">
-            <div class="container">
-                <span class="section-label section-label--green">FAQ</span>
-                <h1 class="section-title">Common <span class="gradient-text">Questions</span></h1>
-                <p class="section-description" style="max-width: 700px;">Everything you need to know about building systems that run your business — not the other way around.</p>
-            </div>
-        </section>
+ <main id="main">
+ <!-- Hero -->
+ <section class="faq-hero">
+ <div class="container">
+ <span class="section-label section-label--green">FAQ</span>
+ <h1 class="section-title">Common <span class="gradient-text">Questions</span></h1>
+ <p class="section-description" style="max-width: 700px;">Everything you need to know about building custom software and websites for your Texas service business — timelines, pricing, ownership, and how we work together.</p>
+ </div>
+ </section>
 
-        <!-- FAQ Sections -->
-        <section class="section" style="padding-top: 2rem;">
-            <div class="container">
+ <!-- FAQ Sections -->
+ <section class="section" style="padding-top: 2rem;">
+ <div class="container">
 
-                <!-- SaaS & Custom Platforms -->
-                <div class="faq-section">
-                    <h2>Operational Systems & Platforms</h2>
+ <!-- SaaS & Custom Platforms -->
+ <div class="faq-section">
+ <h2>Operational Systems & Platforms</h2>
 
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-1">
-                            <span>What's the difference between a concept site and a SaaS platform?</span>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                        </button>
-                        <div class="faq-answer" id="faq-answer-1">
-                            <p><strong>Concept Sites ($5,000)</strong> are static marketing websites designed to showcase your business. They include 5-10 pages standard (up to 20), beautiful design, SEO optimization, and all the essential pages. Perfect for establishing an online presence.</p>
-                            <p><strong>SaaS Platforms (Starting at $14,000)</strong> are full-featured web applications that run your operations. Examples include:</p>
-                            <ul>
-                                <li>Multi-location management dashboards</li>
-                                <li>Customer booking and scheduling systems</li>
-                                <li>Staff scheduling and inventory tracking</li>
-                                <li>Real-time analytics and reporting</li>
-                                <li>Admin panels with role-based access</li>
-                            </ul>
-                            <p>Concept sites are your digital storefront. SaaS platforms are your operational backbone.</p>
-                        </div>
-                    </div>
+ <div class="faq-item">
+ <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-1">
+ <span>What's the difference between a concept site and a SaaS platform?</span>
+ <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+ </button>
+ <div class="faq-answer" id="faq-answer-1">
+ <p><strong>Concept Sites (starting at $3,500)</strong> are marketing websites designed to showcase your business. They include 5-10 pages standard (up to 20), beautiful design, SEO optimization, and all the essential pages. Perfect for establishing an online presence.</p>
+ <p><strong>Custom Software & Operational Systems (Quoted per project)</strong> are full-featured web applications that run your operations. Examples include:</p>
+ <ul>
+ <li>Multi-location management dashboards</li>
+ <li>Customer booking and scheduling systems</li>
+ <li>Staff scheduling and inventory tracking</li>
+ <li>Real-time analytics and reporting</li>
+ <li>Admin panels with role-based access</li>
+ </ul>
+ <p>Concept sites are your digital storefront. SaaS platforms are your operational backbone.</p>
+ </div>
+ </div>
 
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-2">
-                            <span>How long does it take to build an Operational OS?</span>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                        </button>
-                        <div class="faq-answer" id="faq-answer-2">
-                            <p>Timeline varies based on complexity:</p>
-                            <ul>
-                                <li><strong>Concept Site:</strong> 2-3 weeks — Design, content, SEO, launch</li>
-                                <li><strong>SaaS Platform:</strong> 6-10 weeks — Core features, admin dashboard, user accounts</li>
-                                <li><strong>Enterprise Platform:</strong> 3-6 months — Complex features, multiple integrations, advanced security</li>
-                            </ul>
-                            <div class="info-box">
-                                <strong>📋 What affects timeline?</strong>
-                                <p>Feature complexity, number of integrations, data migration needs, and how quickly you can provide feedback during development.</p>
-                            </div>
-                        </div>
-                    </div>
+ <div class="faq-item">
+ <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-2">
+ <span>How long does it take to build a custom software platform?</span>
+ <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+ </button>
+ <div class="faq-answer" id="faq-answer-2">
+ <p>Timeline varies based on complexity:</p>
+ <ul>
+ <li><strong>Concept Site:</strong> 2-3 weeks — Design, content, SEO, launch</li>
+ <li><strong>SaaS Platform:</strong> 6-10 weeks — Core features, admin dashboard, user accounts</li>
+ <li><strong>Custom Software Platform:</strong> 3-6 months — Complex features, multiple integrations, advanced security</li>
+ </ul>
+ <div class="info-box">
+ <strong>📋 What affects timeline?</strong>
+ <p>Feature complexity, number of integrations, data migration needs, and how quickly you can provide feedback during development.</p>
+ </div>
+ </div>
+ </div>
 
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-3">
-                            <span>What tech stack do you use?</span>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                        </button>
-                        <div class="faq-answer" id="faq-answer-3">
-                            <p>We use modern, battle-tested technologies:</p>
-                            <ul>
-                                <li><strong>Backend:</strong> Python (Flask/FastAPI) — fast development, secure, maintainable</li>
-                                <li><strong>Database:</strong> PostgreSQL or SQLite — reliable, scalable, ACID-compliant</li>
-                                <li><strong>Frontend:</strong> Tailwind CSS + Vanilla JS — fast loading, easy to maintain</li>
-                                <li><strong>Hosting:</strong> Railway, Render, or your preferred cloud provider</li>
-                                <li><strong>Integrations:</strong> Twilio (SMS), Resend (email), Stripe (payments), custom APIs</li>
-                            </ul>
-                            <div class="pro-tip">
-                                <strong>💡 Why not React/Angular?</strong>
-                                <p>For most business platforms, server-rendered pages with progressive enhancement are faster to build, easier to maintain, and perform better. We use the right tool for the job — not the trendiest.</p>
-                            </div>
-                        </div>
-                    </div>
+ <div class="faq-item">
+ <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-3">
+ <span>What tech stack do you use?</span>
+ <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+ </button>
+ <div class="faq-answer" id="faq-answer-3">
+ <p>We use modern, battle-tested technologies:</p>
+ <ul>
+ <li><strong>Backend:</strong> Python (Flask/FastAPI) — fast development, secure, maintainable</li>
+ <li><strong>Database:</strong> PostgreSQL or SQLite — reliable, scalable, ACID-compliant</li>
+ <li><strong>Frontend:</strong> Tailwind CSS + Vanilla JS — fast loading, easy to maintain</li>
+ <li><strong>Hosting:</strong> Railway, Render, or your preferred cloud provider</li>
+ <li><strong>Integrations:</strong> Twilio (SMS), Resend (email), Stripe (payments), custom APIs</li>
+ </ul>
+ <div class="pro-tip">
+ <strong>💡 Why not React/Angular?</strong>
+ <p>For most business platforms, server-rendered pages with progressive enhancement are faster to build, easier to maintain, and perform better. We use the right tool for the job — not the trendiest.</p>
+ </div>
+ </div>
+ </div>
 
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-4">
-                            <span>Can you integrate with my existing systems?</span>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                        </button>
-                        <div class="faq-answer" id="faq-answer-4">
-                            <p><strong>Yes.</strong> Third-party integrations are our specialty. Common integrations include:</p>
-                            <ul>
-                                <li><strong>Payment processors:</strong> Stripe, Square, PayPal</li>
-                                <li><strong>CRM systems:</strong> Salesforce, HubSpot, custom databases</li>
-                                <li><strong>Communication:</strong> Twilio (SMS), SendGrid/Resend (email), Slack webhooks</li>
-                                <li><strong>Business tools:</strong> QuickBooks, Xero, Google Workspace</li>
-                                <li><strong>Custom APIs:</strong> Your proprietary systems</li>
-                            </ul>
-                            <p>Each integration is scoped and quoted separately. We handle the API connections, data mapping, and error handling.</p>
-                        </div>
-                    </div>
+ <div class="faq-item">
+ <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-4">
+ <span>Can you integrate with my existing systems?</span>
+ <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+ </button>
+ <div class="faq-answer" id="faq-answer-4">
+ <p><strong>Yes.</strong> Third-party integrations are our specialty. Common integrations include:</p>
+ <ul>
+ <li><strong>Payment processors:</strong> Stripe, Square, PayPal</li>
+ <li><strong>CRM systems:</strong> Salesforce, HubSpot, custom databases</li>
+ <li><strong>Communication:</strong> Twilio (SMS), SendGrid/Resend (email), Slack webhooks</li>
+ <li><strong>Business tools:</strong> QuickBooks, Xero, Google Workspace</li>
+ <li><strong>Custom APIs:</strong> Your proprietary systems</li>
+ </ul>
+ <p>Each integration is scoped and quoted separately. We handle the API connections, data mapping, and error handling.</p>
+ </div>
+ </div>
 
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-5">
-                            <span>What about mobile apps?</span>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                        </button>
-                        <div class="faq-answer" id="faq-answer-5">
-                            <p>We build <strong>responsive web applications</strong> that work beautifully on mobile browsers. This approach offers several advantages:</p>
-                            <ul>
-                                <li><strong>No app store approval:</strong> Launch immediately, no Apple/Google review delays</li>
-                                <li><strong>Single codebase:</strong> Faster development, easier maintenance</li>
-                                <li><strong>No install friction:</strong> Users access instantly via URL</li>
-                                <li><strong>PWA support:</strong> Add to home screen, offline capabilities</li>
-                            </ul>
-                            <p>If you need a native app later, we can build one. But most businesses find a well-built web app covers 95% of their needs.</p>
-                        </div>
-                    </div>
+ <div class="faq-item">
+ <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-5">
+ <span>What about mobile apps?</span>
+ <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+ </button>
+ <div class="faq-answer" id="faq-answer-5">
+ <p>We build <strong>responsive web applications</strong> that work beautifully on mobile browsers. This approach offers several advantages:</p>
+ <ul>
+ <li><strong>No app store approval:</strong> Launch immediately, no Apple/Google review delays</li>
+ <li><strong>Single codebase:</strong> Faster development, easier maintenance</li>
+ <li><strong>No install friction:</strong> Users access instantly via URL</li>
+ <li><strong>PWA support:</strong> Add to home screen, offline capabilities</li>
+ </ul>
+ <p>If you need a native app later, we can build one. But most businesses find a well-built web app covers 95% of their needs.</p>
+ </div>
+ </div>
 
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-6">
-                            <span>Do you offer ongoing maintenance?</span>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                        </button>
-                        <div class="faq-answer" id="faq-answer-6">
-                            <p><strong>Yes.</strong> All projects include 90 days of support for bug fixes and minor adjustments. After that, you have three options:</p>
-                            <ul>
-                                <li><strong>Self-hosted:</strong> You own everything. Host it yourself. I'm available for future updates if needed.</li>
-                                <li><strong>Managed Care:</strong> I handle hosting, updates, security, and priority support. You focus on your business.</li>
-                                <li><strong>Partner Retainer:</strong> Monthly hours for new features, strategic reviews, and dedicated support.</li>
-                            </ul>
-                            <p>I already know your system — no ramp-up time needed.</p>
-                        </div>
-                    </div>
-                </div>
+ <div class="faq-item">
+ <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-6">
+ <span>Do you offer ongoing maintenance?</span>
+ <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+ </button>
+ <div class="faq-answer" id="faq-answer-6">
+ <p><strong>Yes.</strong> All projects include 90 days of support for bug fixes and minor adjustments. After that, you have three options:</p>
+ <ul>
+ <li><strong>Self-hosted:</strong> You own everything. Host it yourself. I'm available for future updates if needed.</li>
+ <li><strong>Managed Care:</strong> I handle hosting, updates, security, and priority support. You focus on your business.</li>
+ <li><strong>Partner Retainer:</strong> Monthly hours for new features, strategic reviews, and dedicated support.</li>
+ </ul>
+ <p>I already know your system — no ramp-up time needed.</p>
+ </div>
+ </div>
+ </div>
 
-                <!-- General Questions -->
-                <div class="faq-section">
-                    <h2>Getting Started</h2>
+ <!-- General Questions -->
+ <div class="faq-section">
+ <h2>Getting Started</h2>
 
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-7">
-                            <span>How do you handle project requirements?</span>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                        </button>
-                        <div class="faq-answer" id="faq-answer-7">
-                            <p>Every project starts with a <strong>discovery call</strong> to understand your business goals, existing pain points, and must-have features. From there:</p>
-                            <ul>
-                                <li><strong>Requirements document:</strong> We outline all features, user flows, and technical specifications</li>
-                                <li><strong>Fixed-price quote:</strong> You know exactly what you're paying before development starts</li>
-                                <li><strong>Milestone-based development:</strong> Regular check-ins at key stages (design, core features, testing)</li>
-                                <li><strong>Revision rounds:</strong> Built into every project scope</li>
-                            </ul>
-                            <div class="pro-tip">
-                                <strong>💡 Pro Tip</strong>
-                                <p>The more detail you can provide about your workflows and pain points, the more accurate our quote will be. We're happy to sign NDAs before discussing sensitive business processes.</p>
-                            </div>
-                        </div>
-                    </div>
+ <div class="faq-item">
+ <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-7">
+ <span>How do you handle project requirements?</span>
+ <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+ </button>
+ <div class="faq-answer" id="faq-answer-7">
+ <p>Every project starts with a <strong>discovery call</strong> to understand your business goals, existing pain points, and must-have features. From there:</p>
+ <ul>
+ <li><strong>Requirements document:</strong> We outline all features, user flows, and technical specifications</li>
+ <li><strong>Fixed-price quote:</strong> You know exactly what you're paying before development starts</li>
+ <li><strong>Milestone-based development:</strong> Regular check-ins at key stages (design, core features, testing)</li>
+ <li><strong>Revision rounds:</strong> Built into every project scope</li>
+ </ul>
+ <div class="pro-tip">
+ <strong>💡 Pro Tip</strong>
+ <p>The more detail you can provide about your workflows and pain points, the more accurate our quote will be. We're happy to sign NDAs before discussing sensitive business processes.</p>
+ </div>
+ </div>
+ </div>
 
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-8">
-                            <span>What do I need to provide before development starts?</span>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                        </button>
-                        <div class="faq-answer" id="faq-answer-8">
-                            <p>For custom platforms, we'll need:</p>
-                            <ul>
-                                <li><strong>Business context:</strong> Your goals, target users, and key workflows</li>
-                                <li><strong>Existing assets:</strong> Branding, logos, any current systems or data</li>
-                                <li><strong>Feature priorities:</strong> What's essential vs. nice-to-have</li>
-                                <li><strong>Integration requirements:</strong> Any third-party systems that need to connect</li>
-                                <li><strong>Access credentials:</strong> For existing platforms we're integrating with or replacing</li>
-                            </ul>
-                            <p>Don't worry if you don't have all of this figured out — we help you work through it during discovery.</p>
-                        </div>
-                    </div>
+ <div class="faq-item">
+ <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-8">
+ <span>What do I need to provide before development starts?</span>
+ <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+ </button>
+ <div class="faq-answer" id="faq-answer-8">
+ <p>For custom platforms, we'll need:</p>
+ <ul>
+ <li><strong>Business context:</strong> Your goals, target users, and key workflows</li>
+ <li><strong>Existing assets:</strong> Branding, logos, any current systems or data</li>
+ <li><strong>Feature priorities:</strong> What's essential vs. nice-to-have</li>
+ <li><strong>Integration requirements:</strong> Any third-party systems that need to connect</li>
+ <li><strong>Access credentials:</strong> For existing platforms we're integrating with or replacing</li>
+ </ul>
+ <p>Don't worry if you don't have all of this figured out — we help you work through it during discovery.</p>
+ </div>
+ </div>
 
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-9">
-                            <span>Do I own my platform and code?</span>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                        </button>
-                        <div class="faq-answer" id="faq-answer-9">
-                            <p><strong>Absolutely.</strong> You own everything we build for you:</p>
-                            <ul>
-                                <li>Full source code and documentation</li>
-                                <li>Your database and all business data</li>
-                                <li>Domain names and hosting accounts</li>
-                                <li>API keys and integration credentials</li>
-                            </ul>
-                            <p>If you ever decide to bring development in-house or switch partners, we provide a complete handoff: code repository, documentation, deployment instructions, and knowledge transfer. No vendor lock-in.</p>
-                        </div>
-                    </div>
+ <div class="faq-item">
+ <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-9">
+ <span>Do I own my platform and code?</span>
+ <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+ </button>
+ <div class="faq-answer" id="faq-answer-9">
+ <p><strong>Absolutely.</strong> You own everything we build for you:</p>
+ <ul>
+ <li>Full source code and documentation</li>
+ <li>Your database and all business data</li>
+ <li>Domain names and hosting accounts</li>
+ <li>API keys and integration credentials</li>
+ </ul>
+ <p>If you ever decide to bring development in-house or switch partners, we provide a complete handoff: code repository, documentation, deployment instructions, and knowledge transfer. No vendor lock-in.</p>
+ </div>
+ </div>
 
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-10">
-                            <span>Can my team manage the platform after launch?</span>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                        </button>
-                        <div class="faq-answer" id="faq-answer-10">
-                            <p>Every platform includes an <strong>admin dashboard</strong> designed for non-technical users. Your team can:</p>
-                            <ul>
-                                <li>Manage users, roles, and permissions</li>
-                                <li>Update content, products, or services</li>
-                                <li>View analytics and generate reports</li>
-                                <li>Configure business rules and settings</li>
-                            </ul>
-                            <p>For technical teams, we provide full documentation and can set up CI/CD pipelines. We build for maintainability — clean code, clear documentation, standard practices.</p>
-                        </div>
-                    </div>
-                </div>
+ <div class="faq-item">
+ <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-10">
+ <span>Can my team manage the platform after launch?</span>
+ <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+ </button>
+ <div class="faq-answer" id="faq-answer-10">
+ <p>Every platform includes an <strong>admin dashboard</strong> designed for non-technical users. Your team can:</p>
+ <ul>
+ <li>Manage users, roles, and permissions</li>
+ <li>Update content, products, or services</li>
+ <li>View analytics and generate reports</li>
+ <li>Configure business rules and settings</li>
+ </ul>
+ <p>For technical teams, we provide full documentation and can set up CI/CD pipelines. We build for maintainability — clean code, clear documentation, standard practices.</p>
+ </div>
+ </div>
+ </div>
 
-                <!-- Security & Infrastructure -->
-                <div class="faq-section">
-                    <h2>Security & Infrastructure</h2>
+ <!-- Security & Infrastructure -->
+ <div class="faq-section">
+ <h2>Security & Infrastructure</h2>
 
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-11">
-                            <span>How do you handle security?</span>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                        </button>
-                        <div class="faq-answer" id="faq-answer-11">
-                            <p>Security is built into everything we develop:</p>
-                            <ul>
-                                <li><strong>Authentication:</strong> Secure password hashing, session management, optional 2FA</li>
-                                <li><strong>Data protection:</strong> Encrypted connections (HTTPS), sensitive data encrypted at rest</li>
-                                <li><strong>Input validation:</strong> Protection against SQL injection, XSS, and CSRF attacks</li>
-                                <li><strong>Access control:</strong> Role-based permissions, audit logging</li>
-                                <li><strong>Regular updates:</strong> Dependency updates and security patches</li>
-                            </ul>
-                            <div class="info-box">
-                                <strong>🔒 Enterprise Security Add-ons</strong>
-                                <p>SSO integration, advanced audit logging, and compliance documentation available for regulated industries.</p>
-                            </div>
-                        </div>
-                    </div>
+ <div class="faq-item">
+ <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-11">
+ <span>How do you handle security?</span>
+ <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+ </button>
+ <div class="faq-answer" id="faq-answer-11">
+ <p>Security is built into everything we develop:</p>
+ <ul>
+ <li><strong>Authentication:</strong> Secure password hashing, session management, optional 2FA</li>
+ <li><strong>Data protection:</strong> Encrypted connections (HTTPS), sensitive data encrypted at rest</li>
+ <li><strong>Input validation:</strong> Protection against SQL injection, XSS, and CSRF attacks</li>
+ <li><strong>Access control:</strong> Role-based permissions, audit logging</li>
+ <li><strong>Regular updates:</strong> Dependency updates and security patches</li>
+ </ul>
+ <div class="info-box">
+ <strong>🔒 Security & Compliance Add-ons</strong>
+ <p>SSO integration, advanced audit logging, and compliance documentation available for regulated industries.</p>
+ </div>
+ </div>
+ </div>
 
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-12">
-                            <span>Where is my platform hosted?</span>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                        </button>
-                        <div class="faq-answer" id="faq-answer-12">
-                            <p>We use modern cloud platforms with automatic scaling and 99.9% uptime SLAs:</p>
-                            <ul>
-                                <li><strong>Railway</strong> — Our default for most platforms, simple deployment and scaling</li>
-                                <li><strong>Render</strong> — Alternative with more granular control</li>
-                                <li><strong>AWS/GCP/Azure</strong> — For enterprises requiring specific cloud providers</li>
-                            </ul>
-                            <p>Hosting costs are separate from development and typically run $20-200/month depending on traffic and database size. We'll recommend the right tier for your needs.</p>
-                        </div>
-                    </div>
+ <div class="faq-item">
+ <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-12">
+ <span>Where is my platform hosted?</span>
+ <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+ </button>
+ <div class="faq-answer" id="faq-answer-12">
+ <p>We use modern cloud platforms with automatic scaling and 99.9% uptime SLAs:</p>
+ <ul>
+ <li><strong>Railway</strong> — Our default for most platforms, simple deployment and scaling</li>
+ <li><strong>Render</strong> — Alternative with more granular control</li>
+ <li><strong>AWS/GCP/Azure</strong> — For enterprises requiring specific cloud providers</li>
+ </ul>
+ <p>Hosting costs are separate from development and typically run $20-200/month depending on traffic and database size. We'll recommend the right tier for your needs.</p>
+ </div>
+ </div>
 
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-13">
-                            <span>What about backups and disaster recovery?</span>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                        </button>
-                        <div class="faq-answer" id="faq-answer-13">
-                            <p>All platforms include automated backup systems:</p>
-                            <ul>
-                                <li><strong>Daily database backups:</strong> Automatic snapshots retained for 30 days</li>
-                                <li><strong>Point-in-time recovery:</strong> Restore to any point within the backup window</li>
-                                <li><strong>Off-site replication:</strong> Backups stored in multiple geographic regions</li>
-                                <li><strong>Tested restores:</strong> We verify backups work before you need them</li>
-                            </ul>
-                            <p>For enterprise clients, we offer enhanced disaster recovery with multi-region failover and 1-hour RTO (recovery time objective).</p>
-                        </div>
-                    </div>
-                </div>
+ <div class="faq-item">
+ <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-13">
+ <span>What about backups and disaster recovery?</span>
+ <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+ </button>
+ <div class="faq-answer" id="faq-answer-13">
+ <p>All platforms include automated backup systems:</p>
+ <ul>
+ <li><strong>Daily database backups:</strong> Automatic snapshots retained for 30 days</li>
+ <li><strong>Point-in-time recovery:</strong> Restore to any point within the backup window</li>
+ <li><strong>Off-site replication:</strong> Backups stored in multiple geographic regions</li>
+ <li><strong>Tested restores:</strong> We verify backups work before you need them</li>
+ </ul>
+ <p>For enterprise clients, we offer enhanced disaster recovery with multi-region failover and 1-hour RTO (recovery time objective).</p>
+ </div>
+ </div>
+ </div>
 
-                <!-- SEO & Performance -->
-                <div class="faq-section">
-                    <h2>Performance & Analytics</h2>
+ <!-- SEO & Performance -->
+ <div class="faq-section">
+ <h2>Performance & Analytics</h2>
 
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-14">
-                            <span>How do you optimize platform performance?</span>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                        </button>
-                        <div class="faq-answer" id="faq-answer-14">
-                            <p>Performance is critical for user experience and productivity. We optimize at every layer:</p>
-                            <ul>
-                                <li><strong>Database:</strong> Indexed queries, connection pooling, query optimization</li>
-                                <li><strong>Caching:</strong> Redis for frequently accessed data, CDN for static assets</li>
-                                <li><strong>Code:</strong> Efficient algorithms, lazy loading, optimized assets</li>
-                                <li><strong>Infrastructure:</strong> Auto-scaling, load balancing, edge caching</li>
-                            </ul>
-                            <div class="pro-tip">
-                                <strong>⚡ Benchmark</strong>
-                                <p>We target sub-200ms API response times and sub-3-second page loads. Slow platforms lose users — we build fast.</p>
-                            </div>
-                        </div>
-                    </div>
+ <div class="faq-item">
+ <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-14">
+ <span>How do you optimize platform performance?</span>
+ <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+ </button>
+ <div class="faq-answer" id="faq-answer-14">
+ <p>Performance is critical for user experience and productivity. We optimize at every layer:</p>
+ <ul>
+ <li><strong>Database:</strong> Indexed queries, connection pooling, query optimization</li>
+ <li><strong>Caching:</strong> Redis for frequently accessed data, CDN for static assets</li>
+ <li><strong>Code:</strong> Efficient algorithms, lazy loading, optimized assets</li>
+ <li><strong>Infrastructure:</strong> Auto-scaling, load balancing, edge caching</li>
+ </ul>
+ <div class="pro-tip">
+ <strong>⚡ Benchmark</strong>
+ <p>We target sub-200ms API response times and sub-3-second page loads. Slow platforms lose users — we build fast.</p>
+ </div>
+ </div>
+ </div>
 
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-15">
-                            <span>Can the platform handle high traffic?</span>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                        </button>
-                        <div class="faq-answer" id="faq-answer-15">
-                            <p><strong>Yes.</strong> We build for scale from day one:</p>
-                            <ul>
-                                <li><strong>Horizontal scaling:</strong> Add more server instances as traffic grows</li>
-                                <li><strong>Database scaling:</strong> Read replicas, connection pooling, query optimization</li>
-                                <li><strong>Caching layers:</strong> Redis reduces database load by 80%+ for common queries</li>
-                                <li><strong>CDN integration:</strong> Global edge caching for static assets</li>
-                            </ul>
-                            <p>Most platforms start on a $20/month infrastructure tier and scale up as needed. We monitor performance and alert you before capacity becomes an issue.</p>
-                        </div>
-                    </div>
+ <div class="faq-item">
+ <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-15">
+ <span>Can the platform handle high traffic?</span>
+ <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+ </button>
+ <div class="faq-answer" id="faq-answer-15">
+ <p><strong>Yes.</strong> We build for scale from day one:</p>
+ <ul>
+ <li><strong>Horizontal scaling:</strong> Add more server instances as traffic grows</li>
+ <li><strong>Database scaling:</strong> Read replicas, connection pooling, query optimization</li>
+ <li><strong>Caching layers:</strong> Redis reduces database load by 80%+ for common queries</li>
+ <li><strong>CDN integration:</strong> Global edge caching for static assets</li>
+ </ul>
+ <p>Most platforms start on a $20/month infrastructure tier and scale up as needed. We monitor performance and alert you before capacity becomes an issue.</p>
+ </div>
+ </div>
 
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-16">
-                            <span>Do you include SEO optimization?</span>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                        </button>
-                        <div class="faq-answer" id="faq-answer-16">
-                            <p>Every platform includes SEO fundamentals:</p>
-                            <ul>
-                                <li><strong>Technical SEO:</strong> Proper meta tags, structured data (JSON-LD), sitemap generation</li>
-                                <li><strong>Performance:</strong> Fast loading times, mobile-optimized, Core Web Vitals compliant</li>
-                                <li><strong>Accessibility:</strong> Semantic HTML, proper heading hierarchy, ARIA labels</li>
-                                <li><strong>Indexing:</strong> Robots.txt, canonical URLs, proper HTTP status codes</li>
-                            </ul>
-                            <p>For public-facing pages, we ensure search engines can discover and rank your content properly.</p>
-                        </div>
-                    </div>
+ <div class="faq-item">
+ <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-16">
+ <span>Do you include SEO optimization?</span>
+ <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+ </button>
+ <div class="faq-answer" id="faq-answer-16">
+ <p>Every platform includes SEO fundamentals:</p>
+ <ul>
+ <li><strong>Technical SEO:</strong> Proper meta tags, structured data (JSON-LD), sitemap generation</li>
+ <li><strong>Performance:</strong> Fast loading times, mobile-optimized, Core Web Vitals compliant</li>
+ <li><strong>Accessibility:</strong> Semantic HTML, proper heading hierarchy, ARIA labels</li>
+ <li><strong>Indexing:</strong> Robots.txt, canonical URLs, proper HTTP status codes</li>
+ </ul>
+ <p>For public-facing pages, we ensure search engines can discover and rank your content properly.</p>
+ </div>
+ </div>
 
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-17">
-                            <span>What analytics and reporting do you include?</span>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                        </button>
-                        <div class="faq-answer" id="faq-answer-17">
-                            <p>All platforms include built-in analytics dashboards:</p>
-                            <ul>
-                                <li><strong>User analytics:</strong> Signups, active users, retention rates</li>
-                                <li><strong>Business metrics:</strong> Revenue, transactions, conversion funnels</li>
-                                <li><strong>Performance metrics:</strong> Response times, error rates, uptime</li>
-                                <li><strong>Export options:</strong> CSV exports for deeper analysis in your tools</li>
-                            </ul>
-                            <div class="info-box">
-                                <strong>📊 Advanced Analytics Add-on</strong>
-                                <p>Custom dashboards, cohort analysis, predictive models, and integration with Google Analytics or Mixpanel.</p>
-                            </div>
-                        </div>
-                    </div>
+ <div class="faq-item">
+ <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-17">
+ <span>What analytics and reporting do you include?</span>
+ <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+ </button>
+ <div class="faq-answer" id="faq-answer-17">
+ <p>All platforms include built-in analytics dashboards:</p>
+ <ul>
+ <li><strong>User analytics:</strong> Signups, active users, retention rates</li>
+ <li><strong>Business metrics:</strong> Revenue, transactions, conversion funnels</li>
+ <li><strong>Performance metrics:</strong> Response times, error rates, uptime</li>
+ <li><strong>Export options:</strong> CSV exports for deeper analysis in your tools</li>
+ </ul>
+ <div class="info-box">
+ <strong>📊 Advanced Analytics Add-on</strong>
+ <p>Custom dashboards, cohort analysis, predictive models, and integration with Google Analytics or Mixpanel.</p>
+ </div>
+ </div>
+ </div>
 
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-18">
-                            <span>What about AI and automation features?</span>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                        </button>
-                        <div class="faq-answer" id="faq-answer-18">
-                            <p>We integrate AI where it adds real value:</p>
-                            <ul>
-                                <li><strong>AI Chat:</strong> Intelligent customer support bot trained on your business data</li>
-                                <li><strong>Automated workflows:</strong> Email sequences, follow-up reminders, appointment confirmations</li>
-                                <li><strong>Smart recommendations:</strong> Product/service suggestions based on user behavior</li>
-                                <li><strong>Data insights:</strong> Pattern recognition in your business metrics</li>
-                            </ul>
-                            <p>We're pragmatic about AI — we use it where it saves time or improves experience, not because it's trendy.</p>
-                        </div>
-                    </div>
-                </div>
+ <div class="faq-item">
+ <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-18">
+ <span>What about AI and automation features?</span>
+ <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+ </button>
+ <div class="faq-answer" id="faq-answer-18">
+ <p>We integrate AI where it adds real value:</p>
+ <ul>
+ <li><strong>AI Chat:</strong> Intelligent customer support bot trained on your business data</li>
+ <li><strong>Automated workflows:</strong> Email sequences, follow-up reminders, appointment confirmations</li>
+ <li><strong>Smart recommendations:</strong> Product/service suggestions based on user behavior</li>
+ <li><strong>Data insights:</strong> Pattern recognition in your business metrics</li>
+ </ul>
+ <p>We're pragmatic about AI — we use it where it saves time or improves experience, not because it's trendy.</p>
+ </div>
+ </div>
+ </div>
 
-                <!-- Features & Integrations -->
-                <div class="faq-section">
-                    <h2>Features & Integrations</h2>
+ <!-- Features & Integrations -->
+ <div class="faq-section">
+ <h2>Features & Integrations</h2>
 
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-19">
-                            <span>What features are commonly included?</span>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                        </button>
-                        <div class="faq-answer" id="faq-answer-19">
-                            <p>Features are customized to your needs, but common components include:</p>
-                            <ul>
-                                <li><strong>User management:</strong> Registration, authentication, role-based permissions</li>
-                                <li><strong>Dashboard:</strong> Real-time metrics, charts, and data visualization</li>
-                                <li><strong>Booking/scheduling:</strong> Appointments, reservations, calendar integration</li>
-                                <li><strong>E-commerce:</strong> Product catalogs, shopping cart, payment processing</li>
-                                <li><strong>Communication:</strong> Email notifications, SMS alerts, in-app messaging</li>
-                                <li><strong>Reporting:</strong> Custom reports, data export, scheduled summaries</li>
-                            </ul>
-                            <p>Each platform is scoped based on your specific workflows and requirements.</p>
-                        </div>
-                    </div>
+ <div class="faq-item">
+ <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-19">
+ <span>What features are commonly included?</span>
+ <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+ </button>
+ <div class="faq-answer" id="faq-answer-19">
+ <p>Features are customized to your needs, but common components include:</p>
+ <ul>
+ <li><strong>User management:</strong> Registration, authentication, role-based permissions</li>
+ <li><strong>Dashboard:</strong> Real-time metrics, charts, and data visualization</li>
+ <li><strong>Booking/scheduling:</strong> Appointments, reservations, calendar integration</li>
+ <li><strong>E-commerce:</strong> Product catalogs, shopping cart, payment processing</li>
+ <li><strong>Communication:</strong> Email notifications, SMS alerts, in-app messaging</li>
+ <li><strong>Reporting:</strong> Custom reports, data export, scheduled summaries</li>
+ </ul>
+ <p>Each platform is scoped based on your specific workflows and requirements.</p>
+ </div>
+ </div>
 
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-20">
-                            <span>Do you support multi-location businesses?</span>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                        </button>
-                        <div class="faq-answer" id="faq-answer-20">
-                            <p><strong>Yes.</strong> Multi-location support is a core capability:</p>
-                            <ul>
-                                <li><strong>Location management:</strong> Add unlimited locations with individual settings</li>
-                                <li><strong>Centralized dashboard:</strong> View metrics across all locations</li>
-                                <li><strong>Location-specific settings:</strong> Hours, staff, inventory per location</li>
-                                <li><strong>Role hierarchy:</strong> Corporate admins, location managers, staff</li>
-                                <li><strong>Aggregated reporting:</strong> Compare performance across locations</li>
-                            </ul>
-                            <div class="pro-tip">
-                                <strong>📍 Built for Multi-Location</strong>
-                                <p>Many businesses come to us specifically because they've outgrown software designed for single locations. We build platforms that scale with your footprint.</p>
-                            </div>
-                        </div>
-                    </div>
+ <div class="faq-item">
+ <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-20">
+ <span>Do you support multi-location businesses?</span>
+ <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+ </button>
+ <div class="faq-answer" id="faq-answer-20">
+ <p><strong>Yes.</strong> Multi-location support is a core capability:</p>
+ <ul>
+ <li><strong>Location management:</strong> Add unlimited locations with individual settings</li>
+ <li><strong>Centralized dashboard:</strong> View metrics across all locations</li>
+ <li><strong>Location-specific settings:</strong> Hours, staff, inventory per location</li>
+ <li><strong>Role hierarchy:</strong> Corporate admins, location managers, staff</li>
+ <li><strong>Aggregated reporting:</strong> Compare performance across locations</li>
+ </ul>
+ <div class="pro-tip">
+ <strong>📍 Built for Multi-Location</strong>
+ <p>Many businesses come to us specifically because they've outgrown software designed for single locations. We build platforms that scale with your footprint.</p>
+ </div>
+ </div>
+ </div>
 
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-21">
-                            <span>What payment integrations do you support?</span>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                        </button>
-                        <div class="faq-answer" id="faq-answer-21">
-                            <p>We integrate with major payment processors:</p>
-                            <ul>
-                                <li><strong>Stripe:</strong> Cards, Apple Pay, Google Pay, subscriptions</li>
-                                <li><strong>Square:</strong> POS integration, in-person payments</li>
-                                <li><strong>PayPal:</strong> Legacy support for existing customers</li>
-                            </ul>
-                            <p>Payment integration includes PCI compliance guidance, secure tokenization, and proper handling of sensitive data. We never store card numbers directly.</p>
-                        </div>
-                    </div>
-                </div>
+ <div class="faq-item">
+ <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-21">
+ <span>What payment integrations do you support?</span>
+ <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+ </button>
+ <div class="faq-answer" id="faq-answer-21">
+ <p>We integrate with major payment processors:</p>
+ <ul>
+ <li><strong>Stripe:</strong> Cards, Apple Pay, Google Pay, subscriptions</li>
+ <li><strong>Square:</strong> POS integration, in-person payments</li>
+ <li><strong>PayPal:</strong> Legacy support for existing customers</li>
+ </ul>
+ <p>Payment integration includes PCI compliance guidance, secure tokenization, and proper handling of sensitive data. We never store card numbers directly.</p>
+ </div>
+ </div>
+ </div>
 
-                <!-- Pricing & Contracts -->
-                <div class="faq-section">
-                    <h2>Pricing & Contracts</h2>
+ <!-- Pricing & Contracts -->
+ <div class="faq-section">
+ <h2>Pricing & Contracts</h2>
 
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-22">
-                            <span>How does pricing work?</span>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                        </button>
-                        <div class="faq-answer" id="faq-answer-22">
-                            <p>We offer tiered pricing based on project scope:</p>
-                            <ul>
-                                <li><strong>Concept Site ($5,000):</strong> Marketing website with 5-10 pages standard (up to 20 included), SEO, mobile-responsive design — best for establishing an online presence</li>
-                                <li><strong>SaaS Platform (Starting at $14,000):</strong> Custom web application with user accounts, admin dashboard, and core features — best for businesses needing software to run operations</li>
-                                <li><strong>Enterprise Platform (Custom Quote):</strong> Full-scale platform with integrations, multi-location support, advanced features — best for complex operations. Contact me to discuss your specific needs.</li>
-                            </ul>
-                            <p>Each project is scoped individually. I provide a detailed quote after understanding your requirements.</p>
-                            <div class="info-box">
-                                <strong>💰 No Surprises</strong>
-                                <p>Fixed-price quotes mean you know exactly what you're paying before we start. No hourly billing surprises.</p>
-                            </div>
-                        </div>
-                    </div>
+ <div class="faq-item">
+ <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-22">
+ <span>How does pricing work?</span>
+ <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+ </button>
+ <div class="faq-answer" id="faq-answer-22">
+ <p>We offer tiered pricing based on project scope:</p>
+ <ul>
+ <li><strong>Concept Site (starting at $3,500):</strong> Marketing website with 5-10 pages standard (up to 20 included), SEO, mobile-responsive design — best for establishing an online presence</li>
+ <li><strong>Custom Software & Operational Systems (Quoted per project):</strong> Custom web application with user accounts, admin dashboard, and core features — best for businesses needing software to run operations</li>
+ <li><strong>Custom Software & Operational Systems (Custom Quote):</strong> Full-scale platform with integrations, multi-location support, advanced features — best for complex operations. Contact me to discuss your specific needs.</li>
+ </ul>
+ <p>Each project is scoped individually. I provide a detailed quote after understanding your requirements.</p>
+ <div class="info-box">
+ <strong>💰 No Surprises</strong>
+ <p>Fixed-price quotes mean you know exactly what you're paying before we start. No hourly billing surprises.</p>
+ </div>
+ </div>
+ </div>
 
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-23">
-                            <span>What's the payment structure?</span>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                        </button>
-                        <div class="faq-answer" id="faq-answer-23">
-                            <p>We work in milestones with deposits:</p>
-                            <ul>
-                                <li><strong>30% deposit</strong> to start development</li>
-                                <li><strong>40% at milestone</strong> (design approved, core features complete)</li>
-                                <li><strong>30% at launch</strong> after final testing and approval</li>
-                            </ul>
-                            <p>For larger projects, we can structure monthly payments across the timeline. We're flexible — let's discuss what works for your cash flow.</p>
-                        </div>
-                    </div>
+ <div class="faq-item">
+ <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-23">
+ <span>What's the payment structure?</span>
+ <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+ </button>
+ <div class="faq-answer" id="faq-answer-23">
+ <p>We work in milestones with deposits:</p>
+ <ul>
+ <li><strong>30% deposit</strong> to start development</li>
+ <li><strong>40% at milestone</strong> (design approved, core features complete)</li>
+ <li><strong>30% at launch</strong> after final testing and approval</li>
+ </ul>
+ <p>For larger projects, we can structure monthly payments across the timeline. We're flexible — let's discuss what works for your cash flow.</p>
+ </div>
+ </div>
 
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-24">
-                            <span>Are there ongoing costs after launch?</span>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                        </button>
-                        <div class="faq-answer" id="faq-answer-24">
-                            <p>Beyond development, expect:</p>
-                            <ul>
-                                <li><strong>Hosting:</strong> $20-200/month depending on scale</li>
-                                <li><strong>Domain:</strong> $10-20/year</li>
-                                <li><strong>Third-party services:</strong> Twilio, Stripe, email providers (usage-based)</li>
-                                <li><strong>Maintenance (optional):</strong> Monthly retainer for ongoing support</li>
-                            </ul>
-                            <p>We'll estimate ongoing costs during quoting so there are no surprises.</p>
-                        </div>
-                    </div>
+ <div class="faq-item">
+ <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-24">
+ <span>Are there ongoing costs after launch?</span>
+ <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+ </button>
+ <div class="faq-answer" id="faq-answer-24">
+ <p>Beyond development, expect:</p>
+ <ul>
+ <li><strong>Hosting:</strong> $20-200/month depending on scale</li>
+ <li><strong>Domain:</strong> $10-20/year</li>
+ <li><strong>Third-party services:</strong> Twilio, Stripe, email providers (usage-based)</li>
+ <li><strong>Maintenance (optional):</strong> Monthly retainer for ongoing support</li>
+ </ul>
+ <p>We'll estimate ongoing costs during quoting so there are no surprises.</p>
+ </div>
+ </div>
 
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-25">
-                            <span>What if I need changes after launch?</span>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                        </button>
-                        <div class="faq-answer" id="faq-answer-25">
-                            <p>All projects include 90 days of support for bug fixes and minor adjustments. After that, you have three options:</p>
-                            <ul>
-                                <li><strong>Self-hosted:</strong> You own everything. Host it yourself. I'm available for future updates if needed.</li>
-                                <li><strong>Managed Care:</strong> I handle hosting, updates, security, and priority support.</li>
-                                <li><strong>Partner Retainer:</strong> Monthly hours for new features, strategic reviews, and dedicated support.</li>
-                            </ul>
-                            <p>I already know your system — no ramp-up time needed.</p>
-                        </div>
-                    </div>
-                </div>
+ <div class="faq-item">
+ <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-25">
+ <span>What if I need changes after launch?</span>
+ <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+ </button>
+ <div class="faq-answer" id="faq-answer-25">
+ <p>All projects include 90 days of support for bug fixes and minor adjustments. After that, you have three options:</p>
+ <ul>
+ <li><strong>Self-hosted:</strong> You own everything. Host it yourself. I'm available for future updates if needed.</li>
+ <li><strong>Managed Care:</strong> I handle hosting, updates, security, and priority support.</li>
+ <li><strong>Partner Retainer:</strong> Monthly hours for new features, strategic reviews, and dedicated support.</li>
+ </ul>
+ <p>I already know your system — no ramp-up time needed.</p>
+ </div>
+ </div>
+ </div>
 
-                <!-- CTA -->
-                <div class="cta-section">
-                    <h2>Still have questions?</h2>
-                    <p>Every business is different. Let's talk about your specific operational challenges and figure out if an Operational OS is the right move.</p>
-                    <a href="contact.html" class="btn btn-primary btn-lg">
-                        <span>Get in Touch</span>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
+ <!-- CTA -->
+ <div class="cta-section">
+ <h2>Still have questions?</h2>
+ <p>Every business is different. Let's talk about your specific operational challenges and figure out if a custom software platform is the right move.</p>
+ <a href="contact.html" class="btn btn-primary btn-lg">
+ <span>Get in Touch</span>
+ <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+ <line x1="5" y1="12" x2="19" y2="12"></line>
+ <polyline points="12 5 19 12 12 19"></polyline>
+ </svg>
+ </a>
+ </div>
+ </div>
+ </section>
+ </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="index.html" class="footer-logo">
-                        <span>🌲</span>
-                        <span>Piney Digital</span>
-                    </a>
-                    <p class="footer-tagline">I build the systems that stop the operational bleed.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Navigation</h4>
-                    <a href="index.html">Homepage</a>
-                    <a href="capabilities.html">Capabilities</a>
-                    <a href="blog.html">Blog</a>
-                    <a href="pricing.html">Pricing</a>
-                    <a href="about.html">About</a>
-                    <a href="faq.html">FAQ</a>
-                    <a href="contact.html">Contact</a>
-                </div>
-                <div class="footer-links">
-                    <h4>Legal</h4>
-                    <a href="privacy.html">Privacy Policy</a>
-                    <a href="terms.html">Terms & Conditions</a>
-                </div>
-                <div class="footer-links">
-                    <h4>Connect</h4>
-                    <a href="tel:9362999897">(936) 299-9897</a>
-                    <a href="mailto:joel@pineydigital.com">joel@pineydigital.com</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Piney Digital. All rights reserved.</p>
-                <p>Built with ❤️ for growing businesses</p>
-            </div>
-        </div>
-    </footer>
+ <!-- Footer -->
+ <footer class="footer">
+ <div class="container">
+ <div class="footer-grid">
+ <div class="footer-brand">
+ <a href="index.html" class="footer-logo">
+ <span>🌲</span>
+ <span>Piney Digital</span>
+ </a>
+ <p>Custom software and websites for Texas service businesses.</p>
+ <p class="footer-service-area" style=" font-size: 0.85rem; margin-top: 0.5rem;">Proudly serving Lufkin, Nacogdoches, Tyler, Conroe, Cleveland, and Houston, TX.</p>
+ </div>
+ <div class="footer-links">
+ <h3>Navigation</h3>
+ <ul>
+ <li><a href="index.html">Homepage</a></li>
+ <li><a href="capabilities.html">Capabilities</a></li>
+ <li><a href="blog.html">Blog</a></li>
+ <li><a href="pricing.html">Pricing</a></li>
+ <li><a href="about.html">About</a></li>
+ <li><a href="faq.html">FAQ</a></li>
+ <li><a href="contact.html">Contact</a></li>
+ </ul>
+ </div>
+ <div class="footer-links">
+ <h3>Legal</h3>
+ <ul>
+ <li><a href="privacy.html">Privacy Policy</a></li>
+ <li><a href="privacy.html#do-not-sell">Do Not Sell My Info</a></li>
+ <li><a href="terms.html">Terms & Conditions</a></li>
+ </ul>
+ </div>
+ <div class="footer-links">
+ <h3>Connect</h3>
+ <ul>
+ <li><a href="tel:9362999897">(936) 299-9897</a></li>
+ <li><a href="mailto:joel@pineydigital.com">joel@pineydigital.com</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="footer-bottom">
+ <p>&copy; 2026 Piney Digital. All rights reserved.</p>
+ <p>Built with ❤️ for growing businesses</p>
+ </div>
+ </div>
+ </footer>
 
-    <script src="js/modern.js"></script>
-    <script src="js/chat.js"></script>
-    <script>
-        // FAQ Accordion
-        document.querySelectorAll('.faq-question').forEach(button => {
-            button.addEventListener('click', () => {
-                const item = button.parentElement;
-                const isActive = item.classList.contains('active');
+ <script src="js/modern.js"></script>
+ <script src="js/chat.js"></script>
+ <script>
+ // FAQ Accordion
+ document.querySelectorAll('.faq-question').forEach(button => {
+ button.addEventListener('click', () => {
+ const item = button.parentElement;
+ const isActive = item.classList.contains('active');
 
-                // Close all other items
-                document.querySelectorAll('.faq-item').forEach(i => {
-                    i.classList.remove('active');
-                    i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
-                });
+ // Close all other items
+ document.querySelectorAll('.faq-item').forEach(i => {
+ i.classList.remove('active');
+ i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+ });
 
-                // Toggle current item
-                if (!isActive) {
-                    item.classList.add('active');
-                    button.setAttribute('aria-expanded', 'true');
-                }
-            });
-        });
-    </script>
+ // Toggle current item
+ if (!isActive) {
+ item.classList.add('active');
+ button.setAttribute('aria-expanded', 'true');
+ }
+ });
+ });
+ </script>
 </body>
 </html>

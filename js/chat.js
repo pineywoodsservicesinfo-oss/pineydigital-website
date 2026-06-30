@@ -203,7 +203,7 @@
           </div>
         </div>
         <div id="chat-input-area">
-          <input type="text" id="chat-input" placeholder="Type your message..." />
+          <input type="text" id="chat-input" name="message" placeholder="Type your message..." aria-label="Message the Piney Digital AI assistant" autocomplete="off" />
           <button id="send-btn" aria-label="Send message">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <line x1="22" y1="2" x2="11" y2="13"></line>

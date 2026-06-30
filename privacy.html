@@ -1,351 +1,376 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-16SZEY2J5E"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-16SZEY2J5E');
-    </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy | Piney Digital</title>
-    <meta name="description" content="Privacy Policy for Piney Digital — How we collect, use, and protect your information including SMS messaging practices.">
-    <meta name="keywords" content="Piney Digital privacy policy, SMS consent, data protection, SaaS platform privacy, operational systems">
-    <meta name="author" content="Joel Escoto">
-    <link rel="canonical" href="https://pineydigital.com/privacy.html">
-    <meta name="robots" content="index, follow">
+ <!-- Cookie consent — loads Google Analytics only after user consent -->
+ <script src="js/cookie-consent.js" defer></script>
+<meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="geo.region" content="US-TX">
+<meta name="geo.placename" content="Lufkin, Texas">
+<meta name="geo.position" content="31.3382;-94.7191">
+<meta name="ICBM" content="31.3382, -94.7191">
+<meta name="distribution" content="global">
+<meta name="rating" content="general">
 
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://pineydigital.com/privacy.html">
-    <meta property="og:title" content="Privacy Policy | Piney Digital">
-    <meta property="og:description" content="Privacy Policy for Piney Digital — How we collect, use, and protect your information.">
-    <meta property="og:image" content="https://pineydigital.com/images/og-image.png">
+ <title>Privacy Policy | Piney Digital</title>
+ <meta name="description" content="Privacy Policy for Piney Digital — How we collect, use, and protect your information including SMS messaging practices.">
+ <meta name="keywords" content="Piney Digital privacy policy, SMS consent, data protection, Texas business privacy, custom software privacy, contact form privacy">
+ <meta name="author" content="Joel Escoto">
+ <link rel="canonical" href="https://pineydigital.com/privacy.html">
+ <meta name="robots" content="index, follow">
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://pineydigital.com/privacy.html">
-    <meta name="twitter:title" content="Privacy Policy | Piney Digital">
-    <meta name="twitter:description" content="Privacy Policy for Piney Digital — How we collect, use, and protect your information.">
-    <meta name="twitter:image" content="https://pineydigital.com/images/og-image.png">
+ <!-- Open Graph -->
+ <meta property="og:type" content="website">
+<meta property="og:site_name" content="Piney Digital">
+<meta property="og:locale" content="en_US">
+ <meta property="og:url" content="https://pineydigital.com/privacy.html">
+ <meta property="og:title" content="Privacy Policy | Piney Digital">
+ <meta property="og:description" content="Privacy Policy for Piney Digital — How we collect, use, and protect your information.">
+ <meta property="og:image" content="https://pineydigital.com/images/og-image.png">
 
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
-    
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="manifest" href="site.webmanifest">
-    <meta name="theme-color" content="#1e5a8e">
-    <meta name="msapplication-TileColor" content="#0a0a0f">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/modern.css">
-    <style>
-        .policy-hero {
-            padding: 120px 0 60px;
-            background: linear-gradient(135deg, rgba(45, 127, 78, 0.1) 0%, rgba(30, 90, 142, 0.1) 100%);
-        }
-        .policy-hero .section-title {
-            font-size: clamp(2.5rem, 5vw, 3.5rem);
-        }
-        .policy-content {
-            max-width: 860px;
-            margin: 0 auto;
-            padding: 60px 2rem 100px;
-        }
-        .policy-content h2 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin: 2.5rem 0 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 1px solid var(--border);
-        }
-        .policy-content h2:first-of-type {
-            margin-top: 0;
-        }
-        .policy-content p, .policy-content li {
-            color: var(--text-secondary);
-            line-height: 1.8;
-            margin-bottom: 1rem;
-            font-size: 1rem;
-        }
-        .policy-content ul {
-            padding-left: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-        .policy-content li {
-            margin-bottom: 0.5rem;
-        }
-        .policy-content a {
-            color: var(--accent);
-            text-decoration: none;
-        }
-        .policy-content a:hover {
-            text-decoration: underline;
-        }
-        .last-updated {
-            display: inline-block;
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            color: var(--text-muted);
-            font-size: 0.875rem;
-            padding: 0.5rem 1rem;
-            border-radius: 999px;
-            margin-bottom: 2rem;
-        }
-        .highlight-box {
-            background: linear-gradient(135deg, rgba(45, 127, 78, 0.1) 0%, rgba(30, 90, 142, 0.1) 100%);
-            border: 1px solid var(--accent);
-            border-radius: 16px;
-            padding: 1.5rem 2rem;
-            margin: 2rem 0;
-        }
-        .highlight-box h3 {
-            color: var(--accent);
-            font-size: 1.1rem;
-            margin-bottom: 0.75rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        .highlight-box p {
-            margin-bottom: 0;
-        }
-        .contact-box {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            padding: 2rem;
-            margin-top: 3rem;
-        }
-        .contact-box h3 {
-            color: var(--text-primary);
-            font-size: 1.25rem;
-            margin-bottom: 1rem;
-        }
-        .contact-box p {
-            margin-bottom: 0.5rem;
-        }
-        .contact-box a {
-            color: var(--accent);
-        }
-        @media (max-width: 768px) {
-            .policy-hero {
-                padding: 100px 0 40px;
-            }
-            .policy-content {
-                padding: 40px 1rem 60px;
-            }
-        }
-    </style>
+ <!-- Twitter Card -->
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:url" content="https://pineydigital.com/privacy.html">
+ <meta name="twitter:title" content="Privacy Policy | Piney Digital">
+ <meta name="twitter:description" content="Privacy Policy for Piney Digital — How we collect, use, and protect your information.">
+ <meta name="twitter:image" content="https://pineydigital.com/images/og-image.png">
+
+ <link rel="icon" type="image/x-icon" href="favicon.ico">
+ <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+ 
+ <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+ <link rel="manifest" href="site.webmanifest">
+ <meta name="theme-color" content="#1e5a8e">
+ <meta name="msapplication-TileColor" content="#0a0a0f">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="css/modern.css">
+ <style>
+ .policy-hero {
+ padding: 120px 0 60px;
+ background: linear-gradient(135deg, rgba(45, 127, 78, 0.1) 0%, rgba(30, 90, 142, 0.1) 100%);
+ }
+ .policy-hero .section-title {
+ font-size: clamp(2.5rem, 5vw, 3.5rem);
+ }
+ .policy-content {
+ max-width: 860px;
+ margin: 0 auto;
+ padding: 60px 2rem 100px;
+ }
+ .policy-content h2 {
+ font-family: 'Space Grotesk', sans-serif;
+ font-size: 1.5rem;
+ font-weight: 600;
+ margin: 2.5rem 0 1rem;
+ padding-bottom: 0.5rem;
+ border-bottom: 1px solid var(--border);
+ }
+ .policy-content h2:first-of-type {
+ margin-top: 0;
+ }
+ .policy-content p, .policy-content li {
+ line-height: 1.8;
+ margin-bottom: 1rem;
+ font-size: 1rem;
+ }
+ .policy-content ul {
+ padding-left: 1.5rem;
+ margin-bottom: 1.5rem;
+ }
+ .policy-content li {
+ margin-bottom: 0.5rem;
+ }
+ .policy-content a {
+ text-decoration: none;
+ }
+ .policy-content a:hover {
+ text-decoration: underline;
+ }
+ .last-updated {
+ display: inline-block;
+ background: var(--card-bg);
+ border: 1px solid var(--border);
+ font-size: 0.875rem;
+ padding: 0.5rem 1rem;
+ border-radius: 999px;
+ margin-bottom: 2rem;
+ }
+ .highlight-box {
+ background: linear-gradient(135deg, rgba(45, 127, 78, 0.1) 0%, rgba(30, 90, 142, 0.1) 100%);
+ border: 1px solid var(--accent);
+ border-radius: 16px;
+ padding: 1.5rem 2rem;
+ margin: 2rem 0;
+ }
+ .highlight-box h3 {
+ font-size: 1.1rem;
+ margin-bottom: 0.75rem;
+ display: flex;
+ align-items: center;
+ gap: 0.5rem;
+ }
+ .highlight-box p {
+ margin-bottom: 0;
+ }
+ .contact-box {
+ background: var(--card-bg);
+ border: 1px solid var(--border);
+ border-radius: 20px;
+ padding: 2rem;
+ margin-top: 3rem;
+ }
+ .contact-box h3 {
+ font-size: 1.25rem;
+ margin-bottom: 1rem;
+ }
+ .contact-box p {
+ margin-bottom: 0.5rem;
+ }
+ .contact-box a {
+ }
+ @media (max-width: 768px) {
+ .policy-hero {
+ padding: 100px 0 40px;
+ }
+ .policy-content {
+ padding: 40px 1rem 60px;
+ }
+ }
+ </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://pineydigital.com/privacy.html",
+  "url": "https://pineydigital.com/privacy.html",
+  "name": "Privacy Policy | Piney Digital",
+  "description": "Privacy Policy for Piney Digital — how we collect, use, and protect your information including SMS messaging practices and CCPA/TDPSA rights.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Piney Digital",
+    "url": "https://pineydigital.com"
+  },
+  "inLanguage": "en-US",
+  "datePublished": "2026-04-03",
+  "dateModified": "2026-06-30"
+}
+</script>
+
 </head>
 <body>
-    <div class="noise-overlay"></div>
-    <div class="cursor-glow" id="cursorGlow"></div>
+ <a href="#main" class="skip-link">Skip to main content</a>
+ <div class="noise-overlay"></div>
+ <div class="cursor-glow" id="cursorGlow"></div>
 
-    <!-- Navigation -->
-    <nav class="nav" id="nav">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">
-                <span class="nav-logo-icon">🌲</span>
-                <span class="nav-logo-text">Piney Digital</span>
-            </a>
-            <div class="nav-links">
-                <a href="index.html" class="nav-link">Homepage</a>
-                <a href="capabilities.html" class="nav-link">Capabilities</a>
-                <a href="blog.html" class="nav-link">Blog</a>
-                <a href="pricing.html" class="nav-link">Pricing</a>
-                <a href="about.html" class="nav-link">About</a>
-                <a href="faq.html" class="nav-link">FAQ</a>
-                <a href="contact.html" class="nav-link">Contact</a>
-            </div>
-            <div class="nav-actions">
-                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-                    <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                    <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                </button>
-                <a href="contact.html" class="nav-cta">
-                    <span>Start Project</span>
-                </a>
-                <button class="nav-menu-toggle" id="menuToggle" aria-label="Toggle menu">
-                    <span></span><span></span><span></span>
-                </button>
-            </div>
-        </div>
-    </nav>
+ <!-- Navigation -->
+ <nav class="nav" id="nav" aria-label="Primary">
+ <div class="nav-container">
+ <a href="index.html" class="nav-logo">
+ <span class="nav-logo-icon">🌲</span>
+ <span class="nav-logo-text">Piney Digital</span>
+ </a>
+ <ul class="nav-links">
+ <li><a href="index.html" class="nav-link">Homepage</a></li>
+ <li><a href="capabilities.html" class="nav-link">Capabilities</a></li>
+ <li><a href="blog.html" class="nav-link">Blog</a></li>
+ <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+ <li><a href="about.html" class="nav-link">About</a></li>
+ <li><a href="faq.html" class="nav-link">FAQ</a></li>
+ <li><a href="contact.html" class="nav-link">Contact</a></li>
+ </ul>
+ <div class="nav-actions">
+ <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+ <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+ <circle cx="12" cy="12" r="5"></circle>
+ <line x1="12" y1="1" x2="12" y2="3"></line>
+ <line x1="12" y1="21" x2="12" y2="23"></line>
+ <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+ <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+ <line x1="1" y1="12" x2="3" y2="12"></line>
+ <line x1="21" y1="12" x2="23" y2="12"></line>
+ <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+ <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+ </svg>
+ <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+ <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+ </svg>
+ </button>
+ <a href="contact.html" class="nav-cta">
+ <span>Start Project</span>
+ </a>
+ <button class="nav-menu-toggle" id="menuToggle" aria-label="Toggle menu">
+ <span></span><span></span><span></span>
+ </button>
+ </div>
+ </div>
+ </nav>
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
-        <div class="mobile-menu-content">
-            <a href="index.html" class="mobile-link">Homepage</a>
-            <a href="capabilities.html" class="mobile-link">Capabilities</a>
-            <a href="blog.html" class="mobile-link">Blog</a>
-            <a href="pricing.html" class="mobile-link">Pricing</a>
-            <a href="about.html" class="mobile-link">About</a>
-            <a href="faq.html" class="mobile-link">FAQ</a>
-            <a href="contact.html" class="mobile-link">Contact</a>
-        </div>
-    </div>
+ <!-- Mobile Menu -->
+ <div class="mobile-menu" id="mobileMenu" id="main">
+ <ul class="mobile-menu-content">
+ <li><a href="index.html" class="mobile-link">Homepage</a></li>
+ <li><a href="capabilities.html" class="mobile-link">Capabilities</a></li>
+ <li><a href="blog.html" class="mobile-link">Blog</a></li>
+ <li><a href="pricing.html" class="mobile-link">Pricing</a></li>
+ <li><a href="about.html" class="mobile-link">About</a></li>
+ <li><a href="faq.html" class="mobile-link">FAQ</a></li>
+ <li><a href="contact.html" class="mobile-link">Contact</a></li>
+ </ul>
+ </div>
 
-    <!-- Hero -->
-    <section class="policy-hero">
-        <div class="container">
-            <span class="section-label">Legal</span>
-            <h1 class="section-title">Privacy <span class="gradient-text">Policy</span></h1>
-            <p class="section-description" style="max-width: 600px;">How Piney Digital collects, uses, and protects your information.</p>
-        </div>
-    </section>
+ <!-- Hero -->
+ <section class="policy-hero">
+ <div class="container">
+ <span class="section-label">Legal</span>
+ <h1 class="section-title">Privacy <span class="gradient-text">Policy</span></h1>
+ <p class="section-description" style="max-width: 600px;">How Piney Digital collects, uses, and protects your information.</p>
+ </div>
+ </section>
 
-    <!-- Content -->
-    <div class="policy-content">
-        <span class="last-updated">Last updated: April 3, 2026</span>
+ <!-- Content -->
+ <div class="policy-content">
+ <span class="last-updated">Last updated: June 30, 2026</span>
 
-        <p>Piney Digital ("we," "us," or "our") builds custom operational systems and SaaS platforms for growing businesses. This Privacy Policy explains how we collect, use, and protect information when you visit our website or communicate with us.</p>
+ <p>Piney Digital ("we," "us," or "our") builds custom websites and operational software for Texas service businesses with multiple locations. This Privacy Policy explains how we collect, use, and protect information when you visit our website or communicate with us.</p>
 
-        <h2>1. Information We Collect</h2>
-        <p>We may collect the following types of information:</p>
-        <ul>
-            <li><strong>Contact information</strong> — name, business name, email address, and phone number when you fill out our contact form or reach out to us directly. Phone numbers are only used for SMS if you explicitly opt in via our website checkbox.</li>
-            <li><strong>Business information</strong> — details about your business, website needs, and project requirements that you share with us.</li>
-            <li><strong>Usage data</strong> — standard website analytics such as pages visited, browser type, and referring URLs collected via cookies and similar technologies.</li>
-            <li><strong>Communications</strong> — records of emails, SMS messages, or other correspondence between you and Piney Digital.</li>
-        </ul>
+ <h2>Categories of Personal Information We Collect</h2>
+ <p>Piney Digital is a sole proprietorship based in Lufkin, Texas, and our website and services are intended for business professionals in the United States. We collect the following categories of personal information (vocabulary aligned with the California Consumer Privacy Act for clarity):</p>
+ <ul>
+ <li><strong>Identifiers:</strong> name, email address, phone number, business name, IP address</li>
+ <li><strong>Commercial information:</strong> details about your business, project requirements, and service history</li>
+ <li><strong>Internet activity:</strong> pages visited, browser type, device type, referring URL, anonymized IP address (via Google Analytics)</li>
+ <li><strong>Geolocation data:</strong> approximate location derived from IP address (via Google Analytics)</li>
+ <li><strong>Professional information:</strong> company size, industry, role/title, project scope</li>
+ </ul>
+ <p><strong>Sensitive data:</strong> Piney Digital does not intentionally collect sensitive personal information (such as government identifiers, financial account numbers, health information, or biometric data). Please do not submit sensitive data through our contact form.</p>
+ <p><strong>Children's privacy:</strong> The Piney Digital website is not directed to persons under the age of 13. We do not knowingly collect personal information from anyone under 13. If we learn we have, we will delete it.</p>
+ <p><strong>Protected Health Information (PHI):</strong> Piney Digital does not knowingly collect, store, or process Protected Health Information as defined under HIPAA or Texas HB 300 (Texas Medical Records Privacy Act). Clients are responsible for de-identifying any PHI before sharing data with Piney Digital.</p>
 
-        <h2>2. How We Use Your Information</h2>
-        <p>We use the information we collect to:</p>
-        <ul>
-            <li>Respond to inquiries and provide platform development services</li>
-            <li>Send project updates, quotes, and relevant communications</li>
-            <li>Contact businesses about our platform development services via SMS or email</li>
-            <li>Improve our website and services</li>
-            <li>Comply with legal obligations</li>
-        </ul>
+ <h2>1. Information We Collect</h2>
 
-        <div class="highlight-box">
-            <h3>📱 SMS Messaging Practices</h3>
-            <p>Piney Digital may send SMS messages to business owners to introduce our platform development services. Your phone number is used solely for business communications and is never sold or shared with third parties for marketing purposes.</p>
-        </div>
+ <h2>2. How We Use Your Information</h2>
+ <p>We use the information we collect to:</p>
+ <ul>
+ <li>Respond to inquiries and provide website and software development services</li>
+ <li>Send project updates, quotes, and relevant communications</li>
+ <li>Contact businesses about our website and software development services (via email, and via SMS only if you explicitly opt in via our website checkbox)</li>
+ <li>Improve our website and services through analytics</li>
+ <li>Comply with legal obligations</li>
+ </ul>
 
-        <h2>3. SMS Messaging & Mobile Communications</h2>
-        <p>Piney Digital sends SMS messages for the following purposes:</p>
-        <ul>
-            <li>Introducing our platform development services to businesses</li>
-            <li>Responding to inquiries about our services</li>
-            <li>Providing project updates and quotes</li>
-            <li>Sending appointment reminders or follow-ups</li>
-        </ul>
+ <div class="highlight-box">
+ <h3>📱 SMS Messaging Practices</h3>
+ <p>Piney Digital may send SMS messages to business owners to introduce our platform development services. Your phone number is used solely for business communications and is never sold or shared with third parties for marketing purposes.</p>
+ </div>
 
-        <p><strong>Opt-Out Instructions:</strong> You can stop receiving SMS messages at any time by replying <strong>STOP</strong> to any message. After opting out, you will receive one confirmation message and no further messages will be sent.</p>
+ <h2>3. SMS Messaging & Mobile Communications</h2>
+ <p>Piney Digital sends SMS messages for the following purposes:</p>
+ <ul>
+ <li>Introducing our platform development services to businesses</li>
+ <li>Responding to inquiries about our services</li>
+ <li>Providing project updates and quotes</li>
+ <li>Sending appointment reminders or follow-ups</li>
+ </ul>
 
-        <p><strong>Help Instructions:</strong> For assistance with SMS messaging, reply <strong>HELP</strong> to any message, or contact us directly at:</p>
-        <ul>
-            <li>Email: <a href="mailto:joel@pineydigital.com">joel@pineydigital.com</a></li>
-            <li>Phone: <a href="tel:+19362999897">(936) 299-9897</a></li>
-        </ul>
+ <p><strong>Opt-Out Instructions:</strong> You can stop receiving SMS messages at any time by replying <strong>STOP</strong> to any message. After opting out, you will receive one confirmation message and no further messages will be sent.</p>
 
-        <p><strong>Message Frequency:</strong> Message frequency varies based on your interactions with us. Typically, you will receive 1-4 messages per month during active campaigns. You will not receive more than one message per day.</p>
+ <p><strong>Help Instructions:</strong> For assistance with SMS messaging, reply <strong>HELP</strong> to any message, or contact us directly at:</p>
+ <ul>
+ <li>Email: <a href="mailto:joel@pineydigital.com">joel@pineydigital.com</a></li>
+ <li>Phone: <a href="tel:+19362999897">(936) 299-9897</a></li>
+ </ul>
 
-        <p><strong>Message and Data Rates:</strong> Standard message and data rates may apply based on your wireless carrier plan. Check with your carrier if you have questions about your plan.</p>
+ <p><strong>Message Frequency:</strong> Message frequency varies based on your interactions with us. Typically, you will receive 1-4 messages per month during active campaigns. You will not receive more than one message per day.</p>
 
-        <p><strong>Carrier Liability:</strong> Wireless carriers are not liable for delayed or undelivered messages.</p>
+ <p><strong>Message and Data Rates:</strong> Standard message and data rates may apply based on your wireless carrier plan. Check with your carrier if you have questions about your plan.</p>
 
-        <p>For complete SMS terms and conditions, please see our <a href="terms.html">Terms & Conditions</a> which includes our Mobile Terms of Service.</p>
+ <p><strong>Carrier Liability:</strong> Wireless carriers are not liable for delayed or undelivered messages.</p>
 
-        <h2>4. Information Sharing</h2>
-        <p>We do not sell, trade, or rent your personal information to third parties. We may share information only in the following limited circumstances:</p>
-        <ul>
-            <li><strong>Service providers</strong> — trusted tools we use to operate our business (such as email delivery and SMS platforms), who are contractually required to protect your data.</li>
-            <li><strong>Legal requirements</strong> — if required by law or to protect our rights.</li>
-        </ul>
+ <p>For complete SMS terms and conditions, please see our <a href="terms.html">Terms & Conditions</a> which includes our Mobile Terms of Service.</p>
 
-        <h2>5. Cookies & Tracking</h2>
-        <p>Our website uses cookies to understand how visitors use our site and to improve your experience. You can disable cookies in your browser settings, though some features of the site may not function properly as a result.</p>
+ <h2>4. Information Sharing</h2>
+ <p><strong>We do not sell your personal information.</strong> We do not trade or rent your personal information to third parties. We may share information only in the following limited circumstances:</p>
+ <ul>
+ <li><strong>Service providers</strong> — trusted tools we use to operate our business (such as email delivery via Resend, SMS via Twilio, and analytics via Google Analytics), who are contractually required to protect your data.</li>
+ <li><strong>Legal requirements</strong> — if required by law or to protect our rights.</li>
+ <li><strong>Business transfers</strong> — if Piney Digital is acquired or merges with another entity, your information may be transferred.</li>
+ </ul>
 
-        <h2>6. Data Security</h2>
-        <p>We take reasonable precautions to protect your information. However, no method of transmission over the internet is 100% secure. We encourage you to contact us directly if you have concerns about your data.</p>
+ <h2>5. Cookies & Tracking</h2>
+ <p>Our website uses cookies and Google Analytics (Google tag G-16SZEY2J5E) to understand how visitors use our site and to improve your experience. You can disable cookies in your browser settings, though some features of the site may not function properly as a result. Google Analytics may collect anonymized IP addresses, device type, and pages visited. You can opt out of Google Analytics tracking by installing the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics Opt-out Browser Add-on</a>.</p>
 
-        <h2>7. Your Rights</h2>
-        <p>You have the right to:</p>
-        <ul>
-            <li>Request access to the personal information we hold about you</li>
-            <li>Request correction of inaccurate information</li>
-            <li>Request deletion of your information</li>
-            <li>Opt out of marketing communications at any time by replying STOP to SMS messages or clicking unsubscribe in emails</li>
-        </ul>
+ <h2>6. Data Security</h2>
+ <p>We take reasonable precautions to protect your information. However, no method of transmission over the internet is 100% secure. We encourage you to contact us directly if you have concerns about your data.</p>
 
-        <h2>8. Third-Party Links</h2>
-        <p>Our website may contain links to third-party websites. We are not responsible for the privacy practices of those sites and encourage you to review their privacy policies.</p>
+ <h2>7. Data Retention</h2>
+ <p>We retain contact-form submissions and communications for as long as our business relationship is active, plus up to 24 months for record-keeping. SMS opt-in records are retained while consent is active plus 12 months thereafter to document proof of consent. Analytics data is retained according to Google Analytics's default settings. You may request earlier deletion at any time by emailing <a href="mailto:joel@pineydigital.com">joel@pineydigital.com</a>.</p>
 
-        <h2>9. Changes to This Policy</h2>
-        <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated date. Continued use of our website after changes constitutes acceptance of the updated policy.</p>
+ <h2>8. Your Rights</h2>
+ <p>If you are a Texas resident, you have rights under the Texas Data Privacy and Security Act (TDPSA, effective July 1, 2024), including the right to:</p>
+ <ul>
+ <li>Confirm whether we are processing your personal data and access that data</li>
+ <li>Request correction of inaccurate personal data</li>
+ <li>Request deletion of your personal data</li>
+ <li>Opt out of marketing communications at any time by replying STOP to SMS messages or clicking unsubscribe in emails</li>
+ </ul>
+ <p>California residents have additional rights under the California Consumer Privacy Act (CCPA/CPRA). European Union residents have rights under the GDPR. To exercise any of these rights, contact us at <a href="mailto:joel@pineydigital.com">joel@pineydigital.com</a> and we will respond within 30 days.</p>
 
-        <div class="contact-box">
-            <h3>Questions About This Policy?</h3>
-            <p>Contact us at:</p>
-            <p><strong>Email:</strong> <a href="mailto:joel@pineydigital.com">joel@pineydigital.com</a></p>
-            <p><strong>Phone:</strong> <a href="tel:+19362999897">(936) 299-9897</a></p>
-            <p><strong>Address:</strong> Lufkin, Texas</p>
-            <p>We're a small local business and happy to help with any questions.</p>
-        </div>
-    </div>
+ <h2>10. International Visitors</h2>
+ <p>Piney Digital is based in the United States and does not target or knowingly market to residents of the European Economic Area (EEA), the United Kingdom, or California specifically. If you are an international visitor, by using our site you understand your information will be transferred to and processed in the United States. EEA and UK residents may exercise any rights they have under the GDPR by emailing <a href="mailto:joel@pineydigital.com">joel@pineydigital.com</a>. California residents have rights under the California Consumer Privacy Act (CCPA/CPRA) including the right to know, delete, correct, and opt out of the sale or sharing of personal information; we do not sell personal information.</p>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="index.html" class="footer-logo">
-                        <span>🌲</span>
-                        <span>Piney Digital</span>
-                    </a>
-                    <p class="footer-tagline">I build the systems that stop the operational bleed.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Navigation</h4>
-                    <a href="index.html">Homepage</a>
-                    <a href="capabilities.html">Capabilities</a>
-                    <a href="blog.html">Blog</a>
-                    <a href="pricing.html">Pricing</a>
-                    <a href="about.html">About</a>
-                    <a href="faq.html">FAQ</a>
-                    <a href="contact.html">Contact</a>
-                </div>
-                <div class="footer-links">
-                    <h4>Legal</h4>
-                    <a href="privacy.html">Privacy Policy</a>
-                    <a href="terms.html">Terms & Conditions</a>
-                </div>
-                <div class="footer-links">
-                    <h4>Connect</h4>
-                    <a href="tel:9362999897">(936) 299-9897</a>
-                    <a href="mailto:joel@pineydigital.com">joel@pineydigital.com</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Piney Digital. All rights reserved.</p>
-                <p>Built with ❤️ for growing businesses</p>
-            </div>
-        </div>
-    </footer>
+ <h2>11. Do Not Sell or Share My Personal Information</h2>
+ <p>Piney Digital does not sell or share personal information for cross-context behavioral advertising. If you wish to formally record this preference, email <a href="mailto:joel@pineydigital.com">joel@pineydigital.com</a> with the subject line "Do Not Sell or Share" and we will record your preference in our system. We honor Global Privacy Control (GPC) signals from your browser where technically feasible.</p>
+ </div>
 
-    <script src="js/modern.js"></script>
-    <script src="js/chat.js"></script>
+ <!-- Footer -->
+ <footer class="footer">
+ <div class="container">
+ <div class="footer-grid">
+ <div class="footer-brand">
+ <a href="index.html" class="footer-logo">
+ <span>🌲</span>
+ <span>Piney Digital</span>
+ </a>
+ <p>Custom software and websites for Texas service businesses.</p>
+ <p class="footer-service-area" style=" font-size: 0.85rem; margin-top: 0.5rem;">Proudly serving Lufkin, Nacogdoches, Tyler, Conroe, Cleveland, and Houston, TX.</p>
+ </div>
+ <div class="footer-links">
+ <h3>Navigation</h3>
+ <ul>
+ <li><a href="index.html">Homepage</a></li>
+ <li><a href="capabilities.html">Capabilities</a></li>
+ <li><a href="blog.html">Blog</a></li>
+ <li><a href="pricing.html">Pricing</a></li>
+ <li><a href="about.html">About</a></li>
+ <li><a href="faq.html">FAQ</a></li>
+ <li><a href="contact.html">Contact</a></li>
+ </ul>
+ </div>
+ <div class="footer-links">
+ <h3>Legal</h3>
+ <ul>
+ <li><a href="privacy.html">Privacy Policy</a></li>
+ <li><a href="terms.html">Terms & Conditions</a></li>
+ </ul>
+ </div>
+ <div class="footer-links">
+ <h3>Connect</h3>
+ <ul>
+ <li><a href="tel:9362999897">(936) 299-9897</a></li>
+ <li><a href="mailto:joel@pineydigital.com">joel@pineydigital.com</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="footer-bottom">
+ <p>&copy; 2026 Piney Digital. All rights reserved.</p>
+ <p>Built with ❤️ for growing businesses</p>
+ </div>
+ </div>
+ </footer>
+
+ <script src="js/modern.js"></script>
+ <script src="js/chat.js"></script>
 </body>
 </html>
