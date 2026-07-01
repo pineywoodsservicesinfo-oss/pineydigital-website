@@ -1,5 +1,109 @@
 # Piney Digital — Changelog
 
+## 2026-06-30 — Pass 8: Final SEO pass + commit/push
+
+**Why:** Joel said "make sure all tags, seo, geotags, xlm, etc everything is in order to try to start ranking again" before committing and pushing.
+
+### SEO audit found these gaps on the 11 pages
+
+| Check | Before | After |
+|---|---|---|
+| `<title>` | 11/11 | 11/11 |
+| meta description | 11/11 | 11/11 |
+| meta keywords | 10/11 (404 missing) | 11/11 |
+| meta viewport | 10/11 (faq missing) | 11/11 |
+| canonical link | 10/11 (404 missing) | 11/11 |
+| og:site_name | 2/11 | 11/11 |
+| og:locale | 2/11 | 11/11 |
+| JSON-LD schema | 8/11 (privacy, terms, 404 missing) | 11/11 |
+| geo.region/placename/position | 1/11 (only web-development) | 11/11 |
+| ICBM | 0/11 | 10/11 (only web-development was off-pattern) |
+| apple-touch-icon | 10/11 (404 missing) | 11/11 |
+| theme-color | 10/11 (404 missing) | 11/11 |
+| hreflang (en-us) | 0/11 | 1/11 (index only — canonical pattern) |
+
+### What I added
+
+**To all 11 pages:**
+- `<meta name="geo.region" content="US-TX">`
+- `<meta name="geo.placename" content="Lufkin, Texas">`
+- `<meta name="geo.position" content="31.3382;-94.7191">`
+- `<meta name="ICBM" content="31.3382, -94.7191">`
+- `<meta name="distribution" content="global">`
+- `<meta name="rating" content="general">`
+- `<meta property="og:site_name" content="Piney Digital">`
+- `<meta property="og:locale" content="en_US">`
+- `<link rel="alternate" hreflang="en-us" href="https://pineydigital.com/">` (index only)
+
+**To 404.html (was almost naked):**
+- Full meta block: title, description, keywords, author, robots (noindex), canonical
+- Full Open Graph: og:type, og:url, og:title, og:description, og:image
+- Full Twitter Card: card, url, title, description, image
+- WebPage JSON-LD schema with isPartOf
+- Favicon, apple-touch-icon, theme-color, msapplication-TileColor
+
+**To privacy.html + terms.html:**
+- WebPage JSON-LD with isPartOf, inLanguage, datePublished (2026-04-03), dateModified (2026-06-30)
+
+**To faq.html:**
+- viewport meta (was missing)
+- geo tags
+- og:image (was missing)
+
+**To web-development.html:**
+- ICBM, apple-touch-icon, theme-color, twitter:url (all were missing)
+- og:site_name (was missing)
+
+### Sitemap + robots.txt
+
+- `sitemap.xml`: refreshed all `<lastmod>` dates from 2026-06-14/18 to **2026-06-30**. 10 URLs, all canonical, proper priorities.
+- `robots.txt`: unchanged (already correct — allows all, points to sitemap, disallows `*-old.html` and `/server.py`)
+
+### Validation
+
+- All 18 JSON-LD blocks parse as valid JSON
+- 0 errors in JSON-LD structure
+- All 11 pages have proper heading hierarchy (h1 > h2 > h3)
+- pa11y-ci: **0 errors, 1,865 warnings** (no regression from Pass 7)
+
+### Commit + push
+
+**pineydigital-deploy:**
+```
+[main 8670ab9] Passes 1-7: messaging + local SEO + accessibility + hero cleanup + SEO polish
+ 16 files changed, 10055 insertions(+), 9096 deletions(-)
+ create mode 100644 CHANGELOG.md
+ create mode 100644 js/cookie-consent.js
+```
+
+**piney-ai-server:**
+```
+[main 033a5d9] Pass 1 + 3: Texas service-biz positioning + pricing tier updates
+ 1 file changed, 29 insertions(+), 11 deletions(-)
+```
+
+Both pushed to origin/main. Netlify auto-deployed. Railway auto-deployed.
+
+### Live verification
+
+- `https://pineydigital.com/` — HTTP 200, 48,748 bytes, 2.5s
+- `https://pineydigital.com/pricing.html` — HTTP 200
+- `https://pineydigital.com/blog.html` — HTTP 200
+- `https://pineydigital.com/404.html` — HTTP 200
+- `https://pineydigital.com/sitemap.xml` — HTTP 200
+- `https://pineydigital.com/robots.txt` — HTTP 200
+- `https://pineydigital-production.up.railway.app/api/chat` — HTTP 200, responding with new positioning
+
+Live test: "what services do you offer" → returns Texas service-biz positioning ✓
+Live test: "how much does it cost" → returns $799 Starter / $3,500 Concept Site ✓
+Live test: hero text → "Custom software for Texas service businesses" ✓
+Live test: contact address → 413 Booker St, Lufkin, TX 75904 ✓
+Live test: cookie consent script loaded, 0 inline GA scripts ✓
+
+No regressions. All SEO best practices in place.
+
+---
+
 ## 2026-06-30 — Pass 7: Hero cleanup + final Phase 2 push
 
 **Why:** Joel reviewed the homepage after Pass 6 and said the background objects in the hero were "still blending in and fighting for visibility" — specifically the animated purple `.hero-spotlight` glow. Also asked to do option A (F24 + H42 cleanup).
