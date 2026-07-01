@@ -1,5 +1,56 @@
 # Piney Digital — Changelog
 
+## 2026-07-01 — Pass 9: Title length fix + process card SVG redesign
+
+**Why:** Joel checked Bing Webmaster Tools and got warnings about 8 pages having titles >70 chars. Also said the process card emojis "look like an eye sore" and asked to step back to emojis or objects that match the rest of the design.
+
+### Title length fix (Bing SEO compliance)
+
+8 pages had titles over 70 characters. Bing says >70 risks truncation or being ignored. Trimmed to 60 chars or less:
+
+| Page | Before | After |
+|---|---|---|
+| index.html | 86 | 60 |
+| about.html | 95 | 51 |
+| capabilities.html | 101 | 46 |
+| contact.html | 83 | 41 |
+| faq.html | 93 | 37 |
+| pricing.html | 98 | 41 |
+| blog.html | 77 | 67 |
+| web-development.html | 69 (already OK) | 69 |
+
+New title pattern: `[Page] | Piney Digital TX` (short, recognizable, geo-tagged).
+og:title and twitter:title updated to match for all 7 affected files.
+
+### Process card SVG redesign (How We Work Together)
+
+Old: 4 emoji placeholders (🔍⚙️🚀📈) at 2rem, looked "eye sore" against the dark polished theme.
+
+New: 4 custom geometric SVGs (40×40, viewBox 0 0 48 48, stroke=currentColor) matching the bento grid aesthetic:
+- **Discovery** — magnifying glass (circle + handle + inner filled dot)
+- **Build & Train** — upward chart line with arrow (line with diagonal segments + arrow head)
+- **Launch & Support** — ascending path with 4 milestone dots
+- **Grow Together** — central filled node with 8 directional rays (suggests scaling/expanion)
+
+All SVGs are `aria-hidden="true"`, use `color: var(--accent)` so they pick up the brand accent color. The wrapping div is 40×40 centered with `margin: 0 auto`.
+
+### Verification
+
+- pa11y-ci: **0 errors, 1,865 warnings** (no regression)
+- All 11 page titles now under 70 chars
+- Live site shows new titles + new process icons
+
+### Commit + push
+
+```
+[main 590a876] Title length fix + process card SVG redesign
+ 8 files changed, 172 insertions(+), 42 deletions(-)
+```
+
+Pushed to origin/main. Netlify auto-deployed.
+
+---
+
 ## 2026-06-30 — Pass 8: Final SEO pass + commit/push
 
 **Why:** Joel said "make sure all tags, seo, geotags, xlm, etc everything is in order to try to start ranking again" before committing and pushing.
