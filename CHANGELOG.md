@@ -1,5 +1,36 @@
 # Piney Digital — Changelog
 
+## 2026-07-01 — Pass 10: Work card illustrations fix (object-matching SVGs)
+
+**Why:** Joel clarified Pass 9 — the change he wanted was on the Capabilities/work section cards (Restaurant Analytics Platform, The Meridian Hotels, APEX Aviation), not "How We Work Together" which was fine. The initials+subtitle pattern on the work cards still looked "eye sore" — wanted real object-matching illustrations.
+
+### What changed
+
+Replaced the `.work-initial` (RAP, M, APX) + `.work-subtitle` text labels with 3 custom object-matching geometric SVGs:
+
+- **Restaurant Analytics Platform** — bar chart with 4 rising bars + ascending trend line with milestone dots (represents a multi-location analytics dashboard)
+- **The Meridian Hotels** — hotel building facade, 3 floors × 5 windows + roofline with central flagpole (represents a luxury boutique hotel chain)
+- **APEX Aviation** — jet airplane silhouette with swept-back wing + 5 motion lines (represents a private jet charter platform)
+
+All 100×100 viewBox, `stroke="currentColor"`, white at 0.85 opacity, picks up the card's gradient background. CSS: 96×96 rendered size, `color: var(--text-primary)`, `z-index: 1` so it sits on top of the radial-gradient highlight.
+
+### Verification
+
+- pa11y-ci: **0 errors, 1,859 warnings** (down 6 from Pass 9 because removing the gradient-text on `.work-initial` cleared 6 warnings)
+- Live verification confirms 3 SVG illustrations rendering, no initials/subtitles left in markup
+- "How We Work Together" section untouched (was correct all along)
+
+### Commit + push
+
+```
+[main ad3de8c] Work card illustrations: replace initials+subtitle with object-matching SVGs
+ 3 files changed, 148 insertions(+), 66 deletions(-)
+```
+
+Pushed to origin/main. Netlify auto-deployed.
+
+---
+
 ## 2026-07-01 — Pass 9: Title length fix + process card SVG redesign
 
 **Why:** Joel checked Bing Webmaster Tools and got warnings about 8 pages having titles >70 chars. Also said the process card emojis "look like an eye sore" and asked to step back to emojis or objects that match the rest of the design.
