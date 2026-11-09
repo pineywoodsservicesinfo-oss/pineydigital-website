@@ -641,6 +641,10 @@
  .nav-contact:hover {
  }
 
+ /* Standard site nav on this page: keep the logo on one line */
+ nav.nav .nav-logo { flex-shrink: 0; }
+ nav.nav .nav-logo-text { white-space: nowrap; }
+
  /* Exit Banner */
  .exit-banner {
  position: fixed;
@@ -808,13 +812,62 @@
  <div class="scroll-progress-top" id="progressBar"></div>
 
  <!-- Navigation -->
- <nav class="nav-immersive" id="navImmersive">
+ <nav class="nav" id="nav" aria-label="Primary">
+ <div class="nav-container">
  <a href="/" class="nav-logo">
- <span class="logo-icon">🌲</span>
- <span>Piney Digital</span>
+ <span class="nav-logo-icon">🌲</span>
+ <span class="nav-logo-text">Piney Digital</span>
  </a>
- <a href="tel:936-299-9897" class="nav-contact">(936) 299-9897</a>
+ <ul class="nav-links">
+ <li><a href="/" class="nav-link">Homepage</a></li>
+ <li><a href="/capabilities" class="nav-link">Capabilities</a></li>
+ <li><a href="/services/" class="nav-link">Services</a></li>
+ <li><a href="/blog.html" class="nav-link active">Blog</a></li>
+ <li><a href="/pricing" class="nav-link">Pricing</a></li>
+ <li><a href="/about" class="nav-link">About</a></li>
+ <li><a href="/faq" class="nav-link">FAQ</a></li>
+ <li><a href="/contact" class="nav-link">Contact</a></li>
+ </ul>
+ <div class="nav-actions">
+ <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+ <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+ <circle cx="12" cy="12" r="5"></circle>
+ <line x1="12" y1="1" x2="12" y2="3"></line>
+ <line x1="12" y1="21" x2="12" y2="23"></line>
+ <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+ <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+ <line x1="1" y1="12" x2="3" y2="12"></line>
+ <line x1="21" y1="12" x2="23" y2="12"></line>
+ <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+ <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+ </svg>
+ <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+ <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+ </svg>
+ </button>
+ <a href="/contact" class="nav-cta">
+ <span>Start Project</span>
+ </a>
+ <button class="nav-menu-toggle" id="menuToggle" aria-label="Toggle menu">
+ <span></span><span></span><span></span>
+ </button>
+ </div>
+ </div>
  </nav>
+
+ <!-- Mobile Menu -->
+ <div class="mobile-menu" id="mobileMenu">
+ <ul class="mobile-menu-content">
+ <li><a href="/" class="mobile-link">Homepage</a></li>
+ <li><a href="/capabilities" class="mobile-link">Capabilities</a></li>
+ <li><a href="/services/" class="mobile-link">Services</a></li>
+ <li><a href="/blog.html" class="mobile-link">Blog</a></li>
+ <li><a href="/pricing" class="mobile-link">Pricing</a></li>
+ <li><a href="/about" class="mobile-link">About</a></li>
+ <li><a href="/faq" class="mobile-link">FAQ</a></li>
+ <li><a href="/contact" class="mobile-link">Contact</a></li>
+ </ul>
+ </div>
 
  <!-- Frame Background - Canvas for GPU-accelerated rendering -->
  <div id="frame-container" id="main">
@@ -1501,5 +1554,6 @@
  </div>
  </div>
 </footer>
+<script src="js/modern.js"></script>
 </body>
 </html>
