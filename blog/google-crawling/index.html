@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+ <!-- Cookie consent — loads Google Analytics only after user consent -->
+ <script src="../../js/cookie-consent.js" defer></script>
+<meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="geo.region" content="US-TX">
+<meta name="geo.placename" content="Lufkin, Texas">
+<meta name="geo.position" content="31.3382;-94.7191">
+<meta name="ICBM" content="31.3382, -94.7191">
+<meta name="distribution" content="global">
+<meta name="rating" content="general">
+
+ <title>Google Crawling, Sitemaps, and the Backend Work That Gets You Found | Piney Digital</title>
+ <meta name="description" content="The technical side of SEO — how Google finds, indexes, and ranks your website.">
+ <meta name="keywords" content="custom software blog, Texas service business insights, multi-location operations, custom website tips, Lufkin web design, small business software, field service operations">
+ <meta name="author" content="Joel Escoto">
+ <link rel="canonical" href="https://pineydigital.com/blog/google-crawling/">
+ <meta name="robots" content="index, follow">
+ <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+
+ <!-- Open Graph -->
+ <meta property="og:type" content="website">
+<meta property="og:site_name" content="Piney Digital">
+<meta property="og:locale" content="en_US">
+ <meta property="og:url" content="https://pineydigital.com/blog/google-crawling/">
+ <meta property="og:title" content="Google Crawling, Sitemaps, and the Backend Work That Gets You Found">
+ <meta property="og:description" content="The technical side of SEO — how Google finds, indexes, and ranks your website.">
+ <meta property="og:image" content="https://pineydigital.com/images/og-blog.png">
+
+ <!-- Twitter Card -->
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:title" content="Google Crawling, Sitemaps, and the Backend Work That Gets You Found">
+ <meta name="twitter:description" content="The technical side of SEO — how Google finds, indexes, and ranks your website.">
+ <meta name="twitter:image" content="https://pineydigital.com/images/og-blog.png">
+ <link rel="icon" type="image/png" sizes="96x96" href="../../favicon-96x96.png">
+ 
+ <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+ <link rel="manifest" href="../../site.webmanifest">
+ <meta name="theme-color" content="#1e5a8e">
+ <meta name="msapplication-TileColor" content="#0a0a0f">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="../../css/modern.css">
+
+ <!-- Structured Data for AI Search -->
+ 
+
+ <!-- BreadcrumbList Schema -->
+ 
+ <style>
+ .blog-hero {
+ padding: 140px 0 60px;
+ min-height: auto;
+ }
+ .blog-pills {
+ display: flex;
+ flex-wrap: wrap;
+ gap: 0.75rem;
+ margin-top: 1.5rem;
+ }
+ .blog-pill {
+ padding: 0.5rem 1rem;
+ background: rgba(255, 255, 255, 0.08);
+ border: 1px solid rgba(255, 255, 255, 0.15);
+ border-radius: 999px;
+ font-size: 0.875rem;
+ font-weight: 500;
+ }
+ .articles-grid {
+ display: grid;
+ grid-template-columns: repeat(2, 1fr);
+ gap: 2rem;
+ }
+ @media (max-width: 900px) {
+ .articles-grid {
+ grid-template-columns: 1fr;
+ }
+ }
+ .article-card {
+ background: rgba(18, 18, 26, 0.95);
+ border: 1px solid rgba(255, 255, 255, 0.12);
+ border-radius: 20px;
+ padding: 2rem;
+ transition: transform 0.3s ease, box-shadow 0.3s ease;
+ box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+ }
+ .article-card:hover {
+ transform: translateY(-4px);
+ box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+ }
+ .article-card__meta {
+ display: flex;
+ flex-wrap: wrap;
+ gap: 0.5rem;
+ margin-bottom: 1rem;
+ }
+ .article-card__tag {
+ display: inline-flex;
+ align-items: center;
+ gap: 0.4rem;
+ padding: 0.35rem 0.75rem;
+ border-radius: 999px;
+ font-size: 0.7rem;
+ font-weight: 700;
+ letter-spacing: 0.05em;
+ text-transform: uppercase;
+ }
+ .article-card__tag--primary {
+ background: rgba(30, 90, 142, 0.15);
+ }
+ .article-card__tag--accent {
+ background: rgba(45, 127, 78, 0.15);
+ }
+ .article-card__title {
+ font-size: 1.5rem;
+ margin-bottom: 0.75rem;
+ line-height: 1.3;
+ }
+ .article-card__excerpt {
+ line-height: 1.7;
+ margin-bottom: 1.5rem;
+ }
+ .posts-section {
+ padding: 80px 0;
+ background: rgba(10, 10, 15, 0.5);
+ }
+ .blog-post {
+ background: rgba(18, 18, 26, 0.95);
+ border: 1px solid rgba(255, 255, 255, 0.12);
+ border-radius: 24px;
+ padding: 3rem;
+ box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+ }
+ margin-bottom: 2rem;
+ }
+ .blog-post__meta {
+ font-size: 0.9rem;
+ margin-bottom: 1.5rem;
+ }
+ .blog-post__content {
+ line-height: 1.9;
+ font-size: 1.05rem;
+ }
+ .blog-post__content h3,
+ .blog-post__content h4 {
+ margin: 2rem 0 1rem;
+ }
+ .blog-post__content ul,
+ .blog-post__content ol {
+ padding-left: 1.25rem;
+ margin: 1rem 0;
+ }
+ .blog-post__content li + li {
+ margin-top: 0.5rem;
+ }
+ .blog-post__content a {
+ }
+ .post-highlight {
+ background: linear-gradient(135deg, rgba(45, 127, 78, 0.1) 0%, rgba(30, 90, 142, 0.1) 100%);
+ border: 1px solid var(--accent);
+ border-radius: 12px;
+ padding: 1.25rem 1.5rem;
+ margin: 1.5rem 0;
+ }
+ .post-highlight strong {
+ }
+ .post-cta {
+ text-align: center;
+ border-top: 1px solid var(--border);
+ padding-top: 2rem;
+ margin-top: 2rem;
+ }
+ .post-cta p {
+ font-weight: 600;
+ margin-bottom: 1rem;
+ }
+ @media (max-width: 768px) {
+ .blog-hero {
+ padding: 100px 0 40px;
+ }
+ .blog-post {
+ padding: 1.5rem;
+ }
+ .article-card {
+ padding: 1.5rem;
+ }
+ }
+
+ /* Hidden cards and show more button */
+ .hidden-card {
+ display: none;
+ }
+ .hidden-card.show {
+ display: block;
+ }
+ .show-more-container {
+ text-align: center;
+ margin-top: 2rem;
+ }
+ .show-more-btn {
+ display: inline-flex;
+ align-items: center;
+ gap: 0.5rem;
+ padding: 0.875rem 2rem;
+ background: rgba(255, 255, 255, 0.05);
+ border: 1px solid rgba(255, 255, 255, 0.15);
+ border-radius: 12px;
+ font-size: 0.9375rem;
+ font-weight: 500;
+ cursor: pointer;
+ transition: all 0.3s ease;
+ }
+ .show-more-btn:hover {
+ background: rgba(255, 255, 255, 0.1);
+ border-
+ }
+ .show-more-btn svg {
+ transition: transform 0.3s ease;
+ }
+ .show-more-btn.expanded svg {
+ transform: rotate(180deg);
+ }
+ .show-more-btn.expanded span {
+ content: 'Show Less';
+ }
+ </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Google Crawling, Sitemaps, and the Backend Work That Gets You Found",
+  "description": "The technical side of SEO — how Google finds, indexes, and ranks your website.",
+  "mainEntityOfPage": "https://pineydigital.com/blog/google-crawling/",
+  "author": {
+    "@type": "Person",
+    "name": "Joel Escoto"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Piney Digital",
+    "url": "https://pineydigital.com"
+  },
+  "datePublished": "2026-04-03"
+}
+</script>
+</head>
+<body>
+ <a href="#main" class="skip-link">Skip to main content</a>
+ <div class="noise-overlay"></div>
+ <div class="cursor-glow" id="cursorGlow"></div>
+
+ <!-- Navigation -->
+ <nav class="nav" id="nav" aria-label="Primary">
+ <div class="nav-container">
+ <a href="/" class="nav-logo">
+ <span class="nav-logo-icon">🌲</span>
+ <span class="nav-logo-text">Piney Digital</span>
+ </a>
+ <ul class="nav-links">
+ <li><a href="/" class="nav-link">Homepage</a></li>
+ <li><a href="/capabilities" class="nav-link">Capabilities</a></li>
+ <li><a href="/blog" class="nav-link active">Blog</a></li>
+ <li><a href="/pricing" class="nav-link">Pricing</a></li>
+ <li><a href="/about" class="nav-link">About</a></li>
+ <li><a href="/faq" class="nav-link">FAQ</a></li>
+ <li><a href="/contact" class="nav-link">Contact</a></li>
+ </ul>
+ <div class="nav-actions">
+ <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+ <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+ <circle cx="12" cy="12" r="5"></circle>
+ <line x1="12" y1="1" x2="12" y2="3"></line>
+ <line x1="12" y1="21" x2="12" y2="23"></line>
+ <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+ <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+ <line x1="1" y1="12" x2="3" y2="12"></line>
+ <line x1="21" y1="12" x2="23" y2="12"></line>
+ <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+ <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+ </svg>
+ <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+ <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+ </svg>
+ </button>
+ <a href="/contact" class="nav-cta">
+ <span>Start Project</span>
+ </a>
+ <button class="nav-menu-toggle" id="menuToggle" aria-label="Toggle menu">
+ <span></span><span></span><span></span>
+ </button>
+ </div>
+ </div>
+ </nav>
+
+ <!-- Mobile Menu -->
+ <div class="mobile-menu" id="mobileMenu">
+ <ul class="mobile-menu-content">
+ <li><a href="/" class="mobile-link">Homepage</a></li>
+ <li><a href="/capabilities" class="mobile-link">Capabilities</a></li>
+ <li><a href="/blog" class="mobile-link">Blog</a></li>
+ <li><a href="/pricing" class="mobile-link">Pricing</a></li>
+ <li><a href="/about" class="mobile-link">About</a></li>
+ <li><a href="/faq" class="mobile-link">FAQ</a></li>
+ <li><a href="/contact" class="mobile-link">Contact</a></li>
+ </ul>
+ </div>
+
+ <main id="main">
+<section class="posts-section"><div class="container">
+<p class="blog-back"><a href="/blog">&larr; All articles</a></p>
+<article class="blog-post">
+ <span class="section-label section-label--primary">Technical SEO</span>
+ <h1>Google Crawling, Sitemaps, and the Backend Work That Gets You Found</h1>
+ <p class="blog-post__meta">April 3, 2026 • 8 min read</p>
+
+ <div class="blog-post__content">
+ <p>You launched your website. It looks great. But when you search for your business on Google... nothing shows up. Or worse, you're buried on page 5.</p>
+
+ <p>This is where most business owners start asking: "How do I get on Google?" The answer involves understanding what happens behind the scenes — the technical work that most people never see but that determines whether your site gets found at all.</p>
+
+ <h3>Step 1: Google Has to Find You (Crawling)</h3>
+ <p>Google uses automated programs called "crawlers" or "spiders" (officially named Googlebot) to discover websites. These bots follow links from page to page, reading content as they go.</p>
+
+ <p>Think of it like a librarian walking through a library. If there's no map and no signs, the librarian might miss entire sections. That's what happens to websites without proper structure.</p>
+
+ <h4>How Googlebot finds your site</h4>
+<ul>
+ <li>Links from other websites pointing to yours</li>
+ <li>Your XML sitemap (more on this below)</li>
+ <li>Direct submission through Google Search Console</li>
+ <li>Social media mentions and shares</li>
+ </ul>
+
+ <p>If your site is brand new and has no incoming links, Google might not know it exists yet. That's normal — but it's fixable.</p>
+
+ <h3>Step 2: Google Has to Understand You (Indexing)</h3>
+ <p>Once Googlebot crawls your site, it sends the information back to Google's servers. Google then decides whether to add your pages to its index — the massive database of all webpages that can appear in search results.</p>
+
+ <h4>Common reasons pages don't get indexed</h4>
+<ul>
+ <li><code>noindex</code> tags accidentally left in the code</li>
+ <li>Pages blocked by robots.txt</li>
+ <li>Thin or duplicate content</li>
+ <li>Technical errors (404s, server errors, slow loading)</li>
+ <li>New site that hasn't been crawled yet</li>
+ </ul>
+
+ <p>You can check if your site is indexed by searching <code>site:yourdomain.com</code> in Google. If pages show up, you're indexed. If nothing appears, there's a problem to fix.</p>
+
+ <h3>The Sitemap: Your Map for Google</h3>
+ <p>An XML sitemap is exactly what it sounds like — a file that tells Google about every important page on your website. It's not for humans; it's a roadmap for search engines.</p>
+
+ <h4>What a sitemap includes</h4>
+<ul>
+ <li>URLs of all important pages</li>
+ <li>When each page was last updated</li>
+ <li>How often pages typically change (daily, weekly, monthly)</li>
+ <li>Priority levels (which pages matter most)</li>
+ </ul>
+
+ <div class="post-highlight">
+ <strong>Why this matters:</strong> Without a sitemap, Google might miss pages — especially if your site navigation isn't perfectly structured. A sitemap ensures nothing gets left behind.
+ </div>
+
+ <h3>Page Speed: The Hidden Ranking Factor</h3>
+ <p>Google officially uses page speed as a ranking signal. Slow sites rank lower, and users bounce faster. The technical term is "Core Web Vitals" — a set of metrics Google uses to measure user experience.</p>
+
+ <h4>What affects speed</h4>
+<ul>
+ <li>Image file sizes (big photos = slow loading)</li>
+ <li>Too many scripts or plugins</li>
+ <li>Slow hosting servers</li>
+ <li>Unoptimized code</li>
+ </ul>
+
+ <h3>Mobile-First: Google Judges Your Mobile Site First</h3>
+ <p>Since 2019, Google has used "mobile-first indexing." That means Google looks at your mobile site first to decide how to rank you — even for desktop searches.</p>
+
+ <p>If your site doesn't work well on phones, you're not just losing mobile customers. You're losing Google ranking across the board.</p>
+ </div>
+
+ <div class="post-cta">
+ <p>Want a site that's built right from day one?</p>
+ <a href="/contact" class="btn btn-primary">Get Your Free Audit</a>
+ </div>
+ </article>
+<p class="blog-back"><a href="/blog">&larr; Back to all articles</a></p>
+</div></section>
+</main>
+</main>
+
+ <!-- Footer -->
+ <footer class="footer">
+ <div class="container">
+ <div class="footer-grid">
+ <div class="footer-brand">
+ <a href="/" class="footer-logo">
+ <span>🌲</span>
+ <span>Piney Digital</span>
+ </a>
+ <p>Custom software and websites for Texas service businesses.</p>
+ <p class="footer-service-area" style=" font-size: 0.85rem; margin-top: 0.5rem;">Proudly serving Lufkin, Nacogdoches, Tyler, Conroe, Cleveland, and Houston, TX.</p>
+ </div>
+ <div class="footer-links">
+ <h3>Navigation</h3>
+ <ul>
+ <li><a href="/">Homepage</a></li>
+ <li><a href="/capabilities">Capabilities</a></li>
+ <li><a href="/blog">Blog</a></li>
+ <li><a href="/pricing">Pricing</a></li>
+ <li><a href="/about">About</a></li>
+ <li><a href="/faq">FAQ</a></li>
+ <li><a href="/contact">Contact</a></li>
+ </ul>
+ </div>
+ <div class="footer-links">
+ <h3>Legal</h3>
+ <ul>
+ <li><a href="/privacy">Privacy Policy</a></li>
+ <li><a href="/privacy#do-not-sell">Do Not Sell My Info</a></li>
+ <li><a href="/terms">Terms & Conditions</a></li>
+ </ul>
+ </div>
+ <div class="footer-links">
+ <h3>Connect</h3>
+ <ul>
+ <li><a href="tel:9362999897">(936) 299-9897</a></li>
+ <li><a href="mailto:joel@pineydigital.com">joel@pineydigital.com</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="footer-bottom">
+ <p>&copy; 2026 Piney Digital. All rights reserved.</p>
+ <p>Built with ❤️ for growing businesses</p>
+ </div>
+ </div>
+ </footer>
+
+ <script src="../../js/modern.js"></script>
+ <script src="../../js/chat.js"></script>
+ 
+</body>
+</html>
