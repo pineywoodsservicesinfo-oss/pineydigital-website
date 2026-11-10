@@ -220,7 +220,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contactForm');
     const formMessage = document.getElementById('formMessage');
 
-    if (contactForm) {
+    // Pages with their own submit handler (contact.html) set data-custom-handler so the form is not sent twice
+    if (contactForm && !contactForm.dataset.customHandler) {
         contactForm.addEventListener('submit', async function(e) {
             e.preventDefault();
 
@@ -249,6 +250,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     formMessage.textContent = 'Thanks! Joel will contact you within 24 hours.';
                     formMessage.style.display = 'block';
                     contactForm.reset();
+                    if (window.pineyTrack) window.pineyTrack('generate_lead', { lead_source: 'contact_form', form_location: 'home_page' });
                 } else {
                     throw new Error('Form submission failed');
                 }

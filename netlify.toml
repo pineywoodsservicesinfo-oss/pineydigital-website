@@ -198,9 +198,16 @@
   status = 301
   force = true
 
+# web-development was merged into the Websites service page
+[[redirects]]
+  from = "/web-development"
+  to = "/services/websites/"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "/web-development.html"
-  to = "/web-development"
+  to = "/services/websites/"
   status = 301
   force = true
 

@@ -280,6 +280,7 @@
 
         // If lead captured, show success message
         if (data.leadCaptured) {
+          if (window.pineyTrack) window.pineyTrack('generate_lead', { lead_source: 'chat_assistant' });
           addMessage("🎉 I've passed your info along to Joel. He'll reach out within 24 hours!", 'assistant');
         }
       } catch (error) {

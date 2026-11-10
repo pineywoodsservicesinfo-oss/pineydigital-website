@@ -671,6 +671,8 @@
  const formMessage = document.getElementById('formMessage');
 
  if (contactForm) {
+ // Tell js/modern.js this page handles the submit itself, so the form is only sent once
+ contactForm.dataset.customHandler = 'true';
  contactForm.addEventListener('submit', async function(e) {
  e.preventDefault();
 
@@ -681,11 +683,13 @@
  submitBtn.disabled = true;
 
  try {
- const formData = new FormData(this);
+ // The backend reads JSON (express.json), so send JSON rather than multipart form data
+ const data = Object.fromEntries(new FormData(this).entries());
  const response = await fetch(this.action, {
  method: 'POST',
- body: formData,
+ body: JSON.stringify(data),
  headers: {
+ 'Content-Type': 'application/json',
  'Accept': 'application/json'
  }
  });
@@ -695,6 +699,7 @@
  formMessage.textContent = 'Thanks! I\'ll review your message and respond within 24 hours.';
  formMessage.style.display = 'block';
  contactForm.reset();
+ if (window.pineyTrack) window.pineyTrack('generate_lead', { lead_source: 'contact_form', form_location: 'contact_page' });
  } else {
  throw new Error('Form submission failed');
  }

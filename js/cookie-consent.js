@@ -82,7 +82,7 @@
     banner.innerHTML = [
       '<div class="cookie-banner-inner">',
       '  <div class="cookie-banner-text">',
-      '    <p><strong>We use cookies for analytics.</strong> We use Google Analytics to understand how visitors use our site so we can improve it. We do not sell your data. <a href="/privacy" target="_blank">Privacy Policy</a> · <a href="/privacy#do-not-sell">Do Not Sell My Info</a></p>',
+      '    <p><strong>We use cookies for analytics.</strong> We use Google Analytics and Google Tag Manager to understand how visitors use our site and to measure our Google Ads. We do not sell your data. <a href="/privacy" target="_blank">Privacy Policy</a> · <a href="/privacy#do-not-sell">Do Not Sell My Info</a></p>',
       '  </div>',
       '  <div class="cookie-banner-actions">',
       '    <button type="button" id="cookie-decline" class="cookie-btn cookie-btn-secondary">Decline</button>',
@@ -113,6 +113,21 @@
       setTimeout(function() { banner.remove(); }, 300);
     });
   }
+
+  // Conversion events for Google Tag Manager. Pushed only after the visitor accepts cookies,
+  // so a conversion is never queued for someone who has not consented.
+  // In GTM, create a Custom Event trigger named after the event (e.g. generate_lead).
+  window.pineyTrack = function(eventName, params) {
+    if (getConsent() !== 'accepted') return;
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push(Object.assign({ event: eventName }, params || {}));
+  };
+
+  // Phone link clicks (tel:) count as conversions for a local service business
+  document.addEventListener('click', function(e) {
+    var link = e.target.closest && e.target.closest('a[href^="tel:"]');
+    if (link) window.pineyTrack('click_to_call', { phone_number: link.getAttribute('href').replace('tel:', '') });
+  });
 
   // Init: if consent was given before, load analytics immediately
   var existing = getConsent();
