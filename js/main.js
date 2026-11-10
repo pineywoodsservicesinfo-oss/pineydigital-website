@@ -245,7 +245,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             } catch (error) {
                 console.error('Form submission error:', error);
-                showMessage('Oops! Something went wrong. Please call us at (936) 299-9897 or try again later.', 'error');
+                showMessage('Oops! Something went wrong. Please call us at (936) 240-9881 or try again later.', 'error');
             } finally {
                 submitButton.disabled = false;
             }
@@ -356,7 +356,7 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('%c🌲 Piney Digital', 'color: #1e5a8e; font-size: 24px; font-weight: bold;');
     console.log('%cProfessional Web Design for East Texas Businesses', 'color: #2d7f4e; font-size: 14px;');
     console.log('%cBuilt with ❤️ in East Texas', 'color: #ff8c42; font-size: 12px;');
-    console.log('%cNeed a website? Call (936) 299-9897', 'color: #6b7280; font-size: 12px;');
+    console.log('%cNeed a website? Call (936) 240-9881', 'color: #6b7280; font-size: 12px;');
     
     // ==========================================
     // PERFORMANCE OPTIMIZATION

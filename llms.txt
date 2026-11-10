@@ -1,0 +1,38 @@
+# Piney Digital
+
+> Piney Digital builds custom websites, custom operational software, dashboards and integrations for Texas service businesses, especially multi-location businesses. Based in Lufkin, TX. Founded by Joel Escoto. Serves Lufkin, Nacogdoches, Tyler, Conroe, Cleveland and Houston, TX.
+
+Key facts:
+- Starter website: starts at $799. 3-5 pages, custom design, mobile-responsive, basic SEO, contact form. Delivered in 1-2 weeks.
+- Concept Site: starts at $3,500. 5-20 pages, custom design (no templates), SEO optimized, contact forms, analytics setup. Delivered in 2-3 weeks.
+- Custom software and platforms: quoted per project. Typically 6-10 weeks for core features, an admin dashboard and user accounts.
+- Every project includes training, documentation and 90 days of support. After that: Self-Hosted, Managed Care, or a Partner Retainer.
+- Clients own everything built for them: source code, documentation, domains, hosting accounts and business data.
+- Free 15-minute audit to see whether custom software or a new website is the right move.
+- Phone: (936) 240-9881
+
+## Services
+- [Services overview](https://pineydigital.com/services/): Websites, custom software, automation and dashboards for Texas service businesses.
+- [Websites](https://pineydigital.com/services/websites/): Custom-designed, mobile-responsive business websites. Starter from $799, Concept Site from $3,500.
+- [Custom software](https://pineydigital.com/services/custom-software/): Operational software built around how your business runs, with dashboards, user roles, admin panels and integrations. Quoted per project.
+- [Dashboards](https://pineydigital.com/services/dashboards/): Operational dashboards for multi-location businesses: compare stores, track costs and see week-over-week changes.
+- [Automation and integrations](https://pineydigital.com/services/automation/): Connect POS, CRM and accounting tools so information moves on its own.
+- [Web development and hosting](https://pineydigital.com/web-development): Website packages, process, managed hosting and common questions.
+
+## Company
+- [Pricing](https://pineydigital.com/pricing): Starter websites at $799, concept sites from $3,500, custom software quoted per project. No monthly fees required.
+- [Capabilities](https://pineydigital.com/capabilities): Websites, dashboards, booking systems, loyalty platforms and custom software.
+- [About](https://pineydigital.com/about): About Joel Escoto, founder of Piney Digital.
+- [FAQ](https://pineydigital.com/faq): Timelines, pricing, ownership and how custom software gets built.
+- [Lufkin and Nacogdoches](https://pineydigital.com/locations/lufkin-nacogdoches/): Local information for East Texas businesses.
+- [Contact](https://pineydigital.com/contact): Request a free 15-minute audit.
+
+## Blog
+- [All articles](https://pineydigital.com/blog)
+- [Concept Site vs. SaaS Platform: Which Do You Need?](https://pineydigital.com/blog/concept-vs-saas/)
+- [The Real Cost of Building a SaaS Platform](https://pineydigital.com/blog/saas-cost/)
+- [7 Signs Your Business Needs Custom Software](https://pineydigital.com/blog/custom-software-signs/)
+- [Why Multi-Location Businesses Need Custom Platforms](https://pineydigital.com/blog/multi-location/)
+- [What is Operational Bleed?](https://pineydigital.com/blog/operational-bleed/)
+- [Web Hosting Explained: What Texas Businesses Need to Know](https://pineydigital.com/blog/hosting/)
+- [Winning the Google Map Pack With Better NAP Consistency](https://pineydigital.com/blog/seo/)

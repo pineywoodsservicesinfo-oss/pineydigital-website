@@ -5,6 +5,7 @@
 (function() {
   const STORAGE_KEY = 'piney_cookie_consent';
   const REAL_GA_ID = 'G-16SZEY2J5E';
+  const GTM_ID = 'GTM-N53DKG27';
 
   // Check existing consent
   function getConsent() {
@@ -38,6 +39,22 @@
     window.gtag = gtag;
     gtag('js', new Date());
     gtag('config', REAL_GA_ID, { anonymize_ip: true });
+
+    loadTagManager();
+  }
+
+  // Load Google Tag Manager (Google Ads etc.) only after consent — standard GTM bootstrap
+  function loadTagManager() {
+    if (window.gtm_loaded) return;
+    window.gtm_loaded = true;
+
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+
+    var g = document.createElement('script');
+    g.async = true;
+    g.src = 'https://www.googletagmanager.com/gtm.js?id=' + GTM_ID;
+    document.head.appendChild(g);
   }
 
   // Disable analytics (remove any existing)
@@ -65,7 +82,7 @@
     banner.innerHTML = [
       '<div class="cookie-banner-inner">',
       '  <div class="cookie-banner-text">',
-      '    <p><strong>We use cookies for analytics.</strong> We use Google Analytics to understand how visitors use our site so we can improve it. We do not sell your data. <a href="privacy.html" target="_blank">Privacy Policy</a> · <a href="privacy.html#do-not-sell">Do Not Sell My Info</a></p>',
+      '    <p><strong>We use cookies for analytics.</strong> We use Google Analytics to understand how visitors use our site so we can improve it. We do not sell your data. <a href="/privacy" target="_blank">Privacy Policy</a> · <a href="/privacy#do-not-sell">Do Not Sell My Info</a></p>',
       '  </div>',
       '  <div class="cookie-banner-actions">',
       '    <button type="button" id="cookie-decline" class="cookie-btn cookie-btn-secondary">Decline</button>',

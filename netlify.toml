@@ -61,7 +61,7 @@
     # - connect-src = where AJAX/fetch requests can go
     # - frame-ancestors 'none' = no one can iframe this site
     # - upgrade-insecure-requests = force HTTPS for all resources
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdnjs.cloudflare.com https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://www.google.com https://pineydigital-production.up.railway.app; frame-ancestors 'none'; upgrade-insecure-requests;"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdnjs.cloudflare.com https://www.googletagmanager.com https://www.google-analytics.com https://www.googleadservices.com https://googleads.g.doubleclick.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://www.google.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://pineydigital-production.up.railway.app; frame-ancestors 'none'; upgrade-insecure-requests;"
 
     # Strict Transport Security (HSTS)
     # Forces browsers to ONLY use HTTPS for this domain.
@@ -142,11 +142,67 @@
   to = "/"
   status = 301
 
-# Redirect old portfolio.html to new capabilities.html (SEO)
+# Redirect old portfolio.html to the capabilities page (SEO)
 [[redirects]]
   from = "/portfolio.html"
-  to = "/capabilities.html"
+  to = "/capabilities"
   status = 301
+
+# One URL per page: .html versions 301 to the clean URL used by canonicals and the sitemap.
+# force = true is required because the .html files exist on disk.
+[[redirects]]
+  from = "/about.html"
+  to = "/about"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog.html"
+  to = "/blog"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/capabilities.html"
+  to = "/capabilities"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/contact.html"
+  to = "/contact"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/faq.html"
+  to = "/faq"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/pricing.html"
+  to = "/pricing"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/privacy.html"
+  to = "/privacy"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/terms.html"
+  to = "/terms"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/web-development.html"
+  to = "/web-development"
+  status = 301
+  force = true
 
 # Handle 404s - Netlify will use 404.html automatically
 # But we can explicitly handle SPA-style routing here if needed

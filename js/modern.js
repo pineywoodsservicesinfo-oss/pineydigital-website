@@ -2,6 +2,22 @@
 // PINEY DIGITAL - MODERN 2026/2027 INTERACTIONS
 // ==========================================
 
+// Only the home and contact pages load GSAP. On every other page, calling gsap threw an
+// error on the first line, which stopped the mobile menu and theme toggle from being wired up.
+// When GSAP is missing, provide no-op stand-ins so the rest of this file still runs.
+(function () {
+    if (typeof window.gsap !== 'undefined') return;
+    var noop = function () { return noopTween; };
+    var noopTween = { kill: noop, pause: noop, play: noop, to: noop, from: noop, fromTo: noop, set: noop };
+    window.gsap = {
+        registerPlugin: noop, to: noop, from: noop, fromTo: noop, set: noop,
+        timeline: function () { return noopTween; },
+        globalTimeline: { clear: noop }
+    };
+    window.ScrollTrigger = window.ScrollTrigger || { getAll: function () { return []; }, create: noop };
+    window.ScrollToPlugin = window.ScrollToPlugin || {};
+})();
+
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize GSAP plugins
     gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);

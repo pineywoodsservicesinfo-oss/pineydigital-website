@@ -252,7 +252,9 @@ h4 { font-size: 1.125rem; }
   border-bottom: 1px solid var(--border-color);
   transition: all var(--transition-base);
   max-width: 100vw;
-  overflow-x: hidden;
+  /* clip (not hidden) so the Services dropdown can extend below the bar */
+  overflow-x: clip;
+  overflow-y: visible;
 }
 
 .nav.scrolled {
@@ -2091,3 +2093,77 @@ textarea:focus-visible,
     flex: 1;
   }
 }
+
+/* Services sub-nav (desktop dropdown + mobile indented list) */
+.nav-item { position: relative; }
+.nav-item.has-sub > .nav-link { display: inline-flex; align-items: center; gap: 6px; }
+.nav-item.has-sub > .nav-link::before {
+  content: '';
+  order: 2;
+  width: 6px; height: 6px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg) translateY(-2px);
+  opacity: 0.7;
+}
+.nav-sub {
+  position: absolute;
+  top: 100%;
+  left: -16px;
+  min-width: 230px;
+  margin: 0;
+  padding: 8px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+  transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s;
+  z-index: 1000;
+}
+/* invisible bridge so the menu doesn't close while the pointer crosses the gap */
+.nav-item.has-sub::after { content: ''; position: absolute; left: 0; right: 0; top: 100%; height: 14px; }
+.nav-item.has-sub:hover > .nav-sub,
+.nav-item.has-sub:focus-within > .nav-sub {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.nav-sub li { margin: 0; display: block; width: 100%; }
+.nav-sub a {
+  display: block;
+  padding: 10px 14px;
+  border-radius: 8px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.nav-sub a:hover,
+.nav-sub a:focus-visible {
+  background: var(--bg-card-hover);
+  color: var(--text-primary);
+}
+.mobile-sub {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0 0 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-left: 2px solid var(--border-color);
+}
+.mobile-sublink {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+@media (prefers-reduced-motion: reduce) { .nav-sub { transition: none; } }

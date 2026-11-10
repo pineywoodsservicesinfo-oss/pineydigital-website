@@ -1,10 +1,24 @@
 # Robots.txt for Piney Digital
+# Search engines and AI answer engines are welcome to crawl and cite this site.
+
 User-agent: *
 Allow: /
-
-# Sitemap location
-Sitemap: https://pineydigital.com/sitemap.xml
-
-# Disallow old/backup files
 Disallow: /*-old.html
 Disallow: /server.py
+
+# Explicit permission for AI search and assistant crawlers
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /*-old.html
+Disallow: /server.py
+
+Sitemap: https://pineydigital.com/sitemap.xml

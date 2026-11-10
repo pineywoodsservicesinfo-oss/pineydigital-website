@@ -35,19 +35,19 @@
             "name": "Get a Quote",
             "short_name": "Quote",
             "description": "Start your project with a free consultation",
-            "url": "/contact.html"
+            "url": "/contact"
         },
         {
             "name": "Capabilities",
             "short_name": "Capabilities",
             "description": "See what I can build for your business",
-            "url": "/capabilities.html"
+            "url": "/capabilities"
         },
         {
             "name": "Pricing",
             "short_name": "Pricing",
             "description": "View enterprise software pricing",
-            "url": "/pricing.html"
+            "url": "/pricing"
         }
     ]
 }
