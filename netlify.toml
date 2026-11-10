@@ -80,12 +80,14 @@
 [[headers]]
   for = "/css/*"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    # Not fingerprinted, so let browsers revalidate (cheap 304s via ETag) instead of caching for a year
+    Cache-Control = "public, max-age=0, must-revalidate"
 
 [[headers]]
   for = "/js/*"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    # Not fingerprinted, so let browsers revalidate (cheap 304s via ETag) instead of caching for a year
+    Cache-Control = "public, max-age=0, must-revalidate"
 
 [[headers]]
   for = "/images/*"
