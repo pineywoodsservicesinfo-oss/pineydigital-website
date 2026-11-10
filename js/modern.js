@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const nav = document.getElementById('nav');
     const menuToggle = document.getElementById('menuToggle');
     const mobileMenu = document.getElementById('mobileMenu');
-    const mobileLinks = document.querySelectorAll('.mobile-link, .mobile-cta');
+    const mobileLinks = document.querySelectorAll('.mobile-link, .mobile-sublink, .mobile-cta');
 
     // Scroll effect for nav
     let lastScroll = 0;
@@ -61,19 +61,51 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Mobile menu toggle
-    if (menuToggle) {
+    function setMenu(open) {
+        if (!mobileMenu) return;
+        mobileMenu.classList.toggle('active', open);
+        if (menuToggle) {
+            menuToggle.classList.toggle('active', open);
+            menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+            menuToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        }
+        document.body.style.overflow = open ? 'hidden' : '';
+    }
+
+    if (menuToggle && mobileMenu) {
+        menuToggle.setAttribute('aria-controls', 'mobileMenu');
+        menuToggle.setAttribute('aria-expanded', 'false');
         menuToggle.addEventListener('click', function() {
-            mobileMenu.classList.toggle('active');
-            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+            setMenu(!mobileMenu.classList.contains('active'));
+        });
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && mobileMenu.classList.contains('active')) setMenu(false);
+        });
+        // If the window grows past the hamburger breakpoint, close the menu
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 1100 && mobileMenu.classList.contains('active')) setMenu(false);
         });
     }
 
     // Close mobile menu on link click
     mobileLinks.forEach(link => {
         link.addEventListener('click', function() {
-            mobileMenu.classList.remove('active');
-            document.body.style.overflow = '';
+            setMenu(false);
         });
+    });
+
+    // Section links that point at the page you're already on (e.g. /services/#dashboards while
+    // on /services/): close the menu first, then scroll, so the jump isn't lost.
+    document.addEventListener('click', function(e) {
+        const a = e.target.closest && e.target.closest('a[href*="#"]');
+        if (!a || a.origin !== location.origin || a.pathname !== location.pathname || a.hash.length < 2) return;
+        let target;
+        try { target = document.querySelector(decodeURIComponent(a.hash)); } catch (err) { return; }
+        if (!target) return;
+        e.preventDefault();
+        setMenu(false);
+        history.pushState(null, '', a.hash);
+        target.scrollIntoView({ block: 'start', behavior: 'instant' });
     });
 
     // ==========================================
@@ -653,4 +685,17 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     console.log('🌲 Piney Digital - Modern 2026 Design Loaded');
+});
+// Arriving on a page with a #section link (e.g. /services/#dashboards) did not land on the
+// section: the page's smooth scrolling was cut off when the layout shifted during load.
+// Jump instantly once the page has loaded, then once more after late layout shifts settle.
+// scroll-margin-top on the target keeps it below the fixed nav bar.
+window.addEventListener('load', function () {
+    if (!location.hash || location.hash.length < 2) return;
+    var target;
+    try { target = document.querySelector(decodeURIComponent(location.hash)); } catch (e) { return; }
+    if (!target) return;
+    var jump = function () { target.scrollIntoView({ block: 'start', behavior: 'instant' }); };
+    jump();
+    setTimeout(jump, 400);
 });

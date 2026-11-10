@@ -12,11 +12,11 @@ Key facts:
 - Phone: (936) 240-9881
 
 ## Services
-- [Services overview](https://pineydigital.com/services/): Websites, custom software, automation and dashboards for Texas service businesses.
+- [Services](https://pineydigital.com/services/): One page covering websites, custom software, multi-location dashboards and integrations, with pricing for each.
 - [Websites](https://pineydigital.com/services/websites/): Custom-designed, mobile-responsive business websites. Starter from $799, Concept Site from $3,500. Includes process, managed hosting and common questions.
-- [Custom software](https://pineydigital.com/services/custom-software/): Operational software built around how your business runs, with dashboards, user roles, admin panels and integrations. Quoted per project.
-- [Dashboards](https://pineydigital.com/services/dashboards/): Operational dashboards for multi-location businesses: compare stores, track costs and see week-over-week changes.
-- [Automation and integrations](https://pineydigital.com/services/automation/): Connect POS, CRM and accounting tools so information moves on its own.
+- [Custom software](https://pineydigital.com/services/#custom-software): Operational software built around how your business runs, with dashboards, user roles, admin panels and integrations. Quoted per project.
+- [Dashboards](https://pineydigital.com/services/#dashboards): Operational dashboards for multi-location businesses: compare stores, track costs and see week-over-week changes.
+- [Automation and integrations](https://pineydigital.com/services/#automation): Connect POS, CRM and accounting tools so information moves on its own.
 
 ## Company
 - [Pricing](https://pineydigital.com/pricing): Starter websites at $799, concept sites from $3,500, custom software quoted per project. No monthly fees required.

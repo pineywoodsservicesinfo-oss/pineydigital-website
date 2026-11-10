@@ -198,6 +198,43 @@
   status = 301
   force = true
 
+# Custom software, dashboards and automation were merged into the single Services page
+[[redirects]]
+  from = "/services/custom-software"
+  to = "/services/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/custom-software/*"
+  to = "/services/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/dashboards"
+  to = "/services/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/dashboards/*"
+  to = "/services/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/automation"
+  to = "/services/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/automation/*"
+  to = "/services/"
+  status = 301
+  force = true
+
 # web-development was merged into the Websites service page
 [[redirects]]
   from = "/web-development"
