@@ -280,7 +280,13 @@ h4 { font-size: 1.125rem; }
 }
 
 .nav-logo-icon {
-  font-size: 1.5rem;
+  display: inline-flex;
+  color: #818cf8;
+}
+
+.footer-logo-icon {
+  display: inline-flex;
+  color: #818cf8;
 }
 
 .nav-logo-text {

@@ -17,4 +17,5 @@ server.js
 Thumbs.db
 
 # Logs
-*.log
+*.logtools/og/_build/
+tools/favicon/_build/

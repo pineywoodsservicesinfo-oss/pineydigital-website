@@ -4,7 +4,7 @@
 
 Key facts:
 - Starter website: starts at $799. 3-5 pages, custom design, mobile-responsive, basic SEO, contact form. Delivered in 1-2 weeks.
-- Concept Site: starts at $3,500. 5-20 pages, custom design (no templates), SEO optimized, contact forms, analytics setup. Delivered in 2-3 weeks.
+- Concept Site: starts at $3,500. Everything in Starter, plus 5-20 pages, custom design (no templates), SEO optimized, contact forms, analytics setup and a chatbot integration that answers common questions and captures leads. Delivered in 2-3 weeks.
 - Custom software and platforms: quoted per project. Typically 6-10 weeks for core features, an admin dashboard and user accounts.
 - Every project includes training, documentation and 90 days of support. After that: Self-Hosted, Managed Care, or a Partner Retainer.
 - Clients own everything built for them: source code, documentation, domains, hosting accounts and business data.
@@ -19,7 +19,8 @@ Key facts:
 - [Automation and integrations](https://pineydigital.com/services/#automation): Connect POS, CRM and accounting tools so information moves on its own.
 
 ## Company
-- [Pricing](https://pineydigital.com/pricing): Starter websites at $799, concept sites from $3,500, custom software quoted per project. No monthly fees required.
+- [Pricing](https://pineydigital.com/pricing): Starter websites at $799, concept sites from $3,500, custom software quoted per project. No monthly fees required; ongoing care (Managed Care or a Partner Retainer) is optional.
+- [Case study: Catfish King](https://pineydigital.com/#work): One portal replacing a vendor-hosted daily sales reporting system for a multi-location restaurant group. Same navigation and reports so managers need no retraining, with live totals, per-store sales tax, Excel/PDF exports and company-owned hosting. Phase 1 build starting; no results published yet.
 - [Capabilities](https://pineydigital.com/capabilities): Websites, dashboards, booking systems, loyalty platforms and custom software.
 - [About](https://pineydigital.com/about): About Joel Escoto, founder of Piney Digital.
 - [FAQ](https://pineydigital.com/faq): Timelines, pricing, ownership and how custom software gets built.
@@ -35,3 +36,14 @@ Key facts:
 - [What is Operational Bleed?](https://pineydigital.com/blog/operational-bleed/)
 - [Web Hosting Explained: What Texas Businesses Need to Know](https://pineydigital.com/blog/hosting/)
 - [Winning the Google Map Pack With Better NAP Consistency](https://pineydigital.com/blog/seo/)
+- [What Actually Makes a Website Turn Visitors Into Calls?](https://pineydigital.com/blog/conversion/)
+- [Google Crawling, Sitemaps, and the Backend Work That Gets You Found](https://pineydigital.com/blog/google-crawling/)
+- [The Integration Question: Building vs. Connecting](https://pineydigital.com/blog/integrations/)
+- [Inside the Loyalty System: Punch Cards + SMS + Reviews](https://pineydigital.com/blog/loyalty/)
+- [From Websites to Operational Systems](https://pineydigital.com/blog/operational-shift/)
+- [5 Reasons Your Business Needs a Professional Website in 2026](https://pineydigital.com/blog/reasons/)
+- [How to Know When Your Business Has Outgrown Its Current Website](https://pineydigital.com/blog/redesign/)
+- [Building for Scale: What Enterprise Platforms Actually Need](https://pineydigital.com/blog/scaling/)
+- [Security Fundamentals for Business Platforms](https://pineydigital.com/blog/security/)
+- [How to Replace Software Your Team Has Used for 15 Years (Without Retraining Anyone)](https://pineydigital.com/blog/replace-legacy-software/)
+- [Who Owns Your Software? 8 Questions to Ask Any Developer Before You Sign](https://pineydigital.com/blog/who-owns-your-software/)

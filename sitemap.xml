@@ -97,6 +97,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://pineydigital.com/blog/replace-legacy-software/</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pineydigital.com/blog/who-owns-your-software/</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://pineydigital.com/blog/saas-cost/</loc>
     <lastmod>2026-11-09</lastmod>
     <changefreq>monthly</changefreq>

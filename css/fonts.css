@@ -1,0 +1,33 @@
+/* Self-hosted variable fonts (latin subset). Same family names the site already uses.
+   The "Fallback" faces resize Arial to match each font's metrics so the swap does not
+   move text and cause layout shift. */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('../fonts/inter-latin-wght.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url('../fonts/space-grotesk-latin-wght.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter Fallback';
+  src: local('Arial'), local('Liberation Sans'), local('Helvetica');
+  size-adjust: 107.1%;
+  ascent-override: 90.4%;
+  descent-override: 22.5%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: 'Space Grotesk Fallback';
+  src: local('Arial'), local('Liberation Sans'), local('Helvetica');
+  size-adjust: 101.6%;
+  ascent-override: 96.9%;
+  descent-override: 28.7%;
+  line-gap-override: 0%;
+}
