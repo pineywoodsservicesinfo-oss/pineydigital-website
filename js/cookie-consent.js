@@ -1,6 +1,7 @@
 // Piney Digital — Cookie Consent Banner
-// GDPR / CCPA / TDPSA compliant. Blocks analytics until user consents.
-// Stores choice in localStorage. No cookies set before consent.
+// GDPR / CCPA / TDPSA oriented. Google Consent Mode v2: tags load on every page with
+// all storage denied; cookies are only set after the user accepts.
+// Stores choice in localStorage.
 
 (function() {
   const STORAGE_KEY = 'piney_cookie_consent';
@@ -24,8 +25,35 @@
     }
   }
 
-  // Load Google Analytics only after consent
-  function loadAnalytics() {
+  // Consent Mode v2: Google tags load on every page, but every storage type defaults to
+  // denied. No ad/analytics cookies are set until the visitor accepts.
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  window.gtag = gtag;
+
+  var DENIED = {
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    analytics_storage: 'denied'
+  };
+  var GRANTED = {
+    ad_storage: 'granted',
+    ad_user_data: 'granted',
+    ad_personalization: 'granted',
+    analytics_storage: 'granted'
+  };
+
+  gtag('consent', 'default', Object.assign({ wait_for_update: 500 }, DENIED));
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+
+  // Restore an earlier choice before any tag fires
+  if (getConsent() === 'accepted') {
+    gtag('consent', 'update', GRANTED);
+  }
+
+  function loadGoogleTags() {
     if (window.gtag_loaded) return;
     window.gtag_loaded = true;
 
@@ -34,21 +62,17 @@
     s.src = 'https://www.googletagmanager.com/gtag/js?id=' + REAL_GA_ID;
     document.head.appendChild(s);
 
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    window.gtag = gtag;
     gtag('js', new Date());
     gtag('config', REAL_GA_ID, { anonymize_ip: true });
 
     loadTagManager();
   }
 
-  // Load Google Tag Manager (Google Ads etc.) only after consent — standard GTM bootstrap
+  // Standard GTM bootstrap
   function loadTagManager() {
     if (window.gtm_loaded) return;
     window.gtm_loaded = true;
 
-    window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
 
     var g = document.createElement('script');
@@ -56,6 +80,12 @@
     g.src = 'https://www.googletagmanager.com/gtm.js?id=' + GTM_ID;
     document.head.appendChild(g);
   }
+
+  function grantConsent() {
+    gtag('consent', 'update', GRANTED);
+  }
+
+  loadGoogleTags();
 
   // Disable analytics (remove any existing)
   function disableAnalytics() {
@@ -82,7 +112,7 @@
     banner.innerHTML = [
       '<div class="cookie-banner-inner">',
       '  <div class="cookie-banner-text">',
-      '    <p><strong>We use cookies for analytics.</strong> We use Google Analytics and Google Tag Manager to understand how visitors use our site and to measure our Google Ads. We do not sell your data. <a href="/privacy" target="_blank">Privacy Policy</a> · <a href="/privacy#do-not-sell">Do Not Sell My Info</a></p>',
+      '    <p><strong>We use cookies for analytics.</strong> Google Analytics and Google Tag Manager load on every page, but set no cookies until you accept. Accepting lets us understand how visitors use our site and measure our Google Ads. We do not sell your data. <a href="/privacy" target="_blank">Privacy Policy</a> · <a href="/privacy#do-not-sell">Do Not Sell My Info</a></p>',
       '  </div>',
       '  <div class="cookie-banner-actions">',
       '    <button type="button" id="cookie-decline" class="cookie-btn cookie-btn-secondary">Decline</button>',
@@ -101,24 +131,24 @@
     // Wire up buttons
     document.getElementById('cookie-accept').addEventListener('click', function() {
       setConsent('accepted');
-      loadAnalytics();
+      grantConsent();
       banner.classList.remove('cookie-banner-visible');
       setTimeout(function() { banner.remove(); }, 300);
     });
 
     document.getElementById('cookie-decline').addEventListener('click', function() {
       setConsent('declined');
+      gtag('consent', 'update', DENIED);
       disableAnalytics();
       banner.classList.remove('cookie-banner-visible');
       setTimeout(function() { banner.remove(); }, 300);
     });
   }
 
-  // Conversion events for Google Tag Manager. Pushed only after the visitor accepts cookies,
-  // so a conversion is never queued for someone who has not consented.
+  // Conversion events for Google Tag Manager. GTM tags respect Consent Mode, so events
+  // are safe to push always: without consent they send cookieless pings only.
   // In GTM, create a Custom Event trigger named after the event (e.g. generate_lead).
   window.pineyTrack = function(eventName, params) {
-    if (getConsent() !== 'accepted') return;
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push(Object.assign({ event: eventName }, params || {}));
   };
@@ -129,12 +159,8 @@
     if (link) window.pineyTrack('click_to_call', { phone_number: link.getAttribute('href').replace('tel:', '') });
   });
 
-  // Init: if consent was given before, load analytics immediately
-  var existing = getConsent();
-  if (existing === 'accepted') {
-    loadAnalytics();
-  } else if (existing !== 'declined') {
-    // No decision yet — show banner after page load
+  // Init: show the banner if no decision yet
+  if (!getConsent()) {
     if (document.readyState === 'complete') {
       setTimeout(showBanner, 500);
     } else {
